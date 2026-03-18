@@ -131,13 +131,18 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Critical
+      100: SoftCritical # Reserve edit: Soft Crit port
+      150: HardCritical # Reserve edit: Soft Crit port
       200: Dead
+  - type: CritStateMovement # Reserve edit: Soft Crit port
   - type: MobStateActions
     actions:
-      Critical:
+      SoftCritical: # Reserve edit: Soft Crit port
       - ActionCritSuccumb
       - ActionCritFakeDeath
+      - ActionCritRageQuit #Reserve
+      HardCritical: # Reserve edit: Soft Crit port
+      - ActionCritSuccumb
       - ActionCritLastWords
       - ActionCritRageQuit #Reserve
   - type: Deathgasp
