@@ -252,6 +252,8 @@
           - Cybernetic # Shitmed - Cybernetic Organs
           - Yowie # Goobstation - Yowie
           inverted: true
+      - !type:ChemAddMoodlet  # Reserve edit: Mood System port
+        moodPrototype: EthanolBenefit
       - !type:Drunk
         boozePower: 2
 

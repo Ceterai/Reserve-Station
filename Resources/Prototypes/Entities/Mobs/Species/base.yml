@@ -349,6 +349,7 @@
     - Parasite
   - type: ObraDinnBody # Goobstation
   # </Goobstation>
+  - type: Mood  # Reserve edit: Mood System port
 
 - type: entity
   save: false

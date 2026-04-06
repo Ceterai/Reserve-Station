@@ -153,6 +153,8 @@
             Radiation: -3
           groups:
             Brute: 0.5
+      - !type:ChemAddMoodlet  # Reserve edit: Mood System port
+        moodPrototype: StrongPaincauser
 
 - type: reagent
   id: Bicaridine
@@ -215,6 +217,8 @@
         identifier: Suffocation
         amount: -1.2
         time: 12
+      - !type:ChemAddMoodlet  # Reserve edit: Mood System port
+        moodPrototype: MildPainkiller
 
 - type: reagent
   id: Cryoxadone
@@ -531,6 +535,10 @@
           min: 1
         reagent: Histamine
         amount: 4
+      - !type:ChemAddMoodlet  # Reserve edit: Mood System port
+        moodPrototype: EpinephrineEffect
+      - !type:ChemAddMoodlet  # Reserve edit: Mood System port
+        moodPrototype: MildPaincauser
       - !type:ModifyStatusEffect
         effectProto: StatusEffectStunned
         time: 0.75
@@ -899,6 +907,11 @@
             - !type:ReagentCondition
               reagent: Ambuzol
               min: 10
+        - !type:ChemRemoveMoodlet  # Reserve edit: Mood System port
+          moodPrototype: RomerolEffect
+          conditions:
+          - !type:ReagentThreshold
+            min: 10
 
 - type: reagent
   id: AmbuzolPlus
@@ -919,6 +932,11 @@
             - !type:ReagentCondition
               reagent: AmbuzolPlus
               min: 5
+        - !type:ChemRemoveMoodlet  # Reserve edit: Mood System port
+          moodPrototype: RomerolEffect
+          conditions:
+          - !type:ReagentThreshold
+            min: 5
 
 - type: reagent
   id: PulpedBananaPeel
@@ -1036,6 +1054,11 @@
         effectProto: StatusEffectSeeingRainbow
         time: 15.0
         type: Remove
+      - !type:ChemPurgeMoodlets  # Reserve edit: Mood System port
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Synaptizine
+          min: 10
 
 - type: reagent
   id: TranexamicAcid
@@ -1378,6 +1401,8 @@
         damage:
           types:
             Cold: 3 # Goobstation - 30 per u?
+      - !type:ChemAddMoodlet  # Reserve edit: Mood System port
+        moodPrototype: LacerinolEffect
 
 - type: reagent
   id: Puncturase
@@ -1407,6 +1432,8 @@
         damage:
           types:
             Blunt: 5 # Goob
+      - !type:ChemAddMoodlet  # Reserve edit: Mood System port
+        moodPrototype: PuncturaseEffect
 
 - type: reagent
   id: Bruizine
@@ -1437,6 +1464,8 @@
         damage:
           types:
             Poison: 4 # Goob
+      - !type:ChemAddMoodlet  # Reserve edit: Mood System port
+        moodPrototype: BruizineEffect
 
 - type: reagent
   id: Holywater
