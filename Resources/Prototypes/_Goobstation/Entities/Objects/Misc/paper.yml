@@ -8,6 +8,13 @@
     sprite: Objects/Misc/bureaucracy.rsi
     layers:
     - state: station-report-paper
+  # Reserve: Folder fix start
+  - type: Item
+    size: Tiny
+  - type: Tag
+    tags:
+    - Document
+  # Reserve: Folder fix end
   - type: StationReport
   - type: Paper
     content: station-report-text
