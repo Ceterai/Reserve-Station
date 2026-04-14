@@ -555,9 +555,6 @@
     layers:
       - state: medibot
         map: [ "enum.DamageStateVisualLayers.Base" ]
-      # - state: powered  # Reserve: Bring back original medibot
-      #   map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
-      #   shader: unshaded
   - type: HTN
     rootTask:
       task: MedibotCompound
