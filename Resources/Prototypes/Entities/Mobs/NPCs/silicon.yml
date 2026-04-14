@@ -551,14 +551,10 @@
   #         enum.DamageStateVisualLayers.BaseUnshaded:
   #           powered: Rainbow
   - type: Sprite
-    # sprite: _Goobstation/Mobs/Silicon/Bots/medibot.rsi  # Reserve: Bring back original medibot
-    sprite: Mobs/Silicon/Bots/medibot.rsi  # Reserve: Bring back original medibot
+    sprite: Mobs/Silicon/Bots/medibot.rsi
     layers:
       - state: medibot
         map: [ "enum.DamageStateVisualLayers.Base" ]
-      # - state: powered  # Reserve: Bring back original medibot
-      #   map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
-      #   shader: unshaded
   - type: HTN
     rootTask:
       task: MedibotCompound
