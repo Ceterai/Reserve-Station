@@ -1,4 +1,4 @@
-ent-DrinkCartonBaseFull = { ent-DrinkBase }
+ent-DrinkCartonBaseFull = картонная упаковка
     .desc = { ent-DrinkBase.desc }
     .suffix = Полный
 ent-DrinkCartonBaseLargeFull = { ent-DrinkCartonBaseFull }

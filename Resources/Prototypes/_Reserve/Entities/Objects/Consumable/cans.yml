@@ -1,0 +1,601 @@
+# SPDX-FileCopyrightText: 2026 Ceterai <ceterai@protonmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Orchid's Barmania - Vendichaos start
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkCan
+  name: aluminium can
+  suffix: Empty
+  description: Buy this if you hate the environment.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/default.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/default.rsi
+
+# - Fun -
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkEggCan
+  name: white surprise can
+  description: This isn't meant to be drunk. I hope.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Egg
+          Quantity: 30
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/egg.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/egg.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkNothingCan
+  name: nothing in a can
+  description: This isn't really anything.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Nothing
+          Quantity: 30
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/nothing.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/nothing.rsi
+
+# - Soups -
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkEggCookedCan
+  name: egg soup can
+  description: Plain cooked eggs in a can. Simple yet cheap.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: EggCooked
+          Quantity: 30
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/egg_cooked.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/egg_cooked.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkHotRamenCan
+  name: noodle soup can
+  description: Plain noodles in a can. Simple yet cheap.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: HotRamen
+          Quantity: 30
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/ramen.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/ramen.rsi
+
+# - Sodas -
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkSpritexCan
+  name: Spritex can
+  description: A knock-off of a long-forgotten brand.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: SodaWater
+          Quantity: 25
+        - ReagentId: Sugar
+          Quantity: 5
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/spritex.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/spritex.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkFantaxCan
+  name: Fantax can
+  description: A knock-off of a long-forgotten brand.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: JuiceOrange
+          Quantity: 10
+        - ReagentId: SodaWater
+          Quantity: 15
+        - ReagentId: Sugar
+          Quantity: 5
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/fantax.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/fantax.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkBlueSpaceUpCan
+  name: BlueSpace-Up can
+  description: Tastes like a cross-dimensional tear in your mouth.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50  # Bigger on the inside because it's bluespace, get it?!
+        reagents:
+        - ReagentId: JuiceBluePumpkin
+          Quantity: 25
+        - ReagentId: SpaceUp
+          Quantity: 25
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/bluespaceup.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/bluespaceup.rsi
+
+# - Juices -
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkCherryBoomCan
+  name: Cherry Boom can
+  description: Some soothing non-carbonated sweetness for those who doesn't like bubbles.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: JuiceCherry
+          Quantity: 25
+        - ReagentId: Sugar
+          Quantity: 5
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/cherry.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/cherry.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkBerryBoomCan
+  name: Berry Boom can
+  description: Some soothing non-carbonated sweetness for those who doesn't like bubbles.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: JuiceBerry
+          Quantity: 25
+        - ReagentId: Sugar
+          Quantity: 5
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/berry.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/berry.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkMangoBoomCan
+  name: Mango Boom can
+  description: Some soothing non-carbonated sweetness for those who doesn't like bubbles.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: JuiceMango
+          Quantity: 25
+        - ReagentId: Sugar
+          Quantity: 5
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/mango.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/mango.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkPotatoBoomCan
+  name: Potato Boom can
+  description: Some soothing non-carbonated sweetness for absolute psychopaths.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: JuicePotato
+          Quantity: 25
+        - ReagentId: Sugar
+          Quantity: 5
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/potato.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/potato.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkPumpkinBoomCan
+  name: Pumpkin Boom can
+  description: Some soothing non-carbonated sweetness for those who like Halloween a bit too much.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: PumpkinFlesh
+          Quantity: 25
+        - ReagentId: Sugar
+          Quantity: 5
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/pumpkin.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/pumpkin.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkBlueBoomCan
+  name: Blue Boom can
+  description: Some soothing non-carbonated sweetness for those who like mysteries.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: JuiceBluePumpkin
+          Quantity: 25
+        - ReagentId: Sugar
+          Quantity: 5
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/bluepumpkin.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/bluepumpkin.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkPoisonBoomCan
+  name: Poison Boom can
+  description: Some soothing non-carbonated sweetness for those who like dying.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: JuiceBerryPoison
+          Quantity: 25
+        - ReagentId: Sugar
+          Quantity: 5
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/poison.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/poison.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkJuiceMultifruitCan
+  name: Multifruit can
+  description: A healthy taste of fruits coming together.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: JuiceApple
+          Quantity: 7.5
+        - ReagentId: JuiceMango
+          Quantity: 7.5
+        - ReagentId: JuiceBanana
+          Quantity: 7.5
+        - ReagentId: JuiceOrange
+          Quantity: 7.5
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/multifruit.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/multifruit.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkLemonLimeStillCan
+  name: Smite Still can
+  description: A non-carbonated drink line from Smite!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: JuiceLemon
+          Quantity: 12
+        - ReagentId: JuiceLime
+          Quantity: 12
+        - ReagentId: Sugar
+          Quantity: 6
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/lemon_lime_still.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/lemon_lime_still.rsi
+
+# - Healthy -
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkDoctorMomCan
+  name: Doctor Mom can
+  description: Drink your vitamins!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Vitamin
+          Quantity: 30
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/vitamin.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/vitamin.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkDoctorNutCan
+  name: Doctor Nut can
+  description: Drink your nutriments!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 30
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/nutriment.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/nutriment.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkDoctorPwrCan
+  name: Doctor Pwr can
+  description: A Pwrgame drink line that markets itself as "healthy". 100% protein.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Protein
+          Quantity: 30
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/protein.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/protein.rsi
+
+# - Bad -
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkBloodCan
+  name: Vampire's Kiss can
+  description: Bloodsuckers love this cocktail of pure plasma!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Blood
+          Quantity: 30
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/blood.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/blood.rsi
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkPilkCan
+  name: pilk can
+  description: Digest the undigestable!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Pilk
+          Quantity: 30
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/pilk.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/pilk.rsi
+
+# - Alcohol -
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkMojitoCan
+  name: mojito can
+  description: A luxury cocktail in a factory can, that's quite a clash.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Mojito
+          Quantity: 30
+      grindable:
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 4
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/mojito.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/mojito.rsi
+# Orchid's Barmania - Vendichaos end

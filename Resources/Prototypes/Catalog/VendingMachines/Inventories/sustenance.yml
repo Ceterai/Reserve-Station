@@ -15,6 +15,7 @@
     FoodSnackNutribrick: 5
     FoodSnackMREBrownie: 5
     FoodCondimentPacketKetchup: 5
+    DrinkDoctorPwrCan: 1  # Reserve: Orchid's Barmania - Vendichaos
   contrabandInventory:
     FoodTinMRE: 3
     FoodTinBeans: 3

@@ -106,6 +106,22 @@
 
 - type: entity
   parent: DrinkGlass
+  id: DrinkMangoJuice
+  suffix: mango juice
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: JuiceMango
+          Quantity: 30
+  - type: Icon
+    sprite: _Reserve/Objects/Consumable/Drinks/mango.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
   id: DrinkPineappleJuice
   suffix: pineapple juice
   components:

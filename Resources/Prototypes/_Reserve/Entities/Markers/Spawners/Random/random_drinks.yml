@@ -1,0 +1,336 @@
+# SPDX-FileCopyrightText: 2026 Ceterai <ceterai@protonmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Orchid's Barmania - Vendichaos start
+- type: entity
+  id: RandomDrinkCan
+  name: random drink spawner
+  suffix: Can
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Consumable/Drinks/pwrgame.rsi
+        state: icon
+  - type: RandomSpawner
+    prototypes:
+      # Vanilla
+      - DrinkBeerCan
+      - DrinkChangelingStingCan
+      - DrinkColaCan
+      - DrinkDrGibbCan
+      - DrinkEnergyDrinkCan
+      - DrinkFourteenLokoCan
+      - DrinkGrapeCan
+      - DrinkIcedTeaCan
+      - DrinkLemonLimeCan
+      - DrinkLemonLimeCranberryCan
+      - DrinkPwrGameCan
+      - DrinkRootBeerCan
+      - DrinkShamblersJuiceCan
+      - DrinkSodaWaterCan
+      - DrinkSolDryCan
+      - DrinkSpaceMountainWindCan
+      - DrinkSpaceUpCan
+      - DrinkStarkistCan
+      - DrinkTonicWaterCan
+      - DrinkWineCan
+      # Reserve
+      - DrinkEggCookedCan
+      - DrinkHotRamenCan
+      - DrinkSpritexCan
+      - DrinkFantaxCan
+      - DrinkBlueSpaceUpCan
+      - DrinkBerryBoomCan
+      - DrinkBlueBoomCan
+      - DrinkCherryBoomCan
+      - DrinkMangoBoomCan
+      - DrinkPumpkinBoomCan
+      - DrinkLemonLimeStillCan
+      - DrinkMojitoCan
+      - DrinkJuiceMultifruitCan
+    chance: 0.8
+    offset: 0.0
+    rarePrototypes:
+      # Vanilla
+      - DrinkNukieCan
+      - DrinkNukieCan
+      - DrinkNukieCan
+      # Reserve
+      - DrinkEggCan
+      - DrinkNothingCan
+      - DrinkPotatoBoomCan
+      - DrinkPoisonBoomCan
+      - DrinkDoctorMomCan
+      - DrinkDoctorNutCan
+      - DrinkDoctorPwrCan
+      - DrinkBloodCan
+      - DrinkPilkCan
+    rareChance: 0.01
+
+- type: entity
+  id: RandomDrinkCarton
+  name: random drink spawner
+  suffix: Carton
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Consumable/Drinks/pineapplejuice.rsi
+        state: icon
+  - type: RandomSpawner
+    prototypes:
+      # Vanilla
+      - DrinkWaterJug
+      - DrinkJuiceLimeCarton
+      - DrinkJuiceOrangeCarton
+      - DrinkJuiceTomatoCarton
+      - DrinkCoconutWaterCarton
+      - DrinkCreamCarton
+      - DrinkMilkCarton
+      - DrinkSoyMilkCarton
+      - DrinkOatMilkCarton
+      - DrinkJuiceLemonCarton
+      - DrinkJuicePineappleCarton
+      # Reserve
+      - DrinkJuiceBluePumpkinCarton
+      - DrinkJuiceMangoCarton
+      - DrinkJuiceMultifruitCarton
+    chance: 0.8
+    offset: 0.0
+    rarePrototypes:
+      # Vanilla
+      - DrinkMilkCarton
+      # Reserve
+      - DrinkWineCarton
+    rareChance: 0.05
+
+- type: entity
+  id: RandomDrinkCup
+  name: random drink spawner
+  suffix: Cup
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _Reserve/Objects/Consumable/Drinks/cocoa.rsi
+        state: icon
+  - type: RandomSpawner
+    prototypes:
+      # Vanilla
+      - DrinkHotCoco
+      - DrinkHotCoffee
+      - DrinkCafeLatte
+      - DrinkTeacup
+      - DrinkGreenTea
+      - DrinkWaterCup
+      # Reserve
+      - DrinkEggCooked
+      - DrinkHotRamen
+      - DrinkMisoSoup
+      - DrinkTomYamSoup
+      - DrinkPumpkinSoup
+      - DrinkPumpkinSpiceLatte
+    chance: 0.8
+    offset: 0.0
+    rarePrototypes:
+      # Vanilla
+      - DrinkLean
+      # Reserve
+    rareChance: 0.05
+
+- type: entity
+  id: RandomDrinkCupEmpty
+  name: random drink spawner
+  suffix: Cup, Empty
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Consumable/Drinks/mug_rainbow.rsi
+        state: icon-0
+  - type: RandomSpawner
+    prototypes:
+      - DrinkMug
+      - DrinkMugBlack
+      - DrinkMugBlue
+      - DrinkMugGreen
+      - DrinkMugHeart
+      - DrinkMugMetal
+      - DrinkMugMoebius
+      - DrinkMugOne
+      - DrinkMugRed
+    chance: 0.8
+    offset: 0.0
+    rarePrototypes:
+      - DrinkMugRainbow
+    rareChance: 0.05
+
+- type: entity
+  id: RandomDrinkEmpty
+  name: random drink spawner
+  suffix: Empty
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _Reserve/Objects/Consumable/Drinks/Bottles/default.rsi
+  - type: RandomSpawner
+    prototypes:
+      - CustomDrinkJug
+      - DrinkBottle
+      - DrinkBottleTall
+      - DrinkCan
+      - DrinkCarton
+      - DrinkGlass
+      - DrinkGlassCoupeShaped
+      - DrinkMug
+      - DrinkMugMetal
+      - DrinkShotGlass
+    chance: 0.8
+    offset: 0.0
+    rarePrototypes:
+      - DrinkMugRainbow
+    rareChance: 0.05
+
+- type: entity
+  id: RandomDrinkJug
+  name: random drink spawner
+  suffix: Jug
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Consumable/Drinks/generic_jug.rsi
+        state: icon
+  - type: RandomSpawner
+    prototypes:
+      - CustomDrinkJug
+    chance: 0.75
+    offset: 0.0
+    rarePrototypes:
+      # Vanilla
+      - DrinkLemonLimeJug
+      - DrinkIceJug
+      - DrinkCoconutWaterJug
+      - DrinkCoffeeJug
+      - DrinkTeaJug
+      - DrinkGreenTeaJug
+      - DrinkIcedTeaJug
+      - DrinkDrGibbJug
+      - DrinkRootBeerJug
+      - DrinkWaterMelonJuiceJug
+      - DrinkEnergyDrinkJug
+      - DrinkSugarJug
+      - DrinkMeadJug
+      # Reserve
+      - DrinkAppleJuiceJug
+      - DrinkBluePumpkinJuiceJug
+      - DrinkLemonJuiceJug
+      - DrinkMangoJuiceJug
+    rareChance: 0.75
+
+- type: entity
+  id: RandomDrinkJuice
+  name: random drink spawner
+  suffix: Juice glass
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _Reserve/Objects/Consumable/Drinks/apple.rsi
+        state: icon
+  - type: RandomSpawner
+    prototypes:
+      - DrinkAppleJuice
+      - DrinkBananaJuice
+      - DrinkBerryJuice
+      - DrinkBluePumpkinJuice
+      - DrinkBungoJuice
+      - DrinkCarrotJuice
+      - DrinkCherryJuice
+      - DrinkGrapeJuice
+      - DrinkLimeJuice
+      - DrinkLemonJuice
+      - DrinkMangoJuice
+      - DrinkOrangeJuice
+      - DrinkPineappleJuice
+      - DrinkTomatoJuice
+      - DrinkWatermelonJuice
+    chance: 0.8
+    offset: 0.0
+    rarePrototypes:
+      - DrinkPotatoJuice
+      - DrinkShamblersJuice
+      - DrinkPoisonBerryJuice
+      - DrinkPumpkinFleshGlass
+    rareChance: 0.05
+
+- type: entity
+  id: RandomDrinkMilk
+  name: random drink spawner
+  suffix: Milk glass
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _Reserve/Objects/Consumable/Drinks/milk.rsi
+        state: icon
+  - type: RandomSpawner
+    prototypes:
+      # Vanilla
+      - DrinkGlassWhite
+      # Reserve
+      - DrinkMilkGoatGlass
+      - DrinkMilkOatGlass
+      - DrinkMilkSoyGlass
+    chance: 0.8
+    offset: 0.0
+    rarePrototypes:
+      # Vanilla
+      # Reserve
+      - DrinkMilkSpoiledGlass
+      - DrinkPilkGlass
+    rareChance: 0.05
+# Orchid's Barmania - Vendichaos end

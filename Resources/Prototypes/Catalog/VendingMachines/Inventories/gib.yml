@@ -37,10 +37,15 @@
     DrinkLemonLimeCan: 2
     DrinkLemonLimeCranberryCan: 2
     DrinkFourteenLokoCan: 2
+    DrinkDoctorNutCan: 1  # Reserve: Orchid's Barmania - Vendichaos
   contrabandInventory:
     ClothingNeckStethoscope: 2
     Saw: 2
     Tourniquet: 3
     DrinkChangelingStingCan: 2
+    DrinkDoctorMomCan: 1  # Reserve: Orchid's Barmania - Vendichaos
   emaggedInventory:
-    DrinkNukieCan: 2
+    # Reserve: Orchid's Barmania - Vendichaos start
+    DrinkBloodCan: 2
+    DrinkDoctorPwrCan: 2
+    # Reserve: Orchid's Barmania - Vendichaos end

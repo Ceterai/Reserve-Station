@@ -164,6 +164,11 @@
     layers:
       - state: icon
         map: ["enum.OpenableVisuals.Layer"]
+  # Reserve: Orchid's Barmania - Vendichaos start
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/default.rsi
+  - type: Item
+    sprite: _Reserve/Objects/Consumable/Drinks/Cans/default.rsi
+  # Reserve: Orchid's Barmania - Vendichaos end
   - type: FitsInDispenser
     solution: drink
   - type: DrawableSolution

@@ -15,11 +15,14 @@
 
 - type: entity
   id: RandomDrinkSoda
-  name: random soda spawner
+  name: random drink spawner  # Reserve: Orchid's Barmania - Vendichaos
+  suffix: Vending
   parent: MarkerBase
   placement:
-    mode: AlignTileAny
+    mode: PlaceFree  # Reserve: Orchid's Barmania - Vendichaos
   components:
+  - type: Transform  # Reserve: Orchid's Barmania - Vendichaos
+    anchored: false
   - type: Sprite
     layers:
       - state: green
@@ -57,10 +60,61 @@
       - DrinkWaterCup
       - DrinkBeerCan
       - DrinkWineCan
+      # Reserve: Orchid's Barmania - Vendichaos start
+      # - Cans
+      - DrinkEggCookedCan
+      - DrinkHotRamenCan
+      - DrinkSpritexCan
+      - DrinkFantaxCan
+      - DrinkBlueSpaceUpCan
+      - DrinkCherryBoomCan
+      - DrinkBerryBoomCan
+      - DrinkMangoBoomCan
+      - DrinkPumpkinBoomCan
+      - DrinkBlueBoomCan
+      - DrinkLemonLimeStillCan
+      - DrinkMojitoCan
+      - DrinkJuiceMultifruitCan
+      # - Cups
+      - DrinkEggCooked
+      - DrinkHotRamen
+      - DrinkMisoSoup
+      - DrinkTomYamSoup
+      - DrinkPumpkinSoup
+      - DrinkPumpkinSpiceLatte
+      # - Bottles
+      - DrinkJuiceBluePumpkinBottleFull
+      - DrinkJuiceMultifruitBottleFull
+      - DrinkBlueBoomBottleFull
+      - DrinkMangoBoomBottleFull
+      - DrinkLemonLimeStillBottleFull
+      - DrinkSupermaxBottleFull
+      # - Cartons
+      - DrinkJuiceBluePumpkinCarton
+      - DrinkJuiceMangoCarton
+      - DrinkJuiceMultifruitCarton
+      # Reserve: Orchid's Barmania - Vendichaos end
     chance: 0.8
     offset: 0.0
-    #rare
     rarePrototypes:
       - DrinkNukieCan
       - DrinkLean
+      # Reserve: Orchid's Barmania - Vendichaos start
+      # - Cans
+      - DrinkEggCan
+      - DrinkNothingCan
+      - DrinkPotatoBoomCan
+      - DrinkPoisonBoomCan
+      - DrinkDoctorMomCan
+      - DrinkDoctorNutCan
+      - DrinkDoctorPwrCan
+      - DrinkBloodCan
+      - DrinkPilkCan
+      # - Cups
+      # - Bottles
+      - DrinkPoisonBoomBottleFull
+      - DrinkJuicePumpkinBottleFull
+      # - Cartons
+      - DrinkWineCarton
+      # Reserve: Orchid's Barmania - Vendichaos end
     rareChance: 0.01

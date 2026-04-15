@@ -32,3 +32,6 @@
     FoodShakerPepper: 1
     FoodCondimentBottleKetchup: 1
     ReagentContainerMayo: 1
+    FoodCondimentBottleCornOil: 1  # Reserve: Orchid's Barmania - Vendichaos
+  emaggedInventory:
+    FoodCondimentBottleCapsaicinOil: 1  # Reserve: Orchid's Barmania - Vendichaos

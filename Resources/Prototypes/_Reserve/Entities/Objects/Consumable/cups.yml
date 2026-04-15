@@ -1,0 +1,128 @@
+# SPDX-FileCopyrightText: 2026 Ceterai <ceterai@protonmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Orchid's Barmania - Vendichaos start
+- type: entity
+  parent: DrinkBaseCup
+  id: DrinkCup
+  name: cup
+  suffix: Empty
+  description: A dark sturdy cup.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+  - type: Icon
+    sprite: _Reserve/Objects/Consumable/Drinks/Cups/default.rsi
+    state: icon-vend
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cups/default.rsi
+    layers:
+      - state: icon-0
+      - map: ["enum.SolutionContainerLayers.Fill"]
+        state: icon-4
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 4
+    fillBaseName: icon-
+  - type: TrashOnSolutionEmpty
+    solution: drink
+
+- type: entity
+  parent: DrinkCup
+  id: DrinkEggCooked
+  name: egg soup
+  description: Hot cooked eggs in a cup. Simple yet cheap.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: EggCooked
+          Quantity: 20
+
+- type: entity
+  parent: DrinkCup
+  id: DrinkHotRamen
+  name: noodle soup
+  description: Hot noodles in a cup. Simple yet cheap.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: HotRamen
+          Quantity: 20
+
+- type: entity
+  parent: DrinkCup
+  id: DrinkMisoSoup
+  name: miso soup
+  description: A full proper meal in a small cup. Tasty, but you crave more!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: HotRamen
+          Quantity: 9
+        - ReagentId: EggCooked
+          Quantity: 5
+        - ReagentId: Soysauce
+          Quantity: 4
+        - ReagentId: Oil
+          Quantity: 2
+
+- type: entity
+  parent: DrinkCup
+  id: DrinkTomYamSoup
+  name: tom yam soup
+  description: A full proper meal in a small cup. Spicy, but you crave more!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: HotRamen
+          Quantity: 10
+        - ReagentId: EggCooked
+          Quantity: 5
+        - ReagentId: CapsaicinOil
+          Quantity: 5
+
+- type: entity
+  parent: DrinkCup
+  id: DrinkPumpkinSoup
+  name: pumpkin soup
+  description: A full proper meal in a small cup. Spooky, but you crave more!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: PumpkinFlesh
+          Quantity: 12
+        - ReagentId: OilOlive
+          Quantity: 4
+        - ReagentId: TableSalt
+          Quantity: 2
+        - ReagentId: Blackpepper
+          Quantity: 2
+
+- type: entity
+  parent: DrinkCup
+  id: DrinkPumpkinSpiceLatte
+  name: pumpkin spice latte
+  description: Tastes great - just don't overhype it.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: PumpkinFlesh
+          Quantity: 6
+        - ReagentId: CafeLatte
+          Quantity: 14
+# Orchid's Barmania - Vendichaos end

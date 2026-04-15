@@ -22,11 +22,24 @@
 - type: vendingMachineInventory
   id: HotDrinksMachineInventory
   startingInventory:
-    DrinkHotCoffee: 5
-    DrinkCafeLatte: 5
-    DrinkTeacup: 5
-    DrinkGreenTea: 5
-    DrinkHotCoco: 5
+    # Reserve: Orchid's Barmania - Vendichaos start
+    DrinkHotCoffee: 3
+    DrinkCafeLatte: 3
+    DrinkTeacup: 3
+    DrinkGreenTea: 3
+    DrinkHotCoco: 3
+    DrinkEggCooked: 3
+    DrinkHotRamen: 3
+    # Reserve: Orchid's Barmania - Vendichaos end
   contrabandInventory:
     DrinkTeapot: 2
     DrinkNothing: 2
+    # Reserve: Orchid's Barmania - Vendichaos start
+    DrinkMisoSoup: 3
+    DrinkPumpkinSpiceLatte: 3
+    # Reserve: Orchid's Barmania - Vendichaos end
+  emaggedInventory:
+    # Reserve: Orchid's Barmania - Vendichaos start
+    DrinkTomYamSoup: 3
+    DrinkPumpkinSoup: 3
+    # Reserve: Orchid's Barmania - Vendichaos end

@@ -106,7 +106,7 @@
     DrinkJigger: 5
     DrinkIceBucket: 2
     BarSpoon: 3
-    CustomDrinkJug: 2 #to allow for custom drinks in the soda/booze dispensers
+    CustomDrinkJug: 3  # to allow for custom drinks in the soda/booze dispensers  # Reserve: Orchid's Barmania - Vendichaos
     DrinkAbsintheBottleFull: 2
     DrinkAleBottleFull: 5
     DrinkBeerBottleFull: 5
@@ -129,12 +129,12 @@
     DrinkMelonLiquorBottleFull: 3
     DrinkPatronBottleFull: 2
     DrinkRumBottleFull: 4
-    DrinkSodaWaterCan: 8
+    DrinkSodaWaterBottleFull: 3  # Reserve: Orchid's Barmania - Vendichaos
     DrinkSolDryCan: 8
     DrinkSpaceMountainWindBottleFull: 3
     DrinkSpaceUpBottleFull: 3
     DrinkTequilaBottleFull: 3
-    DrinkTonicWaterCan: 8
+    DrinkTonicWaterBottleFull: 3  # Reserve: Orchid's Barmania - Vendichaos
     DrinkVermouthBottleFull: 5
     DrinkVodkaBottleFull: 5
     DrinkWhiskeyBottleFull: 5
@@ -143,7 +143,19 @@
     DrinkSakeBottleFull: 3
     DrinkBeerCan: 5
     DrinkWineCan: 5
+    DrinkSupermaxBottleFull: 1  # Reserve: Orchid's Barmania - Vendichaos
   contrabandInventory:
     ChemistryBottleEthanol: 3
     DrinkBottleOfNothingFull: 1
+    # Reserve: Orchid's Barmania - Vendichaos start
+    DrinkWineCarton: 1
+    DrinkJuiceBluePumpkinCarton: 1
+    DrinkJuiceMangoCarton: 1
+    DrinkJuiceMultifruitCarton: 1
+    # Reserve: Orchid's Barmania - Vendichaos end
+  emaggedInventory:
+    # Reserve: Orchid's Barmania - Vendichaos start
     DrinkPoisonWinebottleFull: 2
+    DrinkPoisonBoomBottleFull: 1
+    DrinkJuiceBluePumpkinBottleFull: 1
+    # Reserve: Orchid's Barmania - Vendichaos end

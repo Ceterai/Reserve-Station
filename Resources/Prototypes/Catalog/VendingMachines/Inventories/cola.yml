@@ -39,11 +39,20 @@
     DrinkRootBeerCan: 2
     DrinkIcedTeaCan: 2
     DrinkSolDryCan: 2
-    DrinkLemonLimeCan: 2
-    DrinkLemonLimeCranberryCan: 2
+    # Reserve: Orchid's Barmania - Vendichaos start
+    DrinkSpritexCan: 2
+    DrinkFantaxCan: 2
+    # Reserve: Orchid's Barmania - Vendichaos end
     DrinkFourteenLokoCan: 2
   contrabandInventory:
     DrinkColaBottleFull: 2
-    DrinkChangelingStingCan: 2
+    # Reserve: Orchid's Barmania - Vendichaos start
+    DrinkPilkCan: 2
+    DrinkLemonLimeCan: 1
+    DrinkLemonLimeCranberryCan: 1
+    # Reserve: Orchid's Barmania - Vendichaos end
   emaggedInventory:
-    DrinkNukieCan: 2
+    # Reserve: Orchid's Barmania - Vendichaos start
+    DrinkPoisonCan: 2
+    DrinkEggCan: 1
+    # Reserve: Orchid's Barmania - Vendichaos end

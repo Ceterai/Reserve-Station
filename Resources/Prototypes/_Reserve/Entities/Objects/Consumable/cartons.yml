@@ -1,0 +1,79 @@
+# SPDX-FileCopyrightText: 2026 Ceterai <ceterai@protonmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Orchid's Barmania - Vendichaos start
+- type: entity
+  parent: [DrinkCartonVisualsOpenable, DrinkCartonBaseFull]
+  id: DrinkCarton
+  name: carton
+  suffix: Empty
+  description: A basic cardboard carton made for drinks. Save the environment!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cartons/default.rsi
+
+- type: entity
+  parent: DrinkCarton
+  id: DrinkWineCarton
+  name: wine
+  description: Your way to forgetting all worries and having fun!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Wine
+          Quantity: 50
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cartons/wine.rsi
+
+- type: entity
+  parent: DrinkCarton
+  id: DrinkJuiceBluePumpkinCarton
+  name: blue pumpkin juice
+  description: Tastes like space Halloween.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceBluePumpkin
+          Quantity: 50
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cartons/bluepumpkin.rsi
+
+- type: entity
+  parent: DrinkCarton
+  id: DrinkJuiceMangoCarton
+  name: mango juice
+  description: Not an orange, but orange!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceMango
+          Quantity: 50
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cartons/mango.rsi
+
+- type: entity
+  parent: DrinkCarton
+  id: DrinkJuiceMultifruitCarton
+  name: multifruit juice
+  description: A healthy taste of fruits coming together.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceBluePumpkin
+          Quantity: 50
+  - type: Sprite
+    sprite: _Reserve/Objects/Consumable/Drinks/Cartons/multifruit.rsi
+# Orchid's Barmania - Vendichaos end
