@@ -2,17 +2,17 @@ custom-ghost-fail-exclusive-ghost = This ghost is ckey-locked.
 custom-ghost-fail-server-insufficient-playtime = Play on the server for {$requiredHours} {$requiredHours ->
   *[one] hour
   [other] hours
-}. { -playtime(pH: $playtimeHours, pM: $playtimeMinutes) }
+}. { -playtime($playtimeHours, $playtimeMinutes) }
 
 custom-ghost-fail-job-insufficient-playtime = Play as a {$job} {$requiredHours} {$requiredHours ->
   *[one] hour
   [other] hours
-}. { -playtime(pH: $playtimeHours, pM: $playtimeMinutes) }
+}. { -playtime($playtimeHours, $playtimeMinutes) }
 
 custom-ghost-fail-department-insufficient-playtime = Play as a member of {$department} for {$requiredHours} {$requiredHours ->
   *[one] hour
   [other] hours
-}. { -playtime(pH: $playtimeHours, pM: $playtimeMinutes) }
+}. { -playtime($playtimeHours, $playtimeMinutes) }
 
 custom-ghosts-window-title = Custom ghost menu
 custom-ghosts-window-show-all-checkbox = Show all
