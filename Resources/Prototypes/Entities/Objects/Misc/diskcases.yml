@@ -20,12 +20,19 @@
     maxItemSize: Normal
     whitelist:
       tags:
-        # Reserve: CD disks fix start
-        - CD
-        - Card
-        - Document
-        # Reserve: CD disks fix end
+      # Reserve: CD disks fix start
+      - CD
+      - Card
+      - Document
+      # Reserve: CD disks fix end
     storageOpenSound: /Audio/Machines/screwdriveropen.ogg
     storageCloseSound: /Audio/Machines/screwdriverclose.ogg
     storageInsertSound: /Audio/Items/crowbar.ogg
     storageRemoveSound: /Audio/Items/crowbar.ogg
+  # Reserve: CD disks fix start
+  - type: Item
+    size: Tiny
+  - type: Tag
+    tags:
+    - CDCase  # So we can put CD cases in a CD rack
+  # Reserve: CD disks fix end
