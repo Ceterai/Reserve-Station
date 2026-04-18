@@ -15,7 +15,7 @@ ingestion-remove-mask = Сначала снимите {$entity}.
 ingestion-you-cannot-ingest-any-more = Вы не можете {$verb} еще больше!
 ingestion-other-cannot-ingest-any-more = {CAPITALIZE(SUBJECT($target))} не может {$verb} еще больше!
 
-ingestion-cant-digest = Вы не можете переварить {THE($entity)}!
+ingestion-cant-digest = Вы не можете переварить {$entity}!
 ingestion-cant-digest-other = {CAPITALIZE(SUBJECT($target))} не может переварить {THE($entity)}!
 
 ## Action Verbs, not to be confused with Verbs
