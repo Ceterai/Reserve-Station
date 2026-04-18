@@ -6,7 +6,7 @@
 ingestion-you-need-to-hold-utensil = Вам нужно иметь {$utensil} чтобы это есть!
 
 ingestion-try-use-is-empty = {CAPITALIZE($entity)} пуст!
-ingestion-try-use-wrong-utensil = Вы не можете {$verb} {THE($food)} с помощью {$utensil}.
+ingestion-try-use-wrong-utensil = Вы не можете {$verb} {$food} с помощью {$utensil}.
 
 ingestion-remove-mask = Сначала снимите {$entity}.
 
