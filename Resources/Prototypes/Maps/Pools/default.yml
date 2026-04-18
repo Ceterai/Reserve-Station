@@ -66,10 +66,10 @@
   - Bagel
   - Box
   - Cluster
-#  - Core
+  # - Core
   - Fland
- # - Gate Goobstation - My name is Walter Hartwell White, I live at 2308 Negra alloya line albequrque new mexico.
-  #- Loop Goobstation - I love maintenance!!!
+  # - Gate  # Goobstation - My name is Walter Hartwell White, I live at 2308 Negra alloya line albequrque new mexico.
+  # - Loop  # Goobstation - I love maintenance!!!
   - Marathon
   - Meta
   - Oasis
@@ -77,16 +77,17 @@
   - Origin
   - Saltern
   - Packed
-  #- Reach # Goobstation, removed from map pool
-  #- Train # Goobstation - all my friends hate train
+  # - Reach  # Goobstation, removed from map pool
+  # - Train  # Goobstation - all my friends hate train
   - FlandHighPop
   - OasisHighPop
-# - Barratry # Goobstation - Re-add barratry # Reserve - NOBODY LOVES BARRATRY
-  - Kettle # Goobstation - Re-add kettle (before it was gemini!)
-  - Leonid # Goobstation - for goob by goob
-  - Delta # Goobstation - ported from Corvax
-  - Chloris # Goobstation - also Corvax because we love goidamaps
-  - ReserveSillyIsland # Reserve, silly port
-  - Cog # those who forget to clear their multitool
-  - Serpentcrest # Goobstation when contra
-  #- Prison # Goobstation Detroit
+  # - Barratry  # Goobstation - Re-add barratry # Reserve - NOBODY LOVES BARRATRY
+  - Kettle  # Goobstation - Re-add kettle (before it was gemini!)
+  - Leonid  # Goobstation - for goob by goob
+  - Delta  # Goobstation - ported from Corvax
+  - Chloris  # Goobstation - also Corvax because we love goidamaps
+  - ReserveReach  # Reserve: Reach port
+  - ReserveSillyIsland  # Reserve: SillyIsland port
+  - Cog  # those who forget to clear their multitool
+  - Serpentcrest  # Goobstation when contra
+  # - Prison  # Goobstation Detroit

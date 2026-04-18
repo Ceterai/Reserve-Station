@@ -238,6 +238,7 @@ namespace Content.IntegrationTests.Tests
             "OriginHighPop",  // Not in pool
             "Packed",
             "Reach",
+            "ReserveReach",       // Reserve Station
             "ReserveSillyIsland", // Reserve Station
             "Saltern",
             "Serpentcrest",
@@ -282,7 +283,7 @@ namespace Content.IntegrationTests.Tests
               "TestTeg",        //Dev map
             //"Train",          //Not in pool
               "Packed",
-              "Reach",
+              "ReserveReach",   // Reserve Station
               "ReserveSillyIsland", // Reserve Station
               "Saltern",
               "Serpentcrest"
