@@ -51,6 +51,6 @@ edible-verb-pill = проглотить
 
 ## Force feeding
 
-edible-force-feed = {CAPITALIZE(THE($user))} пытается заставить вас {$verb} что-то!
+edible-force-feed = {CAPITALIZE($user)} пытается заставить вас {$verb} что-то!
 edible-force-feed-success = {CAPITALIZE(THE($user))} заставляет вас {$verb} что-то! {$flavors}
 edible-force-feed-success-user = Вы успешно накормили {THE($target)}.
