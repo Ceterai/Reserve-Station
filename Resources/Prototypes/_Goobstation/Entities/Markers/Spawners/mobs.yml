@@ -17,6 +17,18 @@
     prototypes:
     - MobBrullbar
 
+# Reserve: Better spawners start
+- type: entity
+  parent: SpawnMobBrullbar
+  id: SpawnMobBrullbarChance
+  suffix: 5% chance
+  components:
+  - type: ConditionalSpawner
+    prototypes:
+    - MobBrullbar
+    chance: 0.05
+# Reserve: Better spawners end
+
 - type: entity
   name: Brullbar King Spawner
   id: SpawnMobBrullbarKing
@@ -72,7 +84,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobLivingCurse
-    
+
 - type: entity
   name: Fermid Large Spawner
   id: SpawnMobFermidLarge
@@ -84,7 +96,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobFermidLarge
-    
+
 - type: entity
   name: Fermid Small Spawner
   id: SpawnMobFermidSmall
