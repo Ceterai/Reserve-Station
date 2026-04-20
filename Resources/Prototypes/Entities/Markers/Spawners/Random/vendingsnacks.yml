@@ -32,4 +32,10 @@
       - VendingMachineChang
       - VendingMachineDonut
       - VendingMachineSweetToof # Goobstation
+      # Reserve: Orchid's Barmania - Vendichaos start
+      - VendingMachineFitness
+      - VendingMachineHotfood
+      - VendingMachineSolsnack
+      - VendingMachineWeeb
+      # Reserve: Orchid's Barmania - Vendichaos end
     chance: 1
