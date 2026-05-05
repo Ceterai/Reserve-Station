@@ -126,7 +126,6 @@ namespace Content.IntegrationTests.Tests.Body
                 var coordinates = new EntityCoordinates(grid.Value, center);
                 human = entityManager.SpawnEntity("HumanLungDummy", coordinates);
                 relevantAtmos = entityManager.GetComponent<GridAtmosphereComponent>(grid.Value);
-                startingMoles = 100f; // Hardcoded because GetMapMoles returns 900 here for some reason.
 
 #pragma warning disable NUnit2045
                 Assert.That(entityManager.TryGetComponent(human, out body), Is.True);
@@ -136,13 +135,19 @@ namespace Content.IntegrationTests.Tests.Body
 
             // --- End setup
 
+            // Reserve edit start: Try to fix tests
+            await PoolManager.WaitUntil(server, () => resp.Status == RespiratorStatus.Exhaling);
+            await PoolManager.WaitUntil(server, () => resp.Status == RespiratorStatus.Inhaling);
+            startingMoles = GetMapMoles();
+            // Reserve edit end: Try to fix tests
+
             var inhaleCycles = 100;
             for (var i = 0; i < inhaleCycles; i++)
             {
                 // Breathe in
                 await PoolManager.WaitUntil(server, () => resp.Status == RespiratorStatus.Exhaling);
                 Assert.That(
-                    GetMapMoles(), Is.GreaterThan(0.0f),  // Reserve edit: Try to fix tests
+                    GetMapMoles(), Is.LessThan(startingMoles),
                     "Did not inhale in any gas"
                 );
 
