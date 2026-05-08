@@ -119,6 +119,7 @@ public abstract partial class SharedMindSystem : EntitySystem
         SubscribeLocalEvent<MindContainerComponent, ExaminedEvent>(OnExamined);
         SubscribeLocalEvent<MindContainerComponent, SuicideEvent>(OnSuicide);
         SubscribeLocalEvent<VisitingMindComponent, EntityTerminatingEvent>(OnVisitingTerminating);
+        SubscribeLocalEvent<MindComponent, EntityTerminatingEvent>(OnMindTerminating);  // Reserve edit: Try to fix tests
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnReset);
         SubscribeLocalEvent<MindComponent, ComponentStartup>(OnMindStartup);
         SubscribeLocalEvent<MindContainerComponent, EntityRenamedEvent>(OnRenamed); // Goob edit
@@ -228,6 +229,37 @@ public abstract partial class SharedMindSystem : EntitySystem
             UnVisit(component.MindId.Value);
     }
 
+    // Reserve edit start: Try to fix tests
+    private void OnMindTerminating(EntityUid uid, MindComponent component, ref EntityTerminatingEvent args)
+    {
+        var query = EntityQueryEnumerator<MindContainerComponent>();
+        while (query.MoveNext(out var container_uid, out var container))
+        {
+            var dirty = false;
+            if (container.Mind == uid)
+            {
+                container.Mind = null;
+                dirty = true;
+            }
+            if (container.LastMindStored == uid)
+            {
+                container.LastMindStored = null;
+                dirty = true;
+            }
+            if (dirty)
+                Dirty(container_uid, container);
+        }
+    }
+    // Reserve edit end: Try to fix tests
+
+    // goob start
+    public void SetShowExamineInfo(Entity<MindContainerComponent> ent, bool value)
+    {
+        ent.Comp.ShowExamineInfo = value;
+        Dirty(ent);
+    }
+    // goob end
+
     private void OnExamined(EntityUid uid, MindContainerComponent mindContainer, ExaminedEvent args)
     {
         if (!mindContainer.ShowExamineInfo || !args.IsInDetailsRange)
@@ -293,6 +325,13 @@ public abstract partial class SharedMindSystem : EntitySystem
             return mind.Mind;
 
         return null;
+    }
+
+    // Goobstation
+    public void SetGhostOnShutdown(EntityUid uid, bool value, MindContainerComponent? mind = null)
+    {
+        if (Resolve(uid, ref mind))
+            mind.GhostOnShutdown = value;
     }
 
     public Entity<MindComponent> CreateMind(NetUserId? userId, string? name = null)
@@ -414,7 +453,7 @@ public abstract partial class SharedMindSystem : EntitySystem
         if (mindId == null || !Resolve(mindId.Value, ref mind, false))
             return;
 
-        TransferTo(mindId.Value, null, createGhost:false, mind: mind);
+        TransferTo(mindId.Value, null, createGhost: false, mind: mind);
         SetUserId(mindId.Value, null, mind: mind);
     }
 
@@ -436,9 +475,9 @@ public abstract partial class SharedMindSystem : EntitySystem
     {
     }
 
-    public virtual void ControlMob(EntityUid user, EntityUid target) {}
+    public virtual void ControlMob(EntityUid user, EntityUid target) { }
 
-    public virtual void ControlMob(NetUserId user, EntityUid target) {}
+    public virtual void ControlMob(NetUserId user, EntityUid target) { }
 
     /// <summary>
     /// Tries to create and add an objective from its prototype id.
@@ -717,8 +756,7 @@ public abstract partial class SharedMindSystem : EntitySystem
     /// Returns a list of every living humanoid player's minds, except for a single one which is exluded.
     /// A new hashset is allocated for every call, consider using <see cref="AddAliveHumans"/> instead.
     /// </summary>
-    public HashSet<Entity<MindComponent>> GetAliveHumans(EntityUid? exclude = null,
-        bool excludeSilicon = false, bool excludeChangeling = false) // Goob edit - exclude certain groups of entities
+    public HashSet<Entity<MindComponent>> GetAliveHumans(EntityUid? exclude = null)
     {
         var allHumans = new HashSet<Entity<MindComponent>>();
         AddAliveHumans(allHumans, exclude);
@@ -728,8 +766,7 @@ public abstract partial class SharedMindSystem : EntitySystem
     /// <summary>
     /// Adds to a hashset every living humanoid player's minds, except for a single one which is exluded.
     /// </summary>
-    public void AddAliveHumans(HashSet<Entity<MindComponent>> allHumans, EntityUid? exclude = null,
-    bool excludeSilicon = false, bool excludeChangeling = false) // Goob edit - exclude certain groups of entities
+    public void AddAliveHumans(HashSet<Entity<MindComponent>> allHumans, EntityUid? exclude = null)
     {
         // HumanoidAppearanceComponent is used to prevent mice, pAIs, etc from being chosen
         var query = EntityQueryEnumerator<HumanoidAppearanceComponent, MobStateComponent>();
@@ -740,14 +777,12 @@ public abstract partial class SharedMindSystem : EntitySystem
             if (!TryGetMind(uid, out var mind, out var mindComp) || mind == exclude || !_mobState.IsAlive(uid, mobState))
                 continue;
 
-            // goob edit start - selection blocker event
+            // Goobstation - selection blocker event
             var blockEv = new GetAntagSelectionBlockerEvent();
             RaiseLocalEvent(uid, ref blockEv);
 
-            if (excludeSilicon && blockEv.IsSilicon
-                || excludeChangeling && blockEv.IsChangeling)
+            if (blockEv.Blocked)
                 continue;
-            // goob edit end
 
             allHumans.Add((mind, mindComp));
         }
