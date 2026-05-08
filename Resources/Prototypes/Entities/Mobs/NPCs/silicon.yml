@@ -258,6 +258,7 @@
     defaultChannel: Binary
     channels:
     - Binary
+  - type: IntellicardableMind # Goobstation - intellicard on more AIs
   - type: HealthExaminable
     examinableTypes:
     - Blunt
@@ -530,7 +531,7 @@
         reagent: Tricordrazine
         quantity: 30
         minDamage: 0
-        maxDamage: 50
+        maxDamage: 100 # Goobstation
       Critical:
         reagent: Inaprovaline
         quantity: 15
@@ -544,20 +545,17 @@
       Critical:
         reagent: SpaceDrugs
         quantity: 25
-  - type: RandomSprite
-    available:
-        - enum.DamageStateVisualLayers.Base:
-            medibot: ""
-          enum.DamageStateVisualLayers.BaseUnshaded:
-            powered: Rainbow
+  # - type: RandomSprite  # Reserve: Bring back original medibot
+  #   available:
+  #       - enum.DamageStateVisualLayers.Base:
+  #           medibot: ""
+  #         enum.DamageStateVisualLayers.BaseUnshaded:
+  #           powered: Rainbow
   - type: Sprite
-    sprite: _Goobstation/Mobs/Silicon/Bots/medibot.rsi
+    sprite: Mobs/Silicon/Bots/medibot.rsi
     layers:
       - state: medibot
         map: [ "enum.DamageStateVisualLayers.Base" ]
-      - state: powered
-        map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
-        shader: unshaded
   - type: HTN
     rootTask:
       task: MedibotCompound
@@ -572,7 +570,8 @@
     interactFailureString: petting-failure-medibot
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
-      path: /Audio/Animals/cat_meow.ogg
+      # path: /Audio/Animals/cat_meow.ogg  # Reserve: Bring back original medibot
+      path: /Audio/Ambience/Objects/periodic_beep.ogg  # Reserve: Bring back original medibot
   - type: ShowHealthBars
     damageContainers:
     - Biological
