@@ -58,7 +58,7 @@
       - id: ClothingHeadHatBeretSeniorBotanist
     - !type:AllSelector
       children:
-      - id: UniformEnvirosuitHydroponics
+      - id: ClothingUniformEnvirosuitHydroponics
       - id: ClothingHeadEnvirohelmHydroponics
     - id: ToyFigurineBotanist
     - id: VendingMachineRestockSeeds
@@ -145,7 +145,7 @@
     - id: RCDAmmo
       amount: 2
       weight: 1.2
-    - id: AirtankFilled
+    - id: AirTankFilled
       amount: 2
       weight: 1.2
     - id: AirGrenade
