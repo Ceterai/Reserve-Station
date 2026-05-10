@@ -17,18 +17,6 @@
     prototypes:
     - MobBrullbar
 
-# Reserve: Better spawners start
-- type: entity
-  parent: SpawnMobBrullbar
-  id: SpawnMobBrullbarChance
-  suffix: 5% chance
-  components:
-  - type: ConditionalSpawner
-    prototypes:
-    - MobBrullbar
-    chance: 0.05
-# Reserve: Better spawners end
-
 - type: entity
   name: Brullbar King Spawner
   id: SpawnMobBrullbarKing

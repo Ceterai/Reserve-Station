@@ -75,48 +75,6 @@
     prototypes:
     - MobCatSpace
 
-# Reserve: Better spawners start
-- type: entity
-  parent: MarkerBase
-  id: SpawnMobCatAny
-  name: Any Cat Spawner
-  components:
-  - type: Sprite
-    layers:
-    - state: green
-    - state: ai
-  - type: RandomSpawner
-    prototypes:
-    - MobCat
-    - MobCatCalico
-    - MobCatCaracal
-    - MobCatKitten
-    rarePrototypes:
-    - MobCatShadow
-    - MobCatSpace
-    - MobCatRuntime
-    - MobCatException
-    - MobCatFloppa
-    - MobBingus
-    rareChance: 0.15
-
-- type: entity
-  parent: MarkerBase
-  id: SpawnMobScurret
-  name: Any Scurret Spawner
-  components:
-  - type: Sprite
-    layers:
-    - state: green
-    - state: ai
-  - type: RandomSpawner
-    prototypes:
-    - MobScurret
-    rarePrototypes:
-    - MobEmotionalSupportScurret
-    rareChance: 0.15
-# Reserve: Better spawners end
-
 - type: entity
   parent: MarkerBase
   id: SpawnMobCockroach
