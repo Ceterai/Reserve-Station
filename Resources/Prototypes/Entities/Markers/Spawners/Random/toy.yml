@@ -357,11 +357,8 @@
       - !type:AllSelector
         children:
         - id: MrChips
-          orGroup: GiftPool
         - id: MrDips
-          orGroup: Giftpool
         - id: LilCal
-          orGroup: Giftpool
         weight: 1.0
       - !type:NestedSelector
         tableId: AllPlushiesTable
