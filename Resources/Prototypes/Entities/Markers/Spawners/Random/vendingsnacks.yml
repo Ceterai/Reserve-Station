@@ -37,5 +37,8 @@
       - VendingMachineHotfood
       - VendingMachineSolsnack
       - VendingMachineWeeb
+      - VendingMachineIceCream  # Reserve
+      - VendingMachineJellyDonuts  # Reserve
+      - VendingMachineSoups  # Reserve
       # Reserve: Orchid's Barmania - Vendichaos end
     chance: 1

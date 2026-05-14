@@ -106,6 +106,8 @@
     FoodButter: 3
     FoodCheese: 2 #Goobstation
     FoodMeat: 6
+    FoodCondimentBottleOil: 1
+    FoodCondimentBottleAllicin: 1
     # Reserve: Orchid's Barmania - Vendichaos end
   contrabandInventory:
     EggBoxBroken: 1
@@ -116,9 +118,10 @@
     FoodGarlic: 2
     FoodOnion: 2
     FoodTomato: 3
-    FoodCondimentBottleOil: 1
-    FoodCondimentBottleOilOlive: 1
+    FoodCondimentBottleRefinedOil: 1
+    FoodCondimentBottleOliveOil: 1
     FoodCondimentBottleCornOil: 1
+    FoodCondimentBottleEveryspice: 1
     DrinkJuicePumpkinBottleFull: 1
     # Reserve: Orchid's Barmania - Vendichaos end
   emaggedInventory: # Goobstation

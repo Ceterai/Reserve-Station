@@ -1,4 +1,3 @@
-# Orchid's Barmania - Vendichaos start
 ent-RandomDrinkCan = спавнер случайный напиток
     .suffix = Банка
     .desc = { ent-MarkerBase.desc }
@@ -23,4 +22,10 @@ ent-RandomDrinkJuice = спавнер случайный напиток
 ent-RandomDrinkMilk = спавнер случайный напиток
     .suffix = Молоко в стакане
     .desc = { ent-MarkerBase.desc }
-# Orchid's Barmania - Vendichaos end
+
+ent-RandomFoodCondimentBottle = спавнер случайный соус
+    .suffix = Бутылка
+    .desc = { ent-MarkerBase.desc }
+ent-RandomFoodCondimentPacket = спавнер случайный соус
+    .suffix = Пакетик
+    .desc = { ent-MarkerBase.desc }

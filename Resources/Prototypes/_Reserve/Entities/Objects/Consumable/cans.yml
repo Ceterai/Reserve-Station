@@ -2,33 +2,36 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-# Orchid's Barmania - Vendichaos start
+# region Empty
+
 - type: entity
   parent: DrinkCanBaseFull
   id: DrinkCan
   name: aluminium can
-  suffix: Empty
+  suffix: ""
   description: Buy this if you hate the environment.
   components:
   - type: SolutionContainerManager
     solutions:
       drink:
         maxVol: 30
-      grindable:
+      grindable: &grindableAluminium
         reagents:
         - ReagentId: Aluminium
           Quantity: 4
         - ReagentId: Iron
           Quantity: 1
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/default.rsi
+    sprite: _Reserve/Objects/Consumable/Drinks/cans.rsi
   - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/default.rsi
+    sprite: _Reserve/Objects/Consumable/Drinks/cans.rsi
 
-# - Fun -
+# endregion
+
+# region Fun
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkEggCan
   name: white surprise can
   description: This isn't meant to be drunk. I hope.
@@ -36,23 +39,18 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: Egg
           Quantity: 30
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/egg.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/egg.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: egg
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkNothingCan
   name: nothing in a can
   description: This isn't really anything.
@@ -60,25 +58,20 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: Nothing
           Quantity: 30
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/nothing.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/nothing.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: nothing
 
-# - Soups -
+# region Soups
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkEggCookedCan
   name: egg soup can
   description: Plain cooked eggs in a can. Simple yet cheap.
@@ -86,23 +79,18 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: EggCooked
           Quantity: 30
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/egg_cooked.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/egg_cooked.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: egg_cooked
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkHotRamenCan
   name: noodle soup can
   description: Plain noodles in a can. Simple yet cheap.
@@ -110,51 +98,43 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: HotRamen
           Quantity: 30
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/ramen.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/ramen.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: ramen
 
-# - Sodas -
+# endregion
+
+# region Sodas
 
 - type: entity
-  parent: DrinkCanBaseFull
-  id: DrinkSpritexCan
+  parent: DrinkCan
+  id: DrinkCanSpritex
   name: Spritex can
   description: A knock-off of a long-forgotten brand.
   components:
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: SodaWater
           Quantity: 25
         - ReagentId: Sugar
           Quantity: 5
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/spritex.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/spritex.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: spritex
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkFantaxCan
   name: Fantax can
   description: A knock-off of a long-forgotten brand.
@@ -162,7 +142,6 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: JuiceOrange
           Quantity: 10
@@ -170,19 +149,15 @@
           Quantity: 15
         - ReagentId: Sugar
           Quantity: 5
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/fantax.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/fantax.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: fantax
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkBlueSpaceUpCan
   name: BlueSpace-Up can
   description: Tastes like a cross-dimensional tear in your mouth.
@@ -196,21 +171,120 @@
           Quantity: 25
         - ReagentId: SpaceUp
           Quantity: 25
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/bluespaceup.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/bluespaceup.rsi
-
-# - Juices -
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: space_up_blue
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
+  id: DrinkLemonadeSodaCan
+  name: soda lemonade can
+  description: Tasty soda lemonade in a can.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Lemonade
+          Quantity: 20
+        - ReagentId: SodaWater
+          Quantity: 7
+        - ReagentId: Ice
+          Quantity: 3
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: soda_lemonade
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkClassicColaCan
+  name: Classic cola can
+  description: A classic taste from times gone by.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: NuclearCola
+          Quantity: 30
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: cola_classic
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkBerryColaCan
+  name: Berry Drive cola can
+  description: Berry taste in cola, almost like the real thing!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Cola
+          Quantity: 15
+        - ReagentId: GrapeSoda
+          Quantity: 15
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: cola_grape
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkSodaAccelerateCan
+  name: Accelerate soda can
+  description: Accelerate your life to the max!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: SodaWater
+          Quantity: 25
+        - ReagentId: Sugar
+          Quantity: 5
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: soda_accelerate
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkAltColaCan
+  name: Pepis cola can
+  description: Cola from a familiar but long-forgotten brand.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Cola
+          Quantity: 30
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: cola
+
+# endregion
+
+# region Juices
+
+- type: entity
+  parent: DrinkCan
   id: DrinkCherryBoomCan
   name: Cherry Boom can
   description: Some soothing non-carbonated sweetness for those who doesn't like bubbles.
@@ -218,25 +292,20 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: JuiceCherry
           Quantity: 25
         - ReagentId: Sugar
           Quantity: 5
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/cherry.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/cherry.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: cherry
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkBerryBoomCan
   name: Berry Boom can
   description: Some soothing non-carbonated sweetness for those who doesn't like bubbles.
@@ -244,25 +313,20 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: JuiceBerry
           Quantity: 25
         - ReagentId: Sugar
           Quantity: 5
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/berry.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/berry.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: berry
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkMangoBoomCan
   name: Mango Boom can
   description: Some soothing non-carbonated sweetness for those who doesn't like bubbles.
@@ -270,25 +334,20 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: JuiceMango
           Quantity: 25
         - ReagentId: Sugar
           Quantity: 5
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/mango.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/mango.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: mango
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkPotatoBoomCan
   name: Potato Boom can
   description: Some soothing non-carbonated sweetness for absolute psychopaths.
@@ -296,25 +355,20 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: JuicePotato
           Quantity: 25
         - ReagentId: Sugar
           Quantity: 5
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/potato.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/potato.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: potato
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkPumpkinBoomCan
   name: Pumpkin Boom can
   description: Some soothing non-carbonated sweetness for those who like Halloween a bit too much.
@@ -322,25 +376,20 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: PumpkinFlesh
           Quantity: 25
         - ReagentId: Sugar
           Quantity: 5
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/pumpkin.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/pumpkin.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: pumpkin
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkBlueBoomCan
   name: Blue Boom can
   description: Some soothing non-carbonated sweetness for those who like mysteries.
@@ -348,25 +397,20 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: JuiceBluePumpkin
           Quantity: 25
         - ReagentId: Sugar
           Quantity: 5
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/bluepumpkin.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/bluepumpkin.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: blue_pumpkin
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkPoisonBoomCan
   name: Poison Boom can
   description: Some soothing non-carbonated sweetness for those who like dying.
@@ -374,25 +418,41 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: JuiceBerryPoison
           Quantity: 25
         - ReagentId: Sugar
           Quantity: 5
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/poison.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/poison.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: poison
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
+  id: DrinkBungoBoomCan
+  name: Tropical Boom can
+  description: A taste of the tropics in a small can.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceBungo
+          Quantity: 25
+        - ReagentId: Sugar
+          Quantity: 5
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: soda_ginger
+
+- type: entity
+  parent: DrinkCan
   id: DrinkJuiceMultifruitCan
   name: Multifruit can
   description: A healthy taste of fruits coming together.
@@ -400,7 +460,6 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: JuiceApple
           Quantity: 7.5
@@ -410,19 +469,37 @@
           Quantity: 7.5
         - ReagentId: JuiceOrange
           Quantity: 7.5
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/multifruit.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/multifruit.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: multifruit
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
+  id: DrinkJuiceVeggieCan
+  name: Veggie can
+  description: A taste of vegetables in a small can.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: JuiceTomato
+          Quantity: 10
+        - ReagentId: JuiceCarrot
+          Quantity: 10
+        - ReagentId: JuicePotato
+          Quantity: 10
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: soda_grenadine
+
+- type: entity
+  parent: DrinkCan
   id: DrinkLemonLimeStillCan
   name: Smite Still can
   description: A non-carbonated drink line from Smite!
@@ -430,7 +507,6 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: JuiceLemon
           Quantity: 12
@@ -438,21 +514,38 @@
           Quantity: 12
         - ReagentId: Sugar
           Quantity: 6
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/lemon_lime_still.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/lemon_lime_still.rsi
-
-# - Healthy -
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: lemon_lime
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
+  id: DrinkLemonadeCan
+  name: lemonade can
+  description: Tasty lemonade in a can.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Lemonade
+          Quantity: 30
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: lemonade
+
+# endregion
+
+# region Healthy
+
+- type: entity
+  parent: DrinkCan
   id: DrinkDoctorMomCan
   name: Doctor Mom can
   description: Drink your vitamins!
@@ -460,23 +553,18 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: Vitamin
           Quantity: 30
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/vitamin.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/vitamin.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: vitamin
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkDoctorNutCan
   name: Doctor Nut can
   description: Drink your nutriments!
@@ -484,23 +572,18 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: Nutriment
           Quantity: 30
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/nutriment.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/nutriment.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: nutriment
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkDoctorPwrCan
   name: Doctor Pwr can
   description: A Pwrgame drink line that markets itself as "healthy". 100% protein.
@@ -508,25 +591,22 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: Protein
           Quantity: 30
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/protein.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/protein.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: protein
 
-# - Bad -
+# endregion
+
+# region Bad
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkBloodCan
   name: Vampire's Kiss can
   description: Bloodsuckers love this cocktail of pure plasma!
@@ -534,23 +614,18 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: Blood
           Quantity: 30
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/blood.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/blood.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: blood
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
   id: DrinkPilkCan
   name: pilk can
   description: Digest the undigestable!
@@ -558,25 +633,90 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: Pilk
           Quantity: 30
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/pilk.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/pilk.rsi
-
-# - Alcohol -
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: pilk
 
 - type: entity
-  parent: DrinkCanBaseFull
+  parent: DrinkCan
+  id: DrinkAnomalyBoomCan
+  name: Anomaly Boom can
+  description: Tasty fruits in a can, with a kick!
+  suffix: Fake
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Water
+          Quantity: 22
+        - ReagentId: FerrochromicAcid
+          Quantity: 2
+        - ReagentId: Sugar
+          Quantity: 6
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: soda_grape
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkTeaFakeCan
+  name: Chemist's Joy green tea can
+  description: A drink with a "green tea 6" taste.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Water
+          Quantity: 25
+        - ReagentId: Chlorine
+          Quantity: 2
+        - ReagentId: Acetone
+          Quantity: 3
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: tea_bio_plus
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkTonicMutagenCan
+  name: BioPlus tonic can
+  description: A shady tonic, taking "bio" to a whole new, unexplored level!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Water
+          Quantity: 27
+        - ReagentId: UnstableMutagen
+          Quantity: 3
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: tonic_bio_plus
+
+# endregion
+
+# region Alcohol
+
+- type: entity
+  parent: DrinkCan
   id: DrinkMojitoCan
   name: mojito can
   description: A luxury cocktail in a factory can, that's quite a clash.
@@ -584,18 +724,263 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
         reagents:
         - ReagentId: Mojito
           Quantity: 30
-      grindable:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 4
-        - ReagentId: Iron
-          Quantity: 1
+      grindable: *grindableAluminium
   - type: Sprite
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/mojito.rsi
-  - type: Item
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/mojito.rsi
-# Orchid's Barmania - Vendichaos end
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: mojito
+
+# endregion
+
+# region Neutral
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkWaterFakeCan
+  name: Super Water can
+  description: The cheapest solution to your thirst!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Water
+          Quantity: 25
+        - ReagentId: JuiceBluePumpkin
+          Quantity: 5
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: water_bio_plus
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkRespawnCan
+  name: Respawn can
+  description: The cheapest solution to your hunger!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Water
+          Quantity: 20
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Sugar
+          Quantity: 5
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: soda_fake
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkTonicFakeCan
+  name: Eco tonic can
+  description: A regular tonic, though it seems "eco" here means "economy".
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Water
+          Quantity: 25
+        - ReagentId: Allicin
+          Quantity: 5
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: tonic_fake
+
+# endregion
+
+# region Iced
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkIcedMilkCan
+  name: iced milk can
+  description: Tasty iced milk in a can.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Milk
+          Quantity: 25
+        - ReagentId: Ice
+          Quantity: 5
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: soda
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkIcedGreenTeaCan
+  name: iced green tea can
+  description: Tasty iced green tea in a can.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: IcedGreenTea
+          Quantity: 30
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: tonic
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkIcedCoffeeCan
+  name: iced coffee can
+  description: Tasty iced coffee in a can.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: IcedCoffee
+          Quantity: 30
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: coffee
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkOrchitoCan
+  name: Sun In A Glass can
+  description: A tasty refreshing tea drink from Orchid.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Orchito
+          Quantity: 30
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: soda_orange
+
+# endregion
+
+# region Energy drinks
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkEnergySugarCan
+  name: SugarRush energy drink can
+  description: Sweetness and energy in one drink!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: EnergyDrink
+          Quantity: 20
+        - ReagentId: JuiceBerryPoison
+          Quantity: 5
+        - ReagentId: Sugar
+          Quantity: 5
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: mountain
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkEnergyReserveCan
+  name: Reserve Secret energy drink can
+  description: Will raise even the dead!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: EnergyDrink
+          Quantity: 10
+        - ReagentId: IcedCoffee
+          Quantity: 15
+        - ReagentId: Sugar
+          Quantity: 5
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: death
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkEnergyMaxCan
+  name: EnergyMax energy drink can
+  description: An energy drink with tons of caffeine and other additives. Dangerous, but extremely effective.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Stimulants
+          Quantity: 10
+        - ReagentId: NuclearCola
+          Quantity: 15
+        - ReagentId: Ice
+          Quantity: 5
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: text_purple
+
+- type: entity
+  parent: DrinkCan
+  id: DrinkEnergyReserveRobustCan
+  name: Reserve Robust energy drink can
+  description: The most nuclear energy mix you can drink and not die. Can you handle it, weakling?
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Stimulants
+          Quantity: 12
+        - ReagentId: EnergyDrink
+          Quantity: 8
+        - ReagentId: Coffee
+          Quantity: 8
+        - ReagentId: Sugar
+          Quantity: 2
+      grindable: *grindableAluminium
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: dr_ripper_red
+
+# endregion

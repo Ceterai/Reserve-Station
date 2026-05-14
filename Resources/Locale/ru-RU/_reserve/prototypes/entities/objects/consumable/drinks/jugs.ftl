@@ -1,4 +1,3 @@
-# Orchid's Barmania - Vendichaos start
 ent-DrinkAppleJuiceJug = кувшин яблочного сока
     .desc = Просто яблоки.
 ent-DrinkLemonJuiceJug = кувшин лимонного сока
@@ -7,4 +6,7 @@ ent-DrinkBluePumpkinJuiceJug = кувшин синетыквенного сок�
     .desc = Очень синий вкус.
 ent-DrinkMangoJuiceJug = кувшин сока манго
     .desc = Очень тропический вкус.
-# Orchid's Barmania - Vendichaos end
+ent-DrinkBungoJuiceJug = кувшин сока бунго
+    .desc = Очень тропический вкус.
+ent-DrinkPineappleJuiceJug = кувшин ананасового сока
+    .desc = Очень тропический вкус.

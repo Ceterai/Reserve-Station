@@ -64,7 +64,7 @@
       # - Cans
       - DrinkEggCookedCan
       - DrinkHotRamenCan
-      - DrinkSpritexCan
+      - DrinkCanSpritex
       - DrinkFantaxCan
       - DrinkBlueSpaceUpCan
       - DrinkCherryBoomCan
@@ -72,16 +72,40 @@
       - DrinkMangoBoomCan
       - DrinkPumpkinBoomCan
       - DrinkBlueBoomCan
+      - DrinkBungoBoomCan
       - DrinkLemonLimeStillCan
       - DrinkMojitoCan
       - DrinkJuiceMultifruitCan
+      - DrinkTeaFakeCan
+      - DrinkTonicMutagenCan
+      - DrinkWaterFakeCan
+      - DrinkRespawnCan
+      - DrinkTonicFakeCan
+      - DrinkClassicColaCan
+      - DrinkBerryColaCan
+      - DrinkSodaAccelerateCan
+      - DrinkAltColaCan
+      - DrinkLemonadeCan
+      - DrinkLemonadeSodaCan
+      - DrinkIcedMilkCan
+      - DrinkIcedGreenTeaCan
+      - DrinkIcedCoffeeCan
+      - DrinkOrchitoCan
+      - DrinkEnergySugarCan
+      - DrinkEnergyReserveCan
       # - Cups
       - DrinkEggCooked
       - DrinkHotRamen
       - DrinkMisoSoup
       - DrinkTomYamSoup
       - DrinkPumpkinSoup
+      - DrinkGarlicSoup
       - DrinkPumpkinSpiceLatte
+      - DrinkHotSoyLatte
+      - DrinkHotCream
+      - DrinkCreamOfCoconut
+      - DrinkMilkChoco
+      - DrinkCreamCoffee
       # - Bottles
       - DrinkJuiceBluePumpkinBottleFull
       - DrinkJuiceMultifruitBottleFull
@@ -93,6 +117,12 @@
       - DrinkJuiceBluePumpkinCarton
       - DrinkJuiceMangoCarton
       - DrinkJuiceMultifruitCarton
+      - DrinkJuiceTropicalCarton
+      - DrinkJuiceBungoCarton
+      - DrinkOatMilkCartonMini
+      - DrinkSoyMilkCartonMini
+      - DrinkMilkCartonMini
+      - DrinkMilkCartonMiniChocolate
       # Reserve: Orchid's Barmania - Vendichaos end
     chance: 0.8
     offset: 0.0
@@ -105,12 +135,18 @@
       - DrinkNothingCan
       - DrinkPotatoBoomCan
       - DrinkPoisonBoomCan
+      - DrinkAnomalyBoomCan
       - DrinkDoctorMomCan
       - DrinkDoctorNutCan
       - DrinkDoctorPwrCan
       - DrinkBloodCan
       - DrinkPilkCan
+      - DrinkJuiceVeggieCan
+      - DrinkEnergyMaxCan
+      - DrinkEnergyReserveRobustCan
       # - Cups
+      - DrinkBluePumpkinSoup
+      - DrinkNettleSoup
       # - Bottles
       - DrinkPoisonBoomBottleFull
       - DrinkJuicePumpkinBottleFull

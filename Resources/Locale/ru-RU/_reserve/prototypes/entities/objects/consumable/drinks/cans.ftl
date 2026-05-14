@@ -1,4 +1,3 @@
-# Orchid's Barmania - Vendichaos start
 ent-DrinkCan = банка
     .suffix = Пусто
     .desc = Купи ее если ненавидишь окружающую среду.
@@ -34,8 +33,12 @@ ent-DrinkBlueBoomCan = банка синего бума
     .desc = Успокаивающая негазированная сладость для тех кто любит загадки.
 ent-DrinkPoisonBoomCan = банка ядовитого бума
     .desc = Успокаивающая негазированная сладость для тех кто любит умирать.
+ent-DrinkBungoBoomCan = банка тропического бума
+    .desc = Вкус тропиков в маленькой баночке.
 ent-DrinkJuiceMultifruitCan = банка сока мультифрукта
     .desc = Здоровый вкус союза фруктов.
+ent-DrinkJuiceVeggieCan = банка сока мультиовоща
+    .desc = Вкус овощей в маленькой баночке.
 ent-DrinkLemonLimeStillCan = банка смайта без газа
     .desc = Негазированная линейка напитков от Смайт.
 
@@ -53,4 +56,47 @@ ent-DrinkPilkCan = банка пилка
 
 ent-DrinkMojitoCan = банка мохито
     .desc = Люкс-коктейль вроде мохито в обычной заводской баночке... Вот это контраст.
-# Orchid's Barmania - Vendichaos end
+
+ent-DrinkAnomalyBoomCan = банка аномального бума
+    .desc = Вкусные фрукты в баночке, с кислинкой!
+    .suffix = Поддельный
+ent-DrinkTeaFakeCan = банка зеленого чая Радость Химика
+    .desc = Напиток со вкусом "зеленый чай 6".
+ent-DrinkTonicMutagenCan = банка тоника BioPlus
+    .desc = Подозрительный тоник, ставящий "био" на новый, неизведанный уровень!
+ent-DrinkWaterFakeCan = банка напитка Супер Вода
+    .desc = Самое дешевое решение твоей жажды!
+ent-DrinkRespawnCan = банка напитка Респавн
+    .desc = Самое дешевое решение твоего голода!
+ent-DrinkTonicFakeCan = банка тоника Eco
+    .desc = Обычный тоник. Правда, кажется, "эко" тут означает "эконом".
+ent-DrinkClassicColaCan = банка колы Classic
+    .desc = Классический вкус ушедших времен.
+ent-DrinkBerryColaCan = банка колы Ягодный Драйв
+    .desc = Вкус ягод в коле, почти как настоящий!
+ent-DrinkSodaAccelerateCan = банка содовой Акселерейт
+    .desc = Ускорь свою жизнь на максимум!
+ent-DrinkAltColaCan = банка колы Пепис
+    .desc = Кола от знакомого но давно забытого бренда.
+
+ent-DrinkLemonadeCan = банка лимонада
+    .desc = Вкусный лимонад в баночке.
+ent-DrinkLemonadeSodaCan = банка содового лимонада
+    .desc = Вкусный содовый лимонад в баночке.
+ent-DrinkIcedMilkCan = банка холодного молока
+    .desc = Вкусное холодное молоко в баночке.
+ent-DrinkIcedGreenTeaCan = банка холодного зеленого чая
+    .desc = Вкусный холодный зеленый чай в баночке.
+ent-DrinkIcedCoffeeCan = банка холодного кофе
+    .desc = Вкусный холодный кофе в баночке.
+ent-DrinkOrchitoCan = банка Солнца В Бокале
+    .desc = Вкусный прохладительный чайный напиток от Орхидеи.
+
+ent-DrinkEnergySugarCan = банка энергетика SugarRush
+    .desc = Сладость и энергия в одном напитке!
+ent-DrinkEnergyReserveCan = банка Секрета Резерва
+    .desc = Поднимет даже мертвого!
+ent-DrinkEnergyMaxCan = банка энергетика EnergyMax
+    .desc = Энергетик с кучей кофеина и других добавок. Опасная вещь, но крайне эффективная.
+ent-DrinkEnergyReserveRobustCan = банка Резерв Робаста
+    .desc = Самая ядерная энергосмесь, которую можно выпить и не умереть. Осилишь, ничтожество?

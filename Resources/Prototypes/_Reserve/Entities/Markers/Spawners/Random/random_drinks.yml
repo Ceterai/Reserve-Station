@@ -2,7 +2,8 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-# Orchid's Barmania - Vendichaos start
+# region Cans
+
 - type: entity
   id: RandomDrinkCan
   name: random drink spawner
@@ -44,7 +45,7 @@
       # Reserve
       - DrinkEggCookedCan
       - DrinkHotRamenCan
-      - DrinkSpritexCan
+      - DrinkCanSpritex
       - DrinkFantaxCan
       - DrinkBlueSpaceUpCan
       - DrinkBerryBoomCan
@@ -52,9 +53,27 @@
       - DrinkCherryBoomCan
       - DrinkMangoBoomCan
       - DrinkPumpkinBoomCan
+      - DrinkBungoBoomCan
       - DrinkLemonLimeStillCan
       - DrinkMojitoCan
       - DrinkJuiceMultifruitCan
+      - DrinkTeaFakeCan
+      - DrinkTonicMutagenCan
+      - DrinkWaterFakeCan
+      - DrinkRespawnCan
+      - DrinkTonicFakeCan
+      - DrinkClassicColaCan
+      - DrinkBerryColaCan
+      - DrinkSodaAccelerateCan
+      - DrinkAltColaCan
+      - DrinkLemonadeCan
+      - DrinkLemonadeSodaCan
+      - DrinkIcedMilkCan
+      - DrinkIcedGreenTeaCan
+      - DrinkIcedCoffeeCan
+      - DrinkOrchitoCan
+      - DrinkEnergySugarCan
+      - DrinkEnergyReserveCan
     chance: 0.8
     offset: 0.0
     rarePrototypes:
@@ -67,12 +86,20 @@
       - DrinkNothingCan
       - DrinkPotatoBoomCan
       - DrinkPoisonBoomCan
+      - DrinkAnomalyBoomCan
       - DrinkDoctorMomCan
       - DrinkDoctorNutCan
       - DrinkDoctorPwrCan
       - DrinkBloodCan
       - DrinkPilkCan
+      - DrinkJuiceVeggieCan
+      - DrinkEnergyMaxCan
+      - DrinkEnergyReserveRobustCan
     rareChance: 0.01
+
+# endregion
+
+# region Cartons
 
 - type: entity
   id: RandomDrinkCarton
@@ -103,18 +130,27 @@
       - DrinkOatMilkCarton
       - DrinkJuiceLemonCarton
       - DrinkJuicePineappleCarton
+      # Goob
+      - DrinkMilkCartonMini
+      - DrinkMilkCartonMiniChocolate
       # Reserve
-      - DrinkJuiceBluePumpkinCarton
       - DrinkJuiceMangoCarton
       - DrinkJuiceMultifruitCarton
+      - DrinkJuiceTropicalCarton
+      - DrinkJuiceBungoCarton
+      - DrinkOatMilkCartonMini
+      - DrinkSoyMilkCartonMini
     chance: 0.8
     offset: 0.0
     rarePrototypes:
-      # Vanilla
-      - DrinkMilkCarton
       # Reserve
+      - DrinkJuiceBluePumpkinCarton
       - DrinkWineCarton
     rareChance: 0.05
+
+# endregion
+
+# region Cups
 
 - type: entity
   id: RandomDrinkCup
@@ -146,13 +182,21 @@
       - DrinkMisoSoup
       - DrinkTomYamSoup
       - DrinkPumpkinSoup
+      - DrinkGarlicSoup
       - DrinkPumpkinSpiceLatte
+      - DrinkHotSoyLatte
+      - DrinkHotCream
+      - DrinkCreamOfCoconut
+      - DrinkMilkChoco
+      - DrinkCreamCoffee
     chance: 0.8
     offset: 0.0
     rarePrototypes:
       # Vanilla
       - DrinkLean
       # Reserve
+      - DrinkBluePumpkinSoup
+      - DrinkNettleSoup
     rareChance: 0.05
 
 - type: entity
@@ -187,6 +231,10 @@
       - DrinkMugRainbow
     rareChance: 0.05
 
+# endregion
+
+# region Empty
+
 - type: entity
   id: RandomDrinkEmpty
   name: random drink spawner
@@ -213,11 +261,16 @@
       - DrinkMug
       - DrinkMugMetal
       - DrinkShotGlass
+      - DrinkCup
     chance: 0.8
     offset: 0.0
     rarePrototypes:
       - DrinkMugRainbow
     rareChance: 0.05
+
+# endregion
+
+# region Jugs
 
 - type: entity
   id: RandomDrinkJug
@@ -261,6 +314,10 @@
       - DrinkMangoJuiceJug
     rareChance: 0.75
 
+# endregion
+
+# region Juices
+
 - type: entity
   id: RandomDrinkJuice
   name: random drink spawner
@@ -302,6 +359,10 @@
       - DrinkPumpkinFleshGlass
     rareChance: 0.05
 
+# endregion
+
+# region Milks
+
 - type: entity
   id: RandomDrinkMilk
   name: random drink spawner
@@ -333,4 +394,5 @@
       - DrinkMilkSpoiledGlass
       - DrinkPilkGlass
     rareChance: 0.05
-# Orchid's Barmania - Vendichaos end
+
+# endregion

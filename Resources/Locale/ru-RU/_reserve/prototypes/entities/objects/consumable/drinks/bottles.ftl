@@ -1,21 +1,6 @@
-# Orchid's Barmania - Vendichaos start
-ent-DrinkBottleTall = бутылка
-    .suffix = Пусто, Для приправ
-    .desc = Идеально подходит для готовки.
 ent-DrinkBottle = бутылка
     .suffix = Пусто, Для напитков
     .desc = Надеемся что без микропластиков.
-
-ent-FoodCondimentBottleOil = бутылка подсолнечного масла
-    .desc = { ent-DrinkBottleTall.desc }
-ent-FoodCondimentBottleOilOlive = бутылка оливкового масла
-    .desc = { ent-DrinkBottleTall.desc }
-ent-FoodCondimentBottleCapsaicinOil = бутылка капсаицинового масла
-    .desc = { ent-DrinkBottleTall.desc } Не путать с острым соусом!
-ent-FoodCondimentBottleFrostOil = бутылка криогенного масла
-    .desc = { ent-DrinkBottleTall.desc }
-ent-FoodCondimentBottleCornOil = бутылка кукурузного масла
-    .desc = { ent-DrinkBottleTall.desc }
 
 ent-DrinkJuiceMultifruitBottleFull = бутылка мультифрукта
     .desc = Здоровый вкус союза фруктов.
@@ -41,4 +26,3 @@ reagent-name-mango-boom = манговый бум
 reagent-name-blue-boom = синий бум
 reagent-name-poison-boom = ядовитый бум
 reagent-name-lemon-lime-still = смайт без газа
-# Orchid's Barmania - Vendichaos end

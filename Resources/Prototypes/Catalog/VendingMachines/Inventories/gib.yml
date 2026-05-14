@@ -30,11 +30,11 @@
   id: DrGibbInventory
   startingInventory:
     DrinkDrGibbCan: 6
-    DrinkGrapeCan: 2
+    DrinkBerryColaCan: 2
     DrinkRootBeerCan: 2
-    DrinkIcedTeaCan: 2
+    DrinkLemonadeCan: 2
     DrinkSolDryCan: 2
-    DrinkLemonLimeCan: 2
+    DrinkTeaFakeCan: 3  # Reserve: Orchid's Barmania - Vendichaos
     DrinkLemonLimeCranberryCan: 2
     DrinkFourteenLokoCan: 2
     DrinkDoctorNutCan: 1  # Reserve: Orchid's Barmania - Vendichaos

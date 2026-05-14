@@ -136,15 +136,13 @@
     contents:
     - id: DrinkAleBottleFullGrowler
     - id: DrinkBeerGrowler
-    # Reserve: Orchid's Barmania - Vendichaos start
-    # - id: DrinkCoffeeLiqueurBottleFull
-    # - id: DrinkCognacBottleFull
-    # - id: DrinkGinBottleFull
+    - id: DrinkCoffeeLiqueurBottleFull
+    - id: DrinkCognacBottleFull
+    - id: DrinkGinBottleFull
     - id: DrinkMeadJug
-    # - id: DrinkRumBottleFull
-    # - id: DrinkTequilaBottleFull
-    # - id: DrinkVermouthBottleFull
-    # - id: DrinkVodkaBottleFull
-    # - id: DrinkWhiskeyBottleFull
-    # - id: DrinkWineBottleFull
-    # Reserve: Orchid's Barmania - Vendichaos end
+    - id: DrinkRumBottleFull
+    - id: DrinkTequilaBottleFull
+    - id: DrinkVermouthBottleFull
+    - id: DrinkVodkaBottleFull
+    - id: DrinkWhiskeyBottleFull
+    - id: DrinkWineBottleFull

@@ -134,10 +134,8 @@
   - type: Shakeable
   - type: Sprite
     state: icon
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/default.rsi  # Reserve: Orchid's Barmania - Vendichaos
   - type: Item
     size: Small
-    sprite: _Reserve/Objects/Consumable/Drinks/Cans/default.rsi  # Reserve: Orchid's Barmania - Vendichaos
   - type: MeleeWeapon
     soundNoDamage:
       path: "/Audio/Effects/Fluids/splat.ogg"
