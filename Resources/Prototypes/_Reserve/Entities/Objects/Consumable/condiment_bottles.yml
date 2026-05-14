@@ -309,6 +309,8 @@
           Quantity: 1
         - ReagentId: Butter
           Quantity: 1
+  - type: StaticPrice
+    price: 8
 
 - type: entity
   parent: DrinkBottleTall

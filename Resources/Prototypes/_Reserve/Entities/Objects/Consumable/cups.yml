@@ -203,6 +203,8 @@
           Quantity: 6
         - ReagentId: CafeLatte
           Quantity: 14
+  - type: StaticPrice
+    price: 15
 
 - type: entity
   parent: DrinkCup

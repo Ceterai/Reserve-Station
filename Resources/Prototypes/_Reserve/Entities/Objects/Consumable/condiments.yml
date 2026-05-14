@@ -165,6 +165,8 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 2
     fillBaseName: packet-solid-
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: BaseFoodCondimentPacket
@@ -187,6 +189,8 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 2
     fillBaseName: packet-solid-
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: BaseFoodCondimentPacket
@@ -317,6 +321,8 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 2
     fillBaseName: packet-solid-
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: BaseFoodCondimentPacket
@@ -332,11 +338,9 @@
         - ReagentId: JuiceBanana
           Quantity: 6
         - ReagentId: TableSalt
-          Quantity: 1
-        - ReagentId: Sugar
-          Quantity: 1
+          Quantity: 1.5
         - ReagentId: Blackpepper
-          Quantity: 1
+          Quantity: 1.5
         - ReagentId: Vinegar
           Quantity: 1
   - type: Appearance
@@ -415,6 +419,8 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 2
     fillBaseName: packet-solid-
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: BaseFoodCondimentPacket
@@ -437,6 +443,8 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 2
     fillBaseName: packet-solid-
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: BaseFoodCondimentPacket

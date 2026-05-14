@@ -781,6 +781,8 @@
       - state: icon
         map: ["enum.OpenableVisuals.Layer"]
       - state: soda_fake
+  - type: StaticPrice
+    price: 15
 
 - type: entity
   parent: DrinkCan
