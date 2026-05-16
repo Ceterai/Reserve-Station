@@ -2965,11 +2965,6 @@ entities:
           - 2580
           - 2614
           - 2612
-    - type: UserInterface
-      actors:
-        enum.StorageUiKey.Key:
-        - invalid
-    - type: ActiveUserInterface
 - proto: BoxFolderQmClipboard
   entities:
   - uid: 1942
@@ -7604,10 +7599,6 @@ entities:
     - type: Transform
       pos: 6.48186,10.729865
       parent: 2
-    - type: UserInterface
-      actors:
-        enum.StorageUiKey.Key:
-        - invalid
     - type: Storage
       storedItems:
         871:
@@ -7676,7 +7667,6 @@ entities:
           - 2740
           - 2089
           - 1598
-    - type: ActiveUserInterface
 - proto: ClothingBackpackDuffelSurgeryFilled
   entities:
   - uid: 2501
@@ -15544,7 +15534,7 @@ entities:
         stampedColor: '#006600FF'
         stampedName: stamp-component-stamped-name-centcom
       content: >-
-        [head=2][color=#1b67a5]КОРАБЛЬ ДЕЯ-1[/color][/head]
+        [head=2][color=#1b67a5]КОРАБЛЬ РИЧ-1[/color][/head]
 
         ─────────────────────────────────────────
 
@@ -15630,7 +15620,7 @@ entities:
         stampedColor: '#006600FF'
         stampedName: stamp-component-stamped-name-centcom
       content: >-
-        [head=2][color=#1b67a5]КОРАБЛЬ ДЕЯ-1[/color][/head]
+        [head=2][color=#1b67a5]КОРАБЛЬ РИЧ-1[/color][/head]
 
         ─────────────────────────────────────────
 
@@ -15751,7 +15741,7 @@ entities:
         stampedColor: '#006600FF'
         stampedName: stamp-component-stamped-name-centcom
       content: >-
-        [head=2][color=#1b67a5]КОРАБЛЬ ДЕЯ-1[/color][/head]
+        [head=2][color=#1b67a5]КОРАБЛЬ РИЧ-1[/color][/head]
 
         ─────────────────────────────────────────
 
@@ -20572,9 +20562,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 0.5,-10.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
   - uid: 2518
     components:
     - type: Transform
