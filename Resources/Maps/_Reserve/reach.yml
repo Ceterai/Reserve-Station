@@ -2989,6 +2989,8 @@ entities:
     - type: Transform
       pos: 0.9568187,-15.332221
       parent: 2
+    - type: StorageFill
+      contents: []
     - type: Storage
       storedItems:
         2709:
@@ -8868,6 +8870,8 @@ entities:
     components:
     - type: Transform
       parent: 2733
+    - type: StorageFill
+      contents: []
     - type: Storage
       storedItems:
         2741:
