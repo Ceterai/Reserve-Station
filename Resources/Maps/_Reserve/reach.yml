@@ -2827,6 +2827,8 @@ entities:
       name: книга игрового мастера
     - type: Transform
       parent: 2733
+    - type: StorageFill
+      contents: []
     - type: Storage
       storedItems:
         976:
