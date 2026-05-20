@@ -60,15 +60,23 @@
   tier: 1
   cost: 7500 # Delta Price. 5000 is pre-adjustment.
   recipeUnlocks:
-  - PlantBagOfHolding #DeltaV
+  # - PlantBagOfHolding #DeltaV  # Reserve edit: Orchid's Barmania - Service Heaven - moved to BluespaceHydroponics
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
   - PlantAnalyzer # Reserve add
+  # Reserve edit start: Orchid's Barmania - Service Heaven
+  - WateringCan
+  - ClothingOuterApronBotanistAdvanced
+  - ClothingHandsGlovesBotanistAdvanced
+  - ClothingMaskBreathBotanist
+  - DrinkShakerAdvanced
+  - DrinkKettleAdvanced
+  # Reserve edit end: Orchid's Barmania - Service Heaven
   # Goobstation R&D Console rework start
-  position: -3,4
-  technologyPrerequisites:
-  - AdvancedEntertainment
+  position: -1,7  # Reserve edit: Orchid's Barmania - Service Heaven
+  # technologyPrerequisites:  # Reserve edit: Orchid's Barmania - Service Heaven - no reason to require AdvancedEntertainment
+  # - AdvancedEntertainment
   # Goobstation R&D Console rework end
 
 - type: technology
@@ -153,7 +161,7 @@
   - BiofabricatorMachineCircuitboard
   - BiomassReclaimerMachineCircuitboard
   # Goobstation R&D Console rework start
-  position: -3,5
+  position: 0,8  # Reserve edit: Orchid's Barmania - Service Heaven
   technologyPrerequisites:
   - Hydroponics
   # Goobstation R&D Console rework end
@@ -237,7 +245,7 @@
   - MegaSprayBottle
   - BorgModuleAdvancedCleaning
   # Goobstation R&D Console rework start
-  position: -1,4
+  position: -2,6  # Reserve edit: Orchid's Barmania - Service Heaven
   technologyPrerequisites:
   - AdvancedEntertainment
   - BasicRobotics
@@ -282,7 +290,7 @@
   - WeaponSprayNozzle
   - ClothingBackpackWaterTank
   # Goobstation R&D Console rework start
-  position: -1,6
+  position: -3,6  # Reserve edit: Orchid's Barmania - Service Heaven
   technologyPrerequisites:
   - AdvancedCleaning
   # Goobstation R&D Console rework end

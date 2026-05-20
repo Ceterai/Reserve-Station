@@ -7,3 +7,15 @@
   id: ServiceTools
   recipes:
   - PlantBagOfHolding
+  # Reserve edit start: Orchid's Barmania - Service Heaven
+  - BluespaceBucket
+  - WateringCan
+  - WateringCanExperimental
+  - ClothingOuterApronBotanistAdvanced
+  - ClothingHandsGlovesBotanistAdvanced
+  - ClothingMaskBreathBotanist
+  - DrinkShakerAdvanced
+  - BluespaceDrinkShakerAdvanced
+  - DrinkKettleAdvanced
+  - BluespaceDrinkKettleAdvanced
+  # Reserve edit end: Orchid's Barmania - Service Heaven

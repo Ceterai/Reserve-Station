@@ -36,7 +36,7 @@
     DrinkColaCan: 4
     # Reserve: Orchid's Barmania - Vendichaos start
     DrinkClassicColaCan: 3
-    DrinkCanSpritex: 2
+    DrinkSpritexCan: 2
     DrinkFantaxCan: 2
     # Reserve: Orchid's Barmania - Vendichaos end
     DrinkBrepsiCan: 3

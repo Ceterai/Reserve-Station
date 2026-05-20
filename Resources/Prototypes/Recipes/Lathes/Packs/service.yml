@@ -44,6 +44,9 @@
   - Holoprojector
   - WetFloorSign
   - WireBrush
+  # Reserve edit start: Orchid's Barmania - Service Heaven
+  - ClothingHandsGlovesMitts
+  # Reserve edit end: Orchid's Barmania - Service Heaven
 
 - type: latheRecipePack
   id: ServiceBoardsStatic
@@ -86,3 +89,6 @@
   - JukeboxCircuitBoard
   - DawInstrumentMachineCircuitboard
   - SheetifierMachineCircuitboard # Goobstation - Moved from ScienceBoards
+  - EnergyBoozeDispenserMachineCircuitboard
+  - EnergyDrinkDispenserMachineCircuitboard
+  - EnergySodaDispenserMachineCircuitboard

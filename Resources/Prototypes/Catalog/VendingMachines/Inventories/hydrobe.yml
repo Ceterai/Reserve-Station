@@ -25,7 +25,16 @@
     ClothingUniformJumpsuitHydroponics: 3
     ClothingUniformJumpskirtHydroponics: 3
     ClothingNeckScarfStripedGreen: 3
+    # Reserve edit start: Orchid's Barmania - Service Heaven
+    ClothingHandsGlovesLeather: 1
     ClothingHeadBandBotany: 3
+    ClothingHeadHatBeretSeniorBotanist: 1
+    ClothingMaskBreathBotanist: 1
+    ClothingOuterApronBotanistAdvanced: 1
+    ClothingHandsGlovesBotanistAdvanced: 1
+    ClothingBeltPlant: 1
+    ClothingUniformJumpsuitMilitaryHydroponics: 1
+    # Reserve edit end: Orchid's Barmania - Service Heaven
     ClothingHeadsetService: 2
     ClothingOuterWinterHydro: 2
   contrabandInventory:

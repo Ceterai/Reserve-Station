@@ -1,0 +1,39 @@
+# SPDX-FileCopyrightText: 2026 Ceterai <ceterai@protonmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: technology
+  id: BluespaceHydroponics
+  name: research-technology-bluespace-hydroponics
+  icon:
+    sprite: DeltaV/Objects/Specific/Hydroponics/plant_bag_holding.rsi
+    state: icon
+  discipline: CivilianServices
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - PlantBagOfHolding
+  - BluespaceBucket
+  - WateringCanExperimental
+  position: -1,9
+  technologyPrerequisites:
+  - Hydroponics
+
+- type: technology
+  id: EnergyBarDispensers
+  name: research-technology-advanced-bartending
+  icon:
+    sprite: Structures/dispensers.rsi
+    state: industrial-working
+  discipline: CivilianServices
+  tier: 2
+  cost: 17500
+  recipeUnlocks:
+  - EnergyDrinkDispenserMachineCircuitboard
+  - EnergySodaDispenserMachineCircuitboard
+  - EnergyBoozeDispenserMachineCircuitboard
+  - BluespaceDrinkShakerAdvanced
+  - BluespaceDrinkKettleAdvanced
+  position: -2,7
+  technologyPrerequisites:
+  - Hydroponics

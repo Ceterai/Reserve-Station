@@ -1065,7 +1065,7 @@ DVSmartFridgeMedical: SmartFridgeMedical
 # 2026-01-10 Goobstation Change Mapped Chem to Energy Chem by default
 ChemDispenser: EnergyChemDispenser
 
-# 2026-10-11 Reserve Station edit: Orchid's Barmania - Vendichaos
+# 2026-05-15 Reserve Station edit: Orchid's Barmania - Vendichaos
 VendingMachineCoffee: RandomVendingDrinks
 VendingMachineCola: RandomVendingDrinks
 VendingMachineColaBlack: RandomVendingDrinks
@@ -1087,3 +1087,24 @@ VendingMachineSnackTeal: RandomVendingSnacks
 VendingMachineChang: RandomVendingSnacks
 VendingMachineDonut: RandomVendingSnacks
 VendingMachineSweetToof: RandomVendingSnacks
+
+# 2026-05-20 Reserve Station edit: Orchid's Barmania - Service Heaven
+PlantBag: RandomBotanistTool
+WeedSpray: RandomBotanistTool
+HydroponicsToolScythe: RandomBotanistTool
+ChemistryBottleRobustHarvest: RandomBotanistTool
+BoxMouthSwab: RandomBotanistTool
+PersonalAI: RandomPersonalAI
+ChessBoard: RandomTableTopGame
+BackgammonBoard: RandomTableTopGame
+ParchisBoard: RandomTableTopGame
+CheckerBoard: RandomTableTopGame
+CrateToyBox: CrateFunToyBoxRandom
+RandomArcade: RandomArcadeAny
+FoodCondimentPacketPepper: RandomFoodCondimentPacket
+FoodCondimentPacketSalt: RandomFoodCondimentPacket
+LockerFreezer: LockerFreezerFilledRandom
+CrateFreezer: CrateFreezerFilledRandom
+KitchenKnife: RandomChefTool
+DrinkShaker: RandomBartenderTool
+BoxTrashbag: RandomJanitorTool
