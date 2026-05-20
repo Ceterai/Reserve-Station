@@ -13,24 +13,12 @@ public sealed class SolutionHeaterAutoSystem : EntitySystem
 {
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
 
-    public override void Initialize()
-    {
-        base.Initialize();
-
-        SubscribeLocalEvent<SolutionHeaterAutoComponent, ComponentInit>(OnInit);
-    }
-
-    private void OnInit(Entity<SolutionHeaterAutoComponent> entity, ref ComponentInit args)
-    {
-        EnsureComp<ActiveSolutionHeaterAutoComponent>(entity);
-    }
-
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<ActiveSolutionHeaterAutoComponent, SolutionHeaterAutoComponent, SolutionContainerManagerComponent>();
-        while (query.MoveNext(out var uid, out _, out var heater, out var container))
+        var query = EntityQueryEnumerator<SolutionHeaterAutoComponent, SolutionContainerManagerComponent>();
+        while (query.MoveNext(out var uid, out var heater, out var container))
         {
             if (string.IsNullOrEmpty(heater.Solution))
                 continue;
