@@ -7,7 +7,7 @@
 - type: entity
   parent: DrinkBase
   id: WateringCan
-  name: experimental watering can
+  name: watering can
   description: A watering can that can hold slightly more water than a bucket, and doesn't spill it.
   components:
   - type: Clickable
