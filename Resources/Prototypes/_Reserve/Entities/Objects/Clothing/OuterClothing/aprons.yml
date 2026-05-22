@@ -7,7 +7,7 @@
   id: ClothingOuterApronBotanistAdvanced
   name: advanced botanical apron
   description: A thick apron, perfect for insulating your soft flesh from spills, soil and thorns.
-  suffix: Botanical
+  suffix: ""
   components:
   - type: Sprite
     sprite: _Reserve/Clothing/OuterClothing/Aprons/botanical.rsi
@@ -24,7 +24,7 @@
   id: ClothingOuterApronChemist
   name: advanced chemical apron
   description: A protective apron designed for protecting from chemical spills.
-  suffix: Chemical
+  suffix: ""
   components:
   - type: Sprite
     sprite: _Reserve/Clothing/OuterClothing/Aprons/chemical.rsi

@@ -4,7 +4,7 @@
   id: ClothingHandsGlovesBotanistAdvanced
   name: advanced botanical gloves
   description: These advanced gloves protect your boney hands against thorns, barbs, prickles, and spikes.
-  suffix: Botanical
+  suffix: ""
   components:
   - type: Sprite
     sprite: Clothing/Hands/Gloves/Color/color.rsi
@@ -47,7 +47,7 @@
   id: ClothingHandsGlovesChemistAdvanced
   name: advanced chemical gloves
   description: These advanced insulated gloves protect your boney hands against chemical and thermal burns.
-  suffix: Chemistry
+  suffix: ""
   components:
   - type: Sprite
     sprite: Clothing/Hands/Gloves/Color/color.rsi

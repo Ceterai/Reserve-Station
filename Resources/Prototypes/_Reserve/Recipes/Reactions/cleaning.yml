@@ -101,3 +101,37 @@
   effects:
     - !type:CreateEntityReactionEffect
       entity: EdibleSoapLaughter
+
+- type: reaction
+  id: CreateSoapOmega
+  impact: Medium
+  quantized: true
+  conserveEnergy: false
+  requiredMixerCategories:
+  - Stir
+  reactants:
+    Amatoxin:
+      amount: 1
+    Bananadine:
+      amount: 2
+    Fat:
+      amount: 5
+    Honk:
+      amount: 10
+    Potash:
+      amount: 10
+    Butter:
+      amount: 5
+    Omnizine:
+      amount: 2
+    SpaceDrugs:
+      amount: 3
+    SpaceLube:
+      amount: 5
+    THC:
+      amount: 2
+    TableSalt:
+      amount: 5
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: SoapOmega
