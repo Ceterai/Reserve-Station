@@ -23,8 +23,8 @@
   id: EnergyBarDispensers
   name: research-technology-advanced-bartending
   icon:
-    sprite: Structures/dispensers.rsi
-    state: industrial-working
+    sprite: _Reserve/Objects/Structures/dispensers.rsi
+    state: drinks
   discipline: CivilianServices
   tier: 2
   cost: 17500
