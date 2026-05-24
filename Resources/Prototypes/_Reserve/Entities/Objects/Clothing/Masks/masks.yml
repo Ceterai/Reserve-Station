@@ -6,7 +6,7 @@
   parent: [ClothingMaskBreath, BaseCivilianContraband]
   id: ClothingMaskBreathBotanistAdvanced
   name: botanical breath mask
-  description: This sturdy breathing mask also protects botanist's face from slashy plants.
+  description: This sturdy breathing mask also protects botanist's face from thorny plants.
   components:
   - type: Sprite
     sprite: &botanical_mask_sprite _Reserve/Clothing/Mask/botanical.rsi
@@ -17,7 +17,8 @@
     - Head
     modifiers:
       coefficients:
-        Slash: 0.85
+        Slash: 0.90
+        Piercing: 0.85
 
 - type: entity
   parent: [ClothingMaskBreath, BaseMedicalScienceContraband]
@@ -34,4 +35,4 @@
     - Head
     modifiers:
       coefficients:
-        Caustic: 0.85
+        Caustic: 0.80
