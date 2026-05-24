@@ -3,16 +3,16 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: ClothingOuterApronBotanist
+  parent: [ClothingOuterApronBotanist, BaseCivilianContraband]
   id: ClothingOuterApronBotanistAdvanced
   name: advanced botanical apron
   description: A thick apron, perfect for insulating your soft flesh from spills, soil and thorns.
   suffix: ""
   components:
   - type: Sprite
-    sprite: _Reserve/Clothing/OuterClothing/Aprons/botanical.rsi
+    sprite: &botanical_apron_sprite _Reserve/Clothing/OuterClothing/Aprons/botanical.rsi
   - type: Clothing
-    sprite: _Reserve/Clothing/OuterClothing/Aprons/botanical.rsi
+    sprite: *botanical_apron_sprite
   - type: Armor
     modifiers:
       coefficients:
@@ -20,16 +20,16 @@
         Caustic: 0.85
 
 - type: entity
-  parent: ClothingOuterApronBotanist
+  parent: [ClothingOuterApronBotanist, BaseMedicalScienceContraband]
   id: ClothingOuterApronChemist
   name: advanced chemical apron
   description: A protective apron designed for protecting from chemical spills.
   suffix: ""
   components:
   - type: Sprite
-    sprite: _Reserve/Clothing/OuterClothing/Aprons/chemical.rsi
+    sprite: &chemist_apron_sprite _Reserve/Clothing/OuterClothing/Aprons/chemical.rsi
   - type: Clothing
-    sprite: _Reserve/Clothing/OuterClothing/Aprons/chemical.rsi
+    sprite: *chemist_apron_sprite
   - type: Armor
     modifiers:
       coefficients:

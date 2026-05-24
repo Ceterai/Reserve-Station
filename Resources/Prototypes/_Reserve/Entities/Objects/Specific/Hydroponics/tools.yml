@@ -59,7 +59,7 @@
       Plastic: 75
 
 - type: entity
-  parent: WateringCan
+  parent: [WateringCan, BaseCivilianContraband]
   id: WateringCanExperimental
   name: experimental watering can
   description: An experimental watering can that slowly refills itself.
@@ -85,6 +85,29 @@
     difficulty: 4
     recipes:
       - WateringCanExperimental
+
+- type: entity
+  parent: WateringCanExperimental
+  id: BluespaceWateringCanExperimental
+  name: bluespace EWC
+  description: A bluespace-enhanced experimental watering can that slowly refills itself and has a larger capacity.
+  components:
+  - type: Sprite
+    state: icon_bluespace
+  - type: SolutionContainerManager
+    solutions:
+      bucket:
+        maxVol: 900
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 125
+      Plastic: 125
+      Plasma: 50
+      BSCrystal: 12
+  - type: ReverseEngineering
+    difficulty: 5
+    recipes:
+      - BluespaceWateringCanExperimental
 
 # endregion
 

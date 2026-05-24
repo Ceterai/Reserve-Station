@@ -40,7 +40,7 @@
     fillBaseName: fill-
 
 - type: entity
-  parent: DrinkShakerAdvanced
+  parent: [DrinkShakerAdvanced, BaseCivilianContraband]
   id: BluespaceDrinkShakerAdvanced
   name: bluespace shaker
   description: This advanced shaker uses bluespace technology to hold more liquid.

@@ -918,7 +918,7 @@
   parent: DrinkCan
   id: DrinkEnergyReserveCan
   name: Reserve Secret energy drink can
-  description: Will raise even the dead!
+  description: "Reserve's secret? Reserve: Secret!"
   components:
   - type: SolutionContainerManager
     solutions:
@@ -948,11 +948,11 @@
       drink:
         reagents:
         - ReagentId: Stimulants
-          Quantity: 10
+          Quantity: 4
         - ReagentId: NuclearCola
-          Quantity: 15
+          Quantity: 18
         - ReagentId: Ice
-          Quantity: 5
+          Quantity: 8
       grindable: *grindableAluminium
   - type: Sprite
     layers:
@@ -971,13 +971,13 @@
       drink:
         reagents:
         - ReagentId: Stimulants
-          Quantity: 12
+          Quantity: 6
         - ReagentId: EnergyDrink
-          Quantity: 8
+          Quantity: 10
         - ReagentId: Coffee
-          Quantity: 8
+          Quantity: 10
         - ReagentId: Sugar
-          Quantity: 2
+          Quantity: 4
       grindable: *grindableAluminium
   - type: Sprite
     layers:

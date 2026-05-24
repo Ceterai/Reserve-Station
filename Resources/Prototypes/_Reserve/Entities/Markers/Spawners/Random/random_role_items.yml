@@ -67,8 +67,9 @@
     - id: ClothingHandsGlovesBotanistAdvanced
     - id: ClothingHandsGlovesLeather
     - id: ClothingHandsGlovesEnviroglovesLeather
+    - id: ClothingEyesGogglesBotanistAdvanced
     - id: ClothingMaskBandBotany
-    - id: ClothingMaskBreathBotanist
+    - id: ClothingMaskBreathBotanistAdvanced
     - id: ClothingHeadBandBotany
     - id: ClothingHeadHatTrucker
       weight: 0.5
@@ -84,7 +85,7 @@
     - !type:AllSelector
       weight: 0.4
       children:
-      - id: ClothingMaskBreathBotanist
+      - id: ClothingMaskBreathBotanistAdvanced
       - id: ClothingOuterApronBotanistAdvanced
       - id: ClothingHandsGlovesBotanistAdvanced
     - id: ToyFigurineBotanist
@@ -129,6 +130,8 @@
     - id: ToyFigurineJanitor
     - id: TrashBag
       amount: 2
+    - id: TrashBagOfHolding
+      weight: 0.8
     - id: SprayBottleWater
       amount: 2
       weight: 0.8

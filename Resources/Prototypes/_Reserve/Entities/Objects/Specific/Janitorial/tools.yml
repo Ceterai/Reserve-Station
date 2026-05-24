@@ -31,6 +31,29 @@
 
 # endregion
 
+# region Trash Bags
+
+- type: entity
+  parent: TrashBag
+  id: TrashBagOfHolding
+  name: trash bag of holding
+  components:
+  - type: Sprite
+    sprite: &bluespace_trashbag_sprite _Reserve/Objects/Specific/Janitorial/bluespace_trashbag.rsi
+  - type: Clothing
+    sprite: *bluespace_trashbag_sprite
+  - type: Storage
+    maxItemSize: Large
+    grid:
+    - 0,0,14,9
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 25
+      Plasma: 25
+      BSCrystal: 10
+
+# endregion
+
 # region Soap
 
 - type: entity
@@ -45,14 +68,14 @@
     - Soap
     - FoodSnack
   - type: Sprite
-    sprite: _Reserve/Objects/Specific/Janitorial/soap.rsi
+    sprite: &soap_sprite _Reserve/Objects/Specific/Janitorial/soap.rsi
     layers:
     - state: soap-4
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: SolutionContainerVisuals
     fillBaseName: soap-
   - type: Item
-    sprite: _Reserve/Objects/Specific/Janitorial/soap.rsi
+    sprite: *soap_sprite
   - type: SolutionContainerManager
     solutions:
       soap: &soap_solution

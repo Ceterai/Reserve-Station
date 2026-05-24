@@ -1,4 +1,4 @@
-ent-ClothingMaskBreathBotanist = дыхательная маска ботаника
+ent-ClothingMaskBreathBotanistAdvanced = дыхательная маска ботаника
     .desc = Защищает лицо ботаника от растительных порезов.
 ent-ClothingOuterApronBotanistAdvanced = фартук ботаника
     .desc = Толстый фартук, идеально подходящий для изоляции вашей мягкой плоти от ядовитых растений, грязи и шипов.
@@ -16,3 +16,6 @@ ent-ClothingHandsGlovesMitts = рукава-прихватки
     .desc = Толстые перчатки для держания горячих предметов.
 ent-ClothingHandsGlovesMittsChemist = рукава-прихватки химика
     .desc = Эти толстые изолированные рукава-прихватки защищают ваши костлявые руки от химических и термических ожогов.
+
+ent-ClothingEyesGogglesBotanistAdvanced = очки ботаника
+    .desc = Эти продвинутые очки защищают ваши глаза от ядовитых растений, грязи и шипов.

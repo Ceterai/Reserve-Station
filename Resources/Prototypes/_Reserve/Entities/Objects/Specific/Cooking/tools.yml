@@ -39,7 +39,7 @@
     fillBaseName: fill-
 
 - type: entity
-  parent: DrinkKettleAdvanced
+  parent: [DrinkKettleAdvanced, BaseCivilianContraband]
   id: BluespaceDrinkKettleAdvanced
   name: bluespace kettle
   description: This advanced kettle uses bluespace technology to hold more liquid.

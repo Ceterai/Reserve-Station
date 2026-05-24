@@ -1,18 +1,21 @@
+# SPDX-FileCopyrightText: 2026 Ceterai <ceterai@protonmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: ClothingHandsGlovesEnviroglovesLeather
+  parent: [ClothingHandsGlovesEnviroglovesLeather, BaseCivilianContraband]
   id: ClothingHandsGlovesBotanistAdvanced
   name: advanced botanical gloves
   description: These advanced gloves protect your boney hands against thorns, barbs, prickles, and spikes.
   suffix: ""
   components:
   - type: Sprite
-    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    sprite: &botanical_gloves_sprite Clothing/Hands/Gloves/Color/color.rsi
     layers:
     - state: icon
       color: &botanical_color "#ffb431"
   - type: Item
-    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    sprite: *botanical_gloves_sprite
     inhandVisuals:
       left:
       - state: inhand-left
@@ -21,7 +24,7 @@
       - state: inhand-right
         color: *botanical_color
   - type: Clothing
-    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    sprite: *botanical_gloves_sprite
     clothingVisuals:
       gloves:
       - state: equipped-HAND
@@ -50,12 +53,12 @@
   suffix: ""
   components:
   - type: Sprite
-    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    sprite: &chemist_gloves_sprite Clothing/Hands/Gloves/Color/color.rsi
     layers:
     - state: icon
       color: &chemist_color "#ff7124"
   - type: Item
-    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    sprite: *chemist_gloves_sprite
     inhandVisuals:
       left:
       - state: inhand-left
@@ -64,7 +67,7 @@
       - state: inhand-right
         color: *chemist_color
   - type: Clothing
-    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    sprite: *chemist_gloves_sprite
     clothingVisuals:
       gloves:
       - state: equipped-HAND
@@ -92,9 +95,9 @@
   description: Cooking mitts for handling hot items.
   components:
   - type: Sprite
-    sprite: _Reserve/Clothing/Hands/Gloves/mitts.rsi
+    sprite: &mitts_sprite _Reserve/Clothing/Hands/Gloves/mitts.rsi
   - type: Clothing
-    sprite: _Reserve/Clothing/Hands/Gloves/mitts.rsi
+    sprite: *mitts_sprite
   - type: Fiber
     fiberMaterial: fibers-durathread
     fiberColor: fibers-black
@@ -119,6 +122,6 @@
   description: Chemistry mitts for handling hot items.
   components:
   - type: Sprite
-    sprite: _Reserve/Clothing/Hands/Gloves/mitts_chemical.rsi
+    sprite: &chemist_mitts_sprite _Reserve/Clothing/Hands/Gloves/mitts_chemical.rsi
   - type: Clothing
-    sprite: _Reserve/Clothing/Hands/Gloves/mitts_chemical.rsi
+    sprite: *chemist_mitts_sprite

@@ -258,7 +258,9 @@
         weight: 1.0
       - id: ClothingHandsGlovesBotanistAdvanced
         weight: 0.2
-    - id: ClothingMaskBreathBotanist
+    - id: ClothingMaskBreathBotanistAdvanced
+      prob: 0.15
+    - id: ClothingEyesGogglesBotanistAdvanced
       prob: 0.15
     # Reserve edit end: Orchid's Barmania - Service Heaven
 

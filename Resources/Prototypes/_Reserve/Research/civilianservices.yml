@@ -3,21 +3,55 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: technology
+  id: AdvancedHydroponics
+  name: research-technology-advanced-hydroponics
+  icon:
+    sprite: _Reserve/Objects/Specific/Hydroponics/watering_can_experimental.rsi
+    state: icon
+  discipline: CivilianServices
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - WateringCanExperimental
+  - ClothingOuterApronBotanistAdvanced
+  - ClothingHandsGlovesBotanistAdvanced
+  - ClothingMaskBreathBotanistAdvanced
+  - ClothingEyesGogglesBotanistAdvanced
+  position: -1,9
+  technologyPrerequisites:
+  - Hydroponics
+
+- type: technology
   id: BluespaceHydroponics
   name: research-technology-bluespace-hydroponics
   icon:
     sprite: DeltaV/Objects/Specific/Hydroponics/plant_bag_holding.rsi
     state: icon
   discipline: CivilianServices
-  tier: 2
+  tier: 3
   cost: 7500
   recipeUnlocks:
+  - BluespaceWateringCanExperimental
   - PlantBagOfHolding
-  - BluespaceBucket
-  - WateringCanExperimental
-  position: -1,9
+  position: 0,9
   technologyPrerequisites:
-  - Hydroponics
+  - AdvancedHydroponics
+
+- type: technology
+  id: BluespaceCleaning
+  name: research-technology-bluespace-cleaning
+  icon:
+    sprite: _Reserve/Objects/Specific/Hydroponics/bluespace_bucket.rsi
+    state: icon
+  discipline: CivilianServices
+  tier: 3
+  cost: 7500
+  recipeUnlocks:
+  - BluespaceBucket
+  - TrashBagOfHolding
+  position: -2,7
+  technologyPrerequisites:
+  - AdvancedCleaning
 
 - type: technology
   id: EnergyBarDispensers
@@ -34,6 +68,6 @@
   - EnergyBoozeDispenserMachineCircuitboard
   - BluespaceDrinkShakerAdvanced
   - BluespaceDrinkKettleAdvanced
-  position: -2,7
+  position: -2,8
   technologyPrerequisites:
   - Hydroponics

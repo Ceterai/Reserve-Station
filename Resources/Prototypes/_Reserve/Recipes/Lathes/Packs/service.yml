@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-# region Static
+# region Dynamic, Clothing
 
 - type: latheRecipe
   id: ClothingOuterApronBotanistAdvanced
@@ -46,8 +46,8 @@
   result: ClothingHandsGlovesMittsChemist
 
 - type: latheRecipe
-  id: ClothingMaskBreathBotanist
-  result: ClothingMaskBreathBotanist
+  id: ClothingMaskBreathBotanistAdvanced
+  result: ClothingMaskBreathBotanistAdvanced
   completetime: 2
   materials:
     Glass: 50
@@ -55,13 +55,22 @@
     Cloth: 100
 
 - type: latheRecipe
-  parent: ClothingMaskBreathBotanist
+  parent: ClothingMaskBreathBotanistAdvanced
   id: ClothingMaskBreathChemist
   result: ClothingMaskBreathChemist
 
+- type: latheRecipe
+  id: ClothingEyesGogglesBotanistAdvanced
+  result: ClothingEyesGogglesBotanistAdvanced
+  completetime: 2
+  materials:
+    Glass: 100
+    Plastic: 100
+    Cloth: 100
+
 # endregion
 
-# region Dynamic
+# region Dynamic, Tools
 
 - type: latheRecipePack
   id: PlantAnalyzer
@@ -79,12 +88,31 @@
     BSCrystal: 50
 
 - type: latheRecipe
+  id: TrashBagOfHolding
+  result: TrashBagOfHolding
+  completetime: 3
+  materials:
+    Plastic: 100
+    Plasma: 100
+    BSCrystal: 40
+
+- type: latheRecipe
   id: WateringCan
   result: WateringCan
   completetime: 2
   materials:
     Steel: 300
     Plastic: 300
+
+- type: latheRecipe
+  id: BluespaceWateringCanExperimental
+  result: BluespaceWateringCanExperimental
+  completetime: 5
+  materials:
+    Steel: 500
+    Plastic: 500
+    Plasma: 250
+    BSCrystal: 50
 
 - type: latheRecipe
   id: WateringCanExperimental
