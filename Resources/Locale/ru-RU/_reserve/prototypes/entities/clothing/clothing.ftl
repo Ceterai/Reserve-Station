@@ -17,5 +17,5 @@ ent-ClothingHandsGlovesMitts = рукава-прихватки
 ent-ClothingHandsGlovesMittsChemist = рукава-прихватки химика
     .desc = Эти толстые изолированные рукава-прихватки защищают ваши костлявые руки от химических и термических ожогов.
 
-ent-ClothingEyesGogglesBotanistAdvanced = очки ботаника
+ent-ClothingEyesGogglesBotanistAdvanced = защитные очки ботаника
     .desc = Эти продвинутые очки защищают ваши глаза от ядовитых растений, грязи и шипов.
