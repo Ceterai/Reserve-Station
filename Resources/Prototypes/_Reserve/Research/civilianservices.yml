@@ -17,7 +17,7 @@
   - ClothingHandsGlovesBotanistAdvanced
   - ClothingMaskBreathBotanistAdvanced
   - ClothingEyesGogglesBotanistAdvanced
-  position: -1,9
+  position: -2,8
   technologyPrerequisites:
   - Hydroponics
 
@@ -33,7 +33,7 @@
   recipeUnlocks:
   - BluespaceWateringCanExperimental
   - PlantBagOfHolding
-  position: 0,9
+  position: -3,8
   technologyPrerequisites:
   - AdvancedHydroponics
 
@@ -41,8 +41,8 @@
   id: BluespaceCleaning
   name: research-technology-bluespace-cleaning
   icon:
-    sprite: _Reserve/Objects/Specific/Hydroponics/bluespace_bucket.rsi
-    state: icon
+    sprite: _Reserve/Objects/Specific/Janitorial/bluespace_trashbag.rsi
+    state: icon-0
   discipline: CivilianServices
   tier: 3
   cost: 7500
@@ -54,7 +54,23 @@
   - AdvancedCleaning
 
 - type: technology
-  id: EnergyBarDispensers
+  id: BasicBartending
+  name: research-technology-basic-bartending
+  icon:
+    sprite: _Reserve/Objects/Consumable/Drinks/shaker.rsi
+    state: icon
+  discipline: CivilianServices
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - DrinkShakerAdvanced
+  - DrinkKettleAdvanced
+  position: -1,9
+  technologyPrerequisites:
+  - Hydroponics
+
+- type: technology
+  id: AdvancedBartending
   name: research-technology-advanced-bartending
   icon:
     sprite: _Reserve/Objects/Structures/dispensers.rsi
@@ -66,8 +82,22 @@
   - EnergyDrinkDispenserMachineCircuitboard
   - EnergySodaDispenserMachineCircuitboard
   - EnergyBoozeDispenserMachineCircuitboard
+  position: -2,9
+  technologyPrerequisites:
+  - BasicBartending
+
+- type: technology
+  id: BluespaceBartending
+  name: research-technology-bluespace-bartending
+  icon:
+    sprite: _Reserve/Objects/Consumable/Drinks/shaker.rsi
+    state: icon_bluespace
+  discipline: CivilianServices
+  tier: 3
+  cost: 2500
+  recipeUnlocks:
   - BluespaceDrinkShakerAdvanced
   - BluespaceDrinkKettleAdvanced
-  position: -2,8
+  position: -3,9
   technologyPrerequisites:
-  - Hydroponics
+  - AdvancedBartending

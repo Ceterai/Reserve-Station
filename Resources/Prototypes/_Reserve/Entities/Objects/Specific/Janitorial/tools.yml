@@ -11,7 +11,7 @@
   description: A bucket infused with bluespace technology, allowing it to hold much more liquid.
   components:
   - type: Sprite
-    sprite: &bluespace_bucket_sprite _Reserve/Objects/Specific/Hydroponics/bluespace_bucket.rsi
+    sprite: &bluespace_bucket_sprite _Reserve/Objects/Specific/Janitorial/bluespace_bucket.rsi
   - type: Clothing
     sprite: *bluespace_bucket_sprite
   - type: SolutionContainerManager

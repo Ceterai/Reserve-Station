@@ -54,8 +54,8 @@
   id: Hydroponics
   name: research-technology-basic-hydroponics
   icon:
-    sprite: Structures/Machines/seed_extractor.rsi
-    state: seedextractor
+    sprite: _Reserve/Objects/Specific/Hydroponics/plant_analyzer.rsi  # Reserve edit: Orchid's Barmania - Service Heaven
+    state: icon
   discipline: CivilianServices
   tier: 1
   cost: 7500 # Delta Price. 5000 is pre-adjustment.
@@ -65,15 +65,11 @@
   - HydroponicsTrayMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
   - PlantAnalyzer # Reserve add
-  # Reserve edit start: Orchid's Barmania - Service Heaven
-  - WateringCan
-  - DrinkShakerAdvanced
-  - DrinkKettleAdvanced
-  # Reserve edit end: Orchid's Barmania - Service Heaven
+  - WateringCan  # Reserve edit: Orchid's Barmania - Service Heaven
   # Goobstation R&D Console rework start
-  position: -1,7  # Reserve edit: Orchid's Barmania - Service Heaven
-  # technologyPrerequisites:  # Reserve edit: Orchid's Barmania - Service Heaven - no reason to require AdvancedEntertainment
-  # - AdvancedEntertainment
+  position: -1,8  # Reserve edit: Orchid's Barmania - Service Heaven
+  technologyPrerequisites:
+  - BasicRobotics  # Reserve edit: Orchid's Barmania - Service Heaven
   # Goobstation R&D Console rework end
 
 - type: technology
