@@ -184,3 +184,41 @@
       HotCocoa: 8
       Grenadine: 15
       RootBeer: 7
+
+- type: entity
+  parent: EnergyDrinkDispenser
+  id: EnergySauceDispenser
+  name: energy sauce dispenser
+  suffix: energy
+  description: A bluespace Sauce Dispenser that uses station energy to synthesize basic sauces. The future is here and now.
+  components:
+  - type: Sprite
+    sprite: _Reserve/Objects/Structures/dispensers.rsi
+    state: sauce
+  - type: Machine
+    board: EnergySauceDispenserMachineCircuitboard
+  - type: EnergyReagentDispenser
+    reagents:
+      Ketchup: 10
+      Mustard: 12
+      Hotsauce: 16
+      HorseradishSauce: 24
+      Ketchunaise: 12
+      Mayo: 16
+      Vinaigrette: 28
+      Syrup: 18
+      Enzyme: 40
+      Egg: 28
+      Butter: 32
+      Sugar: 6
+      TableSalt: 8
+      Blackpepper: 8
+      Vinegar: 20
+      Cream: 10
+      LaughinSyrup: 45
+      Astrotame: 30
+      Oil: 12
+      Cornoil: 18
+      OilOlive: 20
+      FrostOil: 30
+      CapsaicinOil: 30

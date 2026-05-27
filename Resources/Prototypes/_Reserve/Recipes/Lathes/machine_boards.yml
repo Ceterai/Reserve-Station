@@ -31,3 +31,11 @@
   icon:
     sprite: _Reserve/Objects/Structures/dispensers.rsi
     state: alcohol
+
+- type: latheRecipe
+  parent: EnergyChemDispenserMachineCircuitboard
+  id: EnergySauceDispenserMachineCircuitboard
+  result: EnergySauceDispenserMachineCircuitboard
+  icon:
+    sprite: _Reserve/Objects/Structures/dispensers.rsi
+    state: sauce

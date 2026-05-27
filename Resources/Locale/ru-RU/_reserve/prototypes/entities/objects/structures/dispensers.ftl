@@ -14,3 +14,5 @@ ent-EnergySodaDispenser = энерго-раздатчик газировки
     .desc = { ent-EnergyChemDispenser.desc }
 ent-EnergyBoozeDispenser = энерго-раздатчик алкоголя
     .desc = { ent-EnergyChemDispenser.desc }
+ent-EnergySauceDispenser = энерго-раздатчик соусов
+    .desc = { ent-EnergyChemDispenser.desc }

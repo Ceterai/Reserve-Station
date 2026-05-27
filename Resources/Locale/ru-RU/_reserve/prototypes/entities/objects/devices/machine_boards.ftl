@@ -3,11 +3,14 @@ ent-SauceDispenserMachineCircuitboard = раздатчик соусов (маш�
     .suffix = { ent-BaseMachineCircuitboard.suffix }
 
 ent-EnergyDrinkDispenserMachineCircuitboard = энерго-раздатчик напитков (машинная плата)
-    .desc = Печатная плата энерго-раздатчика напитков.
+    .desc = Печатная плата энерго-раздатчика простых напитков.
     .suffix = { ent-BaseMachineCircuitboard.suffix }
 ent-EnergySodaDispenserMachineCircuitboard = энерго-раздатчик газировки (машинная плата)
-    .desc = Печатная плата энерго-раздатчика содовых напитков.
+    .desc = Печатная плата энерго-раздатчика газированных напитков.
     .suffix = { ent-BaseMachineCircuitboard.suffix }
 ent-EnergyBoozeDispenserMachineCircuitboard = энерго-раздатчик алкоголя (машинная плата)
     .desc = Печатная плата энерго-раздатчика алкогольных напитков.
+    .suffix = { ent-BaseMachineCircuitboard.suffix }
+ent-EnergySauceDispenserMachineCircuitboard = энерго-раздатчик соусов (машинная плата)
+    .desc = Печатная плата энерго-раздатчика соусов.
     .suffix = { ent-BaseMachineCircuitboard.suffix }

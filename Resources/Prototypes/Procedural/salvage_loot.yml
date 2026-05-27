@@ -139,6 +139,9 @@
         - proto: TrashBagOfHolding
           prob: 0.15
           cost: 2
+        - proto: ClothingHeadHatChefBluespace
+          prob: 0.05
+          cost: 2
         # Reserve edit end: Orchid's Barmania - Service Heaven
 
 # Mob loot table

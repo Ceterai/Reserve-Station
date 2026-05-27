@@ -54,7 +54,7 @@
   - AdvancedCleaning
 
 - type: technology
-  id: BasicBartending
+  id: Bartending
   name: research-technology-basic-bartending
   icon:
     sprite: _Reserve/Objects/Consumable/Drinks/shaker.rsi
@@ -84,7 +84,7 @@
   - EnergyBoozeDispenserMachineCircuitboard
   position: -2,9
   technologyPrerequisites:
-  - BasicBartending
+  - Bartending
 
 - type: technology
   id: BluespaceBartending
@@ -101,3 +101,48 @@
   position: -3,9
   technologyPrerequisites:
   - AdvancedBartending
+
+- type: technology
+  id: Cooking
+  name: research-technology-basic-cooking
+  icon:
+    sprite: _Reserve/Clothing/Hands/Gloves/mitts.rsi
+    state: icon
+  discipline: CivilianServices
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - ClothingHandsGlovesMitts
+  position: 0,8
+  technologyPrerequisites:
+  - Hydroponics
+
+- type: technology
+  id: AdvancedCooking
+  name: research-technology-advanced-cooking
+  icon:
+    sprite: _Reserve/Objects/Structures/dispensers.rsi
+    state: sauce
+  discipline: CivilianServices
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - EnergySauceDispenserMachineCircuitboard
+  position: 0,9
+  technologyPrerequisites:
+  - Cooking
+
+- type: technology
+  id: BluespaceCooking
+  name: research-technology-bluespace-cooking
+  icon:
+    sprite: _Reserve/Clothing/Head/Hats/chefhat.rsi
+    state: icon
+  discipline: CivilianServices
+  tier: 3
+  cost: 2500
+  recipeUnlocks:
+  - ClothingHeadHatChefBluespace
+  position: 1,9
+  technologyPrerequisites:
+  - AdvancedCooking

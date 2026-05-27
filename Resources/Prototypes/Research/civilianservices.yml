@@ -154,9 +154,9 @@
   - BiofabricatorMachineCircuitboard
   - BiomassReclaimerMachineCircuitboard
   # Goobstation R&D Console rework start
-  position: 0,8  # Reserve edit: Orchid's Barmania - Service Heaven
+  position: 1,8  # Reserve edit: Orchid's Barmania - Service Heaven
   technologyPrerequisites:
-  - Hydroponics
+  - Cooking  # Reserve edit: Orchid's Barmania - Service Heaven
   # Goobstation R&D Console rework end
 
 # Tier 2
@@ -300,7 +300,7 @@
   recipeUnlocks:
   - CargoTelepadMachineCircuitboard
   # Goobstation R&D Console rework start
-  position: 1,8
+  position: 1,7  # Reserve edit: Orchid's Barmania - Service Heaven
   technologyPrerequisites:
   - MeatManipulation
   - FauxAstroTiles

@@ -19,3 +19,6 @@ ent-ClothingHandsGlovesMittsChemist = рукава-прихватки химик
 
 ent-ClothingEyesGogglesBotanistAdvanced = защитные очки ботаника
     .desc = Эти продвинутые очки защищают ваши глаза от ядовитых растений, грязи и шипов.
+
+ent-ClothingHeadHatChefBluespace = бездонный поварской колпак
+    .desc = Этот колпак больше внутри! Удобная кабина пилотирования для маленького крысиного экипажа.
