@@ -125,7 +125,7 @@
     state: sauce
   discipline: CivilianServices
   tier: 2
-  cost: 5000
+  cost: 7500
   recipeUnlocks:
   - EnergySauceDispenserMachineCircuitboard
   position: 0,9

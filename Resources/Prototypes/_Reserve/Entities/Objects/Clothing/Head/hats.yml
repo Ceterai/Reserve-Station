@@ -14,7 +14,7 @@
     sprite: *chefs_hat_sprite
   - type: Storage
     grid:
-    - 0,0,1,1
+    - 0,0,1,2
   - type: PhysicalComposition
     materialComposition:
       Cloth: 50
