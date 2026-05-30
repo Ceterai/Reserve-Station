@@ -686,6 +686,7 @@
   minLimit: 0
   loadouts:
   - BotanistApron
+  - BotanistApronAdvanced  # Reserve edit: Orchid's Barmania - Service Heaven
   - BotanistWintercoat
 
 - type: loadoutGroup
@@ -1581,6 +1582,7 @@
   loadouts:
   - RegularLabCoat
   - ChemistLabCoat
+  - ChemistApronAdvanced  # Reserve edit: Orchid's Barmania - Service Heaven
   - ChemistWintercoat
   - SeniorPhysicianLabCoat # Goobstation
 
