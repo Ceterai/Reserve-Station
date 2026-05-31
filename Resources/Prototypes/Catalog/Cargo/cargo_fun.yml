@@ -230,7 +230,7 @@
   icon:
     sprite: Structures/Storage/Crates/toybox.rsi
     state: crate_icon
-  product: CrateFunToyBox
+  product: CrateFunToyBoxRandom  # Reserve edit: Orchid's Barmania - Service Heaven
   cost: 900
   category: cargoproduct-category-name-fun
   group: market
