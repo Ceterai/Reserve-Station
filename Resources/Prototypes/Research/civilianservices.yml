@@ -178,7 +178,7 @@
   - FauxTileAstroSnow
   - FauxTileAstroAsteroidSand
   # Goobstation R&D Console rework start
-  position: 1,5
+  position: 1,6  # Reserve edit: Orchid's Barmania - Service Heaven
   technologyPrerequisites:
   - AudioVisualCommunication
   # Goobstation R&D Console rework end
@@ -267,7 +267,7 @@
   position: 0,6
   technologyPrerequisites:
   - PushHorn
-  - RipleyAPLU
+  # - RipleyAPLU  # Reserve edit: Orchid's Barmania - Service Heaven: RipleyAPLU is already required for CritterMechs, which is required for PushHorn.
   # Goobstation R&D Console rework end
 
 - type: technology
