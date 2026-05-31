@@ -149,18 +149,17 @@
     - id: ClothingBeltJanitorFilled
     # Containers
     - id: Bucket
+    - id: BluespaceBucket
+      weight: 0.8
     - id: TrashBag
       amount: 2
     - id: TrashBagOfHolding
-      weight: 0.8
-    - id: BluespaceBucket
       weight: 0.8
     # Borg Modules
     - id: BorgModuleCleaning
       weight: 0.8
     - id: BorgModuleAdvancedCleaning
       weight: 0.6
-      weight: 0.8
     # Other
     - id: Plunger
     - id: WetFloorSign
