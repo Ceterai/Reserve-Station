@@ -199,6 +199,7 @@
       - id: TennisBall
         amount: 2
       - id: DiscoBeachBall
+        weight: 0.2
       weight: 0.8
     - id: ClothingShoesSkates
       weight: 0.3
