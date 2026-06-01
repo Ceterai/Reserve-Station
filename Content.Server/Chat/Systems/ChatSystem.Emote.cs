@@ -221,19 +221,6 @@ public partial class ChatSystem
         if (!AllowedToUseEmote(uid, emote))
             return true;
 
-        //Reserve emote cooldown begin
-        if (TryComp<EmotingComponent>(uid, out var comp))
-        {
-            var currentTime = _gameTiming.CurTime;
-            if (currentTime - comp.LastChatEmoteTime < comp.ChatEmoteCooldown)
-            {
-                return false;
-            }
-
-            comp.LastChatEmoteTime = currentTime;
-        }
-        //Reserve emote cooldown end
-
         return TryInvokeEmoteEvent(uid, emote, voluntary: !forced); // Goob - emotespam
 
         static string TrimPunctuation(string textInput)

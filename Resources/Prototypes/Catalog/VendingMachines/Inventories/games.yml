@@ -32,6 +32,7 @@
     BooksBag: 3
     CardBoxBlack: 3 # GoobStation
     BoxPlaysetEvacPod: 1 # WD EDIT
+    PokerChips100: 6 # GoobStation
   contrabandInventory:
     Basketball: 1
     FoodSnackBoritos: 3
