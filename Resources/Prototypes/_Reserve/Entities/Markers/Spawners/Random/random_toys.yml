@@ -197,8 +197,8 @@
       - id: BeachBall
       - id: Football
       - id: TennisBall
-      - id: DiscoBeachBall
         amount: 2
+      - id: DiscoBeachBall
       weight: 0.8
     - id: ClothingShoesSkates
       weight: 0.3
