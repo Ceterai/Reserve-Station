@@ -7,7 +7,7 @@
   mapName: 'Reach-1'
   mapPath: /Maps/_Reserve/reach.yml
   minPlayers: 0
-  maxPlayers: 16
+  maxPlayers: 12
   stations:
     ReserveReach:
       stationProto: StandardNanotrasenStation
