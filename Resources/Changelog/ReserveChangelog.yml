@@ -479,3 +479,21 @@ Entries:
         изменен.
   id: 63
   time: '2026-05-15T04:30:49.0000000+00:00'
+- author: thxmqninq
+  changes:
+    - type: Add
+      message: Добавлен новый антагонист - кровные братья
+  id: 64
+  time: '2026-05-30T20:06:07.0000000+00:00'
+- author: IvanKuvalda
+  changes:
+    - type: Fix
+      message: починил режквит
+  id: 65
+  time: '2026-05-30T20:08:14.0000000+00:00'
+- author: Svarshik
+  changes:
+    - type: Add
+      message: Апстрим с Goob Station на 31.05!
+  id: 66
+  time: '2026-06-01T06:39:53.0000000+00:00'

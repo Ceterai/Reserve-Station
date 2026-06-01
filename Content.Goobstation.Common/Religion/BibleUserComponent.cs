@@ -12,14 +12,7 @@ using Robust.Shared.GameStates; // Goobstation
 
 namespace Content.Goobstation.Common.Religion;
 
-/// <summary>
-/// EntityQuery Tracking Component for Summonables that are counting up a respawn.
-/// </summary>
-[RegisterComponent]
-public sealed partial class SummonableRespawningComponent : Component
-{}
-
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState] // Goobstation - Network that bitch!
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class BibleUserComponent : Component
 {
     /// <summary>

@@ -64,20 +64,6 @@
   alert: LossOfSurprise
   alwaysAllowed: true
 
-- type: statusEffect
-  id: ShadowCloakAlertSE
-  alert: ShadowCloakAlert
-  alwaysAllowed: true
-
-- type: statusEffect
-  id: EssenceRegen
-  alert: EssenceRegen
-
-- type: statusEffect
-  id: Fleshmend
-  alert: Fleshmend
-  alwaysAllowed: true
-
 - type: entity
   parent: MobStatusEffectBase
   id: StatusEffectStaminaResistanceModifier
