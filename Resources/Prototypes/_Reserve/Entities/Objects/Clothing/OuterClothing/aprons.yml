@@ -13,6 +13,9 @@
     sprite: &botanical_apron_sprite _Reserve/Clothing/OuterClothing/Aprons/botanical.rsi
   - type: Clothing
     sprite: *botanical_apron_sprite
+  - type: Storage
+    grid:
+    - 0,0,3,1  # 8 slots instead of default 6
   - type: Armor
     modifiers:
       coefficients:
@@ -31,6 +34,9 @@
     sprite: &chemist_apron_sprite _Reserve/Clothing/OuterClothing/Aprons/chemical.rsi
   - type: Clothing
     sprite: *chemist_apron_sprite
+  - type: Storage
+    grid:
+    - 0,0,3,1  # 8 slots instead of default 6
   - type: Armor
     modifiers:
       coefficients:
