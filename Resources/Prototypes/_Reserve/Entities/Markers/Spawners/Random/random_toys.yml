@@ -242,7 +242,10 @@
         weight: 0.8
       - id: MagicDiceBag
         weight: 0.7
-      - id: BoxDarts
+      - !type:AllSelector
+        children:
+        - id: BoxDarts
+        - id: TargetDarts
         weight: 1.2
       - id: CrayonBox
       - id: ClothingBackpackDuffelTennisGame
@@ -270,7 +273,7 @@
       weight: 0.4
     - id: SpellCardFun
       weight: 0.2
-    - !type:GroupSelector
+    - !type:AllSelector
       children:
       - id: WeaponRifleFoam
       - id: BoxDonkSoftBox
