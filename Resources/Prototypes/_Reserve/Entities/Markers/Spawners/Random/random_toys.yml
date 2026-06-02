@@ -269,8 +269,6 @@
       - id: ClothingHeadHatMagician
       - id: ClothingMaskJoy
       weight: 0.3
-    - id: ToolboxArtisticFilled
-      weight: 0.4
     - id: SpellCardFun
       weight: 0.2
     - !type:AllSelector
