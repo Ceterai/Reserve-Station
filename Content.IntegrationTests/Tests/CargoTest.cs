@@ -87,7 +87,7 @@ public sealed class CargoTest
     [
         // This is ignored because it is explicitly intended to be able to sell for more than it costs.
         new("FunCrateGambling"),
-        new("FunToyBox")  // Reserve edit: Orchid's Barmania - Service Heaven: rarely can by sold for up to ~400 credits
+        new("FunToyBox")  // Reserve edit: Orchid's Barmania - Service Heaven: randomized, rarely can be sold for up to plus ~400 credits.
     ];
 
     [Test]
