@@ -407,3 +407,5 @@
       path: /Audio/Weapons/Guns/Empty/empty.ogg
     clumsyProof: true
   - type: PacifismAllowedGun
+  - type: StaticPrice
+    price: 100  # Reserve edit: Orchid's Barmania - Service Heaven: It's not a real gun.
