@@ -5,7 +5,7 @@
 # region Buckets
 
 - type: entity
-  parent: Bucket
+  parent: [Bucket, BaseCivilianContraband]
   id: BluespaceBucket
   name: bluespace bucket
   description: A bucket infused with bluespace technology, allowing it to hold much more liquid.
@@ -34,7 +34,7 @@
 # region Trash Bags
 
 - type: entity
-  parent: TrashBag
+  parent: [TrashBag, BaseCivilianContraband]
   id: TrashBagOfHolding
   name: trash bag of holding
   components:
