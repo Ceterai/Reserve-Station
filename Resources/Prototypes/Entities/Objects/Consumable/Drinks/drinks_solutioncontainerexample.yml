@@ -20,7 +20,10 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 50  # Reserve: Orchid's Barmania - Service Heaven
+        maxVol: 30
+        reagents:
+        - ReagentId: JuiceWatermelon
+          Quantity: 30
   - type: Sprite
     sprite: Objects/Consumable/Drinks/pitcher.rsi
     layers:
@@ -45,7 +48,10 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 50  # Reserve: Orchid's Barmania - Service Heaven
+        maxVol: 30
+        reagents:
+        - ReagentId: JuiceWatermelon
+          Quantity: 30
   - type: Sprite
     sprite: Objects/Consumable/Drinks/pitcher.rsi
     layers:
