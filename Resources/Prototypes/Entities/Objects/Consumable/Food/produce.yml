@@ -629,7 +629,7 @@
 
 - type: entity
   name: banana peel
-  parent: [BaseItem, FoodGrillableBase]
+  parent: BaseItem
   id: TrashBananaPeel
   components:
   - type: Sprite
@@ -697,6 +697,13 @@
     materialComposition:
       RawBananium: 1
   # Can be grilled
+  - type: AtmosExposed
+  - type: Temperature
+    currentTemperature: 290
+  - type: InternalTemperature
+    conductivity: 5.0
+    thickness: 0.5
+    area: 1.0
   - type: Construction
     graph: RecipeTrashBakedBananaPeelAlt
     node: start
