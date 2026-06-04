@@ -21,5 +21,7 @@ ent-ClothingBeltMilitaryWebbingBSOFilled = РПС Синего Щита
     .desc = Разгрузка, используемая подразделениями Центрального Командования.
 ent-ClothingBeltSecurityWebbingContractor = РПС контрактника
     .desc = Нагрудный РПС с глубокими карманами и взрывозащищенностью, часто используется контрактниками и охотниками за головами.
+    .suffix = Синдикат
 ent-ClothingBeltSecurityWebbingContractorFilled = { ent-ClothingBeltSecurityWebbingContractor }
     .desc = { ent-ClothingBeltSecurityWebbingContractor.desc }
+    .suffix = Синдикат, Заполненный
