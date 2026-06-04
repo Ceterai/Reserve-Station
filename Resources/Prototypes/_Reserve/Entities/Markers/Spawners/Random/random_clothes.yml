@@ -32,9 +32,10 @@
     offset: 0.0
     rarePrototypes:
       - ClothingEyesGlassesNoir
-      - ClothingEyesGlassesMercenary
       - ClothingEyesGlassesNoir
       - ClothingEyesGlassesMercenary
+      - ClothingEyesGlassesMercenary
+      - ClothingEyesGlassesDiag
       - ClothingEyesHudOnionBeer
       - ClothingEyesHudMedOnion
       - ClothingEyesHudMedOnionBeer
