@@ -255,6 +255,10 @@
       amount: 2
     - id: LargeBeaker
     - id: Pitcher
+    - id: DrinkVisualizerTestCut
+      weight: 0.4
+    - id: DrinkVisualizerTestNot
+      weight: 0.2
     - id: BoxMousetrap
     - id: VariantCubeBox
     - id: FoodBoxCloth
@@ -288,6 +292,10 @@
     - id: BarSpoon
     - id: LargeBeaker
     - id: Pitcher
+    - id: DrinkVisualizerTestCut
+      weight: 0.4
+    - id: DrinkVisualizerTestNot
+      weight: 0.2
     - id: ClothingEyesHudBeer
     - id: ClothingEyesEyepatchHudBeer
     - id: ClothingOuterWinterBar
