@@ -33,7 +33,11 @@
     rarePrototypes:
       - ClothingEyesGlassesNoir
       - ClothingEyesGlassesMercenary
+      - ClothingEyesGlassesNoir
+      - ClothingEyesGlassesMercenary
       - ClothingEyesHudOnionBeer
+      - ClothingEyesHudMedOnion
+      - ClothingEyesHudMedOnionBeer
     rareChance: 0.05
 
 - type: entity
