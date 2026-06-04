@@ -146,6 +146,7 @@ loadout-group-security-cadet-jumpsuit = Кадет СБ, комбинезон
 loadout-group-security-star = СБ, Звёздочка
 # Medical
 loadout-group-medical-gloves = Медицинский отдел, перчатки
+loadout-group-medical-glasses = Медицинский отдел, очки
 loadout-group-medical-mask = Медицинский отдел, маска
 loadout-group-chief-medical-officer-head = Главный врач, голова
 loadout-group-chief-medical-officer-jumpsuit = Главный врач, комбинезон
@@ -163,6 +164,7 @@ loadout-group-chemist-jumpsuit = Химик, комбинезон
 loadout-group-chemist-outerclothing = Химик, верхняя одежда
 loadout-group-chemist-backpack = Химик, рюкзак
 loadout-group-chemist-gloves = Химик, перчатки
+loadout-group-chemist-goggles = Химик, очки
 loadout-group-chemist-masks = Химик, маски
 loadout-group-paramedic-head = Парамедик, голова
 loadout-group-paramedic-jumpsuit = Парамедик, комбинезон

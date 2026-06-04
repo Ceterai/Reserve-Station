@@ -1642,6 +1642,10 @@
   loadouts:
   - MedicalHud
   - MedicalEyePatchHud
+  - ChemistMedicGoggles  # Reserve edit: Orchid's Barmania - Service Heaven
+  - ChemistMedicGogglesAdvanced  # Reserve edit: Orchid's Barmania - Service Heaven
+  - RoboticistMedicGoggles  # Reserve edit: Orchid's Barmania - Service Heaven
+  - RoboticistMedicGogglesAdvanced  # Reserve edit: Orchid's Barmania - Service Heaven
   - Glasses
   - GlassesJamjar
   - GlassesJensen

@@ -197,6 +197,7 @@ loadout-group-security-star = Security Star
 
 # Medical
 loadout-group-medical-gloves = Medical gloves
+loadout-group-medical-glasses = Medical glasses
 loadout-group-medical-mask = Medical mask
 
 loadout-group-chief-medical-officer-head = Chief Medical Officer head
@@ -218,14 +219,13 @@ loadout-group-chemist-jumpsuit = Chemist jumpsuit
 loadout-group-chemist-outerclothing = Chemist outer clothing
 loadout-group-chemist-backpack = Chemist backpack
 loadout-group-chemist-gloves = Chemist gloves
+loadout-group-chemist-goggles = Chemist goggles
 loadout-group-chemist-masks = Chemist masks
 
 loadout-group-paramedic-head = Paramedic head
 loadout-group-paramedic-jumpsuit = Paramedic jumpsuit
 loadout-group-paramedic-outerclothing = Paramedic outer clothing
 loadout-group-paramedic-shoes = Paramedic shoes
-
-loadout-group-medical-glasses = Medical glasses
 
 # Wildcards
 loadout-group-reporter-jumpsuit = Reporter jumpsuit

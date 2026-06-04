@@ -756,6 +756,7 @@
   groups:
   - GroupTankHarness
   - ChemistHead # Goobstation
+  - ChemistGoggles  # Reserve edit: Orchid's Barmania - Service Heaven
   - ChemistMasks  # Reserve edit: Orchid's Barmania - Service Heaven
   - ChemistJumpsuit
   - ChemistGloves  # Reserve edit: Orchid's Barmania - Service Heaven
