@@ -31,57 +31,6 @@
       role: JobChemist
       time: 180000  # 50 hours
 
-- type: loadoutEffectGroup
-  id: AdvancedDoctor
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobMedicalDoctor
-      time: 36000  # 10 hours
-
-- type: loadoutEffectGroup
-  id: LeadPhysician
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobChemist
-      time: 180000  # 50 hours
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:DepartmentTimeRequirement
-      department: Medical
-      time: 360000 # 100 hrs
-
-- type: loadoutEffectGroup
-  id: SeniorOmnimedic
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobRoboticist
-      time: 90000  # 25 hours
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:DepartmentTimeRequirement
-      department: Medical
-      time: 90000 # 25 hrs
-
-- type: loadoutEffectGroup
-  id: LeadOmnimedic
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobRoboticist
-      time: 180000  # 50 hours
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:DepartmentTimeRequirement
-      department: Medical
-      time: 180000 # 50 hrs
-
 # endregion
 
 # region Groups
@@ -133,38 +82,6 @@
     proto: AdvancedChemist
   equipment:
     eyes: ClothingEyesGlassesChemical
-
-- type: loadout
-  id: ChemistMedicGoggles
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorPhysician
-  equipment:
-    eyes: ClothingEyesGlassesMedChem
-
-- type: loadout
-  id: ChemistMedicGogglesAdvanced
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: LeadPhysician
-  equipment:
-    eyes: ClothingEyesGlassesMedChemFlash
-
-- type: loadout
-  id: RoboticistMedicGoggles
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorOmnimedic
-  equipment:
-    eyes: ClothingEyesHudDiagnosticMedical
-
-- type: loadout
-  id: RoboticistMedicGogglesAdvanced
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: LeadOmnimedic
-  equipment:
-    eyes: ClothingEyesGlassesMedDiag
 
 # endregion
 

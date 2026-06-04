@@ -28,6 +28,7 @@ loadout-group-roboticist-jumpsuit = Комбинезон робототехни�
 loadout-group-roboticist-backpack = Рюкзак робототехника
 loadout-group-roboticist-outerclothing = Верхняя одежда робототехника
 loadout-group-roboticist-gloves = Перчатки робототехника
+loadout-group-roboticist-goggles = Очки робототехника
 loadout-group-roboticist-shoes = Обувь робототехника
 loadout-group-roboticist-id = ID-карта робототехника
 
