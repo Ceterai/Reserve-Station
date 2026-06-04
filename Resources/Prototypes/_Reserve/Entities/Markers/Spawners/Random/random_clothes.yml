@@ -33,12 +33,16 @@
     rarePrototypes:
       - ClothingEyesGlassesNoir
       - ClothingEyesGlassesNoir
+      - ClothingEyesGlassesNoir
+      - ClothingEyesGlassesMercenary
       - ClothingEyesGlassesMercenary
       - ClothingEyesGlassesMercenary
       - ClothingEyesGlassesDiag
       - ClothingEyesHudOnionBeer
       - ClothingEyesHudMedOnion
       - ClothingEyesHudMedOnionBeer
+      - ClothingEyesGlassesMedChem
+      - ClothingEyesGlassesMedChemFlash
     rareChance: 0.05
 
 - type: entity

@@ -32,6 +32,7 @@ ent-ClothingEyesHudMultiversal = мультивселенский визор
     .suffix = Промежуточные, Омни Визор
 ent-ClothingEyesHudOmni = омни визор
     .desc = Визор, показывающий все возможные показатели на экипаже.
+
 # Corvax-HiddenDesc-Start
 ent-ClothingEyesHudSyndicate = визор оперативника
     .suffix = синди-визор
@@ -39,6 +40,7 @@ ent-ClothingEyesHudSyndicate = визор оперативника
 ent-ClothingEyesHudSyndicateAgent = визор агента Синдиката
     .desc = Профессиональный визор агента Синдиката, предназначенный для быстрой диагностики состояния команды.
 # Corvax-HiddenDesc-End
+
 ent-ClothingEyesGlassesHiddenSecurity = { ent-ClothingEyesGlassesSunglasses }
     .desc = { ent-ClothingEyesGlassesSunglasses.desc }
     .suffix = Синдикат
@@ -58,3 +60,8 @@ ent-ClothingEyesEyepatchHudDiag = диагностический моновиз�
     .desc = Окуляр с индикатором на стекле, способный анализировать целостность и состояние роботов и экзокостюмов. Сделан из си-боргия.
 ent-ClothingEyesEyepatchHudDiagFlipped = { ent-ClothingEyesEyepatchHudDiag }
     .desc = { ent-ClothingEyesEyepatchHudDiag.desc }
+
+ent-ClothingEyesGlassesMedChem = медхимические очки
+    .desc = Очки, способные сканировать химический состав раствора, со встроенным медицинским дисплеем.
+ent-ClothingEyesGlassesMedChemFlash = солнцезащитные медхимические очки
+    .desc = Солнцезащитные очки с медицинским интерфейсом и анализатором раствора.
