@@ -36,3 +36,9 @@
     entries:
       Taco: FSE_Mango
       Burger: FSE_MangoBurger
+  # Reserve edit start: Orchid's Garden - Tidy Kitchen
+  # Can be sliced
+  - type: SliceableFood
+    count: 4
+    slice: FoodMangoSlice
+  # Reserve edit end: Orchid's Garden - Tidy Kitchen
