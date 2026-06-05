@@ -1,2 +1,2 @@
-ent-ClothingNeckMantleBlueshield = мантия офицера синего щита
+ent-ClothingNeckMantleBlueshield = мантия офицера Синего Щита
     .desc = Удобная и защитная мантия для квалифицированных телохранителей.

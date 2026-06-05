@@ -156,10 +156,10 @@ loadout-group-chemist-envirohelm = Экошлем химика
 loadout-group-chemist-envirosuit = Экокостюм химика
 loadout-group-chemist-envirogloves = Экоперчатки химика
 # Head of Security
-loadout-group-head-of-security-envirohelm = Экошлем гсб
-loadout-group-head-of-security-envirosuit = Экокостюм гсб
-loadout-group-head-of-security-envirogloves = Экоперчатки гсб
-loadout-group-head-of-security-gloves = Перчатки гсб
+loadout-group-head-of-security-envirohelm = Экошлем главы службы безопасности
+loadout-group-head-of-security-envirosuit = Экокостюм главы службы безопасности
+loadout-group-head-of-security-envirogloves = Экоперчатки главы службы безопасности
+loadout-group-head-of-security-gloves = Перчатки главы службы безопасности
 # Brigmedic
 loadout-group-brigmedic-envirohelm = Экошлем бригмедика
 loadout-group-brigmedic-envirosuit = Экокостюм бригмедика

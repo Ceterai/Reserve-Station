@@ -1,7 +1,7 @@
 ent-ClothingHeadHelmetHardsuitChronolegioneer = футуристический шлем
     .desc = Шлем бойцов будущего, предназначенный для специальных операций с временными потоками
 ent-ClothingHeadHelmetHardsuitBlueshield = шлем офицера Синего Щита
-    .desc = Шлем скафандра офицера синего щита.
+    .desc = Шлем скафандра офицера Синего Щита.
 ent-ClothingHeadHelmetHardsuitCybersunStealth = шлем стелс-костюма Cybersun
     .desc = Шлем с обшивкой для скрытных операций..
     .suffix = СТЭЛС
@@ -11,7 +11,7 @@ ent-ClothingHeadHelmetVoidsuitSecurity = шлем боевого костюма 
     .desc = Крепкая лицевая панель, прикреплённая к боевому костюму охраны.
 ent-ClothingHeadHelmetHardsuitHeadOfSecurityExperimental = усовершенствованный шлем скафандра главы службы безопасности
     .desc = Шлем боевого костюма охраны с новейшим топ-секретным NT-HUD софтом. Кажется, этот шлем прочнее стандартных.
-ent-ClothingHeadHelmetHardsuitNanorep = шлем скафандра ПNT
+ent-ClothingHeadHelmetHardsuitNanorep = шлем скафандра представителя NanoTrasen
     .desc = { ent-ClothingHeadHardsuitWithLightBase.desc }
 ent-ClothingHeadSinguloth = шлем рыцаря Сингулота
     .desc = Адамантиевый шлем ордена рыцарей Сингулота. Он излучает священную ауру.
