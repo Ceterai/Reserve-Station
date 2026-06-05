@@ -1,5 +1,6 @@
-ent-ClothingOuterSuitHEV = H.E.V костюм
+ent-ClothingOuterSuitHEV = костюм H.E.V
     .desc = Костюм, закрывающий все тело, предназначенный для защиты пользователя от радиации, энергетических разрядов, травм тупым предметом при работе с опасными материалами.
+    .suffix = Адмем
 ent-SurveillanceWirelessCameraBodyEntertainment = камера NOPRO
     .desc = Камера, крепящаяся на теле. Оно наблюдает за тобой.
 ent-WhiteRobes = одеяния избранного
