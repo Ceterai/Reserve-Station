@@ -1146,6 +1146,26 @@
   tags:
   - Vegetable
 
+# Laughin Pea
+
+- type: foodSequenceElement
+  id: LaughinPea
+  name: food-sequence-content-laughin-pea
+  sprites:
+  - sprite: Objects/Specific/Hydroponics/laughin_pea.rsi
+    state: produce
+  tags:
+  - Vegetable
+
+- type: foodSequenceElement
+  id: LaughinPeaBurger
+  name: food-sequence-burger-content-laughin-pea
+  sprites:
+  - sprite: Objects/Specific/Hydroponics/laughin_pea.rsi
+    state: produce
+  tags:
+  - Vegetable
+
 # World Pea
 
 - type: foodSequenceElement

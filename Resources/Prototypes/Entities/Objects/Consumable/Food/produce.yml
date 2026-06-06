@@ -370,6 +370,12 @@
     tags:
     - Vegetable
     - Ruminant
+  # Reserve edit start: Orchid's Garden - Tidy Kitchen
+  - type: FoodSequenceElement
+    entries:
+      Taco: LaughinPea
+      Burger: LaughinPeaBurger
+  # Reserve edit end: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: tower-cap log
@@ -639,6 +645,7 @@
     sprite: Objects/Specific/Hydroponics/banana.rsi
     heldPrefix: peel
   - type: Slippery
+    launchForwardsMultiplier: 1.5  # Reserve edit: Orchid's Garden - Tidy Kitchen
   - type: StepTrigger
     intersectRatio: 0.2
     triggerGroups: # Goobstation
@@ -816,6 +823,7 @@
     entries:
       Burger: CarrotBurger
       Taco: Carrot
+      Skewer: Carrot  # Reserve edit: Orchid's Garden - Tidy Kitchen
   # Reserve edit start: Orchid's Garden - Tidy Kitchen
   # Can be sliced
   - type: SliceableFood
@@ -854,6 +862,7 @@
     entries:
       Burger: CabbageBurger
       Taco: Cabbage
+      Skewer: Cabbage  # Reserve edit: Orchid's Garden - Tidy Kitchen
   # Reserve edit start: Orchid's Garden - Tidy Kitchen
   # Can be sliced
   - type: SliceableFood
@@ -892,6 +901,7 @@
     entries:
       Burger: GarlicBurger
       Taco: Garlic
+      Skewer: Garlic  # Reserve edit: Orchid's Garden - Tidy Kitchen
   # Reserve edit start: Orchid's Garden - Tidy Kitchen
   # Can be sliced
   - type: SliceableFood
@@ -936,6 +946,7 @@
     entries:
       Burger: Lemon
       Taco: Lemon
+      Skewer: Lemon  # Reserve edit: Orchid's Garden - Tidy Kitchen
   # Reserve edit start: Orchid's Garden - Tidy Kitchen
   # Can be sliced
   - type: SliceableFood
@@ -979,6 +990,7 @@
     entries:
       Burger: Lemoon
       Taco: Lemoon
+      Skewer: Lemoon  # Reserve edit: Orchid's Garden - Tidy Kitchen
   # Reserve edit start: Orchid's Garden - Tidy Kitchen
   # Can be sliced
   - type: SliceableFood
@@ -1014,6 +1026,7 @@
     entries:
       Burger: Lime
       Taco: Lime
+      Skewer: Lime  # Reserve edit: Orchid's Garden - Tidy Kitchen
   # Reserve edit start: Orchid's Garden - Tidy Kitchen
   # Can be sliced
   - type: SliceableFood
@@ -1048,6 +1061,7 @@
     entries:
       Burger: Orange
       Taco: Orange
+      Skewer: Orange  # Reserve edit: Orchid's Garden - Tidy Kitchen
   # Reserve edit start: Orchid's Garden - Tidy Kitchen
   # Can be sliced
   - type: SliceableFood
@@ -1093,6 +1107,13 @@
   - type: Tag
     tags:
     - Fruit
+  # Reserve edit start: Orchid's Garden - Tidy Kitchen
+  - type: FoodSequenceElement
+    entries:
+      Burger: ExtradimensionalOrangeBurger
+      Taco: ExtradimensionalOrange
+      Skewer: ExtradimensionalOrange
+  # Reserve edit end: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: pineapple
@@ -1169,6 +1190,7 @@
     entries:
       Burger: Potato
       Taco: Potato
+      Skewer: Potato  # Reserve edit: Orchid's Garden - Tidy Kitchen
   # Reserve edit start: Orchid's Garden - Tidy Kitchen
   # Can be sliced
   - type: SliceableFood
@@ -1430,6 +1452,7 @@
     entries:
       Burger: Apple
       Taco: Apple
+      Skewer: Apple  # Reserve edit: Orchid's Garden - Tidy Kitchen
   # Reserve edit start: Orchid's Garden - Tidy Kitchen
   # Can be sliced
   - type: SliceableFood
@@ -1478,6 +1501,7 @@
     entries:
       Burger: GoldenApple
       Taco: GoldenApple
+      Skewer: GoldenApple  # Reserve edit: Orchid's Garden - Tidy Kitchen
   # Reserve edit start: Orchid's Garden - Tidy Kitchen
   # Can be sliced
   - type: SliceableFood
@@ -1897,6 +1921,7 @@
     entries:
       Taco: Aloe
       Burger: Aloe
+      Skewer: Aloe  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: poppy
@@ -1936,6 +1961,7 @@
     entries:
       Taco: Poppy
       Burger: Poppy
+      Skewer: Poppy  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: lily
@@ -1968,6 +1994,7 @@
     entries:
       Taco: Lily
       Burger: Lily
+      Skewer: Lily  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: lingzhi
@@ -2000,6 +2027,7 @@
     entries:
       Taco: Lingzhi
       Burger: Lingzhi
+      Skewer: Lingzhi  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: ambrosia vulgaris
@@ -2045,6 +2073,7 @@
     entries:
       Taco: AmbrosiaVulgaris
       Burger: AmbrosiaVulgarisBurger
+      Skewer: AmbrosiaVulgaris  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: ambrosia deus
@@ -2088,6 +2117,7 @@
     entries:
       Taco: AmbrosiaDeus
       Burger: AmbrosiaDeusBurger
+      Skewer: AmbrosiaDeus  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: galaxythistle
@@ -2121,6 +2151,7 @@
     entries:
       Taco: Galaxythistle
       Burger: GalaxythistleBurger
+      Skewer: Galaxythistle  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: glasstle
@@ -2189,6 +2220,7 @@
     entries:
       Taco: Glasstle
       Burger: GlasstleBurger
+      Skewer: Glasstle  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: fly amanita
@@ -2221,6 +2253,7 @@
     entries:
       Taco: FlyAmanita
       Burger: FlyAmanita
+      Skewer: FlyAmanita  # Reserve edit: Orchid's Garden - Tidy Kitchen
   - type: Tag #Goobstation
     tags:
     - Mushroom
@@ -2257,6 +2290,7 @@
     entries:
       Taco: Gatfruit
       Burger: GatfruitBurger
+      Skewer: Gatfruit  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: capfruit
@@ -2292,6 +2326,7 @@
     entries:
       Taco: Capfruit
       Burger: CapfruitBurger
+      Skewer: Capfruit  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: capfruit
@@ -2387,6 +2422,7 @@
     entries:
       Taco: SpacemansTrumpet
       Burger: SpacemansTrumpetBurger
+      Skewer: SpacemansTrumpet  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: koibean
@@ -2623,9 +2659,9 @@
   # Reserve edit start: Orchid's Garden - Tidy Kitchen
   - type: FoodSequenceElement
     entries:
-      Burger: WatermelonSliceBurger
-      Taco: WatermelonSlice
-      Skewer: WatermelonSliceSkewer
+      Burger: HolymelonSliceBurger
+      Taco: HolymelonSlice
+      Skewer: HolymelonSliceSkewer
   # Reserve edit end: Orchid's Garden - Tidy Kitchen
 
 - type: entity
@@ -2735,6 +2771,7 @@
     entries:
       Taco: Bungo
       Burger: Bungo
+      Skewer: Bungo  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: bungo pit
@@ -2825,6 +2862,12 @@
   - type: Tag
     tags:
     - Vegetable
+  # Reserve edit start: Orchid's Garden - Tidy Kitchen
+  - type: FoodSequenceElement
+    entries:
+      Taco: WorldPea
+      Burger: WorldPeaBurger
+  # Reserve edit end: Orchid's Garden - Tidy Kitchen
 
 - type: entity
   name: pumpkin

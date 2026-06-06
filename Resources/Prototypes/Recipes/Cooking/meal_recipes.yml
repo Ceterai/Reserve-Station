@@ -2084,9 +2084,8 @@
   result: FoodMealQueso
   time: 15
   group: Soup
-  #todo Add blackpepper
-  #reagents:
-    #blackpepper: 5
+  reagents:
+    Blackpepper: 5  # Reserve edit: Orchid's Garden - Tidy Kitchen
   solids:
     FoodChiliPepper: 1
     FoodCheeseSlice: 2

@@ -65,6 +65,7 @@
   sprites:
   - sprite: _RMC14/Objects/Kitchen/Plants/mango.rsi
     state: produce
+  scale: 0.75,0.75  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
 - type: foodSequenceElement
   id: FSE_MangoBurger
@@ -72,4 +73,5 @@
   sprites:
   - sprite: _RMC14/Objects/Kitchen/Plants/mango.rsi
     state: produce
+  scale: 0.75,0.75  # Reserve edit: Orchid's Garden - Tidy Kitchen
 
