@@ -645,7 +645,8 @@
     sprite: Objects/Specific/Hydroponics/banana.rsi
     heldPrefix: peel
   - type: Slippery
-    launchForwardsMultiplier: 1.5  # Reserve edit: Orchid's Garden - Tidy Kitchen
+    slipData:
+      launchForwardsMultiplier: 1.5  # Reserve edit: Orchid's Garden - Tidy Kitchen
   - type: StepTrigger
     intersectRatio: 0.2
     triggerGroups: # Goobstation
