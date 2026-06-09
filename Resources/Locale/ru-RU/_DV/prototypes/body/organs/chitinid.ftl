@@ -1,6 +1,6 @@
 ent-OrganChitinidStomach = { ent-OrganAnimalStomach }
     .desc = { ent-OrganAnimalStomach.desc }
-    .suffix = Хитинид
+    .suffix = { species-name-chitinid }
 ent-OrganChitinidLiver = { ent-OrganHumanLiver }
     .desc = { ent-OrganHumanLiver.desc }
-    .suffix = Хитинид
+    .suffix = { species-name-chitinid }

@@ -8,3 +8,5 @@ ent-VehicleKeyATV = ключи от квадроцикла
     .desc = Ключи от квадроцикла. Ничего особенного.
 ent-VehicleKeyJanicart = ключи от уборочной машины
     .desc = Интересный дизайн.
+ent-VehicleKeySkeletonMotorcycle = ключи от мотоцикла скелета
+    .desc = Красивая связка ключей, увенчанная черепом.
