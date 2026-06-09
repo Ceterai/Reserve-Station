@@ -6,3 +6,7 @@ ent-MobLaughterDemon = демон смеха
 
 ent-MobLesserSlaughterDemon = малый демон резни
     .desc = { ent-BaseMobSlaughterDemon.desc }
+
+ent-PolymorphBloodCrawlJaunt = { ent-PolymorphShadowJauntAnimation }
+    .desc = { ent-PolymorphShadowJauntAnimation.desc }
+    .suffix = Эффект, Полиморф, Демон резни
