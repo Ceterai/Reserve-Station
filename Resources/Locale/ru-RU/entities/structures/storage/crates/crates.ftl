@@ -49,6 +49,9 @@ ent-CrateCommandSecure = ящик командования
     .desc = { ent-CrateBaseSecure.desc }
 ent-CrateLivestock = ящик для скота
     .desc = { ent-CrateGeneric.desc }
+ent-CrateNPCXenobioSlime = ящик слаймов
+    .desc = Содержит двух слаймов для экспериментов.
+    .suffix = Ксенобиология
 ent-CrateRodentCage = хомячья клетка
     .desc = { ent-CrateGeneric.desc }
 

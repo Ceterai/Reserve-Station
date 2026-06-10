@@ -214,3 +214,16 @@ ent-FloorTileItemPlasmaMarble = плазменная мраморная плит
     .desc = { ent-FloorTileItemWhiteMarble.desc }
 ent-FloorTileItemUraniumMarble = урановая мраморная плитка
     .desc = { ent-FloorTileItemWhiteMarble.desc }
+
+ent-PartRodMetalLingering0 = { ent-PartRodMetal }
+    .desc = { ent-PartRodMetal.desc }
+    .suffix = Не исчезают закончившись, 0
+ent-FloorTileItemSteelLingering0 = { ent-FloorTileItemSteel }
+    .desc = { ent-FloorTileItemSteel.desc }
+    .suffix = Не исчезают закончившись, 0
+ent-FloorTileItemWhiteLingering0 = { ent-FloorTileItemWhite }
+    .desc = { ent-FloorTileItemWhite.desc }
+    .suffix = Не исчезают закончившись, 0
+ent-FloorTileItemDarkLingering0 = { ent-FloorTileItemDark }
+    .desc = { ent-FloorTileItemDark.desc }
+    .suffix = Не исчезают закончившись, 0

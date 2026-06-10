@@ -20,3 +20,7 @@ ent-OrganAnimalHeart = сердце
 ent-OrganAnimalKidneys = почки
     .desc = { ent-BaseAnimalOrgan.desc }
     .suffix = Животное
+
+ent-OrganMouseEggSack = яичный мешок
+    .desc = Этот орган позволяет мышам размножаться бесполым путем. Его ткани кажутся... инопланетными, неужели это действительно природный орган?
+    .suffix = Животное, Мышь, Орган
