@@ -11,4 +11,4 @@ ent-VehicleKeyJanicart = ключи от уборочной машины
 ent-VehicleKeyForklift = ключи от погрузчика
     .desc = Ключи для погрузки!
 ent-VehicleKeySkeletonMotorcycle = ключи от мотоцикла скелета
-    .desc = Красивая связка ключей, украшенная черепом.
+    .desc = Красивая связка ключей, увенчанная черепом.
