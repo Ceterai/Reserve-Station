@@ -11,7 +11,7 @@ namespace Content.Shared.Nutrition.Components;
 /// This is used on an entity with a solution container to flag a specific solution as being able to have its
 /// reagents consumed directly.
 /// </summary>
-[RegisterComponent, NetworkedComponent, Access(typeof(IngestionSystem))]
+[RegisterComponent, NetworkedComponent, Access(typeof(IngestionSystem), typeof(FoodSequenceSystem))]  // Reserve edit: Fix burgers, tacos and skewers
 public sealed partial class EdibleComponent : Component
 {
     /// <summary>
