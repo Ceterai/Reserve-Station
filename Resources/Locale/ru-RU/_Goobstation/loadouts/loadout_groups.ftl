@@ -229,4 +229,4 @@ loadout-group-boxer-envirosuit = Боксёр, экокостюм
 loadout-group-plasma-tank = Баллон плазмы
 loadout-group-animals = Животные
 loadout-group-security-neck = СБ, плащ
-loadout-group-security-melee = Оружите ближнего боя
+loadout-group-security-melee = Оружие ближнего боя
