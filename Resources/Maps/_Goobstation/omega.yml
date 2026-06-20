@@ -75157,6 +75157,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 24.5,16.5
       parent: 2
+- proto: SpawnPointShaftMiner  # Reserve edit: Bring back salvagers
+  entities:
   - uid: 11102
     components:
     - type: Transform

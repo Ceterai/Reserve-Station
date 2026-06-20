@@ -14054,6 +14054,8 @@ entities:
     - type: Transform
       pos: -0.5,15.5
       parent: 2
+- proto: SpawnPointShaftMiner  # Reserve edit: Bring back salvagers
+  entities:
   - uid: 1941
     components:
     - type: Transform
