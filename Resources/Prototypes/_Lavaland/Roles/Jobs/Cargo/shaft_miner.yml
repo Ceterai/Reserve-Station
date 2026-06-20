@@ -20,6 +20,9 @@
   - Salvage
   - Maintenance
   - External
+  alternateTitles: # Reserve - alternate titles
+  - ShaftMinerGeologist
+  - ShaftMinerVulcanologist
 
 - type: startingGear
   id: ShaftMinerGear
@@ -41,3 +44,11 @@
     outerClothing: ClothingOuterWinterMiner
     neck: ClothingNeckScarfStripedBrown
     gloves: ClothingHandsGlovesColorBlack
+
+- type: jobAlternateTitle
+  id: ShaftMinerGeologist
+  name: job-name-alt-miner-1
+
+- type: jobAlternateTitle
+  id: ShaftMinerVulcanologist
+  name: job-name-alt-miner-2

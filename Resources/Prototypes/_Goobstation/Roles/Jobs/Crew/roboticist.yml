@@ -16,6 +16,9 @@
   - Research
   - Maintenance
   - Robotics
+  alternateTitles: # Reserve - alternate titles
+  - RoboticistCybersurgeon
+  - RoboticistAISpecialist
 
 - type: startingGear
   id: RoboticistGear
@@ -37,3 +40,11 @@
     jumpsuit: ClothingUniformJumpsuitRoboticist
     shoes: ClothingShoesColorBlack
     id: RoboticistPDA
+
+- type: jobAlternateTitle
+  id: RoboticistCybersurgeon
+  name: job-name-alt-roboticist-1
+
+- type: jobAlternateTitle
+  id: RoboticistAISpecialist
+  name: job-name-alt-roboticist-2

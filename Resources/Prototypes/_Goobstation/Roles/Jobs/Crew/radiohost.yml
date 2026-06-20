@@ -10,6 +10,9 @@
   - Maintenance
   - Journalism
   - Service
+  alternateTitles: # Reserve - alternate titles
+  - RadioHostPodcaster
+  - RadioHostConspiracyTheorist
 
 - type: startingGear
   id: RadioHostGear
@@ -30,3 +33,10 @@
     shoes: ClothingShoesColorBlack
     id: RadioHostPDA
 
+- type: jobAlternateTitle
+  id: RadioHostPodcaster
+  name: job-name-alt-radiohost-1
+
+- type: jobAlternateTitle
+  id: RadioHostConspiracyTheorist
+  name: job-name-alt-radiohost-2
