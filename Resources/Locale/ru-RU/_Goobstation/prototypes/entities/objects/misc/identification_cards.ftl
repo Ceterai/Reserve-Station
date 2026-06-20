@@ -44,7 +44,6 @@ ent-OuterCommandIDCard = ID карта внешнего командования
     .desc = { ent-IDCardStandard.desc }
 ent-MinerIDCard = ID карта шахтёра
     .desc = { ent-IDCardStandard.desc }
-    .suffix = Неправильная
 ent-IDCardTide = ID карта тайдера
     .desc = Самодельная ID-карта, сделанная бог знает из чего.
 ent-IDCardTideUnfinished = незаконченная самодельная ID карта
