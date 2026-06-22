@@ -100,7 +100,7 @@ job-name-alt-librarian-2 = Писатель
 job-name-alt-librarian-3 = Профессор
 job-name-alt-librarian-4 = Куратор
 
-job-name-alt-musician-1 = Радио-диджей
+job-name-alt-musician-1 = Диджей
 job-name-alt-musician-2 = Прибывшая знаменитость
 job-name-alt-musician-3 = Исполнитель
 
