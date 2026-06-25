@@ -13,3 +13,8 @@ slime-examined-tamer = [color=green]Он рад вас видеть![/color]
 slime-interaction-tame = Кажется, теперь вы ему нравитесь!
 
 slime-interaction-tame-fail = Похоже, вы его не интересуете.
+
+mob-growth-display-baby = малыш
+mob-growth-display-adult = взрослый
+
+slime-latch-fail-already-latched = Вы не можете прицепиться к {$ent}, к нему уже прицепился кто-то другой!

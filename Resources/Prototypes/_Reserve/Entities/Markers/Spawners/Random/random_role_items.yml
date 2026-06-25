@@ -15,6 +15,8 @@
     - id: PlantBagOfHolding
       weight: 0.8
     - id: ClothingBeltPlantFilled
+    - id: HandLabeler
+    - id: WateringCan
     - id: VasePlant0
       amount: 2
       weight: 1.2
@@ -49,9 +51,28 @@
     - id: ChemistryBottleDylovene
     - id: AugmentBotanyPanel
       weight: 0.8
+    - id: SprayBottleWater
+      amount: 2
+      weight: 0.8
+    - id: WateringCanExperimental
+      weight: 0.8
+    - id: BluespaceBucket
+      weight: 0.6
+    - id: BoxAgrichem
+      weight: 0.6
+    - id: SeedEmUpSpray
+      weight: 0.6
     - id: ClothingOuterApronBotanist
+    - id: ClothingOuterApronBotanistAdvanced
+    - id: ClothingHandsGlovesBotanistAdvanced
     - id: ClothingHandsGlovesLeather
     - id: ClothingHandsGlovesEnviroglovesLeather
+    - id: ClothingEyesGogglesBotanistAdvanced
+    - id: ClothingMaskBandBotany
+    - id: ClothingMaskBreathBotanistAdvanced
+    - id: ClothingHeadBandBotany
+    - id: ClothingHeadHatTrucker
+      weight: 0.5
     - !type:AllSelector
       children:
       - id: ClothingUniformJumpsuitMilitaryHydroponics
@@ -60,8 +81,17 @@
       children:
       - id: ClothingUniformEnvirosuitHydroponics
       - id: ClothingHeadEnvirohelmHydroponics
+      - id: ClothingHandsGlovesEnviroglovesLeather
+    - !type:AllSelector
+      weight: 0.4
+      children:
+      - id: ClothingMaskBreathBotanistAdvanced
+      - id: ClothingOuterApronBotanistAdvanced
+      - id: ClothingHandsGlovesBotanistAdvanced
     - id: ToyFigurineBotanist
     - id: VendingMachineRestockSeeds
+    - id: VendingMachineRestockNutriMax
+      weight: 0.4
     - !type:AllSelector
       children:
       - id: BloonionSeeds
@@ -76,34 +106,70 @@
   table: !type:GroupSelector
     children:
     - id: MopItem
-    - id: DrinkMopwataBottleRandom
-    - id: DrinkMopwataGlass
     - id: AdvMopItem
     - id: MopBucketCubeWrapped
     - id: MoproachCube
     - id: MothroachCube
     - id: MoproachShoes
+    # Drinks
+    - id: DrinkMopwataBottleRandom
+    - id: DrinkMopwataGlass
+    # Sprays
     - id: SprayBottleSpaceCleaner
+    - id: SprayBottleWater
+      amount: 2
+      weight: 0.8
+    - id: SprayBottle
+      amount: 2
+      weight: 0.4
+    - id: MegaSprayBottle
+      weight: 0.4
+    # Fun
     - id: CrewCassette
+    - id: VinylSleeveJanitor
+    - id: ToyFigurineJanitor
+    # Soaps
     - id: SoapNT
     - id: BoxSoapsAssorted
     - id: BoxSoapsAssortedOmega
+    - !type:AllSelector
+      children:
+      - id: EdibleSoap
+      - id: EdibleSoapCherry
+      - id: EdibleSoapBrepsi
+      - id: EdibleSoapLaughter
+    # Grenades
     - id: GrenadeCleanade
       amount: 2
     - id: LubeGrenade
       amount: 2
     - id: BoxCleanerGrenades
-    - id: VinylSleeveJanitor
     - id: ClothingHandsGlovesEnviroglovesJanitor
     - id: ClothingHandsGlovesJanitor
     - id: ClothingBeltJanitorFilled
-    - id: ToyFigurineJanitor
+    # Containers
+    - id: Bucket
+    - id: BluespaceBucket
+      weight: 0.8
     - id: TrashBag
       amount: 2
+    - id: TrashBagOfHolding
+      weight: 0.8
+    # Borg Modules
+    - id: BorgModuleCleaning
+      weight: 0.8
+    - id: BorgModuleAdvancedCleaning
+      weight: 0.6
+    # Other
     - id: Plunger
-    - id: Bucket
     - id: WetFloorSign
     - id: WireBrush
+    - !type:AllSelector
+      children:
+      - id: ClothingBackpackWaterTank
+      - id: WeaponSprayNozzle
+      weight: 0.8
+    # Clothing
     - !type:AllSelector
       children:
       - id: ClothingOuterBioJanitor
@@ -175,6 +241,80 @@
     - id: ToolboxMechanicalFilled
     - id: VendingMachineRestockTankDispenser
 
+- type: entityTable
+  id: ChefToolTable
+  table: !type:GroupSelector
+    children:
+    - id: ButchCleaver
+    - id: KitchenKnife
+    - id: RollingPin
+    - id: FoodPlateTin
+    - id: FoodPlateMuffinTin
+      amount: 2
+    - id: Beaker
+      amount: 2
+    - id: LargeBeaker
+    - id: Pitcher
+    - id: DrinkVisualizerTestCut
+      weight: 0.4
+    - id: DrinkVisualizerTestNot
+      weight: 0.2
+    - id: BoxMousetrap
+    - id: VariantCubeBox
+    - id: FoodBoxCloth
+    - id: VendingMachineRestockChefvend
+    - id: ClothingOuterApronChef
+    - id: ClothingHeadHatChef
+      weight: 0.8
+    - id: ClothingShoesChef
+      weight: 0.8
+    - id: ClothingBeltChefFilled
+    - id: ClothingHandsGlovesMitts
+    - id: ToyFigurineChef
+    - id: ClothingOuterWinterChef
+      weight: 0.8
+    - id: ClothingOuterJacketChef
+      weight: 0.8
+    - id: DrinkKettleAdvanced
+    - id: BluespaceDrinkKettleAdvanced
+      weight: 0.6
+    - id: ClothingHeadHatChefBluespace
+      weight: 0.6
+
+- type: entityTable
+  id: BartenderToolTable
+  table: !type:GroupSelector
+    children:
+    - id: DrinkShaker
+    - id: DrinkVacuumFlask
+    - id: DrinkFlaskBar
+    - id: DrinkJigger
+    - id: BarSpoon
+    - id: LargeBeaker
+    - id: Pitcher
+    - id: DrinkVisualizerTestCut
+      weight: 0.4
+    - id: DrinkVisualizerTestNot
+      weight: 0.2
+    - id: ClothingEyesHudBeer
+    - id: ClothingEyesEyepatchHudBeer
+    - id: ClothingOuterWinterBar
+    - id: ClothingOuterApronBar
+    - id: HandLabeler
+    - id: RagItem
+      amount: 2
+    - id: ToyFigurineBartender
+    - id: VendingMachineRestockBooze
+      weight: 0.8
+    - id: DrinkCanPack
+    - id: DrinkShakerAdvanced
+    - id: BluespaceDrinkShakerAdvanced
+      weight: 0.6
+    - id: DrinkKettleAdvanced
+      weight: 0.8
+    - id: BluespaceDrinkKettleAdvanced
+      weight: 0.4
+
 - type: entity
   id: RandomBotanistTool
   name: random tool
@@ -231,6 +371,44 @@
   - type: EntityTableSpawner
     table: !type:NestedSelector
       tableId: AtmosToolTable
+
+- type: entity
+  id: RandomChefTool
+  name: random tool
+  suffix: Chef
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Clothing/Hands/Gloves/hop.rsi
+        state: icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: ChefToolTable
+
+- type: entity
+  id: RandomBartenderTool
+  name: random tool
+  suffix: Bartender
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Consumable/Drinks/shaker.rsi
+        state: icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: BartenderToolTable
 
 # Objects
 

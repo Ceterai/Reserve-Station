@@ -1,2 +1,2 @@
-ent-GatewayFlatpackLavaland = плоский пакет lavaland gateway
-    .desc = Плоский рюкзак, который использовался для перевозки пассажиров в Лаваленд.
+ent-GatewayFlatpackLavaland = упакованные врата лаваленда
+    .desc = Содержит врата переноса в Лаваленд.

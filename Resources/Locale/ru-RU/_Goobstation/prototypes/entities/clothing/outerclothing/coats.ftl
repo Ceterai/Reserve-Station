@@ -14,3 +14,5 @@ ent-ClothingOuterCoatRDPurpleOpened = { ent-ClothingOuterCoatRDPurple }
     .desc = { ent-ClothingOuterCoatRDPurple.desc }
 ent-ClothingOuterCoatHoPLong = длинное пальто главы персонала
     .desc = Элегантное длинное пальто для главы персонала.
+ent-ClothingOuterArmoredJacketOuterCommand = куртка внешнего командования
+    .desc = Фиолетовая куртка с очень дорогими деталями. На спине эмблема Терра-Гов.

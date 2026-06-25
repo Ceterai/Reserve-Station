@@ -131,30 +131,40 @@
 
 - type: entityTable
   id: CrateFunToyBoxFill
-  table: !type:AllSelector
+  table: !type:GroupSelector
     children:
     - id: SnapPopBox
-      prob: 0.3
+      weight: 0.3
     - id: CrazyGlue
       amount: 2
-      prob: 0.3
+      weight: 0.3
     - id: PlasticBanana
-      prob: 0.3
+      weight: 0.3
     - id: WhoopieCushion
-      prob: 0.5
+      weight: 0.5
     - id: ToyHammer
-      prob: 0.5
+      weight: 0.5
     - id: MysteryFigureBox
-      prob: 0.9
+      weight: 0.7
     - id: MysteryFigureBox
       amount: 2
-      prob: 0.1
+      weight: 0.2
     - !type:GroupSelector
       children:
       - id: RevolverCapGun
       - id: DoubleToySword
       - id: FoamWonderprod
       - id: FoamCutlass
+      - id: WeaponRifleFoam
+        weight: 0.2
+      weight: 0.8
+    - !type:GroupSelector
+      children:
+      - id: WeaponWaterBlaster
+      - id: WeaponWaterPistol
+      - id: WeaponWaterBlasterSuper
+        weight: 0.2
+      weight: 0.2
     - !type:GroupSelector
       children:
       - !type:AllSelector
@@ -162,7 +172,7 @@
         - id: MrChips
         - id: MrDips
         - id: LilCal
-        weight: 1.0
+        weight: 0.2
       - !type:NestedSelector
         tableId: AllPlushiesTable
         weight: 1.5
@@ -180,31 +190,40 @@
       children:
       - id: BalloonNT
       - id: BalloonCorgi
+      weight: 0.3
     - !type:GroupSelector
       children:
       - id: Basketball
       - id: BeachBall
       - id: Football
+      - id: TennisBall
+        amount: 2
+      - id: DiscoBeachBall
+        weight: 0.2
+      weight: 0.8
     - id: ClothingShoesSkates
-      prob: 0.5
+      weight: 0.3
     - id: RubberChicken
-      prob: 0.5
+      weight: 0.3
     - !type:GroupSelector
       children:
       - id: HelicopterInstrument
       - id: BirdToyInstrument
-      prob: 0.3
+      weight: 0.3
     - id: DrinkPwrGameCan
       amount: 2
-      prob: 0.2
+      weight: 0.3
     - id: GrenadeToy
       amount: 2
-      prob: 0.2
+      weight: 0.3
+    - id: GrenadeFoamDart
+      amount: 3
+      weight: 0.2
     - !type:GroupSelector
       children:
       - id: ToyAi
       - id: ToyMouse
-      prob: 0.2
+      weight: 0.3
     - !type:GroupSelector
       children:
       - id: ChessBoard
@@ -212,50 +231,56 @@
       - id: ParchisBoard
       - id: CheckerBoard
       - id: BoxPlaysetEvacPod
+        weight: 1.2
       - id: CardBoxBase
+        weight: 0.7
       - id: CardBoxBlack
+        weight: 0.7
       - id: CardBoxNanotrasen
+        weight: 0.7
       - id: DiceBag
+        weight: 0.8
       - id: MagicDiceBag
-      - id: BoxDarts
+        weight: 0.7
+      - !type:AllSelector
+        children:
+        - id: BoxDarts
+        - id: TargetDarts
+        weight: 1.2
       - id: CrayonBox
-      prob: 0.2
-    - !type:GroupSelector
-      children:
-      - id: ChessBoard
-      - id: BackgammonBoard
-      - id: ParchisBoard
-      - id: CheckerBoard
-      - id: BoxPlaysetEvacPod
-      - id: CardBoxBase
-      - id: CardBoxBlack
-      - id: CardBoxNanotrasen
-      - id: DiceBag
-      - id: MagicDiceBag
-      - id: BoxDarts
-      - id: CrayonBox
-      prob: 0.5
+      - id: ClothingBackpackDuffelTennisGame
+        weight: 1.2
     - !type:GroupSelector
       children:
       - id: ClothingShoesClownLarge
       - id: ClothingShoeSlippersLizard
       - id: ClothingShoesFakeJordans
-      prob: 0.2
+      weight: 0.3
     - !type:GroupSelector
       children:
       - id: ClothingHandsGlovesBoxingRed
       - id: ClothingHandsGlovesBoxingBlue
       - id: ClothingHandsGlovesBoxingYellow
       - id: ClothingHandsGlovesBoxingGreen
-      prob: 0.5
+      weight: 0.6
       rolls: 2
     - !type:GroupSelector
       children:
       - id: ClothingHeadHatMagician
       - id: ClothingMaskJoy
-      prob: 0.2
-    - id: ToolboxArtisticFilled
-      prob: 0.1
+      - id: ClothingEyesHudFriedOnion
+      weight: 0.3
+    - id: SpellCardFun
+      weight: 0.2
+    - !type:AllSelector
+      children:
+      - id: WeaponRifleFoam
+      - id: BoxDonkSoftBox
+      - id: GrenadeFoamDart
+        amount: 2
+      weight: 0.3
+    - id: WaterDropletHat
+      weight: 0.1
 
 - type: entity
   id: CrateFunToyBoxRandom
@@ -266,6 +291,8 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: CrateFunToyBoxFill
+        rolls: !type:RangeNumberSelector
+          range: 16, 18
 
 - type: entity
   id: RandomArcadeAny

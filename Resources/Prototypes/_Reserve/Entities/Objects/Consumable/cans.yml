@@ -114,7 +114,7 @@
 
 - type: entity
   parent: DrinkCan
-  id: DrinkCanSpritex
+  id: DrinkSpritexCan
   name: Spritex can
   description: A knock-off of a long-forgotten brand.
   components:
@@ -918,7 +918,7 @@
   parent: DrinkCan
   id: DrinkEnergyReserveCan
   name: Reserve Secret energy drink can
-  description: Will raise even the dead!
+  description: "Reserve's secret? Reserve: Secret!"
   components:
   - type: SolutionContainerManager
     solutions:
@@ -947,7 +947,7 @@
     solutions:
       drink:
         reagents:
-        - ReagentId: Stimulants
+        - ReagentId: Epinephrine
           Quantity: 10
         - ReagentId: NuclearCola
           Quantity: 15
@@ -970,7 +970,7 @@
     solutions:
       drink:
         reagents:
-        - ReagentId: Stimulants
+        - ReagentId: Epinephrine
           Quantity: 12
         - ReagentId: EnergyDrink
           Quantity: 8

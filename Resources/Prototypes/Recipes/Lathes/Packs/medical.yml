@@ -85,6 +85,12 @@
   - ClothingHandsGlovesLatex
   - ClothingHandsGlovesNitrile
   - ClothingMaskSterile
+  # Reserve edit start: Orchid's Barmania - Service Heaven
+  - ClothingOuterApronChemist
+  - ClothingHandsGlovesChemistAdvanced
+  - ClothingHandsGlovesMittsChemist
+  - ClothingMaskBreathChemist
+  # Reserve edit end: Orchid's Barmania - Service Heaven
 
 # These are all empty
 - type: latheRecipePack

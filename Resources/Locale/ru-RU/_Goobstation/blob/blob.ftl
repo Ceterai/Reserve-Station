@@ -4,10 +4,11 @@ ghost-role-information-blobbernaut-name = Блоббернаут
 ghost-role-information-blobbernaut-description = Вы - Блоббернаут. Вы должны защищать ядро блоба.
 
 ghost-role-information-blob-name = Блоб
-ghost-role-information-blob-description = Вы - носитель блоба. Поглотите станцию.
+ghost-role-information-blob-description = Вы — носитель блоба. Поглотите станцию.
 
 roles-antag-blob-name = Блоб
-roles-antag-blob-objective = Достичь критической массы.
+roles-antag-blob-objective = Вы — паразитическое космическое существо, преследующее единственную цель: пожирать.
+    Распространяйтесь из своего ядра, поглощайте структуру станции одну за другой и ассимилируйте или уничтожьте всё живое на борту. Неустанно расширяйтесь. Защищайте своё ядро ​​любой ценой. Оставьте после себя лишь биомассу.
 
 guide-entry-blob = Блоб
 # Popups
@@ -130,3 +131,13 @@ admin-verb-text-make-blob = Создать переносчик блоба
 language-Blob-name = Блоб
 chat-language-Blob-name = Блоб
 language-Blob-description = Блиб боб! Блоб блоб!
+
+blob-alert-shuttle-arrived = Обнаружена биологическая угроза. Весь персонал должен немедленно эвакуироваться.
+
+blob-help-action-desc = Получить базовую информацию об игре за блоба.
+
+blob-help-action-name = Помощь
+
+blob-teleport-to-node-action-desc = Телепортирует вас к случайному узловому блобу.
+
+blob-teleport-to-node-action-name = Телепорт к узлу (0)

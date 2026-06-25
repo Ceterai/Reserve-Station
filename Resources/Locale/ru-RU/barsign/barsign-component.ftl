@@ -59,10 +59,10 @@ barsign-prototype-description-ale-nath = По какой-то причине п�
 barsign-prototype-name-the-net = Сеть
 barsign-prototype-description-the-net = Незаметишь как затянет на пару часов.
 
-## Maid Cafe
+## Cat Cafe
 
-barsign-prototype-name-maid-cafe = Мэйдо-кафе
-barsign-prototype-description-maid-cafe = С возвращением, хозяин!
+barsign-prototype-name-maid-cafe = Кошко-кафе
+barsign-prototype-description-maid-cafe = С возвращением!
 
 ## Maltese Falcon
 

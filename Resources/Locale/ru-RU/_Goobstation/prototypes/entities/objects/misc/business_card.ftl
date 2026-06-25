@@ -1,4 +1,4 @@
-ent-CentralCommandBusinessCard = визитная карточка Центком
+ent-CentralCommandBusinessCard = визитная карточка ЦентКом
     .desc = Зеленая карточка с логотипом nanotrasen. На обороте что-то написано.
 ent-TunnelClownBusinessCard = визитная карточка туннельного клоуна
     .desc = Зеленая карточка с логотипом nanotrasen. На обороте что-то написано.

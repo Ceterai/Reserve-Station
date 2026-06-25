@@ -1,4 +1,4 @@
-ent-ClothingBackpackStasisBattery = cтазис-хранилище
+ent-ClothingBackpackStasisBattery = стазис-хранилище
     .desc = Хранит энергию, чтобы заморозить течение времени, искажая пространство внутри для увеличения емкости.
 ent-ClothingBackpackStasisBatteryUnremoveable = { ent-ClothingBackpackStasisBattery }
     .suffix = Неснимаемый

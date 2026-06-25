@@ -4,7 +4,7 @@ cosmiccult-announcement-sender = ???
 cosmiccult-title = Космический культ
 cosmiccult-description = Среди экипажа скрываются культисты.
 roles-antag-cosmiccult-name = Космический культист
-roles-antag-cosmiccult-description = Приблизьте конец всего сущего с помощью уловок и саботажа, промывая мозги тем, кто мог бы выступить против вас.
+roles-antag-cosmiccult-description = Приведите к концу всё с помощью обмана и саботажа, промывая мозги тем, кто вам противостоит. [color=#4cabb3][bold]Занавес должен опуститься.[/bold][/color]
 cosmiccult-gamemode-title = Космический культ
 cosmiccult-gamemode-description = Сканеры фиксируют аномальное увеличение Λ-CDM. Дополнительных данных нет.
 cosmiccult-vote-steward-initiator = Неизвестное
@@ -155,3 +155,5 @@ cosmiccult-entropy-unavailable = Ты не можешь сделать это п
 cosmiccult-astral-ascendant = { $name }, восходящий
 cosmiccult-gear-pickup-rejection = { $ITEM } сопротивляется прикосновению { CAPITALIZE(THE($TARGET)) }!
 cosmiccult-gear-pickup = Вы можете почувствовать, как разрываетесь, держа в руках { $ITEM }!
+
+cult-alert-recall-shuttle = Обнаружены высокие концентрации Лямбда-CDM неизвестного происхождения на станции. Все аномальные присутствия должны быть устранены до эвакуации.

@@ -1,6 +1,6 @@
-ent-ClothingBackpackCentcomm = рюкзак Центком
+ent-ClothingBackpackCentcomm = рюкзак ЦентКом
     .desc = Роскошный рюкзак, пахнущий деньгами.
-ent-ClothingBackpackBlueshield = рюкзак офицера синего щита
+ent-ClothingBackpackBlueshield = рюкзак офицера Синего Щита
     .desc = Очень прочный рюкзак, пахнет энергетическим пистолетом.
 ent-ClothingBackpackUnremoveable = { ent-ClothingBackpack }
     .desc = { ent-ClothingBackpack.desc }

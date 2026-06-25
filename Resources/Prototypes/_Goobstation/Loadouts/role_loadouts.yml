@@ -162,6 +162,7 @@
   groups:
   - GroupTankHarness
   - RoboticistHead
+  - RoboticistGoggles  # Reserve edit: Orchid's Barmania - Service Heaven
   - ScientistNeck
   - RoboticistJumpsuit
   - RoboticistBackpack
@@ -169,7 +170,6 @@
   - RoboticistGloves
   - RoboticistShoes
   - RoboticistPDA
-  - Glasses
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool

@@ -28,3 +28,8 @@ research-technology-bluespace-construction-storage = Блюспейс-строи
 research-technology-extended-communication = Расширенные коммуникации
 research-technology-bluespace-munitions = Блюспейс-аммуниция
 research-technology-radio-music-communication = Радиомузыкальные коммуникации
+research-technology-cloning = Биологическая реконструкция
+
+research-technology-service-energy-chem = Органический электросинтез
+
+research-technology-xeno-compatibility = Ксеносовместимость

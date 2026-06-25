@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Goob Station Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: job
   id: Roboticist
   name: job-name-roboticist
@@ -16,12 +20,15 @@
   - Research
   - Maintenance
   - Robotics
+  alternateTitles: # Reserve - alternate titles
+  - RoboticistCybersurgeon
+  - RoboticistAISpecialist
 
 - type: startingGear
   id: RoboticistGear
   equipment:
     ears: ClothingHeadsetRobotics
-    eyes: ClothingEyesHudDiagnostic
+    # eyes: ClothingEyesHudDiagnostic  # Reserve edit: Orchid's Barmania - Service Heaven
 
 - type: chameleonOutfit
   id: RoboticistChameleonOutfit
@@ -37,3 +44,11 @@
     jumpsuit: ClothingUniformJumpsuitRoboticist
     shoes: ClothingShoesColorBlack
     id: RoboticistPDA
+
+- type: jobAlternateTitle
+  id: RoboticistCybersurgeon
+  name: job-name-alt-roboticist-1
+
+- type: jobAlternateTitle
+  id: RoboticistAISpecialist
+  name: job-name-alt-roboticist-2

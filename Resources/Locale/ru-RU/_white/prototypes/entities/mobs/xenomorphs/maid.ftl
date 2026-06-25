@@ -1,3 +1,3 @@
-ent-MobXenomorphMaid = Похотливая ксеноморф горничная
+ent-MobXenomorphMaid = ксеноморф-слуга
     .desc = Не проси её откладывать в тебя яйца.
     .suffix = { ent-BaseMobXenomorphAdult.suffix }

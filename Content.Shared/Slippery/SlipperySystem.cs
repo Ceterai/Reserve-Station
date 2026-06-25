@@ -55,7 +55,6 @@ using Robust.Shared.Network;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Physics.Systems;
-using Robust.Shared.Physics.Events;
 using Robust.Shared.Utility;
 using Content.Shared.Projectiles;
 
@@ -173,8 +172,11 @@ public sealed class SlipperySystem : EntitySystem
         if (attemptCausingEv.Cancelled)
             return;
 
-        var ev = new SlipEvent(other);
-        RaiseLocalEvent(uid, ref ev);
+        var slipEv = new SlipEvent(other);
+        RaiseLocalEvent(uid, ref slipEv);
+
+        var slippedEv = new SlippedEvent(uid, component.SlipData.SuperSlippery);
+        RaiseLocalEvent(other, slippedEv);
 
         if (_physicsQuery.TryComp(other, out var physics) && !_slidingQuery.HasComp(other))
         {
@@ -225,6 +227,8 @@ public sealed class SlipAttemptEvent : EntityEventArgs, IInventoryRelayEvent
 
     public SlotFlags TargetSlots { get; } = SlotFlags.FEET;
 
+    public bool SuperSlippery;
+
     public SlipAttemptEvent(EntityUid? slipCausingEntity)
     {
         SlipCausingEntity = slipCausingEntity;
@@ -236,9 +240,26 @@ public sealed class SlipAttemptEvent : EntityEventArgs, IInventoryRelayEvent
 /// </summary>
 /// <param name="Cancelled">If the slip should be cancelled</param>
 [ByRefEvent]
-public record struct SlipCausingAttemptEvent (bool Cancelled);
+public record struct SlipCausingAttemptEvent(bool Cancelled);
 
 /// Raised on an entity that CAUSED some other entity to slip (e.g., the banana peel).
 /// <param name="Slipped">The entity being slipped</param>
 [ByRefEvent]
 public readonly record struct SlipEvent(EntityUid Slipped);
+
+/// Raised on the entity that got slipped
+/// <param name="Slipper">The entity being slipped</param>
+/// <param name="SuperSlippery">Was whatever slipped us super slippery</param>
+public sealed class SlippedEvent : EntityEventArgs, IInventoryRelayEvent
+{
+    public SlotFlags TargetSlots { get; } = SlotFlags.WITHOUT_POCKET;
+
+    public EntityUid Slipper;
+    public bool SuperSlippery;
+
+    public SlippedEvent(EntityUid slipper, bool superSlippery)
+    {
+        Slipper = slipper;
+        SuperSlippery = superSlippery;
+    }
+}

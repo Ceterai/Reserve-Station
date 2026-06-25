@@ -1,5 +1,5 @@
-ent-BlueShieldDeputy = заместитель Синий Щит
-    .suffix = Человек
+ent-BlueShieldDeputy = заместитель Синего Щита
     .desc = { ent-MobHuman.desc }
-ent-BlueShieldDeputySpawnBriefcase = чемодан-телепортер заместителя СЩ
+    .suffix = { species-name-human }
+ent-BlueShieldDeputySpawnBriefcase = чемодан-телепортер заместителя Синего Щита
     .desc = Особое устройство, создающее блюспейс портал, связанный с ближайшим офисом заместителя СЩ NanoTrasen. Когда заместитель будет готов, он телепортируется в это место.

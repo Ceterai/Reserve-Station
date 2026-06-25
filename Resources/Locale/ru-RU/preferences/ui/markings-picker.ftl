@@ -1,16 +1,19 @@
-markings-used = Используемые черты
+markings-used = Используемые черты и настройки
 markings-unused = Неиспользуемые черты
 markings-add = Добавить черту
 markings-remove = Убрать черту
-markings-rank-up = Вверх
-markings-rank-down = Вниз
-markings-search = Поиск
-marking-points-remaining = Черт осталось: { $points }
+markings-rank-up = ▲
+markings-rank-down = ▼
+markings-search = Поиск...
+marking-points-remaining = Черт осталось: [{$current}/{$max}]
 marking-used = { $marking-name }
 marking-used-forced = { $marking-name } (Принудительно)
 marking-slot-add = Добавить
 marking-slot-remove = Удалить
 marking-slot = Слот { $number }
+marking-forced-colors = Данная черта имеет предустановленные цвета и не может быть изменена.
+marking-select-to-customize = Выберите черту на правой панели, чтобы настроить её цвет.
+marking-customize-colors = Окрас
 
 # Categories
 
@@ -37,3 +40,4 @@ markings-category-Tail = Хвост
 markings-category-Undershirt = Майка
 markings-category-Underwear = Нижнее белье
 markings-category-Overlay = Наложение
+markings-category-Groin = Пах

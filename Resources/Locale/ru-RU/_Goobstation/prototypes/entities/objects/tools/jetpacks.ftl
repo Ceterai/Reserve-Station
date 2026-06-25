@@ -1,11 +1,11 @@
 ent-JetpackChrono = футуристичный джетпак
     .desc = Реактивный ранец с магнитным креплением, вмещающий огромное количество газа. Используется в качестве кислородного баллона.
 ent-JetpackChronoUnremoveable = { ent-JetpackChrono }
-    .suffix = Неснимаемый
     .desc = { ent-JetpackChrono.desc }
+    .suffix = Неснимаемый
 ent-JetpackContractor = джетпак контрактника
-    .suffix = Пустой
     .desc = { ent-BaseJetpack.desc }
+    .suffix = Синдикат
 ent-JetpackContractorFilled = джетпак контрактника
-    .suffix = Заполненный
     .desc = { ent-BaseJetpack.desc }
+    .suffix = Синдикат, Заполненный

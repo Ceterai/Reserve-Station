@@ -68,7 +68,8 @@ using System.Linq;
 using System.Numerics;
 using Content.Server.Cargo.Components;
 using Content.Server.Cargo.Systems;
-using Content.Server.Nutrition.Components;
+// Reserve edit: guide-book #320
+using Content.Shared.Nutrition.Components;
 using Content.Server.Nutrition.EntitySystems;
 using Content.Shared.Cargo.Prototypes;
 using Content.Shared.Prototypes;
@@ -86,7 +87,8 @@ public sealed class CargoTest
     private static readonly HashSet<ProtoId<CargoProductPrototype>> Ignored =
     [
         // This is ignored because it is explicitly intended to be able to sell for more than it costs.
-        new("FunCrateGambling")
+        new("FunCrateGambling"),
+        new("FunToyBox")  // Reserve edit: Orchid's Barmania - Service Heaven: randomized, rarely can be sold for up to plus ~400 credits.
     ];
 
     [Test]
@@ -144,6 +146,9 @@ public sealed class CargoTest
             {
                 foreach (var proto in protoManager.EnumeratePrototypes<CargoProductPrototype>())
                 {
+                    if (Ignored.Contains(proto.ID))  // Reserve edit: Orchid's Barmania - Service Heaven
+                        continue;
+
                     var ent = entManager.SpawnEntity(proto.Product, new MapCoordinates(Vector2.Zero, mapId));
 
                     foreach (var bounty in bounties)

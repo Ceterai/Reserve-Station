@@ -80,6 +80,7 @@ guide-entry-janitorial = Уборка станции
 guide-entry-bartender = Бармен
 guide-entry-chef = Шеф-повар
 guide-entry-foodrecipes = Рецепты еды
+guide-entry-ingredient-recipes = Ингредиенты
 guide-entry-medical = Медицинский отдел
 guide-entry-medicaldoctor = Врач
 guide-entry-chemist = Химик
@@ -87,6 +88,7 @@ guide-entry-medicine = Медицина
 guide-entry-brute =
     Продвинутое лечение
     механических повреждений
+guide-entry-plastic = Производство пластика
 guide-entry-botanicals = Ботаника
 guide-entry-cloning = Клонирование
 guide-entry-cryogenics = Криогеника
@@ -196,3 +198,9 @@ guide-entry-rules-ban-types = Типы запретов
 guide-entry-rules-ban-durations = Длительность запрета
 guide-entry-writing = Разметка письма
 guide-entry-glossary = Словарь терминов
+guide-entry-ressureregulator = Регулятор давления
+guide-entry-rules-m1 = М1
+guide-entry-rules-mrp-m0 = МРП Правила
+guide-entry-rules-r18 = R18
+guide-entry-rules-r19 = R19
+guide-entry-rules-r20 = R20
