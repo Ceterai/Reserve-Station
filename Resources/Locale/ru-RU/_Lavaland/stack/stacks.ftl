@@ -7,8 +7,9 @@ stack-unprocessed-quartz-ore = необработанный кварц
 stack-unprocessed-uranium-ore = необработанная урановая руда
 stack-unprocessed-bananium-ore = необработанная бананиумовая руда
 stack-unprocessed-coal = необработанный уголь
+stack-unprocessed-artifact-fragment-ore = необработанный фрагмент артефакта
 
-stack-artifact-fragment-ore = необработанный фрагмент артефакта
+stack-artifact-fragment-ore = фрагмент артефакта
 
 stack-ashwood-plank =
     { $amount ->
@@ -33,8 +34,6 @@ stack-magma-wing =
         [1] крыло магматического наблюдателя
        *[other] крыльев магматического наблюдателя
     }
-
-stack-unprocessed-artifact-fragment-ore = незавершённый фрагмент артефакта
 
 stack-watcher-wing =
     { $amount ->
