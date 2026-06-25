@@ -91,7 +91,13 @@ public sealed class CatEmoteSpamCountermeasureSystem : EntitySystem
 
     private void OnEmoteEvent(Entity<SpeechComponent> ent, ref EmoteEvent args)
     {
-        if (args.Emote.Category is EmoteCategory.Vocal or EmoteCategory.Farts && args.Voluntary)
+        if (
+            (
+                args.Emote.Category is EmoteCategory.Vocal or EmoteCategory.Farts ||
+                args.Emote.ID is "Spin" or "Flip"  // Reserve edit: Smite too much flex. Add more as needed.
+            ) &&
+            args.Voluntary
+        )
             Add(ent.Owner);
     }
 
@@ -125,7 +131,7 @@ public sealed class CatEmoteSpamCountermeasureSystem : EntitySystem
         // This is ground control to major tom
         var steps = count - soft;
         // By default, this is 8% per step over. 10 over soft threshold is 80%.
-        var chance = steps*_postSoftThresholdProbability;
+        var chance = steps * _postSoftThresholdProbability;
 
         if (_rand.Prob(chance))
             Smite(uid, false);
