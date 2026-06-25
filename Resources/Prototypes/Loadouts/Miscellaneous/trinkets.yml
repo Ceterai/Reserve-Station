@@ -443,6 +443,7 @@
 
 - type: loadout
   id: FoodSnackLollypopWrapped
+  dummyEntity: FoodSnackLollypop  # Reserve edit: Better trinket loadout
   effects:
   - !type:JobRequirementLoadoutEffect
     requirement:
@@ -455,6 +456,7 @@
 
 - type: loadout
   id: FoodSnackLollypopWrappedRainbow
+  dummyEntity: FoodSnackLollypopRainbow  # Reserve edit: Better trinket loadout
   effects:
   - !type:JobRequirementLoadoutEffect
     requirement:
@@ -467,6 +469,7 @@
 
 - type: loadout
   id: FoodSnackLollypopWrappedCarp
+  dummyEntity: FoodSnackLollypopCarp  # Reserve edit: Better trinket loadout
   effects:
   - !type:JobRequirementLoadoutEffect
     requirement:
