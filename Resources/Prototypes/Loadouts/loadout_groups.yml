@@ -212,9 +212,14 @@
   - Cane
   # Reserve edit start: Better trinket loadout
   - PlushieMoth
+  - PlushieSlime
+  - PlushieDiona
+  - PlushieVox
+  - PlushieHuman
   - PlushieSharkBlue
   - PlushieSharkGrey
   - PlushieSharkPink
+  - PlushieSharkRainbow
   - VinylSleeve
   - DiskCaseFilled
   - DiskCaseGold
@@ -229,11 +234,14 @@
   - BalloonNT
   - BalloonCorgi
   - d6DiceGold
+  - d6DiceRainbow
   - ReserveCan
   - OrchitoCan
+  - ReserveRobustCan
   - Skub
   - MaterialCotton
   - Vape
+  - SmokingPipe
   - LighterGold
   # Reserve edit end: Better trinket loadout
   # GoobStation Start

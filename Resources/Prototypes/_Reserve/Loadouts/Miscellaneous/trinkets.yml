@@ -219,6 +219,7 @@
 
 - type: loadout
   id: d6DiceGold
+  dummyEntity: d6DiceGold
   effects:
   - !type:JobRequirementLoadoutEffect
     requirement:
@@ -231,9 +232,84 @@
     - d6DiceGold
   groupBy: "games"
 
+- type: entity
+  parent: d6Dice
+  id: d6DiceRainbow
+  name: rainbow d6
+  suffix: Loadout, Trinkets
+  components:
+  - type: PointLight
+    radius: 0.5
+    energy: 1
+  - type: RgbLightController
+    layers: [ 0 ]
+
+- type: loadout
+  id: d6DiceRainbow
+  dummyEntity: d6DiceRainbow
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Cargo
+      time: 864000 # 240hr
+  storage:
+    back:
+    - d6DiceRainbow
+    - d6DiceRainbow
+  groupBy: "games"
+
 # endregion
 
 # region Plushies
+
+- type: loadout
+  id: PlushieSlime
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 18000 # 5hr
+  storage:
+    back:
+    - PlushieSlime
+  groupBy: "plush"
+
+- type: loadout
+  id: PlushieDiona
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 54000 # 15hr
+  storage:
+    back:
+    - PlushieDiona
+  groupBy: "plush"
+
+- type: loadout
+  id: PlushieVox
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 54000 # 15hr
+  storage:
+    back:
+    - PlushieVox
+  groupBy: "plush"
+
+- type: loadout
+  id: PlushieHuman
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 54000 # 15hr
+  storage:
+    back:
+    - PlushieHuman
+  groupBy: "plush"
 
 - type: loadout
   id: PlushieSharkBlue
@@ -271,6 +347,30 @@
     - PlushieSharkPink
   groupBy: "plush"
 
+- type: entity
+  parent: PlushieSharkGrey
+  id: PlushieSharkRainbow
+  name: rainbow shark soft toy
+  suffix: Loadout, Trinkets
+  components:
+  - type: PointLight
+    radius: 1.5
+    energy: 2
+  - type: RgbLightController
+    layers: [ 0 ]
+
+- type: loadout
+  id: PlushieSharkRainbow
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 1800000 # 500hr
+  storage:
+    back:
+    - PlushieSharkRainbow
+  groupBy: "plush"
+
 # endregion
 
 # region Drinks
@@ -293,6 +393,18 @@
   storage:
     back:
     - DrinkOrchitoCan
+  groupBy: "drinks"
+
+- type: loadout
+  id: ReserveRobustCan
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 2700000 # 750hr
+  storage:
+    back:
+    - DrinkEnergyReserveRobustCan
   groupBy: "drinks"
 
 # endregion
@@ -322,6 +434,10 @@
     - MaterialCotton
   groupBy: "species"
 
+# endregion
+
+# region Smokeables
+
 - type: loadout
   id: Vape
   effects:
@@ -333,6 +449,19 @@
   storage:
     back:
     - Vape
+  groupBy: "smokeables"
+
+- type: loadout
+  id: SmokingPipe
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobDetective
+      time: 72000 # 20hr
+  storage:
+    back:
+    - SmokingPipeFilledTobacco
   groupBy: "smokeables"
 
 - type: entity
@@ -351,6 +480,8 @@
       visible: false
       shader: unshaded
       map: [ "flame" ]
+  - type: RandomSprite
+    available: []
 
 - type: loadout
   id: LighterGold
