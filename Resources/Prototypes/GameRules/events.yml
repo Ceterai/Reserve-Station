@@ -212,6 +212,7 @@
     - id: TunnelClownMidround # Goobstation
     #- id: WraithMidround # Goobstation - Wraith
     #TODO when midrounds are "reviewed" by the chudmins add them back
+    - id: BloodBrothersSpawn # Harmony
 
 - type: entity
   id: BaseStationEvent
