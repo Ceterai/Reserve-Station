@@ -206,6 +206,11 @@
     tags:
     - Card
   # Reserve: Folder fix end
+  # Reserve edit start: Better Recycling
+  - type: PhysicalComposition
+    materialComposition:
+      Cardboard: 5
+  # Reserve edit end: Better Recycling
 
 # region Black Cards
 

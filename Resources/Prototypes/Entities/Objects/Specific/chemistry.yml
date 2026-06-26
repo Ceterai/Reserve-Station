@@ -339,6 +339,11 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 6
     fillBaseName: beaker
+  # Reserve edit start: Better Recycling
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 50
+  # Reserve edit end: Better Recycling
 
 - type: entity
   parent: BaseItem
@@ -402,6 +407,11 @@
   - type: StaticPrice
     price: 30
   - type: DnaSubstanceTrace
+  # Reserve edit start: Better Recycling
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 50
+  # Reserve edit end: Better Recycling
 
 - type: entity
   name: beaker
@@ -708,6 +718,11 @@
     tags:
     - Syringe
     - SyringeGunAmmo # GoobStation
+  # Reserve edit start: Better Recycling
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 50
+  # Reserve edit end: Better Recycling
 
 - type: entity
   parent: BaseSyringe
@@ -960,3 +975,8 @@
     sound:
       path: /Audio/_Goobstation/Items/handling/pillbottle_drop.ogg
   # Goobstation edit end
+  # Reserve edit start: Better Recycling
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 25
+  # Reserve edit end: Better Recycling
