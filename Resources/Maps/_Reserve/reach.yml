@@ -8,8 +8,8 @@ meta:
   engineVersion: 266.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/25/2026 22:48:45
-  entityCount: 3050
+  time: 06/26/2026 00:10:31
+  entityCount: 3066
 maps:
 - 1
 grids:
@@ -8457,6 +8457,12 @@ entities:
     - type: Transform
       pos: 3.5,8.5
       parent: 2
+  - uid: 1823
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 11.5,-6.5
+      parent: 2
   - uid: 2129
     components:
     - type: Transform
@@ -9026,6 +9032,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -18.5,-0.5
       parent: 2
+  - uid: 887
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 9.5,-6.5
+      parent: 2
   - uid: 992
     components:
     - type: Transform
@@ -9371,13 +9383,19 @@ entities:
     - type: Transform
       pos: 11.5,5.5
       parent: 2
-- proto: DisposalTrunk
-  entities:
-  - uid: 1045
+  - uid: 3065
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 9.5,-6.5
+      pos: 10.5,-6.5
+      parent: 2
+- proto: DisposalTrunk
+  entities:
+  - uid: 907
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 11.5,-6.5
       parent: 2
   - uid: 1046
     components:
@@ -14162,6 +14180,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 25.746017,-2.1150365
       parent: 2
+- proto: LavalandShuttleConsoleCircuitboard
+  entities:
+  - uid: 3047
+    components:
+    - type: Transform
+      pos: 2.6702344,16.44305
+      parent: 2
 - proto: LightTree
   entities:
   - uid: 2980
@@ -14354,6 +14379,13 @@ entities:
       parent: 2
     - type: Pullable
       prevFixedRotation: True
+- proto: LockerScienceFilledXenobiology
+  entities:
+  - uid: 3051
+    components:
+    - type: Transform
+      pos: -1.25,11.5
+      parent: 2
 - proto: LockerSecurityFilled
   entities:
   - uid: 1652
@@ -17837,21 +17869,11 @@ entities:
     - type: Transform
       pos: 6.5,9.5
       parent: 2
-    - type: RandomSpawner
-      prototypes:
-      - BlockGameArcade
-      - SpaceVillainArcadeFilled
-      - ClawMachine
   - uid: 2262
     components:
     - type: Transform
       pos: 5.5,9.5
       parent: 2
-    - type: RandomSpawner
-      prototypes:
-      - BlockGameArcade
-      - SpaceVillainArcadeFilled
-      - ClawMachine
 - proto: RandomArtifactSpawner
   entities:
   - uid: 292
@@ -17967,21 +17989,6 @@ entities:
     - type: Transform
       pos: 8.5,-10.5
       parent: 2
-    - type: RandomSpawner
-      prototypes:
-      - AirCanister
-      - AmmoniaCanister
-      - CarbonDioxideCanister
-      - FrezonCanister
-      - NitrogenCanister
-      - NitrousOxideCanister
-      - OxygenCanister
-      - PlasmaCanister
-      - TritiumCanister
-      - WaterVaporCanister
-      rareChance: 0.15
-      rarePrototypes:
-      - AirCanister
   - uid: 2948
     components:
     - type: Transform
@@ -18013,8 +18020,6 @@ entities:
     - type: Transform
       pos: 13.30391,-6.241681
       parent: 2
-    - type: RandomSpawner
-      rareChance: 0.5
 - proto: RandomCurrencyMin
   entities:
   - uid: 2534
@@ -18029,31 +18034,6 @@ entities:
     - type: Transform
       pos: -9.5,3.5
       parent: 2
-    - type: RandomSpawner
-      prototypes:
-      - DrinkAbsintheBottleFull
-      - DrinkBlueCuracaoBottleFull
-      - DrinkCognacBottleFull
-      - DrinkGrenadineBottleFull
-      - DrinkGinBottleFull
-      - DrinkGildlagerBottleFull
-      - DrinkCoffeeLiqueurBottleFull
-      - DrinkMelonLiquorBottleFull
-      - DrinkPatronBottleFull
-      - DrinkRumBottleFull
-      - DrinkSakeBottleFull
-      - DrinkTequilaBottleFull
-      - DrinkVermouthBottleFull
-      - DrinkVodkaBottleFull
-      - DrinkWhiskeyBottleFull
-      - DrinkWineBottleFull
-      - DrinkBeerBottleFull
-      - DrinkBeerGrowler
-      - DrinkAleBottleFull
-      - DrinkAleBottleFullGrowler
-      - DrinkChampagneBottleFull
-      - DrinkBluePumpkinJuiceBottleFull
-      - DrinkSupermaxBottleFull
 - proto: RandomDrinkCan
   entities:
   - uid: 2271
@@ -18257,11 +18237,11 @@ entities:
       parent: 2
 - proto: RandomProduce
   entities:
-  - uid: 887
+  - uid: 2464
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 10.5,-6.5
+      pos: 10.721744,-6.503365
       parent: 2
   - uid: 2780
     components:
@@ -18297,15 +18277,15 @@ entities:
       parent: 2
 - proto: RandomSoap
   entities:
-  - uid: 907
-    components:
-    - type: Transform
-      pos: 9.5,-6.5
-      parent: 2
   - uid: 2815
     components:
     - type: Transform
       pos: -5.7988744,-7.444484
+      parent: 2
+  - uid: 3066
+    components:
+    - type: Transform
+      pos: 11.471744,-6.36274
       parent: 2
 - proto: RandomTowel
   entities:
@@ -18347,16 +18327,16 @@ entities:
       canCollide: False
 - proto: Recycler
   entities:
-  - uid: 1823
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 11.5,-6.5
-      parent: 2
   - uid: 2398
     components:
     - type: Transform
       pos: -0.5,16.5
+      parent: 2
+  - uid: 2427
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 9.5,-6.5
       parent: 2
 - proto: ReinforcedPlasmaWindow
   entities:
@@ -20284,6 +20264,13 @@ entities:
     - type: Transform
       pos: 7.5,11.5
       parent: 2
+- proto: SpawnPointBrigmedic
+  entities:
+  - uid: 3052
+    components:
+    - type: Transform
+      pos: 17.5,1.5
+      parent: 2
 - proto: SpawnPointCaptain
   entities:
   - uid: 1981
@@ -20303,6 +20290,13 @@ entities:
     - type: Transform
       pos: 0.5,12.5
       parent: 2
+- proto: SpawnPointChaplain
+  entities:
+  - uid: 3060
+    components:
+    - type: Transform
+      pos: 7.5,10.5
+      parent: 2
 - proto: SpawnPointChef
   entities:
   - uid: 1984
@@ -20316,6 +20310,20 @@ entities:
     components:
     - type: Transform
       pos: 8.5,0.5
+      parent: 2
+- proto: SpawnPointChiefEngineer
+  entities:
+  - uid: 3064
+    components:
+    - type: Transform
+      pos: -17.5,2.5
+      parent: 2
+- proto: SpawnPointChiefMedicalOfficer
+  entities:
+  - uid: 3053
+    components:
+    - type: Transform
+      pos: 3.5,-2.5
       parent: 2
 - proto: SpawnPointClown
   entities:
@@ -20394,6 +20402,13 @@ entities:
     - type: Transform
       pos: 4.5,-2.5
       parent: 2
+- proto: SpawnPointMedicalIntern
+  entities:
+  - uid: 3054
+    components:
+    - type: Transform
+      pos: 5.5,-2.5
+      parent: 2
 - proto: SpawnPointMime
   entities:
   - uid: 3031
@@ -20429,6 +20444,13 @@ entities:
     - type: Transform
       pos: -9.5,0.5
       parent: 2
+- proto: SpawnPointParamedic
+  entities:
+  - uid: 3059
+    components:
+    - type: Transform
+      pos: 8.5,-2.5
+      parent: 2
 - proto: SpawnPointPassenger
   entities:
   - uid: 34
@@ -20448,6 +20470,13 @@ entities:
     - type: Transform
       pos: 3.5,0.5
       parent: 2
+- proto: SpawnPointQuartermaster
+  entities:
+  - uid: 3056
+    components:
+    - type: Transform
+      pos: 1.5,12.5
+      parent: 2
 - proto: SpawnPointRadioHost
   entities:
   - uid: 3036
@@ -20461,6 +20490,20 @@ entities:
     components:
     - type: Transform
       pos: 8.5,9.5
+      parent: 2
+- proto: SpawnPointResearchAssistant
+  entities:
+  - uid: 3057
+    components:
+    - type: Transform
+      pos: -1.5,10.5
+      parent: 2
+- proto: SpawnPointResearchDirector
+  entities:
+  - uid: 3058
+    components:
+    - type: Transform
+      pos: -1.5,9.5
       parent: 2
 - proto: SpawnPointRoboticist
   entities:
@@ -20488,6 +20531,13 @@ entities:
     - type: Transform
       pos: -2.5,8.5
       parent: 2
+- proto: SpawnPointSecurityCadet
+  entities:
+  - uid: 3055
+    components:
+    - type: Transform
+      pos: 16.5,-3.5
+      parent: 2
 - proto: SpawnPointSecurityOfficer
   entities:
   - uid: 1998
@@ -20499,6 +20549,13 @@ entities:
     components:
     - type: Transform
       pos: 17.5,-3.5
+      parent: 2
+- proto: SpawnPointServiceWorker
+  entities:
+  - uid: 3061
+    components:
+    - type: Transform
+      pos: 7.5,9.5
       parent: 2
 - proto: SpawnPointShaftMiner
   entities:
@@ -20524,12 +20581,26 @@ entities:
     - type: Transform
       pos: -17.5,0.5
       parent: 2
+- proto: SpawnPointTechnicalAssistant
+  entities:
+  - uid: 3063
+    components:
+    - type: Transform
+      pos: -17.5,1.5
+      parent: 2
 - proto: SpawnPointVirologist
   entities:
   - uid: 3027
     components:
     - type: Transform
       pos: 11.5,-0.5
+      parent: 2
+- proto: SpawnPointWarden
+  entities:
+  - uid: 3062
+    components:
+    - type: Transform
+      pos: 16.5,1.5
       parent: 2
 - proto: SpawnPointZookeeper
   entities:
@@ -21387,6 +21458,13 @@ entities:
           - Forward
         - - Middle
           - Off
+        1823:
+        - - Left
+          - Reverse
+        - - Right
+          - Forward
+        - - Middle
+          - Off
   - uid: 2106
     components:
     - type: Transform
@@ -21394,7 +21472,7 @@ entities:
       parent: 2
     - type: DeviceLinkSource
       linkedPorts:
-        1823:
+        2427:
         - - Left
           - Reverse
         - - Right
@@ -23407,16 +23485,16 @@ entities:
       parent: 2
 - proto: WindoorSecure
   entities:
+  - uid: 1045
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 10.5,-7.5
+      parent: 2
   - uid: 1528
     components:
     - type: Transform
       pos: -0.5,-9.5
-      parent: 2
-  - uid: 2427
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 9.5,-6.5
       parent: 2
 - proto: WindoorSecureAtmosphericsLocked
   entities:
@@ -23796,12 +23874,6 @@ entities:
     components:
     - type: Transform
       pos: 24.5,2.5
-      parent: 2
-  - uid: 2464
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 10.5,-7.5
       parent: 2
   - uid: 2465
     components:
