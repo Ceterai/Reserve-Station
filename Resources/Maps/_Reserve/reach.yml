@@ -9,7 +9,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 06/26/2026 00:10:31
-  entityCount: 3066
+  entityCount: 3067
 maps:
 - 1
 grids:
@@ -14182,7 +14182,7 @@ entities:
       parent: 2
 - proto: LavalandShuttleConsoleCircuitboard
   entities:
-  - uid: 3047
+  - uid: 3067
     components:
     - type: Transform
       pos: 2.6702344,16.44305
