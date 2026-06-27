@@ -41,7 +41,6 @@
     # - id: XenomorphsInfestation #  removed for low pop too little sec
     - id: SlasherSpawn
     - id: SpacePirates
-    - id: GreyTideAntagMidround
     # - id: SingulothKnightsMidround
     # - id: DarkLordMidround
     - id: MimeAssassinMidround

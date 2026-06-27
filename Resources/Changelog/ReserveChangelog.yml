@@ -686,3 +686,9 @@ Entries:
         сальто и вращениями будет караться.
   id: 86
   time: '2026-06-26T04:12:08.0000000+00:00'
+- author: Ceterai
+  changes:
+    - type: Add
+      message: Апстрим с Goob Station на 27.06!
+  id: 87
+  time: '2026-06-27T05:55:49.0000000+00:00'
