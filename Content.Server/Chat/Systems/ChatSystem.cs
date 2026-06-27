@@ -1383,6 +1383,13 @@ public sealed partial class ChatSystem : SharedChatSystem
         var languageDisplay = language.IsVisibleLanguage
             ? Loc.GetString("chat-manager-language-prefix", ("language", language.ChatName))
             : "";
+        // goob start - font modifiers
+        var fontModifierEv = new TransformSpeakerFontEvent(source);
+        RaiseLocalEvent(source, fontModifierEv);
+        string? modFontId = fontModifierEv.FontId;
+        int? modFontSize = fontModifierEv.FontSize;
+        Color? modFontColor = fontModifierEv.Color;
+        // goob end - font modifiers
 
         // goob start - loudspeakers
 
@@ -1420,7 +1427,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         // Reserve edit end: Fix languages in chat
 
         return Loc.GetString(wrapId,
-            ("color", color),
+            ("color", modFontColor ?? color),
             ("entityName", entityName),
             ("verb", Loc.GetString(verbId)),
             ("fontType", fontType),

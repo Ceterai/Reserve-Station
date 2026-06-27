@@ -12,8 +12,8 @@
   - type: Sprite
     sprite: _Goobstation/Wizard/Projectiles/spellcard.rsi
     state: red
-  - type: SpecialAnimationOnUse
-    overrideText: "Special Attack: 65 STRIKE!!!!"
+  # - type: SpecialAnimationOnUse
+  #   overrideText: "Special Attack: 65 STRIKE!!!!"
   - type: UseDelay
     delay: 5
   # Reserve: Folder fix start

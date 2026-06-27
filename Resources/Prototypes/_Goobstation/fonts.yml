@@ -60,3 +60,7 @@
   id: BrahmsGotischCyrillic
   path: /Fonts/_Goobstation/BrahmsGotischCyrillic/BrahmsGotischCyr.otf
 # Reserve edit end: Fix languages in chat
+
+- type: font
+  id: MinecraftEnchantment
+  path: /Fonts/unifont-17.0.03.otf
