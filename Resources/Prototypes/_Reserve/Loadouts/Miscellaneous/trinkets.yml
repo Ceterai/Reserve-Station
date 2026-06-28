@@ -182,6 +182,21 @@
   groupBy: "games"
 
 - type: loadout
+  id: TennisRacket
+  dummyEntity: BaseTennisRacket
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobBoxer
+      time: 180000 # 50hr
+  storage:
+    back:
+    - BaseTennisRacket
+    - BaseTennisRacket
+  groupBy: "games"
+
+- type: loadout
   id: BalloonNT
   effects:
   - !type:JobRequirementLoadoutEffect
@@ -207,6 +222,19 @@
     - BalloonCorgi
   groupBy: "games"
 
+- type: loadout
+  id: SpellCardFun
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobLibrarian
+      time: 720000 # 200hr
+  storage:
+    back:
+    - SpellCardFun
+  groupBy: "games"
+
 - type: entity
   parent: d6Dice
   id: d6DiceGold
@@ -216,6 +244,9 @@
   - type: Sprite
     state: d6_6
     color: "#ffc833"
+  - type: PhysicalComposition
+    materialComposition:
+      Gold: 50
 
 - type: loadout
   id: d6DiceGold
@@ -243,6 +274,9 @@
     energy: 1
   - type: RgbLightController
     layers: [ 0 ]
+  - type: PhysicalComposition
+    materialComposition:
+      Plasma: 50
 
 - type: loadout
   id: d6DiceRainbow
@@ -358,6 +392,18 @@
     energy: 2
   - type: RgbLightController
     layers: [ 0 ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: grey-inhand-left
+        shader: unshaded
+      right:
+      - state: grey-inhand-right
+        shader: unshaded
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 100
+      Plasma: 100
 
 - type: loadout
   id: PlushieSharkRainbow
@@ -412,6 +458,19 @@
 # region Other
 
 - type: loadout
+  id: Rag
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobBartender
+      time: 360000 # 100hr
+  storage:
+    back:
+    - RagItem
+  groupBy: "misc"
+
+- type: loadout
   id: Skub
   effects:
   - !type:JobRequirementLoadoutEffect
@@ -437,6 +496,19 @@
 # endregion
 
 # region Smokeables
+
+- type: loadout
+  id: CigarGoldCase
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Command
+      time: 360000 # 100hr
+  storage:
+    back:
+    - CigarGoldCase
+  groupBy: "smokeables"
 
 - type: loadout
   id: Vape
@@ -482,6 +554,9 @@
       map: [ "flame" ]
   - type: RandomSprite
     available: []
+  - type: PhysicalComposition
+    materialComposition:
+      Gold: 100
 
 - type: loadout
   id: LighterGold
