@@ -242,6 +242,8 @@
     materialComposition:
       Cloth: 100
       Plasma: 100
+  - type: StaticPrice
+    price: 50
   # Reserve edit end: Better Recycling
 
 - type: entity
@@ -492,6 +494,8 @@
     materialComposition:
       Cloth: 100
       Plasma: 100
+  - type: StaticPrice
+    price: 50
   # Reserve edit end: Better Recycling
 
 - type: entity
@@ -914,6 +918,8 @@
     materialComposition:
       Cloth: 100
       Plasma: 100
+  - type: StaticPrice
+    price: 50
   # Reserve edit end: Better Recycling
 
 - type: entity
