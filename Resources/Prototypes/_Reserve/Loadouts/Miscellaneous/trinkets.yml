@@ -34,6 +34,7 @@
   parent: DiskCase
   id: DiskCaseGold
   name: golden disk case
+  description: A gleaming pure gold case capable of holding as many as three discs. It looks like there's already something inside...
   suffix: Loadout, Trinkets
   components:
   - type: Sprite
@@ -239,6 +240,7 @@
   parent: d6Dice
   id: d6DiceGold
   name: golden d6
+  description: A small marvel, earned through honest labor. Made of pure gold. Don't believe it? ...There's always the recycler...
   suffix: Loadout, Trinkets
   components:
   - type: Sprite
@@ -267,6 +269,7 @@
   parent: d6Dice
   id: d6DiceRainbow
   name: rainbow d6
+  description: A small marvel, earned through immense effort. It slowly shimmers with all the colors of the rainbow.
   suffix: Loadout, Trinkets
   components:
   - type: PointLight
@@ -385,6 +388,7 @@
   parent: PlushieSharkGrey
   id: PlushieSharkRainbow
   name: rainbow shark soft toy
+  description: A soft, lovely marvel, earned through immense effort. It slowly shimmers with all the colors of the rainbow.
   suffix: Loadout, Trinkets
   components:
   - type: PointLight
@@ -542,6 +546,7 @@
   parent: Lighter
   id: LighterGold
   name: golden lighter
+  description: A small marvel, earned through honest labor. Made of pure gold. Don't believe it? ...There's always the recycler...
   suffix: Loadout, Trinkets
   components:
   - type: Sprite
