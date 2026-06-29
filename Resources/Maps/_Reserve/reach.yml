@@ -8,8 +8,8 @@ meta:
   engineVersion: 266.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/26/2026 18:13:29
-  entityCount: 3068
+  time: 06/29/2026 03:31:11
+  entityCount: 3067
 maps:
 - 1
 grids:
@@ -2038,7 +2038,7 @@ entities:
       invokeCounter: 1
     - type: DeviceLinkSource
       linkedPorts:
-        1599:
+        956:
         - - DoorStatus
           - DoorBolt
 - proto: AirlockExternalGlass
@@ -2056,6 +2056,35 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         241:
+        - - DoorStatus
+          - DoorBolt
+  - uid: 956
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -17.5,6.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        957:
+        - - DoorStatus
+          - DoorBolt
+        30:
+        - - DoorStatus
+          - DoorBolt
+  - uid: 957
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -16.5,5.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        956:
         - - DoorStatus
           - DoorBolt
 - proto: AirlockExternalGlassAtmosphericsLocked
@@ -2092,35 +2121,6 @@ entities:
     - type: Transform
       pos: 3.5,14.5
       parent: 2
-- proto: AirlockExternalGlassLocked
-  entities:
-  - uid: 1546
-    components:
-    - type: Transform
-      pos: -16.5,5.5
-      parent: 2
-    - type: DeviceLinkSink
-      invokeCounter: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        1599:
-        - - DoorStatus
-          - DoorBolt
-  - uid: 1599
-    components:
-    - type: Transform
-      pos: -17.5,6.5
-      parent: 2
-    - type: DeviceLinkSink
-      invokeCounter: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        30:
-        - - DoorStatus
-          - DoorBolt
-        1546:
-        - - DoorStatus
-          - DoorBolt
 - proto: AirlockExternalGlassShuttleArrivals
   entities:
   - uid: 32
@@ -8420,18 +8420,6 @@ entities:
     - type: Transform
       pos: 3.5,16.5
       parent: 2
-  - uid: 956
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 9.5,-6.5
-      parent: 2
-  - uid: 957
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 10.5,-6.5
-      parent: 2
   - uid: 958
     components:
     - type: Transform
@@ -8457,11 +8445,29 @@ entities:
     - type: Transform
       pos: 3.5,8.5
       parent: 2
-  - uid: 1823
+  - uid: 1546
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 11.5,-6.5
+      parent: 2
+  - uid: 1560
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 10.5,-6.5
+      parent: 2
+  - uid: 1599
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 9.5,-6.5
+      parent: 2
+  - uid: 1783
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 12.5,-6.5
       parent: 2
   - uid: 2129
     components:
@@ -13542,11 +13548,6 @@ entities:
     - type: Transform
       pos: 15.5,-5.5
       parent: 2
-  - uid: 1560
-    components:
-    - type: Transform
-      pos: 12.5,-6.5
-      parent: 2
   - uid: 1561
     components:
     - type: Transform
@@ -14179,13 +14180,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 25.746017,-2.1150365
-      parent: 2
-- proto: LavalandShuttleConsoleCircuitboard
-  entities:
-  - uid: 3067
-    components:
-    - type: Transform
-      pos: 2.6702344,16.44305
       parent: 2
 - proto: LightTree
   entities:
@@ -16560,6 +16554,12 @@ entities:
     - type: Transform
       pos: 3.5,6.5
       parent: 2
+  - uid: 2255
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 12.5,-6.5
+      parent: 2
 - proto: PlasticFlapsAirtightOpaque
   entities:
   - uid: 1689
@@ -16879,10 +16879,10 @@ entities:
       parent: 2
 - proto: PoweredDimSmallLight
   entities:
-  - uid: 1783
+  - uid: 2427
     components:
     - type: Transform
-      pos: 9.5,-6.5
+      pos: 10.5,-6.5
       parent: 2
 - proto: Poweredlight
   entities:
@@ -18332,7 +18332,7 @@ entities:
     - type: Transform
       pos: -0.5,16.5
       parent: 2
-  - uid: 2427
+  - uid: 3047
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -18382,18 +18382,21 @@ entities:
       parent: 2
 - proto: SalvageExpeditionsComputerCircuitboard
   entities:
-  - uid: 3047
+  - uid: 1823
     components:
     - type: Transform
-      pos: 2.6702344,16.44305
+      pos: 2.6526442,16.458872
       parent: 2
 - proto: SalvageJobBoardComputerCircuitboard
   entities:
   - uid: 1525
     components:
     - type: Transform
-      pos: 2.3577344,16.458675
+      pos: 2.3379478,16.452997
       parent: 2
+    - type: CollisionWake
+      enabled: False
+    - type: Conveyed
 - proto: SalvageMagnet
   entities:
   - uid: 966
@@ -19008,12 +19011,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -12.5,6.5
       parent: 2
-  - uid: 2255
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 12.5,-6.5
-      parent: 2
   - uid: 2258
     components:
     - type: Transform
@@ -19374,6 +19371,9 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         1956:
+        - - Pressed
+          - Toggle
+        2427:
         - - Pressed
           - Toggle
     - type: Fixtures
@@ -21451,21 +21451,7 @@ entities:
       parent: 2
     - type: DeviceLinkSource
       linkedPorts:
-        956:
-        - - Right
-          - Forward
-        - - Left
-          - Reverse
-        - - Middle
-          - Off
-        957:
-        - - Left
-          - Reverse
-        - - Right
-          - Forward
-        - - Middle
-          - Off
-        1823:
+        3047:
         - - Left
           - Reverse
         - - Right
@@ -21479,7 +21465,28 @@ entities:
       parent: 2
     - type: DeviceLinkSource
       linkedPorts:
-        2427:
+        1546:
+        - - Left
+          - Reverse
+        - - Right
+          - Forward
+        - - Middle
+          - Off
+        1560:
+        - - Left
+          - Reverse
+        - - Right
+          - Forward
+        - - Middle
+          - Off
+        1599:
+        - - Left
+          - Reverse
+        - - Right
+          - Forward
+        - - Middle
+          - Off
+        1783:
         - - Left
           - Reverse
         - - Right
