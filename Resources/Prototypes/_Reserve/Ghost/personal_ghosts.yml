@@ -147,3 +147,21 @@
   - type: Sprite
     sprite: _Reserve/Ghosts/perlovka_is_my_name.rsi
     color: "#FFFFFF"
+
+- type: customGhost
+  id: goose-in-a-hat-ghost
+  category: personal
+  proto: MobObserverCkeyGooseInAHat
+  restrictions:
+  - !type:CkeyRestriction
+    ckey: [Mr_Samuel]
+  name: Гусь в шляпе
+  description: ¯\_(ツ)_/¯
+
+- type: entity
+  parent: MobObserverCkey
+  id: MobObserverCkeyGooseInAHat
+  components:
+  - type: Sprite
+    sprite: _Reserve/Ghosts/goose-in-a-hat-ghost.rsi
+    color: "#ffffff88"
