@@ -7,10 +7,10 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 
 <Document>
 
-# Pizza Pies
+# Burger Recipes
 
-Pizzas are a great way to prepare food for a large crew, as each pizza is 8 servings.
+Separate from fastfood because there's just too many of them...
 
-<GuideFoodIngredientGroupEmbed Group="Pizza"/>  <!--Reserve edit: Fix recipe categories-->
+<GuideFoodIngredientGroupEmbed Group="Burger"/>  <!--Reserve edit: Fix recipe categories-->
 
 </Document>
