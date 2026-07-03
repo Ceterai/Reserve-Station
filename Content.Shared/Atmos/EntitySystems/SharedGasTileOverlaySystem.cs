@@ -87,7 +87,6 @@ public abstract class SharedGasTileOverlaySystem : EntitySystem
     {
         [ViewVariables] public readonly byte FireState;
         [ViewVariables] public readonly byte[] Opacity;
-        [Dependency] protected readonly IPrototypeManager ProtoMan = default!;
         // TODO change fire color based on ByteTemp
 
         /// <summary>
