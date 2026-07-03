@@ -40,6 +40,7 @@ using Content.Shared._White.CustomGhostSystem;
 using Content.Shared.CCVar;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Preferences;
+using Content.Shared.Preferences.Loadouts;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
@@ -150,6 +151,11 @@ namespace Content.Server.Preferences.Managers
 
             if (ShouldStorePrefs(session.Channel.AuthType))
                 await _db.SaveCharacterSlotAsync(userId, profile, slot);
+
+            // Reserve edit: repopulate missing role loadouts in the server cache after a save.
+            // Must be called after the DB save so the extra entries are not persisted to the database.
+            if (profile is HumanoidCharacterProfile savedHp)
+                EnsureMissingRoleLoadouts(savedHp, session);
         }
 
         private async void HandleDeleteCharacterMessage(MsgDeleteCharacter message)
@@ -344,11 +350,39 @@ namespace Content.Server.Preferences.Managers
             // Clean up preferences in case of changes to the game,
             // such as removed jobs still being selected.
             // WWDP EDIT START
-            return new PlayerPreferences(prefs.Characters.Select(p => new KeyValuePair<int, ICharacterProfile>(p.Key,
-                    p.Value.Validated(session, collection))), prefs.SelectedCharacterIndex, prefs.AdminOOCColor,
+            return new PlayerPreferences(prefs.Characters.Select(p =>
+            {
+                var validated = p.Value.Validated(session, collection);
+                // Reserve edit: populate missing role loadouts so ckey-restricted items
+                // (e.g. UniqueReserveItems) auto-apply correctly without needing a manual save.
+                if (validated is HumanoidCharacterProfile hp)
+                    EnsureMissingRoleLoadouts(hp, session);
+                return new KeyValuePair<int, ICharacterProfile>(p.Key, validated);
+            }), prefs.SelectedCharacterIndex, prefs.AdminOOCColor,
                     _protos.TryIndex<CustomGhostPrototype>(prefs.CustomGhost, out var ghostProto) && ghostProto.CanUse(session) ? prefs.CustomGhost : new ProtoId<CustomGhostPrototype>("default"),
                     prefs.ConstructionFavorites);
             // WWDP EDIT END
+        }
+
+        // Reserve edit: ensures that all RoleLoadoutPrototypes are represented in the server-side
+        // profile cache, even for roles the player has never explicitly saved. This allows
+        // session-dependent effects (e.g. CkeyRequirementLoadoutEffect) to be evaluated with a
+        // real session rather than the null session used in SpawnPlayerMob's SetDefault path.
+        // Only roles that actually produce items (minLimit > 0 groups with valid loadouts) are added
+        // to avoid inflating the profile unnecessarily.
+        private void EnsureMissingRoleLoadouts(HumanoidCharacterProfile profile, ICommonSession session)
+        {
+            foreach (var roleProto in _protos.EnumeratePrototypes<RoleLoadoutPrototype>())
+            {
+                if (profile.Loadouts.ContainsKey(roleProto.ID))
+                    continue;
+
+                var roleLoadout = new RoleLoadout(roleProto.ID);
+                roleLoadout.EnsureValid(profile, session, _dependencies);
+
+                if (roleLoadout.SelectedLoadouts.Values.Any(v => v.Count > 0))
+                    profile.SetLoadout(roleLoadout);
+            }
         }
 
         public IEnumerable<KeyValuePair<NetUserId, ICharacterProfile>> GetSelectedProfilesForPlayers(
