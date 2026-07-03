@@ -148,8 +148,8 @@ namespace Content.Server.Preferences.Managers
             };
 
             prefsData.Prefs = curPrefs.WithCharacters(profiles).WithSlot(slot); // WWDP EDIT
-            // Reserve edit: update enriched spawn prefs; done before DB save so there is no window
-            // where SpawnPrefs lags behind Prefs.
+            // Reserve edit: Ckey loadout items - update enriched spawn prefs; done before DB
+            // save so there is no window where SpawnPrefs lags behind Prefs.
             prefsData.SpawnPrefs = CreateSpawnPrefs(session, prefsData.Prefs);
 
             if (ShouldStorePrefs(session.Channel.AuthType))
@@ -250,7 +250,8 @@ namespace Content.Server.Preferences.Managers
             var prefsData = _cachedPlayerPrefs[session.UserId];
             DebugTools.Assert(prefsData.Prefs != null);
             prefsData.Prefs = SanitizePreferences(session, prefsData.Prefs, _dependencies);
-            // Reserve edit: separate enriched prefs used only for spawning, so canonical prefs stay unmodified.
+            // Reserve edit: Ckey loadout items - separate enriched prefs used only for
+            // spawning, so canonical prefs stay unmodified.
             prefsData.SpawnPrefs = CreateSpawnPrefs(session, prefsData.Prefs);
 
             prefsData.PrefsLoaded = true;
@@ -358,7 +359,7 @@ namespace Content.Server.Preferences.Managers
             // WWDP EDIT END
         }
 
-        // Reserve edit: returns an enriched copy of prefs where every RoleLoadoutPrototype is represented,
+        // Reserve edit: Ckey loadout items - returns an enriched copy of prefs where every RoleLoadoutPrototype is represented,
         // even for roles the player has never explicitly saved.  This lets session-dependent loadout
         // effects (e.g. CkeyRequirementLoadoutEffect) be evaluated with a real session rather than the
         // null session that SpawnPlayerMob uses for profiles not yet in _loadouts.
@@ -377,7 +378,7 @@ namespace Content.Server.Preferences.Managers
                 prefs.CustomGhost, prefs.ConstructionFavorites);
         }
 
-        // Reserve edit: returns prefs enriched with all role loadouts for spawning.
+        // Reserve edit: Ckey loadout items - returns prefs enriched with all role loadouts for spawning.
         public PlayerPreferences GetSpawnPreferences(NetUserId userId)
         {
             if (_cachedPlayerPrefs.TryGetValue(userId, out var data) && data.SpawnPrefs != null)
@@ -385,7 +386,7 @@ namespace Content.Server.Preferences.Managers
             return GetPreferences(userId);
         }
 
-        // Reserve edit: ensures that all RoleLoadoutPrototypes are represented in the server-side
+        // Reserve edit: Ckey loadout items - ensures that all RoleLoadoutPrototypes are represented in the server-side
         // profile cache, even for roles the player has never explicitly saved. This allows
         // session-dependent effects (e.g. CkeyRequirementLoadoutEffect) to be evaluated with a
         // real session rather than the null session used in SpawnPlayerMob's SetDefault path.
@@ -424,8 +425,7 @@ namespace Content.Server.Preferences.Managers
         {
             public bool PrefsLoaded;
             public PlayerPreferences? Prefs;
-            // Reserve edit: enriched copy of Prefs with all role loadouts populated, used only for spawning.
-            public PlayerPreferences? SpawnPrefs;
+            public PlayerPreferences? SpawnPrefs;  // Reserve edit: Ckey loadout items - enriched copy of Prefs with all role loadouts populated, used only for spawning.
         }
 
         void IPostInjectInit.PostInject()

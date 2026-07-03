@@ -39,8 +39,7 @@ namespace Content.Server.Preferences.Managers
         bool TryGetCachedPreferences(NetUserId userId, [NotNullWhen(true)] out PlayerPreferences? playerPreferences);
         PlayerPreferences GetPreferences(NetUserId userId);
         PlayerPreferences? GetPreferencesOrNull(NetUserId? userId);
-        // Reserve edit: enriched prefs used for spawning (includes all role loadouts for ckey-restricted items).
-        PlayerPreferences GetSpawnPreferences(NetUserId userId);
+        PlayerPreferences GetSpawnPreferences(NetUserId userId);  // Reserve edit: Ckey loadout items - enriched prefs used for spawning (includes all role loadouts for ckey-restricted items).
         IEnumerable<KeyValuePair<NetUserId, ICharacterProfile>> GetSelectedProfilesForPlayers(List<NetUserId> userIds);
         bool HavePreferencesLoaded(ICommonSession session);
 
