@@ -148,14 +148,12 @@ namespace Content.Server.Preferences.Managers
             };
 
             prefsData.Prefs = curPrefs.WithCharacters(profiles).WithSlot(slot); // WWDP EDIT
+            // Reserve edit: update enriched spawn prefs; done before DB save so there is no window
+            // where SpawnPrefs lags behind Prefs.
+            prefsData.SpawnPrefs = CreateSpawnPrefs(session, prefsData.Prefs);
 
             if (ShouldStorePrefs(session.Channel.AuthType))
                 await _db.SaveCharacterSlotAsync(userId, profile, slot);
-
-            // Reserve edit: repopulate missing role loadouts in the server cache after a save.
-            // Must be called after the DB save so the extra entries are not persisted to the database.
-            if (profile is HumanoidCharacterProfile savedHp)
-                EnsureMissingRoleLoadouts(savedHp, session);
         }
 
         private async void HandleDeleteCharacterMessage(MsgDeleteCharacter message)
@@ -195,7 +193,7 @@ namespace Content.Server.Preferences.Managers
             var arr = new Dictionary<int, ICharacterProfile>(curPrefs.Characters);
             arr.Remove(slot);
 
-            prefsData.Prefs = curPrefs.WithCharacters(arr).WithSlot(nextSlot ?? curPrefs.SelectedCharacterIndex); // WWDP EDIT 
+            prefsData.Prefs = curPrefs.WithCharacters(arr).WithSlot(nextSlot ?? curPrefs.SelectedCharacterIndex); // WWDP EDIT
 
             if (!ShouldStorePrefs(message.MsgChannel.AuthType))
             {
@@ -252,6 +250,8 @@ namespace Content.Server.Preferences.Managers
             var prefsData = _cachedPlayerPrefs[session.UserId];
             DebugTools.Assert(prefsData.Prefs != null);
             prefsData.Prefs = SanitizePreferences(session, prefsData.Prefs, _dependencies);
+            // Reserve edit: separate enriched prefs used only for spawning, so canonical prefs stay unmodified.
+            prefsData.SpawnPrefs = CreateSpawnPrefs(session, prefsData.Prefs);
 
             prefsData.PrefsLoaded = true;
 
@@ -272,6 +272,7 @@ namespace Content.Server.Preferences.Managers
             var data = _cachedPlayerPrefs[session.UserId];
             DebugTools.Assert(data.Prefs != null);
             data.Prefs = SanitizePreferences(session, data.Prefs, _dependencies);
+            data.SpawnPrefs = CreateSpawnPrefs(session, data.Prefs);
             _sawmill.Debug("here");
         }
 
@@ -350,18 +351,38 @@ namespace Content.Server.Preferences.Managers
             // Clean up preferences in case of changes to the game,
             // such as removed jobs still being selected.
             // WWDP EDIT START
-            return new PlayerPreferences(prefs.Characters.Select(p =>
-            {
-                var validated = p.Value.Validated(session, collection);
-                // Reserve edit: populate missing role loadouts so ckey-restricted items
-                // (e.g. UniqueReserveItems) auto-apply correctly without needing a manual save.
-                if (validated is HumanoidCharacterProfile hp)
-                    EnsureMissingRoleLoadouts(hp, session);
-                return new KeyValuePair<int, ICharacterProfile>(p.Key, validated);
-            }), prefs.SelectedCharacterIndex, prefs.AdminOOCColor,
+            return new PlayerPreferences(prefs.Characters.Select(p => new KeyValuePair<int, ICharacterProfile>(p.Key,
+                    p.Value.Validated(session, collection))), prefs.SelectedCharacterIndex, prefs.AdminOOCColor,
                     _protos.TryIndex<CustomGhostPrototype>(prefs.CustomGhost, out var ghostProto) && ghostProto.CanUse(session) ? prefs.CustomGhost : new ProtoId<CustomGhostPrototype>("default"),
                     prefs.ConstructionFavorites);
             // WWDP EDIT END
+        }
+
+        // Reserve edit: returns an enriched copy of prefs where every RoleLoadoutPrototype is represented,
+        // even for roles the player has never explicitly saved.  This lets session-dependent loadout
+        // effects (e.g. CkeyRequirementLoadoutEffect) be evaluated with a real session rather than the
+        // null session that SpawnPlayerMob uses for profiles not yet in _loadouts.
+        // Only used for spawning; canonical prefs are never modified.
+        private PlayerPreferences CreateSpawnPrefs(ICommonSession session, PlayerPreferences prefs)
+        {
+            var enriched = prefs.Characters.Select(p =>
+            {
+                if (p.Value is not HumanoidCharacterProfile hp)
+                    return p;
+                var copy = hp.Clone();
+                EnsureMissingRoleLoadouts(copy, session);
+                return new KeyValuePair<int, ICharacterProfile>(p.Key, copy);
+            });
+            return new PlayerPreferences(enriched, prefs.SelectedCharacterIndex, prefs.AdminOOCColor,
+                prefs.CustomGhost, prefs.ConstructionFavorites);
+        }
+
+        // Reserve edit: returns prefs enriched with all role loadouts for spawning.
+        public PlayerPreferences GetSpawnPreferences(NetUserId userId)
+        {
+            if (_cachedPlayerPrefs.TryGetValue(userId, out var data) && data.SpawnPrefs != null)
+                return data.SpawnPrefs;
+            return GetPreferences(userId);
         }
 
         // Reserve edit: ensures that all RoleLoadoutPrototypes are represented in the server-side
@@ -403,6 +424,8 @@ namespace Content.Server.Preferences.Managers
         {
             public bool PrefsLoaded;
             public PlayerPreferences? Prefs;
+            // Reserve edit: enriched copy of Prefs with all role loadouts populated, used only for spawning.
+            public PlayerPreferences? SpawnPrefs;
         }
 
         void IPostInjectInit.PostInject()
