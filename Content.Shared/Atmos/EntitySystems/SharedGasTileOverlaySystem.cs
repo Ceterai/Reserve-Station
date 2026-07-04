@@ -15,7 +15,16 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using System.Numerics;
+using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
+using Content.Shared.Atmos.Prototypes;
+using Robust.Shared.Enums;
+using Robust.Shared.Graphics.RSI;
+using Robust.Shared.Map;
+using Robust.Shared.Map.Components;
+using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 using Robust.Shared.Configuration;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -79,7 +88,7 @@ public abstract class SharedGasTileOverlaySystem : EntitySystem
 
     public static Vector2i GetGasChunkIndices(Vector2i indices)
     {
-        return new Vector2i((int)MathF.Floor((float)indices.X / ChunkSize), (int)MathF.Floor((float)indices.Y / ChunkSize));
+        return new Vector2i((int) MathF.Floor((float) indices.X / ChunkSize), (int) MathF.Floor((float) indices.Y / ChunkSize));
     }
 
     [Serializable, NetSerializable]
@@ -87,6 +96,8 @@ public abstract class SharedGasTileOverlaySystem : EntitySystem
     {
         [ViewVariables] public readonly byte FireState;
         [ViewVariables] public readonly byte[] Opacity;
+        [Dependency] public readonly IPrototypeManager ProtoMan = default!;
+        public readonly int[] VisibleGasId = default!;
         // TODO change fire color based on ByteTemp
 
         /// <summary>
@@ -99,9 +110,6 @@ public abstract class SharedGasTileOverlaySystem : EntitySystem
 
         public GasOverlayData(byte fireState, byte[] opacity, ThermalByte byteTemp)
         {
-            base.Initialize();
-            SubscribeLocalEvent<GasTileOverlayComponent, ComponentGetState>(OnGetState);
-
             List<int> visibleGases = new();
 
             for (var i = 0; i < Atmospherics.TotalNumberOfGases; i++)
@@ -212,7 +220,7 @@ public struct ThermalByte : IEquatable<ThermalByte>
     public void SetTemperature(float temperatureKelvin)
     {
         var clampedTemp = Math.Clamp(temperatureKelvin, TempMinimum, TempMaximum);
-        _coreValue = (byte)((clampedTemp - TempMinimum) * TempResolution / (TempMaximum - TempMinimum));
+        _coreValue = (byte) ((clampedTemp - TempMinimum) * TempResolution / (TempMaximum - TempMinimum));
     }
 
     public void SetAtmosIsImpossible()
