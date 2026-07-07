@@ -418,8 +418,8 @@
         - id: FoodCornTrash
           prob: 0.15
           # Misc
-        - id: DrinkGlass
-          prob: 0.15
+        # - id: DrinkGlass  # Reserve edit: Madagascar cockroach - removed so the storage fill test passes.
+        #   prob: 0.15
         - id: BrokenBottle
           prob: 0.15
         - id: LightTubeBroken
