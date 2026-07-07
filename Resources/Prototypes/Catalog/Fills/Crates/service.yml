@@ -372,6 +372,8 @@
           prob: 0.05
         - id: MobLootbug # Goobstation
           prob: 0.02
+        - id: MobCockroachBig  # Reserve edit: Madagascar cockroach
+          prob: 0.01
           # Food Packaging
         - id: FoodPacketBoritosTrash
           prob: 0.1
