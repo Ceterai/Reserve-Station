@@ -3,11 +3,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  id: OrganCockroachBigInnards
   parent: BaseAnimalOrgan
+  id: OrganCockroachBigInnards
   name: innards
   description: A mess of insect equivalents of organs. Ew.
-  suffix: Cockroach, Organ
+  suffix: Cockroach, Organ, Stomach, Liver, Kidneys, Heart, Egg sack
   components:
   - type: Sprite
     sprite: _White/Mobs/Species/Xenomorph/organs.rsi
@@ -52,7 +52,7 @@
       - id: Narcotic
       - id: Alcohol
         rateModifier: 0.1
-  - type: Tag # goob edit
+  - type: Tag
     tags:
     - Meat
     - Organ
@@ -64,6 +64,19 @@
     size: Small
     heldPrefix: stomach
 
+- type: entity
+  parent: OrganAnimalLungs
+  id: OrganCockroachBigInnardsLungs
+  name: innards
+  description: A mess of insect equivalents of organs. Ew.
+  suffix: Cockroach, Organ, Lungs
+  components:
+  - type: Sprite
+    sprite: _White/Mobs/Species/Xenomorph/organs.rsi
+    layers:
+    - state: egg_sack
+    scale: 0.25, 0.25
+
 - type: body
   id: CockroachBig
   name: madagascar cockroach
@@ -74,7 +87,7 @@
       connections:
       - groin
       organs:
-        lungs: OrganAnimalLungs
+        lungs: OrganCockroachBigInnardsLungs
     groin:
       part: GroinAnimal
       connections:
