@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+# region Organs
+
 - type: entity
   parent: BaseAnimalOrgan
   id: OrganCockroachBigInnards
@@ -77,6 +79,10 @@
     - state: egg_sack
     scale: 0.25, 0.25
 
+# endregion
+
+# region Body
+
 - type: body
   id: CockroachBig
   name: madagascar cockroach
@@ -101,6 +107,10 @@
     feet:
       part: FeetAnimal
 
+# endregion
+
+# region Entity
+
 - type: entity
   parent: MobCockroach
   id: MobCockroachBig
@@ -120,12 +130,6 @@
       0: Alive
       50: Critical  # KILL IT WITH FIRE!!!
       250: Dead  # IT'S STILL TWITCHING!!! KILL IT KILL IT KILL IT!!!
-  - type: ExplosionResistance
-    damageCoefficient: 0.5
-  - type: Armor
-    modifiers:
-      coefficients:
-        Radiation: 0.3
   - type: Bloodstream
     bloodReagent: InsectBlood
   - type: Respirator
@@ -210,3 +214,22 @@
           Quantity: 5
         - ReagentId: UnstableMutagen
           Quantity: 5
+
+# endregion
+
+# region Spawner
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobCockroachBig
+  name: madagascar cockroach spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobCockroachBig
+
+# endregion
