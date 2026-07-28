@@ -45,8 +45,6 @@
   contrabandInventory:
     DrinkPwrGameCan: 4
     DrinkDoctorPwrCan: 1
-  emaggedInventory:
-    DrinkNukieCan: 1
 
 - type: vendingMachineInventory
   id: FoodIceCreamInventory

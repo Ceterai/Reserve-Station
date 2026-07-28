@@ -235,34 +235,13 @@
     - id: ClothingUniformJumpsuitHydroponics
     - id: ClothingBackpackHydroponics
     - id: ClothingShoesColorBrown
-    # Reserve edit start: Orchid's Barmania - Service Heaven
-    - !type:GroupSelector
-      children:
-      - id: ClothingOuterApronBotanist
-        weight: 1.0
-      - id: ClothingOuterApronBotanistAdvanced
-        weight: 0.2
+    - id: ClothingOuterApronBotanist
     - id: ClothingUniformJumpskirtHydroponics
     - id: ClothingUniformOveralls
-    - !type:GroupSelector
-      children:
-      - id: ClothingHeadHatBeretSeniorBotanist
-        weight: 1.0
-      - id: ClothingHeadBandBotany
-        weight: 1.0
-      - id: ClothingHeadHatTrucker  # The hat itself is a subtle joke
-        weight: 0.45
-    - !type:GroupSelector
-      children:
-      - id: ClothingHandsGlovesLeather
-        weight: 1.0
-      - id: ClothingHandsGlovesBotanistAdvanced
-        weight: 0.2
-    - id: ClothingMaskBreathBotanistAdvanced
+    - id: ClothingHeadHatTrucker #the hat itself is a subtle joke
       prob: 0.15
-    - id: ClothingEyesGogglesBotanistAdvanced
-      prob: 0.15
-    # Reserve edit end: Orchid's Barmania - Service Heaven
+    - id: ClothingHandsGlovesLeather
+      prob: 0.5
 
 - type: entity
   id: WardrobeMedicalDoctorFilled

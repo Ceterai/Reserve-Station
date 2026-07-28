@@ -273,7 +273,7 @@
       - !type:GroupSelector
         children:
         - !type:EntSelector
-          id: CrateFunToyBoxRandom  # Reserve edit: Orchid's Barmania - Service Heaven
+          id: CrateFunToyBox
           weight: 1
       - !type:GroupSelector
         children:

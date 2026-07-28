@@ -766,7 +766,6 @@
   minLimit: 0
   loadouts:
   - BotanistApron
-  - BotanistApronAdvanced  # Reserve edit: Orchid's Barmania - Service Heaven
   - BotanistWintercoat
 
 - type: loadoutGroup
@@ -1665,7 +1664,6 @@
   loadouts:
   - RegularLabCoat
   - ChemistLabCoat
-  - ChemistApronAdvanced  # Reserve edit: Orchid's Barmania - Service Heaven
   - ChemistWintercoat
   - SeniorPhysicianLabCoat # Goobstation
 
@@ -1721,10 +1719,6 @@
   loadouts:
   - MedicalHud
   - MedicalEyePatchHud
-  - ChemistMedicGoggles  # Reserve edit: Orchid's Barmania - Service Heaven
-  - ChemistMedicGogglesAdvanced  # Reserve edit: Orchid's Barmania - Service Heaven
-  - RoboticistMedicGoggles  # Reserve edit: Orchid's Barmania - Service Heaven
-  - RoboticistMedicGogglesAdvanced  # Reserve edit: Orchid's Barmania - Service Heaven
   - Glasses
   - GlassesJamjar
   - GlassesJensen

@@ -28,7 +28,7 @@
   id: RoboticistGear
   equipment:
     ears: ClothingHeadsetRobotics
-    # eyes: ClothingEyesHudDiagnostic  # Reserve edit: Orchid's Barmania - Service Heaven
+    eyes: ClothingEyesHudDiagnostic
 
 - type: chameleonOutfit
   id: RoboticistChameleonOutfit

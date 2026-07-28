@@ -109,9 +109,6 @@
 
 - type: loadout # goob
   id: HydroMJ
-  effects:  # Reserve edit: Orchid's Barmania - Service Heaven
-  - !type:GroupLoadoutEffect
-    proto: MasterBotanist
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryHydroponics
 
@@ -135,16 +132,10 @@
 # Outer clothing
 - type: loadout
   id: BotanistApron
-  effects:  # Reserve edit: Orchid's Barmania - Service Heaven
-  - !type:GroupLoadoutEffect
-    proto: AdvancedBotanist
   equipment:
     outerClothing: ClothingOuterApronBotanist
 
 - type: loadout
   id: BotanistWintercoat
-  effects:  # Reserve edit: Orchid's Barmania - Service Heaven
-  - !type:GroupLoadoutEffect
-    proto: AdvancedBotanist
   equipment:
     outerClothing: ClothingOuterWinterHydro

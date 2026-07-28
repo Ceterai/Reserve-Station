@@ -239,7 +239,6 @@
   - ChefJumpsuit
   - CommonBackpack
   - ChefOuterClothing
-  - ChefGloves  # Reserve edit: Orchid's Barmania - Service Heaven
   - Glasses
   - Survival
   - Trinkets
@@ -333,12 +332,10 @@
   groups:
   - GroupTankHarness
   - BotanistHead
-  - BotanistGoggles  # Reserve edit: Orchid's Barmania - Service Heaven
-  - BotanistMasks  # Reserve edit: Orchid's Barmania - Service Heaven
   - BotanistJumpsuit
   - BotanistBackpack
   - BotanistOuterClothing
-  - BotanistGloves  # Reserve edit: Orchid's Barmania - Service Heaven
+  - Glasses
   - Survival
   - Trinkets
   - Animals
@@ -788,10 +785,9 @@
   groups:
   - GroupTankHarness
   - ChemistHead # Goobstation
-  - ChemistGoggles  # Reserve edit: Orchid's Barmania - Service Heaven
-  - ChemistMasks  # Reserve edit: Orchid's Barmania - Service Heaven
+  - MedicalMask
   - ChemistJumpsuit
-  - ChemistGloves  # Reserve edit: Orchid's Barmania - Service Heaven
+  - MedicalGloves
   - ChemistBackpack
   - ChemistOuterClothing
   - MedicalShoes
