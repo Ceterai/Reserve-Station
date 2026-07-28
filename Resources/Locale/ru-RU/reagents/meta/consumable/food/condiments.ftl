@@ -1,11 +1,11 @@
-reagent-name-astrotame = астротем
+reagent-name-astrotame = Астротем
 reagent-desc-astrotame = Слаще тысячи ложек сахара, но без калорий.
 reagent-name-bbq-sauce = соус барбекю
 reagent-desc-bbq-sauce = Салфетки в комплект не входят.
 reagent-name-cornoil = кукурузное масло
 reagent-desc-cornoil = Кукурузное масло. Вкусное масло, используемое в готовке. Изготавливается из кукурузы.
-reagent-name-coldsauce = холодный соус
-reagent-desc-coldsauce = Заставляет язык онеметь.
+reagent-name-frostoil = холодный соус
+reagent-desc-frostoil = Заставляет язык онеметь.
 reagent-name-horseradish-sauce = хрен
 reagent-desc-horseradish-sauce = Пакетик душистого хрена.
 reagent-name-hotsauce = острый соус
