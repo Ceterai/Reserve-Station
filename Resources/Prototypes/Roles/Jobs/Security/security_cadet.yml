@@ -21,6 +21,7 @@
   - OfficerCadetSOP
   - SearchesSOP
   goobcoins: 30 #Goob content
+  weight: 6  # Reserve edit: Fix Assistant job order
   access:
   - Security
   - Brig

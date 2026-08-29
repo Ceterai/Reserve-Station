@@ -19,7 +19,7 @@
       inverted: true
       species:
       - Felinid
-  weight: 5
+  weight: 9  # Reserve edit: Fix Assistant job order
   startingGear: WardenGear
   icon: "JobIconWarden"
   supervisors: job-supervisors-hos

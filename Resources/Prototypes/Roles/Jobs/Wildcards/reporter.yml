@@ -9,6 +9,7 @@
   icon: "JobIconReporter"
   goobcoins: 15 #Goob content
   supervisors: job-supervisors-hop
+  weight: 2  # Reserve edit: Fix Service Department job order
   access:
   - Service
   - Maintenance

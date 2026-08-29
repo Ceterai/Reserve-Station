@@ -16,6 +16,7 @@
   - Bartender
   - Drinks
   goobcoins: 10 #Goob content
+  weight: 7  # Reserve edit: Fix Service Department job order
   access:
   - Service
   - Maintenance

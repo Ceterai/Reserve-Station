@@ -52,6 +52,8 @@
     components:
     - type: SurgerySpeedModifier
       speedModifier: 2
+  alternateTitles: # Reserve - alternate titles
+  - ChiefMedicalOfficerLeadDoctor
 
 - type: startingGear
   id: CMOGear
@@ -76,3 +78,7 @@
     neck: ClothingCloakCmo
     outerClothing: ClothingOuterCoatLabCmo
     gloves: ClothingHandsGlovesNitrile
+
+- type: jobAlternateTitle
+  id: ChiefMedicalOfficerLeadDoctor
+  name: job-name-alt-cmo-1

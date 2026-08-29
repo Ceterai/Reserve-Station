@@ -18,6 +18,7 @@
   - Security
   - DetectiveSOP
   goobcoins: 30 #Goob content
+  weight: 8  # Reserve edit: Fix Assistant job order
   access:
   - Security
   - Brig

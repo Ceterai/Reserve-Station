@@ -23,6 +23,7 @@
   roles:
   - Bartender
   - Botanist
+  - Boxer
   - Chaplain
   - Chef
   - Clown
@@ -32,11 +33,11 @@
   - Librarian
   - Mime
   - Musician
-  - Boxer
-  - Zookeeper
   - Passenger
   - Reporter
+  - RadioHost # Goobstation # Reserve edit - moved from Specific to Service
   - Visitor
+  - Zookeeper
   - ServiceWorker
   - PartyMaker # event-restricted, Goobstation
 
@@ -163,21 +164,23 @@
   name: department-Silicon
   description: department-Silicon-description
   color: "#D381C9"
-  weight: 60 # Reserve-Edit
+  weight: 10 # Reserve-Edit
   buttonStyle: ButtonColorSiliconDepartment # Reserve-Edit
   roles:
   - Borg
   - StationAi
 
-- type: department
-  id: Specific
-  name: department-Specific
-  description: department-Specific-description
-  color: "#9FED58"
-  weight: 10
-  buttonStyle: ButtonColorSpecificDepartment # Reserve-Edit
-  roles:
-  - RadioHost # Goobstation
-  - Reporter
-  - Psychologist
-  primary: false
+# - type: department # Reserve edit - no need for this, moved RadioHost to Service
+#   id: Specific
+#   name: department-Specific
+#   description: department-Specific-description
+#   color: "#9FED58"
+#   weight: 10
+#   buttonStyle: ButtonColorSpecificDepartment # Reserve-Edit
+#   roles:
+#   - RadioHost # Goobstation
+#   - Boxer
+#   - Reporter
+#   - Zookeeper
+#   - Psychologist
+#   primary: false

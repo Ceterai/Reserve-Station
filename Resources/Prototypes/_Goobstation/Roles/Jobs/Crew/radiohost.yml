@@ -8,6 +8,8 @@
   startingGear: RadioHostGear
   icon: "JobIconRadioHost"
   supervisors: job-supervisors-hop
+  goobcoins: 15 #Goob content
+  weight: 3  # Reserve edit: Fix Service Department job order
   access:
   - Maintenance
   - Journalism

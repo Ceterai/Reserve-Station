@@ -15,6 +15,7 @@
   supervisors: job-supervisors-science
   guides: [ Science ] # goobstation
   goobcoins: 20 #Goob content
+  weight: 6  # Reserve edit: Fix Assistant job order
   access:
   - Research
   - Maintenance

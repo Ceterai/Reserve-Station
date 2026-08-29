@@ -10,6 +10,7 @@
   supervisors: job-supervisors-hop
   guides: [ Janitorial ] # goobstation
   goobcoins: 20 # Goobstation
+  weight: 4  # Reserve edit: Fix Service Department job order
   access:
   - Service
   - Janitor

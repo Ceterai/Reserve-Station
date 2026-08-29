@@ -17,6 +17,7 @@
   - FoodRecipes
   - CQC
   goobcoins: 15 #Goob content
+  weight: 8  # Reserve edit: Fix Service Department job order
   access:
   - Service
   - Maintenance

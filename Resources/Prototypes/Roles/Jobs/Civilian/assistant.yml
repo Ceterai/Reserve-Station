@@ -9,6 +9,7 @@
   icon: "JobIconPassenger"
   supervisors: job-supervisors-everyone
   goobcoins: 20 #Goob content
+  weight: 1  # Reserve edit: Fix Service Department job order
   access:
   - Maintenance
   special: # Goobstation

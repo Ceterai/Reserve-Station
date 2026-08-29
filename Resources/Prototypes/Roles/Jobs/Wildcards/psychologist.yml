@@ -9,6 +9,7 @@
   icon: "JobIconPsychologist"
   supervisors: job-supervisors-cmo
   goobcoins: 15 #Goob content
+  weight: 7  # Reserve edit: Fix Assistant job order
   access:
   - Medical
   - Maintenance

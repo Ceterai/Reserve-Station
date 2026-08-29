@@ -20,6 +20,7 @@
   - CorporateJudo
   - AlertLevels
   goobcoins: 30 #Goob content
+  weight: 7  # Reserve edit: Fix Assistant job order
   access:
   - Security
   - Brig

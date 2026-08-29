@@ -15,6 +15,7 @@
   guides: # goobstation
   - Atmospherics
   goobcoins: 20 #Goob content
+  weight: 9  # Reserve edit: Fix Assistant job order
   access:
   - Maintenance
   - Engineering

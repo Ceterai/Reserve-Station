@@ -21,6 +21,7 @@
   - BrigmedicSOP
   - Medicine
   goobcoins: 35
+  weight: 8  # Reserve edit: Fix Assistant job order
   access: # EE parity, make corpsman able function.
   - Security
   - Brig
@@ -39,6 +40,8 @@
     components:
     - type: SurgerySpeedModifier
       speedModifier: 1.25 # Same as Paramedic
+  alternateTitles: # Reserve - alternate titles
+  - BrigmedicBattleMedic
 
 - type: chameleonOutfit
   id: BrigmedicChameleonOutfit
@@ -54,3 +57,7 @@
     back: ClothingBackpackBrigmedic
     shoes: ClothingShoesBootsJack
     head: ClothingHeadHatBeretBrigmedic
+
+- type: jobAlternateTitle
+  id: BrigmedicBattleMedic
+  name: job-name-alt-brigmedic-1

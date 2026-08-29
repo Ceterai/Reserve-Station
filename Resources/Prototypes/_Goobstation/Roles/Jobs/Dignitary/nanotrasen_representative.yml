@@ -58,6 +58,9 @@
       - type: CommandStaff
       - type: Condemned
         soulOwnedNotDevil: true
+  alternateTitles: # Reserve - alternate titles
+  - NanotrasenRepresentativeAgent
+  - NanotrasenRepresentativeOfficial
 
 - type: startingGear
   id: NanotrasenRepresentativeGear
@@ -87,3 +90,11 @@
     shoes: ClothingShoesBootsLaceup
     head: ClothingHeadHatTophat
     neck: ClothingNeckScarfStripedCentcom
+
+- type: jobAlternateTitle
+  id: NanotrasenRepresentativeAgent
+  name: job-name-alt-ntr-1
+
+- type: jobAlternateTitle
+  id: NanotrasenRepresentativeOfficial
+  name: job-name-alt-ntr-2

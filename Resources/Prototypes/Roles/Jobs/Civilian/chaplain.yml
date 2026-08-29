@@ -13,6 +13,7 @@
   supervisors: job-supervisors-hop
   guides: [ Chaplain ] # goobstation
   goobcoins: 25 #Goob content
+  weight: 4  # Reserve edit: Fix Service Department job order
   access:
   - Chapel
   - Maintenance

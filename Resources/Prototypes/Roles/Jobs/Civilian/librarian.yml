@@ -9,6 +9,7 @@
   icon: "JobIconLibrarian"
   supervisors: job-supervisors-hop
   goobcoins: 10 #Goob content
+  weight: 3  # Reserve edit: Fix Service Department job order
   access:
   - Service
   - Maintenance
