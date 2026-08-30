@@ -36,10 +36,11 @@ public sealed partial class StationJobsSystem
         _jobsByWeight = new Dictionary<int, HashSet<string>>();
         foreach (var job in _prototypeManager.EnumeratePrototypes<JobPrototype>())
         {
-            if (!_jobsByWeight.ContainsKey(job.Weight))
-                _jobsByWeight.Add(job.Weight, new HashSet<string>());
+            int weight = JobLogicComparer.Instance.Round(job.Weight);  // Reserve edit: Fix Assistant job order
+            if (!_jobsByWeight.ContainsKey(weight))  // Reserve edit: Fix Assistant job order
+                _jobsByWeight.Add(weight, new HashSet<string>());  // Reserve edit: Fix Assistant job order
 
-            _jobsByWeight[job.Weight].Add(job.ID);
+            _jobsByWeight[weight].Add(job.ID);  // Reserve edit: Fix Assistant job order
         }
 
         _orderedWeights = _jobsByWeight.Keys.OrderByDescending(i => i).ToList();
@@ -381,7 +382,7 @@ public sealed partial class StationJobsSystem
                 if (!job.CanBeAntag && (!_player.TryGetSessionById(player, out session) || antagBlocked.Contains(session)))
                     continue;
 
-                if (weight is not null && job.Weight - job.Weight % 5 != weight.Value - weight.Value % 5)  // Reserve edit: Fix Assistant job order - round down to 5 so 2 = 4 = 0, etc.
+                if (weight is not null && job.Weight - job.Weight % 5 != weight)  // Reserve edit: Fix Assistant job order - round down to 5 so 2 = 4 = 0, etc.
                     continue;
 
                 if (!(roleBans == null || !roleBans.Contains(jobId))) //TODO: Replace with IsRoleBanned

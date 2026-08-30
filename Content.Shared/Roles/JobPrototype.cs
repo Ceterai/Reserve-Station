@@ -189,4 +189,33 @@ namespace Content.Shared.Roles
             return string.Compare(x.ID, y.ID, StringComparison.Ordinal);
         }
     }
+
+    /// <summary>
+    /// Reserve edit: Fix Assistant job order
+    /// Sorts <see cref="JobPrototype"/>s appropriately for determining candidates,
+    /// respecting their <see cref="JobPrototype.Weight"/>.
+    /// </summary>
+    public sealed class JobLogicComparer : IComparer<JobPrototype>
+    {
+        public static readonly JobLogicComparer Instance = new();
+
+        public int Round(JobPrototype? x)
+        {
+            if (x is null)
+            {
+                return 0;
+            }
+            return x.Weight - x.Weight % 5;
+        }
+
+        public int Round(int? x)
+        {
+            return (x ?? 0) - (x ?? 0) % 5;
+        }
+
+        public int Compare(JobPrototype? x, JobPrototype? y)
+        {
+            return Round(x) - Round(y);
+        }
+    }
 }
