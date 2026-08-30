@@ -4,9 +4,9 @@ namespace Content.Client.Stylesheets.Stylesheets;
 
 public sealed partial class NanotrasenStylesheet
 {
-    public override ColorPalette PrimaryPalette => Palettes.Navy;
-    public override ColorPalette SecondaryPalette => Palettes.Slate;
-    public override ColorPalette PositivePalette => Palettes.Green;
-    public override ColorPalette NegativePalette => Palettes.Red;
-    public override ColorPalette HighlightPalette => Palettes.Gold;
+    public override ColorPalette PrimaryPalette => ReserveRedStylesheet.PrimaryPalette; // Reserve edit: ReserveRedStyle
+    public override ColorPalette SecondaryPalette => ReserveRedStylesheet.SecondaryPalette; // Reserve edit: ReserveRedStyle
+    public override ColorPalette PositivePalette => ReserveRedStylesheet.PositivePalette; // Reserve edit: ReserveRedStyle
+    public override ColorPalette NegativePalette => ReserveRedStylesheet.NegativePalette; // Reserve edit: ReserveRedStyle
+    public override ColorPalette HighlightPalette => ReserveRedStylesheet.HighlightPalette; // Reserve edit: ReserveRedStyle
 }

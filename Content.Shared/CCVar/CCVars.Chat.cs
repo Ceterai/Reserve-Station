@@ -84,7 +84,7 @@ public sealed partial class CCVars
     /// The color in which the highlights will be displayed.
     /// </summary>
     public static readonly CVarDef<string> ChatHighlightsColor =
-        CVarDef.Create("chat.highlights_color", "#17FFC1FF", CVar.CLIENTONLY | CVar.ARCHIVE, "The color in which the highlights will be displayed.");
+        CVarDef.Create("chat.highlights_color", "#c23c2d", CVar.CLIENTONLY | CVar.ARCHIVE, "The color in which the highlights will be displayed.");  // Reserve edit: ReserveRedStyle
 
     #region Goobstation - Chat Highlight sounds!
     // Goobstation - Chat Highlight sounds!

@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MIT
 
+using Content.Shared.Stylesheets; // Reserve edit: ReserveRedStyle
+
 namespace Content.Shared.Chat;
 
 public static class ChatChannelExtensions
@@ -8,13 +10,13 @@ public static class ChatChannelExtensions
     {
         return channel switch
         {
-            ChatChannel.Server => Color.Orange,
+            ChatChannel.Server => Color.Goldenrod, // Reserve edit: ReserveRedStyle
             ChatChannel.Radio => Color.LimeGreen,
             ChatChannel.LOOC => Color.MediumTurquoise,
             ChatChannel.OOC => Color.LightSkyBlue,
             ChatChannel.Dead => Color.MediumPurple,
-            ChatChannel.Admin => Color.Red,
-            ChatChannel.AdminAlert => Color.Red,
+            ChatChannel.Admin => ReserveRed.Red, // Reserve edit: ReserveRedStyle
+            ChatChannel.AdminAlert => ReserveRed.DarkRed, // Reserve edit: ReserveRedStyle
             ChatChannel.AdminChat => Color.HotPink,
             ChatChannel.Whisper => Color.DarkGray,
             _ => Color.LightGray
