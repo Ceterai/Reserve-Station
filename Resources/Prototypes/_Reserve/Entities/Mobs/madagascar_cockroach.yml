@@ -131,7 +131,10 @@
       50: Critical  # KILL IT WITH FIRE!!!
       250: Dead  # IT'S STILL TWITCHING!!! KILL IT KILL IT KILL IT!!!
   - type: Bloodstream
-    bloodReagent: InsectBlood
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 40
   - type: Respirator
     damage:
       types:
