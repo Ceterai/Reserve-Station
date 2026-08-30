@@ -1,25 +1,3 @@
-// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
-// SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
-// SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Fishbait <Fishbait@git.ml>
-// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
-// SPDX-FileCopyrightText: 2025 Ilya246 <57039557+Ilya246@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Ilya246 <ilyukarno@gmail.com>
-// SPDX-FileCopyrightText: 2025 Kutosss <162154227+Kutosss@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
-// SPDX-FileCopyrightText: 2025 NazrinNya <137837419+NazrinNya@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 ReserveBot <211949879+ReserveBot@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Roudenn <romabond091@gmail.com>
-// SPDX-FileCopyrightText: 2025 Svarshik <96281939+lexaSvarshik@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 deltanedas <39013340+deltanedas@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 deltanedas <@deltanedas:kde.org>
-// SPDX-FileCopyrightText: 2025 fishbait <gnesse@gmail.com>
-// SPDX-FileCopyrightText: 2025 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
-// SPDX-FileCopyrightText: 2025 nazrin <tikufaev@outlook.com>
-// SPDX-FileCopyrightText: 2025 unknown <Administrator@DESKTOP-PMRIVVA.kommune.indresogn.no>
-//
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System;
@@ -32,7 +10,6 @@ using Content.Server.Pinpointer;
 using Content.Server.Stunnable;
 using Content.Shared.Destructible;
 using Content.Shared.Destructible;
-using Content.Shared.Foldable;
 using Content.Shared.Ghost.Roles.Components;
 using Content.Shared.Humanoid;
 using Content.Shared.Maps;
@@ -60,11 +37,6 @@ using Robust.Shared.IoC;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Maths;
-using Robust.Shared.Random;
-using Content.Shared.Maps;
-using Content.Shared.Mobs;
-using Content.Shared.Stacks;
-using Robust.Server.Containers;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
@@ -90,8 +62,6 @@ public sealed class BinglePitSystem : EntitySystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ITileDefinitionManager _tiledef = default!;
     [Dependency] private readonly TileSystem _tile = default!;
-    [Dependency] private readonly ContainerSystem _container = default!; // WD edit
-    [Dependency] private readonly FoldableSystem _foldable = default!; // Reserve edit 
     [Dependency] private readonly TurfSystem _turf = default!;
 
     private EntityQuery<BingleComponent> _query;
@@ -146,7 +116,16 @@ public sealed class BinglePitSystem : EntitySystem
 
         var coords = Transform(uid).Coordinates;
         for (var i = 0; i < component.StartingBingles; i++)
-            Spawn(component.GhostRoleToSpawn, coords);
+            SpawnGhostRoleMarker(component, coords);
+    }
+
+    private void SpawnGhostRoleMarker(BinglePitComponent component, EntityCoordinates coords)
+    {
+        var proto = _random.Prob(component.RareGhostRoleChance)
+            ? component.RareGhostRoleToSpawn
+            : component.GhostRoleToSpawn;
+
+        Spawn(proto, coords);
     }
 
     private void OnStepTriggered(EntityUid uid, BinglePitComponent component, ref StepTriggeredOffEvent args)
@@ -192,28 +171,6 @@ public sealed class BinglePitSystem : EntitySystem
         if (TryComp<PullableComponent>(tripper, out var pullable) && pullable.BeingPulled)
             _pulling.TryStopPull(tripper, pullable, ignoreGrab: true);
 
-        // Reserve fix
-        if (TryComp<FoldableComponent>(tripper, out var foldable) && !foldable.IsFolded)
-            _foldable.TrySetFolded(tripper, foldable, true);
-
-        // WD edit start
-        if (HasComp<ContainerManagerComponent>(tripper))
-        {
-            foreach (var container in _container.GetAllContainers(tripper))
-            {
-                component.BinglePoints += container.Count;
-                foreach (var entity in container.ContainedEntities)
-                    if (TryComp(entity, out StackComponent? stackComponent))
-                        component.BinglePoints += stackComponent.Count;
-                    else
-                        component.BinglePoints++;
-            }
-        }
-
-        if (TryComp(tripper, out StackComponent? stack))
-            component.BinglePoints += stack.Count;
-        // WD edit end
-
         var fall = EnsureComp<BinglePitFallingComponent>(tripper);
         fall.Pit = (uid, component);
         fall.NextDeletionTime = _timing.CurTime + fall.DeletionTime;
@@ -229,7 +186,7 @@ public sealed class BinglePitSystem : EntitySystem
 
     public void SpawnBingle(EntityUid uid, BinglePitComponent component)
     {
-        Spawn(component.GhostRoleToSpawn, Transform(uid).Coordinates);
+        SpawnGhostRoleMarker(component, Transform(uid).Coordinates);
         OnSpawnTile(uid, component.Level * 2);
 
         component.MinionsMade++;
