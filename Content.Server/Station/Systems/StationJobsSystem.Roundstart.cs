@@ -381,7 +381,7 @@ public sealed partial class StationJobsSystem
                 if (!job.CanBeAntag && (!_player.TryGetSessionById(player, out session) || antagBlocked.Contains(session)))
                     continue;
 
-                if (weight is not null && job.Weight != weight.Value)
+                if (weight is not null && job.Weight - job.Weight % 5 != weight.Value - weight.Value % 5)  // Reserve edit: Fix Assistant job order - round down to 5 so 2 = 4 = 0, etc.
                     continue;
 
                 if (!(roleBans == null || !roleBans.Contains(jobId))) //TODO: Replace with IsRoleBanned
