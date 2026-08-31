@@ -44,7 +44,7 @@ ent-PlayerBorgDerelict = { ent-BorgChassisDerelict }
 ent-PlayerBorgDerelictGhostRole = { ent-PlayerBorgDerelict }
     .suffix = Гост роль
     .desc = { ent-PlayerBorgDerelict.desc }
-ent-PlayerBorgSyndicateInvasionGhostRoleSpawner = спавнер роли борга вторжения синдиката
+ent-PlayerBorgSyndicateInvasionGhostRoleSpawner = спавнер роли борга вторжения Синдиката
     .desc = { ent-MarkerBase.desc }
 
 ent-PlayerStationAiAssembly = каркас ядра ИИ
