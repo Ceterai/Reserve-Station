@@ -323,6 +323,7 @@
     - jumpsuit
   - type: Tag
     tags:
+    - ScurretWearable  # Reserve edit: Super Scurret - let scurrets wear other EVAs too
     - PlasmamanSafe # EE Plasmeme Change
   - type: StainBlocker # Reserve
     slots: [INNERCLOTHING, FEET, GLOVES]
