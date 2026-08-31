@@ -172152,6 +172152,8 @@ entities:
     - type: Transform
       pos: -65.5,101.5
       parent: 2
+- proto: SpawnPointBoxer  # Reserve edit: Add boxers to Gate
+  entities:  # Reserve edit: Add boxers to Gate
   - uid: 14103
     components:
     - type: Transform
