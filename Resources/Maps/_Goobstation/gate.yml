@@ -24373,8 +24373,6 @@ entities:
       - Arsenal
       - Experimental
       - CivilianServices
-    - type: SiloUtilizer
-      silo: 9848
   - uid: 13152
     components:
     - type: Transform
@@ -24385,8 +24383,6 @@ entities:
     - type: Transform
       pos: -70.5,170.5
       parent: 2
-    - type: SiloUtilizer
-      silo: 9848
 - proto: AutolatheMachineCircuitboard
   entities:
   - uid: 4779
@@ -66781,8 +66777,6 @@ entities:
       - Arsenal
       - Experimental
       - CivilianServices
-    - type: SiloUtilizer
-      silo: 9848
 - proto: Carpet
   entities:
   - uid: 1858
@@ -79361,15 +79355,11 @@ entities:
       - Arsenal
       - Experimental
       - CivilianServices
-    - type: SiloUtilizer
-      silo: 9848
   - uid: 20979
     components:
     - type: Transform
       pos: -70.5,171.5
       parent: 2
-    - type: SiloUtilizer
-      silo: 9848
 - proto: CleanerDispenser
   entities:
   - uid: 13381
@@ -97623,8 +97613,6 @@ entities:
       - Arsenal
       - Experimental
       - CivilianServices
-    - type: SiloUtilizer
-      silo: 9848
 - proto: EvilPlushieXeve
   entities:
   - uid: 9491
@@ -97639,8 +97627,6 @@ entities:
     - type: Transform
       pos: -70.5,177.5
       parent: 2
-    - type: SiloUtilizer
-      silo: 9848
 - proto: ExplosivesSignMed
   entities:
   - uid: 31453
@@ -148503,8 +148489,6 @@ entities:
     - type: Transform
       pos: 2.5,198.5
       parent: 2
-    - type: SiloUtilizer
-      silo: 9848
 - proto: MedkitAdvancedFilled
   entities:
   - uid: 30976
@@ -149151,8 +149135,6 @@ entities:
     - type: Transform
       pos: -49.5,-7.5
       parent: 2
-    - type: SiloUtilizer
-      silo: 9848
 - proto: OrganHumanEyes
   entities:
   - uid: 675
@@ -157625,15 +157607,11 @@ entities:
       - Arsenal
       - Experimental
       - CivilianServices
-    - type: SiloUtilizer
-      silo: 9848
   - uid: 20976
     components:
     - type: Transform
       pos: -70.5,169.5
       parent: 2
-    - type: SiloUtilizer
-      silo: 9848
 - proto: PsychBed
   entities:
   - uid: 4321
@@ -165864,8 +165842,6 @@ entities:
     - type: Transform
       pos: -71.5,170.5
       parent: 2
-    - type: SiloUtilizer
-      silo: 9848
     - type: TechnologyDatabase
       supportedDisciplines:
       - Industrial
@@ -165910,8 +165886,6 @@ entities:
     - type: Transform
       pos: 57.5,62.5
       parent: 2
-    - type: SiloUtilizer
-      silo: 9848
     - type: TechnologyDatabase
       supportedDisciplines:
       - Industrial
@@ -165929,8 +165903,6 @@ entities:
       - Arsenal
       - Experimental
       - CivilianServices
-    - type: SiloUtilizer
-      silo: 9848
 - proto: SeedExtractor
   entities:
   - uid: 5784
@@ -165961,8 +165933,6 @@ entities:
       - Arsenal
       - Experimental
       - CivilianServices
-    - type: SiloUtilizer
-      silo: 9848
 - proto: ShardCrystalPink
   entities:
   - uid: 290
