@@ -1060,3 +1060,6 @@ BoxTrashbag: RandomJanitorTool
 
 # 2026-08-24 Reserve Station edit: Upstream 2408
 PartRodMetalLingering0: null
+
+# 2026-08-31 Reserve Station edit: Bring back station Gate
+CableApcStackLingering10: CableApcStack10
