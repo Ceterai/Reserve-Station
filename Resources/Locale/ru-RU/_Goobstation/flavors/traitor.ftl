@@ -19,7 +19,7 @@ traitor-ccybersunindustries-roundend = [color=yellow]специалист Cybers
 traitor-corporateclimber-intro = Вы - Карьерист.
 traitor-corporateclimber-goal = Убийство без необходимости сделает вас предателем или, по крайней мере, будет восприниматься как таковой. Все это лишь средство достижения цели.
 traitor-corporateclimber-allies = Смерть Синдикату.
-traitor-corporateclimber-uplink = У вас есть связь с черным рынком деяний. Ваш канал связи находится в вашем КПК. Сбросьте несколько лишних грузов, и ваш подъем станет гораздо более плавным.
+traitor-corporateclimber-uplink = У вас есть связь с чёрным рынком деяний. Ваш канал связи находится в вашем КПК. Сбросьте несколько лишних грузов, и ваш подъем станет гораздо более плавным.
 traitor-corporateclimber-roundend = [color=yellow]корпоративный альпинист[/color].
 
 traitor-donkcorporation-intro = Вы - шпион компании «Donk Co.»
@@ -37,7 +37,7 @@ traitor-gorlexmarauders-roundend = [color=red]мародёр Горлекса[/c
 traitor-legaltrouble-intro = У вас проблемы с законом.
 traitor-legaltrouble-goal = Постарайтесь закончить свой список дел и не попасться. Если они узнают, чем вы занимаетесь на самом деле, скандал приобретет галактический масштаб.
 traitor-legaltrouble-allies = Смерть Синдикату.
-traitor-legaltrouble-uplink = Вы подключились к черному рынку, чтобы навести порядок в этом деле. Ваш канал связи находится в вашем КПК. Если нет улик, то нет и преступления.
+traitor-legaltrouble-uplink = Вы подключились к чёрному рынку, чтобы навести порядок в этом деле. Ваш канал связи находится в вашем КПК. Если нет улик, то нет и преступления.
 traitor-legaltrouble-roundend = [color=white]в затруднительном положении[/color].
 
 traitor-mi13-intro = Вы - агент MI13.
