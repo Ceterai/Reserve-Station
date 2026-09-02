@@ -1787,6 +1787,60 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         }
 
+        // Reserve edit start: Full discord bot integration
+        public async Task<ulong?> GetLinkedDiscordId(Guid player, CancellationToken cancel)
+        {
+            await using var db = await GetDb(cancel);
+            var linked = await db.DbContext.RMCLinkedAccounts.SingleOrDefaultAsync(l => l.PlayerId == player, cancel);
+            return linked?.DiscordId;
+        }
+        // Reserve edit end: Full discord bot integration
+
+        // Reserve edit start: Discord bot account linking
+        private static readonly TimeSpan LinkingCodeLifetime = TimeSpan.FromMinutes(10);
+
+        public async Task<NetUserId?> GetLinkedPlayerId(ulong discordId, CancellationToken cancel)
+        {
+            await using var db = await GetDb(cancel);
+            var linked = await db.DbContext.RMCLinkedAccounts.SingleOrDefaultAsync(l => l.DiscordId == discordId, cancel);
+            return linked == null ? null : new NetUserId(linked.PlayerId);
+        }
+
+        public async Task<(LinkAccountCodeResult Result, NetUserId? PlayerId)> ConsumeLinkingCode(Guid code, ulong discordId, CancellationToken cancel)
+        {
+            await using var db = await GetDb(cancel);
+
+            var linking = await db.DbContext.RMCLinkingCodes.SingleOrDefaultAsync(l => l.Code == code, cancel);
+            if (linking == null)
+                return (LinkAccountCodeResult.CodeNotFound, null);
+
+            if (DateTime.UtcNow - linking.CreationTime > LinkingCodeLifetime)
+                return (LinkAccountCodeResult.CodeExpired, null);
+
+            var existingForDiscord = await db.DbContext.RMCLinkedAccounts.SingleOrDefaultAsync(l => l.DiscordId == discordId, cancel);
+            if (existingForDiscord != null && existingForDiscord.PlayerId != linking.PlayerId)
+                return (LinkAccountCodeResult.DiscordAlreadyLinked, null);
+
+            var existingForPlayer = await db.DbContext.RMCLinkedAccounts.SingleOrDefaultAsync(l => l.PlayerId == linking.PlayerId, cancel);
+            if (existingForPlayer != null)
+            {
+                existingForPlayer.DiscordId = discordId;
+            }
+            else
+            {
+                if (!await db.DbContext.RMCDiscordAccounts.AnyAsync(d => d.Id == discordId, cancel))
+                    db.DbContext.RMCDiscordAccounts.Add(new RMCDiscordAccount { Id = discordId });
+
+                db.DbContext.RMCLinkedAccounts.Add(new RMCLinkedAccount { PlayerId = linking.PlayerId, DiscordId = discordId });
+            }
+
+            db.DbContext.RMCLinkingCodes.Remove(linking);
+            await db.DbContext.SaveChangesAsync(cancel);
+
+            return (LinkAccountCodeResult.Success, new NetUserId(linking.PlayerId));
+        }
+        // Reserve edit end: Discord bot account linking
+
         public async Task<RMCPatron?> GetPatron(Guid player, CancellationToken cancel)
         {
             await using var db = await GetDb(cancel);

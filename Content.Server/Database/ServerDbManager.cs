@@ -28,6 +28,16 @@ using MSLogLevel = Microsoft.Extensions.Logging.LogLevel;
 
 namespace Content.Server.Database
 {
+    // Reserve edit start: Discord bot account linking
+    public enum LinkAccountCodeResult
+    {
+        Success,
+        CodeNotFound,
+        CodeExpired,
+        DiscordAlreadyLinked,
+    }
+    // Reserve edit end: Discord bot account linking
+
     public interface IServerDbManager
     {
         void Init();
@@ -315,6 +325,14 @@ namespace Content.Server.Database
         Task SetLinkingCode(Guid player, Guid code);
 
         Task<bool> HasLinkedAccount(Guid player, CancellationToken cancel);
+
+        Task<ulong?> GetLinkedDiscordId(Guid player, CancellationToken cancel);  // Reserve edit: Full discord bot integration
+
+        // Reserve edit start: Discord bot account linking
+        Task<NetUserId?> GetLinkedPlayerId(ulong discordId, CancellationToken cancel);
+
+        Task<(LinkAccountCodeResult Result, NetUserId? PlayerId)> ConsumeLinkingCode(Guid code, ulong discordId, CancellationToken cancel);
+        // Reserve edit end: Discord bot account linking
 
         Task<RMCPatron?> GetPatron(Guid player, CancellationToken cancel);
 
@@ -1083,6 +1101,28 @@ namespace Content.Server.Database
             DbReadOpsMetric.Inc();
             return RunDbCommand(() => _db.HasLinkedAccount(player, cancel));
         }
+
+        // Reserve edit start: Full discord bot integration
+        public Task<ulong?> GetLinkedDiscordId(Guid player, CancellationToken cancel)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetLinkedDiscordId(player, cancel));
+        }
+        // Reserve edit end: Full discord bot integration
+
+        // Reserve edit start: Discord bot account linking
+        public Task<NetUserId?> GetLinkedPlayerId(ulong discordId, CancellationToken cancel)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetLinkedPlayerId(discordId, cancel));
+        }
+
+        public Task<(LinkAccountCodeResult Result, NetUserId? PlayerId)> ConsumeLinkingCode(Guid code, ulong discordId, CancellationToken cancel)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.ConsumeLinkingCode(code, discordId, cancel));
+        }
+        // Reserve edit end: Discord bot account linking
 
         public Task<RMCPatron?> GetPatron(Guid player, CancellationToken cancel)
         {
