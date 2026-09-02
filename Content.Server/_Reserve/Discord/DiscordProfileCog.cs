@@ -192,9 +192,14 @@ public sealed class DiscordProfileCog
                 continue;
 
             var highJob = humanoid.JobPriorities.FirstOrDefault(pair => pair.Value == JobPriority.High).Key;
-            var jobName = highJob.Id;
-            if (_prototypes.TryIndex(highJob, out JobPrototype? job))
-                jobName = Loc.GetString(job.Name);
+            var jobName = Loc.GetString("discord-profile-no-job");
+            if (!string.IsNullOrEmpty(highJob.Id) && _prototypes.TryIndex(highJob, out JobPrototype? job))
+            {
+                jobName = humanoid.JobAlternateTitles.TryGetValue(highJob, out var altTitleId) &&
+                          _prototypes.TryIndex(altTitleId, out JobAlternateTitlePrototype? altTitle)
+                    ? altTitle.LocalizedName(humanoid.Gender)
+                    : Loc.GetString(job.Name);
+            }
 
             var speciesName = humanoid.Species;
             if (_prototypes.TryIndex<SpeciesPrototype>(humanoid.Species, out var species))
@@ -202,6 +207,7 @@ public sealed class DiscordProfileCog
 
             output.AppendLine(Loc.GetString("discord-profile-character",
                 ("name", humanoid.Name),
+                ("gender", humanoid.Gender),
                 ("age", humanoid.Age),
                 ("species", speciesName),
                 ("job", jobName)));

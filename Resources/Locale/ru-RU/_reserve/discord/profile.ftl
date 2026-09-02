@@ -1,8 +1,9 @@
 discord-profile-title = Профиль: { $player } ({ $ckey }){ $badges }
 discord-profile-title-not-connected = Профиль: { $player } (не привязан)
 discord-profile-characters = Персонажи
-discord-profile-character = - **{ $name }** ({ $species }-{ $job }, { $age } лет)
+discord-profile-character = - **{ $name }** ({ $gender }, { $species }-{ $job }, { $age } лет)
 discord-profile-no-characters = Персонажи не найдены.
+discord-profile-no-job = Разнорабочий
 discord-profile-balance = Баланс
 discord-profile-inventory = Токены
 discord-profile-token = { $token } x{ $count }
