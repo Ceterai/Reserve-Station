@@ -14,6 +14,7 @@ using Content.Goobstation.Shared.ServerCurrency;
 using NetCord;
 using NetCord.Rest;
 using Robust.Shared.Configuration;
+using Robust.Shared.Enums;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using System.Linq;
@@ -41,6 +42,14 @@ public sealed class DiscordProfileCog
         CCVars.DiscordPatronRoleTier1,
         CCVars.DiscordBoosterRole,
     ];
+
+    private static readonly Dictionary<Gender, string> GenderPronouns = new()
+    {
+        { Gender.Male, Loc.GetString("humanoid-profile-editor-pronouns-male-text") },
+        { Gender.Female, Loc.GetString("humanoid-profile-editor-pronouns-female-text") },
+        { Gender.Epicene, Loc.GetString("humanoid-profile-editor-pronouns-epicene-text") },
+        { Gender.Neuter, Loc.GetString("humanoid-profile-editor-pronouns-neuter-text") },
+    };
 
     public DiscordProfileCog()
     {
@@ -205,9 +214,11 @@ public sealed class DiscordProfileCog
             if (_prototypes.TryIndex<SpeciesPrototype>(humanoid.Species, out var species))
                 speciesName = Loc.GetString(species.Name);
 
+            if (!GenderPronouns.TryGetValue(humanoid.Gender, out var pronouns))
+                pronouns = Loc.GetString("humanoid-profile-editor-pronouns-epicene-text");
             output.AppendLine(Loc.GetString("discord-profile-character",
                 ("name", humanoid.Name),
-                ("gender", humanoid.Gender),
+                ("gender", pronouns),
                 ("age", humanoid.Age),
                 ("species", speciesName),
                 ("job", jobName)));
