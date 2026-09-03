@@ -17,7 +17,11 @@ public sealed class DiscordLinkCog
         IoCManager.InjectDependencies(this);
     }
 
-    public async Task<InteractionCallback> HandleAsync(string code, ulong discordUserId)
+    /// <summary>
+    ///     Handles the /link command from Discord.
+    ///     Returns an ephemeral message to the user with the result of the linking attempt.
+    /// </summary>
+    public async Task<InteractionCallback> HandleLinkAsync(string code, ulong discordUserId)
     {
         if (!Guid.TryParse(code, out var parsedCode))
             return Ephemeral(Loc.GetString("discord-link-invalid-code"));
@@ -38,6 +42,19 @@ public sealed class DiscordLinkCog
             : "?";
 
         return Ephemeral(Loc.GetString("discord-link-success", ("player", name)));
+    }
+
+    /// <summary>
+    ///     Handles the /unlink command from Discord.
+    ///     Returns an ephemeral message to the user with the result of the unlinking attempt.
+    /// </summary>
+    public async Task<InteractionCallback> HandleUnlinkAsync(ulong discordUserId)
+    {
+        var unlinked = await _database.UnlinkDiscordAccount(discordUserId, default);
+        if (unlinked)
+            return Ephemeral(Loc.GetString("discord-unlink-success"));
+        else
+            return Ephemeral(Loc.GetString("discord-unlink-not-linked"));
     }
 
     private static InteractionCallback Ephemeral(string message)

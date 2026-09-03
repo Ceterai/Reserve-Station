@@ -332,6 +332,10 @@ namespace Content.Server.Database
         Task<NetUserId?> GetLinkedPlayerId(ulong discordId, CancellationToken cancel);
 
         Task<(LinkAccountCodeResult Result, NetUserId? PlayerId)> ConsumeLinkingCode(Guid code, ulong discordId, CancellationToken cancel);
+
+        // Unlink a Discord account from a player.
+        // Returns true if the account was unlinked, false if it wasn't linked in the first place.
+        Task<bool> UnlinkDiscordAccount(ulong discordId, CancellationToken cancel);
         // Reserve edit end: Discord bot account linking
 
         Task<RMCPatron?> GetPatron(Guid player, CancellationToken cancel);
@@ -1121,6 +1125,14 @@ namespace Content.Server.Database
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.ConsumeLinkingCode(code, discordId, cancel));
+        }
+
+        // Unlink a Discord account from a player.
+        // Returns true if the account was unlinked, false if it wasn't linked in the first place.
+        public Task<bool> UnlinkDiscordAccount(ulong discordId, CancellationToken cancel)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.UnlinkDiscordAccount(discordId, cancel));
         }
         // Reserve edit end: Discord bot account linking
 

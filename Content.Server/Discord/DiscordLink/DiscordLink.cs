@@ -247,6 +247,11 @@ public sealed class DiscordLink : IPostInjectInit
             await HandleLinkCommand(command);
             return;
         }
+        else if (command.Data.Name == "unlink")
+        {
+            await HandleUnlinkCommand(command);
+            return;
+        }
 
         if (_profileCog == null || command.Data.Name is not ("profile" or "balance" or "characters" or "inventory"))
             return;
@@ -272,6 +277,34 @@ public sealed class DiscordLink : IPostInjectInit
         await command.SendResponseAsync(response);
     }
 
+    private async Task HandleUnlinkCommand(SlashCommandInteraction command)
+    {
+        if (_linkCog == null)
+            return;
+
+        var response = await HandleUnlinkOnMainThread(command.User.Id);
+        await command.SendResponseAsync(response);
+    }
+
+    private Task<InteractionCallback> HandleUnlinkOnMainThread(ulong discordUserId)
+    {
+        var completion = new TaskCompletionSource<InteractionCallback>(TaskCreationOptions.RunContinuationsAsynchronously);
+
+        _taskManager.RunOnMainThread(async () =>
+        {
+            try
+            {
+                completion.SetResult(await _linkCog!.HandleUnlinkAsync(discordUserId));
+            }
+            catch (Exception e)
+            {
+                completion.SetException(e);
+            }
+        });
+
+        return completion.Task;
+    }
+
     private Task<InteractionCallback> HandleLinkOnMainThread(string code, ulong discordUserId)
     {
         var completion = new TaskCompletionSource<InteractionCallback>(TaskCreationOptions.RunContinuationsAsynchronously);
@@ -280,7 +313,7 @@ public sealed class DiscordLink : IPostInjectInit
         {
             try
             {
-                completion.SetResult(await _linkCog!.HandleAsync(code, discordUserId));
+                completion.SetResult(await _linkCog!.HandleLinkAsync(code, discordUserId));
             }
             catch (Exception e)
             {
@@ -325,14 +358,13 @@ public sealed class DiscordLink : IPostInjectInit
                 CreateProfileCommand("characters", "Show a player's characters."),
                 CreateProfileCommand("inventory", "Show a player's bought tokens."),
                 CreateLinkCommand(),
+                CreateUnlinkCommand(),
             };
 
             var registeredCommands = await _client.Rest.GetGuildApplicationCommandsAsync(_client.Id, _guildId);
             foreach (var command in commandDefinitions)
             {
-                if (registeredCommands.Any(registered => registered.Name == command.Name))
-                    continue;
-
+                await _client.Rest.DeleteGuildApplicationCommandAsync(_client.Id, _guildId, registeredCommands.FirstOrDefault(c => c.Name == command.Name)?.Id ?? 0);
                 await _client.Rest.CreateGuildApplicationCommandAsync(_client.Id, _guildId, command);
             }
 
@@ -355,7 +387,7 @@ public sealed class DiscordLink : IPostInjectInit
                 new ApplicationCommandOptionProperties(
                     ApplicationCommandOptionType.Boolean,
                     "privately",
-                    "Only show the response to you (default: false)"));
+                    "Only show the response to you. Always true if you specify a player."));
     }
     // Reserve edit end: Full discord bot integration
 
@@ -368,6 +400,11 @@ public sealed class DiscordLink : IPostInjectInit
                 "code",
                 "The linking code shown in-game")
                 .WithRequired(true));
+    }
+
+    private static SlashCommandProperties CreateUnlinkCommand()
+    {
+        return new SlashCommandProperties("unlink", "Unlink your Discord account from your in-game account.");
     }
     // Reserve edit end: Discord bot account linking
 

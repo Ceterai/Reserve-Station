@@ -1839,6 +1839,19 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
             return (LinkAccountCodeResult.Success, new NetUserId(linking.PlayerId));
         }
+
+        // Unlink a Discord account from a player
+        public async Task<bool> UnlinkDiscordAccount(ulong discordId, CancellationToken cancel)
+        {
+            await using var db = await GetDb(cancel);
+            var linked = await db.DbContext.RMCLinkedAccounts.SingleOrDefaultAsync(l => l.DiscordId == discordId, cancel);
+            if (linked == null)
+                return false;
+
+            db.DbContext.RMCLinkedAccounts.Remove(linked);
+            await db.DbContext.SaveChangesAsync(cancel);
+            return true;
+        }
         // Reserve edit end: Discord bot account linking
 
         public async Task<RMCPatron?> GetPatron(Guid player, CancellationToken cancel)

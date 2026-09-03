@@ -10,4 +10,4 @@ discord-profile-token = { $token } x{ $count }
 discord-profile-no-tokens = No tokens found.
 discord-profile-no-data = No profile data is available.
 discord-profile-player-not-found = No player found for `{ $player }`.
-discord-profile-player-required = Specify a player, or link your account with /link.
+discord-profile-player-required = First, link your account with /link.

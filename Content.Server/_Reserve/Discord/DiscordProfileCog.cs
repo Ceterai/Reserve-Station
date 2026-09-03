@@ -76,11 +76,21 @@ public sealed class DiscordProfileCog
         string ckey;
         ulong? discordId;
 
+        // Security: only connected players can check other players' profiles, to prevent abuse of the bot for scraping data.
+        // If the player argument is omitted, we assume the user wants their own profile.
+        var linkedId = await _database.GetLinkedPlayerId(discordUserId, default);
+        if (linkedId == null)
+            return Respond(Loc.GetString("discord-profile-player-required"), ephemeral);
+
+        // Security: if the player argument is included, always go ephemeral to prevent abuse of the bot for scraping data.
+        if (!string.IsNullOrWhiteSpace(player))
+            ephemeral = true;
+
         if (string.IsNullOrWhiteSpace(player))
         {
-            var linkedId = await _database.GetLinkedPlayerId(discordUserId, default);
-            if (linkedId == null)
-                return Respond(Loc.GetString("discord-profile-player-required"), ephemeral);
+            // var linkedId = await _database.GetLinkedPlayerId(discordUserId, default);
+            // if (linkedId == null)
+            //     return Respond(Loc.GetString("discord-profile-player-required"), ephemeral);
 
             userId = linkedId.Value;
             ckey = (await _database.GetPlayerRecordByUserId(userId))?.LastSeenUserName ?? userId.ToString();

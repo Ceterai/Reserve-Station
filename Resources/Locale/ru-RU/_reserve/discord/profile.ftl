@@ -10,4 +10,4 @@ discord-profile-token = { $token } x{ $count }
 discord-profile-no-tokens = Токены не найдены.
 discord-profile-no-data = Данные профиля отсутствуют.
 discord-profile-player-not-found = Игрок с идентификатором `{ $player }` не найден.
-discord-profile-player-required = Укажите игрока или привяжите свой аккаунт через /link.
+discord-profile-player-required = Сначала привяжите свой аккаунт через /link.
