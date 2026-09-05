@@ -24,6 +24,7 @@ ent-ClothingUniformMailCarrier = униформа почтальона
     .desc = Враг собак - везде.
 ent-ClothingUniformHecu = униформа HECU
     .desc = Убить Фримена.
+    .suffix = Адмем, Халф-Лайф
 ent-ClothingUniformJumpsuitNavyGold = комбинезон офицера флота
     .desc = Комбинезон, который носят высокопоставленные члены Центрального Командования. Остальное засекречено.
 ent-ClothingUniformJumpsuitSpecOps = комбинезон офицера специальных операций

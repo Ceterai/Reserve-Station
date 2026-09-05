@@ -84,7 +84,7 @@ traitor-evilchampion-uplink = У Чемпионов Зла хорошие свя
 traitor-evilchampion-roundend = [color=red]Чемпион Зла[/color]
 
 issuers-corporate-flavor-1 = NanoTrasen
-issuers-corporate-flavor-2 = Центральное командование
+issuers-corporate-flavor-2 = Central Command
 
 traitor-cybersunindustries-roundend = [color=yellow]специалист из Cybersun Industries[/color]
 

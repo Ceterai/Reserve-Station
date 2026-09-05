@@ -30,10 +30,10 @@ ent-RandomHumanoidSpawnerChronolegioneer = роль призрака - хрон�
 
 ent-RandomHumanoidHECUSpawner = роль призрака - оперативник HECU
     .desc = { "" }
-    .suffix = ОБР, Адмем, Half Life
-ent-TheGmanSpawer = роль призрака - Г-мэн
+    .suffix = ОБР, Адмем, Халф-Лайф
+ent-TheGmanSpawer = роль призрака - Джи-мэн
     .desc = { "" }
-    .suffix = Адмем, Half Life
+    .suffix = Адмем, Халф-Лайф
 
 ent-ConquestSpawner = роль призрака - завоеватель
     .desc = { "" }

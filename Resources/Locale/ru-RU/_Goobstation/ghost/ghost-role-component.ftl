@@ -95,7 +95,7 @@ ghost-role-information-bsd-rules = Следуйте приказам, данны
 
 # Халфлайф
 
-ghost-role-information-Gman-name = G-Man
+ghost-role-information-Gman-name = Джи-мэн
 ghost-role-information-Gman-description = Правильный человек, оказавшийся в неподходящем месте, может изменить мир к лучшему.
 ghost-role-information-Gman-rules = Вы не подчиняетесь никаким правилам или границам. Смерть не может удержать вас, как и Нанотрейзен.
 
