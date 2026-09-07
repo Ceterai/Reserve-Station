@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: gamePreset
+  id: Vampire
+  alias:
+    - vamp
+    - vampyre
+  name: vampire-title
+  description: vampire-description
+  showInVote: true
+  rules:
+  - DummyNonAntagChance
+  - Vampire
+  - BasicStationEventScheduler
+  - MeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
