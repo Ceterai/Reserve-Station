@@ -180,112 +180,140 @@ alerts-vampire-blood-swell-desc = Your muscles surge with unholy power.
 alerts-vampire-blood-rush-name = Blood Rush
 alerts-vampire-blood-rush-desc = Supernatural speed courses through your limbs.
 
-# Reserve edit: Vampires - admin antag verb
-admin-verb-text-make-vampire = Make Vampire
-admin-verb-make-vampire = Make the target into a vampire.
+# region Admin antag verb
 
-# Reserve edit: Vampires - guidebook vampire entries
+admin-verb-text-make-vampire = Make a Vampire
+admin-verb-make-vampire = Turn the target into a vampire.
+
+# endregion
+
+# region Guidebook entries
+
 guide-entry-vampire = Vampire
 guide-entry-vampire-progression = Vampire Progression
 guide-entry-vampire-classes = Vampire Classes
 guide-entry-vampire-counterplay = Countering Vampires
 
-# Reserve edit: Vampires - vampire prototype localization
 mind-role-vampire-name = Vampire Role
-ent-vampiric-claws-name = vampiric claws
-ent-vampiric-claws-desc = Blood-forged claws that siphon vitae on hit. They dissipate after 15 swings, or if dispelled.
-ent-vampire-decoy-name = vampire decoy
-ent-vampire-sanguine-pool-name = sanguine pool
-ent-vampire-sanguine-pool-desc = A sentient puddle of vampiric blood.
 objective-vampire-survive-name = Survive
-objective-vampire-survive-desc = I must survive no matter what.
+objective-vampire-survive-desc = I must survive at all costs.
 objective-vampire-escape-name = Escape to CentComm alive and unrestrained.
 objective-vampire-escape-desc = I need to escape on the evacuation shuttle without being captured.
 objective-vampire-kill-random-desc = Do it however you like, just make sure they do not reach CentComm.
 objective-vampire-thrall-obey-name = Obey your master
 objective-vampire-thrall-obey-desc = You are enthralled. Follow your master's commands.
 
-# Reserve edit: Vampires - vampire actions localization
-action-name-vampire-toggle-fangs = Toggle Fangs (Toggle)
-action-desc-vampire-toggle-fangs = Extend or retract your fangs to drink blood from victims.
-action-name-vampire-glare = Glare (Free)
-action-desc-vampire-glare = Paralyze and mute nearby targets, dealing stamina damage over time.
-action-name-vampire-rejuvenate = Rejuvenate (Free)
-action-desc-vampire-rejuvenate = Instantly remove stuns and recover 100 stamina damage.
-action-name-vampire-rejuvenate-advanced = Rejuvenate (Free)
-action-desc-vampire-rejuvenate-advanced = Instantly remove stuns and recover 100 stamina, plus purge harmful reagents (10u) and heal 20 brute, 20 burn, 20 toxin, and 30 oxy loss.
-action-name-vampire-choose-class = Choose Vampire Class
-action-desc-vampire-choose-class = Choose your vampire subclass.
-action-name-vampire-vampiric-claws = Vampiric Claws
-action-desc-vampire-vampiric-claws = Create undroppable claws of blood. Each hit grants +5 blood. Has 15 swings. Use in hand to dispel.
-action-name-vampire-sanguine-pool = Sanguine Pool
-action-desc-vampire-sanguine-pool = Transform into a pool of blood for 8 seconds, allowing movement through doors and windows.
-action-name-vampire-blood-tendrils = Blood Tendrils
-action-desc-vampire-blood-tendrils = After a short delay, tendrils erupt in a 3x3 area, poisoning and heavily slowing victims.
-action-name-vampire-blood-barrier = Blood Barrier
-action-desc-vampire-blood-barrier = Create 3 blood barriers at the target location. Vampires can pass through them.
-action-name-vampire-predator-sense = Predator Sense
-action-desc-vampire-predator-sense = Hunt down your prey, there is nowhere to hide...
-action-name-vampire-blood-eruption = Blood Eruption (100)
-action-desc-vampire-blood-eruption = Cause any blood within 4 tiles of you to erupt, dealing 50 brute damage to anyone standing on it.
-action-name-vampire-blood-bringers-rite = Blood Bringers Rite (Toggle)
-action-desc-vampire-blood-bringers-rite = When toggled, everyone around you begins to bleed profusely. You drain their blood and rejuvenate with it.
-action-name-vampire-cloak-of-darkness = Cloak of Darkness (Toggle)
-action-desc-vampire-cloak-of-darkness = Toggle invisibility and speed boost that scales with darkness. Stronger in dark areas and weaker in bright light.
-action-name-vampire-shadow-snare = Shadow Snare (20)
-action-desc-vampire-shadow-snare = Place a fragile shadow trap at target location. Damages, blinds (20s), and heavily slows a non-vampire humanoid who steps on it.
-action-name-vampire-shadow-anchor = Shadow Anchor (20)
-action-desc-vampire-shadow-anchor = First use places a shadow anchor beacon (2 min). Second use while it exists instantly returns you to it and consumes it.
-action-name-vampire-shadow-boxing = Shadow Boxing (50)
-action-desc-vampire-shadow-boxing = Target someone to have your shadow bats beat them up. You must stay within 4 tiles for this to work.
-action-name-vampire-dark-passage = Dark Passage (20)
-action-desc-vampire-dark-passage = Teleport to target location through shadows.
-action-name-vampire-extinguish-lights = Extinguish Lights (0)
-action-desc-vampire-extinguish-lights = Destroy all light sources within 3 tiles, gaining 5 blood per light.
-action-name-vampire-eternal-darkness = Eternal Darkness (Toggle)
-action-desc-vampire-eternal-darkness = When toggled, shroud the area around you in darkness and slowly lower nearby body temperatures.
-action-name-vampire-enthrall = Enthrall (150)
-action-desc-vampire-enthrall = Channel for 15 seconds on a humanoid target to bind them to your will. Cancels if either of you moves.
-action-name-vampire-pacify = Pacify (10)
-action-desc-vampire-pacify = Flood a victim's mind with bliss, pacifying them for 40 seconds.
-action-name-vampire-subspace-swap = Subspace Swap (30)
-action-desc-vampire-subspace-swap = Select a target within 7 tiles to swap positions, slowing them for 4 seconds.
-action-name-vampire-decoy = Decoy (30)
-action-desc-vampire-decoy = Leave behind a fragile duplicate that blinds attackers when harmed while you vanish into invisibility.
-action-name-vampire-rally-thralls = Rally Thralls (100)
-action-desc-vampire-rally-thralls = Command thralls within 7 tiles to shake off stuns, wake up, and regain stamina.
-action-name-vampire-blood-bond = Blood Bond (Toggle)
-action-desc-vampire-blood-bond = Toggle a blood tether to nearby thralls, redistributing damage between you at the cost of 2.5 blood per second.
-action-name-vampire-mass-hysteria = Mass Hysteria (70)
-action-desc-vampire-mass-hysteria = Flood every nearby mind (except thralls) with terror, flashing them and cursing them with hallucinations for 30 seconds.
-action-name-vampire-blood-swell = Blood Swell (30)
-action-desc-vampire-blood-swell = For 30 seconds reduce brute damage by 60%, stamina and burn by 50%, and halve stun times. Cannot use guns.
-action-name-vampire-blood-rush = Blood Rush (30)
-action-desc-vampire-blood-rush = For 10 seconds, double your movement speed.
-action-name-vampire-seismic-stomp = Seismic Stomp (30)
-action-desc-vampire-seismic-stomp = Slam the ground, knocking down and throwing all creatures within 3 tiles away. Destroys floor tiles.
-action-name-vampire-overwhelming-force = Overwhelming Force (Toggle)
-action-desc-vampire-overwhelming-force = Automatically pry open unpowered doors. While active, you cannot be pushed or pulled. Costs 5 blood per door.
-action-name-vampire-demonic-grasp = Demonic Grasp (20)
-action-desc-vampire-demonic-grasp = Launch a demonic hand up to 15 tiles. Immobilizes the target for 5 seconds and can pull in combat mode.
-action-name-vampire-charge = Charge (30)
-action-desc-vampire-charge = Charge until hitting an obstacle or void. Creatures take 60 brute and are thrown 5 tiles. Structures take 150 damage.
+# endregion
 
-# Reserve edit: Vampires - vampire effects localization
-ent-vampire-effect-blood-tendrils-name = blood tendrils
-ent-vampire-effect-shadow-punch-name = shadow punch
-ent-vampire-effect-blood-barrier-name = blood barrier
-ent-vampire-effect-blood-barrier-desc = A barrier made of solidified blood that blocks movement.
-ent-vampire-effect-transformation-out-name = vampire transformation out
-ent-vampire-effect-transformation-in-name = vampire transformation in
-ent-vampire-effect-blood-eruption-name = blood eruption
-ent-vampire-effect-drain-beam-name = drain beam
-ent-vampire-effect-drain-beam-desc = A crimson beam of life-draining energy.
-ent-vampire-effect-drain-beam-visual-name = drain beam visual
-ent-vampire-effect-drain-beam-visual-desc = A smooth client-side vampire drain beam.
-ent-vampire-effect-shadow-anchor-name = shadow anchor
-ent-vampire-effect-shadow-anchor-desc = A pulsing knot of shadow you can return to.
-ent-vampire-effect-shadow-snare-name = shadow snare
-ent-vampire-effect-shadow-snare-desc = A nearly invisible trap made of condensed shadows.
-ent-vampire-effect-shadow-tendrils-name = shadow tendrils
-ent-vampire-effect-shadow-tendrils-desc = Dark tendrils binding your legs.
+# region Entities
+
+ent-VampiricClawsItem = vampiric claws
+    .desc = Blood-forged claws that siphon vitae on hit. They dissipate after 15 swings, or if dispelled.
+ent-VampireDecoyEntity = vampire decoy
+ent-MobVampireSanguinePool = sanguine pool
+    .desc = A sentient puddle of vampiric blood.
+
+# endregion
+
+# region Actions
+
+ent-ActionVampireToggleFangs = Toggle Fangs (Toggle)
+    .desc = Extend or retract your fangs to drink the blood of your victims.
+ent-ActionVampireGlare = Glare (Free)
+    .desc = Paralyzes and silences nearby targets, dealing them stamina damage over time.
+ent-ActionVampireRejuvenateI = Rejuvenate (Free)
+    .desc = Instantly removes stun and restores 100 stamina damage.
+ent-ActionVampireRejuvenateII = Rejuvenate (Free)
+    .desc = Instantly removes stun, restores 100 stamina, clears harmful reagents (10u), and heals damage.
+ent-ActionClassSelectId = Select Vampire Class
+    .desc = Choose your vampire subclass.
+
+# Hemomancer
+
+ent-ActionVampireHemomancerClaws = Vampiric Claws
+    .desc = Creates non-dispellable blood-forged claws. Each hit grants +5 blood. 15 hits. Use in hand to dispel.
+ent-ActionVampireSanguinePool = Sanguine Pool
+    .desc = Transforms you into a pool of blood for 8 seconds, allowing you to pass through doors and windows.
+ent-ActionVampireHemomancerTendrils = Blood Tendrils
+    .desc = After a short delay, tendrils erupt in a 3x3 area, poisoning and heavily slowing victims.
+ent-ActionVampireBloodBarrier = Blood Barrier
+    .desc = Creates 3 blood barriers at the selected location. Vampires can pass through them.
+ent-ActionVampirePredatorSense = Predator Sense
+    .desc = Track your prey; they have nowhere to hide...
+ent-ActionVampireBloodEruption = Blood Eruption (100)
+    .desc = Any blood within a 4-tile radius erupts, dealing 50 blunt damage to those standing in it.
+ent-ActionVampireBloodBringersRite = Bloodbringer's Rite (Toggle)
+    .desc = When activated, everyone nearby starts bleeding heavily. You drink their blood and heal.
+
+# Umbrae
+
+ent-ActionVampireCloakOfDarkness = Cloak of Darkness (Toggle)
+    .desc = Invisibility and a speed bonus depending on lighting. Stronger in the dark, weaker in bright light.
+ent-ActionVampireShadowSnare = Shadow Snare (20)
+    .desc = Places a fragile shadow trap. Deals damage, blinds (20s), and heavily slows non-vampire humanoids.
+ent-ActionVampireShadowAnchor = Shadow Anchor (20)
+    .desc = The first use places a beacon (2 min). Reusing it instantly returns you to it and consumes the beacon.
+ent-ActionVampireShadowBoxing = Shadow Boxing (50)
+    .desc = Command shadow bats to beat the target. You must remain within 4 tiles.
+ent-ActionVampireDarkPassage = Dark Passage (20)
+    .desc = Teleports to the selected point through the shadows.
+ent-ActionVampireExtinguish = Extinguish Light (0)
+    .desc = Destroys light sources within a 3-tile radius, granting 5 blood for each.
+ent-ActionVampireEternalDarkness = Eternal Darkness (Toggle)
+    .desc = Envelops the area around you in darkness and gradually lowers the temperature of nearby bodies.
+
+# Dantalion
+
+ent-ActionVampireEnthrall = Enthrall (150)
+    .desc = Channel for 15 seconds on a humanoid to bend them to your will. Breaks if either of you moves.
+ent-ActionVampirePacify = Pacify (30)
+    .desc = Fills the target's mind with bliss, pacifying them for 40 seconds.
+ent-ActionVampireSubspaceSwap = Subspace Swap (30)
+    .desc = Select a target within a 7-tile radius, swap places with them, and slow them for 4 seconds.
+ent-ActionVampireDecoy = Decoy (30)
+    .desc = Leaves a fragile copy that blinds attackers when damaged while you hide in invisibility.
+ent-ActionVampireRallyThralls = Rally Thralls (100)
+    .desc = Commands thralls within a 7-tile radius to remove stuns, wake up, and restore stamina.
+ent-ActionVampireBloodBond = Blood Bond (Toggle)
+    .desc = Toggles a blood bond with nearby thralls, redistributing damage at the cost of 2.5 blood per second.
+ent-ActionVampireMassHysteria = Mass Hysteria (70)
+    .desc = Instills terror in all nearby minds (except thralls), blinding and causing hallucinations for 30 seconds.
+
+# Gargantua
+
+ent-ActionVampireBloodSwell = Blood Swell (30)
+    .desc = Reduces incoming damage and shortens stuns for 30 seconds. Weapons do not work, but melee grows.
+ent-ActionVampireBloodRush = Blood Rush (30)
+    .desc = Doubles your movement speed for 10 seconds.
+ent-ActionVampireSeismicStomp = Seismic Stomp (30)
+    .desc = Strikes the ground, knocking down and pushing creatures within a 3-tile radius. Destroys floor tiles.
+ent-ActionVampireOverwhelmingForce = Overwhelming Force (Toggle)
+    .desc = Automatically breaches powerless doors. While active, you cannot be pushed or pulled. Costs 5 blood per door.
+ent-ActionVampireDemonicGrasp = Demonic Grasp (20)
+    .desc = Launches a demonic hand up to 15 tiles. Immobilizes the target for 5 seconds and can pull in combat mode.
+ent-ActionVampireCharge = Charge (30)
+    .desc = Rushes in a direction until hitting an obstacle. Creatures take 60 crushing damage and are knocked back 5 tiles. Structures take 150 damage.
+
+# endregion
+
+# region Effects
+
+ent-VampireBloodTendrilVisual = blood tendrils
+ent-VampireShadowBoxingPunch = shadow punch
+ent-VampireBloodBarrier = blood barrier
+    .desc = A barrier made of solidified blood that blocks movement.
+ent-VampireSanguinePoolOut = vampire transformation out
+ent-VampireSanguinePoolIn = vampire transformation in
+ent-VampireBloodEruptionVisual = blood eruption
+ent-VampireDrainBeam = drain beam
+    .desc = A crimson beam of life-draining energy.
+ent-VampireDrainBeamVisual = drain beam visual
+    .desc = A smooth client-side vampire drain beam.
+ent-VampireBloodBondBeamVisual = blood bond beam visual
+    .desc = A smooth client-side vampire blood bond beam.
+ent-VampireShadowAnchorBeacon = shadow anchor
+    .desc = A pulsing knot of shadow you can return to.
+ent-VampireShadowSnare = shadow snare
+    .desc = A nearly invisible trap made of condensed shadows.
+ent-VampireShadowSnareEnsnare = shadow tendrils
+    .desc = Dark tendrils binding your legs.

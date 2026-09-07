@@ -153,12 +153,14 @@ alerts-vampire-blood-swell-desc = Ваши мышцы переполняет н�
 alerts-vampire-blood-rush-name = Кровавый рывок
 alerts-vampire-blood-rush-desc = Сверхъестественная скорость течёт по вашим конечностям.
 
-# Admin antag verb
+# region Админ-панель антагонистов
 
 admin-verb-text-make-vampire = Сделать вампиром
 admin-verb-make-vampire = Сделать цель вампиром.
 
-# Guidebook entries
+# endregion
+
+# region Записи в руководстве
 
 guide-entry-vampire = Вампир
 guide-entry-vampire-progression = Прогрессия вампира
@@ -173,6 +175,8 @@ objective-vampire-escape-desc = Мне нужно покинуть станци�
 objective-vampire-kill-random-desc = Любыми средствами не дайте цели добраться до Центкома.
 objective-vampire-thrall-obey-name = Подчиняйся своему хозяину
 objective-vampire-thrall-obey-desc = Вы обращены в трелла. Следуйте приказам своего хозяина.
+
+# endregion
 
 # region Сущности
 
