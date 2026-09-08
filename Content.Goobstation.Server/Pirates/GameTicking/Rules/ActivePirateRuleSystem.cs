@@ -73,7 +73,8 @@ public sealed partial class ActivePirateRuleSystem : GameRuleSystem<ActivePirate
         var briefing = Loc.GetString("antag-pirate-briefing");
         _antag.SendBriefing(target, briefing, Color.OrangeRed, BriefingSound);
 
-        _npcFaction.AddFaction(target, "PirateFaction"); // yaml fucking sucks!!!
+        var pirateFaction = "PirateFaction";  // Reserve edit: Fix warnings
+        _npcFaction.AddFaction(target, pirateFaction); // yaml fucking sucks!!!  // Reserve edit: Fix warnings
 
         return true;
     }

@@ -216,7 +216,8 @@ public sealed class AristocratSystem : EntitySystem
 
         // the fog (snow) is coming
         var xform = Transform(ent);
-        _weather.SetWeather(xform.MapID, _prot.Index<WeatherPrototype>("SnowfallMagic"), null);
+        var snowfallMagic = "SnowfallMagic";  // Reserve edit: Fix warnings
+        _weather.SetWeather(xform.MapID, _prot.Index<WeatherPrototype>(snowfallMagic), null);  // Reserve edit: Fix warnings
     }
 
     private void EndWaltz(Entity<AristocratComponent> ent)

@@ -48,7 +48,7 @@ public abstract class SharedBarkSystem : EntitySystem
         var list = new List<BarkVoicePrototype>();
         foreach (var (voice, requirements) in listRaw.VoiceList)
         {
-            if(!_prototypeManager.TryIndex(voice, out var prototype))
+            if (!_prototypeManager.TryIndex(voice, out var prototype))
                 continue;
 
             var isValid = true;
