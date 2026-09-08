@@ -34,8 +34,9 @@ public sealed class MagicSystem : SharedMagicSystem
         if (!ev.MakeSurvivorAntagonist)
             return;
 
-        if (_mind.TryGetMind(ev.Performer, out var mind, out _) && !_tag.HasTag(mind, "InvalidForSurvivorAntag"))
-            _tag.AddTag(mind, "InvalidForSurvivorAntag");
+        var invalidForSurvivorAntagTag = "InvalidForSurvivorAntag";  // Reserve edit: Fix warnings
+        if (_mind.TryGetMind(ev.Performer, out var mind, out _) && !_tag.HasTag(mind, invalidForSurvivorAntagTag))  // Reserve edit: Fix warnings
+            _tag.AddTag(mind, invalidForSurvivorAntagTag);  // Reserve edit: Fix warnings
 
         EntProtoId survivorRule = "Survivor";
 

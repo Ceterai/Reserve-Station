@@ -229,7 +229,8 @@ public sealed partial class HereticAbilitySystem : SharedHereticAbilitySystem
                 if (!EntityManager.EntityExists(blade))
                     continue;
 
-                if (!_tag.HasTag(blade, "HereticBladeBlade"))
+                var hereticBladeTag = "HereticBladeBlade";  // Reserve edit: Fix warnings
+                if (!_tag.HasTag(blade, hereticBladeTag))  // Reserve edit: Fix warnings
                     continue;
 
                 if (TryComp(blade, out MansusInfusedComponent? infused) &&

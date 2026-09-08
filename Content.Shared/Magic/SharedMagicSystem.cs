@@ -527,10 +527,10 @@ public abstract class SharedMagicSystem : EntitySystem
             if (HasComp(target, data.Component.GetType()))
                 continue;
 
-            var component = (Component)Factory.GetComponent(name);
-            var temp = (object)component;
+            var component = (Component) Factory.GetComponent(name);
+            var temp = (object) component;
             _seriMan.CopyTo(data.Component, ref temp);
-            AddComp(target, (Component)temp!);
+            AddComp(target, (Component) temp!);
         }
     }
 
@@ -661,7 +661,8 @@ public abstract class SharedMagicSystem : EntitySystem
 
             var ent = human.Comp.OwnedEntity.Value;
 
-            if (_tag.HasTag(ent, "InvalidForGlobalSpawnSpell"))
+            var invalidForGlobalSpawnSpellTag = "InvalidForGlobalSpawnSpell";  // Reserve edit: Fix warnings
+            if (_tag.HasTag(ent, invalidForGlobalSpawnSpellTag))  // Reserve edit: Fix warnings
                 continue;
 
             var mapCoords = _transform.GetMapCoordinates(ent);

@@ -78,8 +78,9 @@ public sealed partial class RevenantAnimatedSystem : EntitySystem
         _popup.PopupEntity(Loc.GetString("revenant-animate-item-animate", ("target", ent.Owner)), ent.Owner, Filter.Pvs(ent.Owner), true);
 
         // Add melee damage if an item doesn't already have it
+        var protoIdBlunt = "Blunt";  // Reserve edit: Fix warnings
         if (EnsureHelper<MeleeWeaponComponent>(ent, out var melee))
-            melee.Damage = new DamageSpecifier(_prototypeManager.Index<DamageTypePrototype>("Blunt"), 5);
+            melee.Damage = new DamageSpecifier(_prototypeManager.Index<DamageTypePrototype>(protoIdBlunt), 5);  // Reserve edit: Fix warnings
 
         EnsureHelper<InputMoverComponent>(ent);
         EnsureHelper<MovementSpeedModifierComponent>(ent, out var moveSpeed);

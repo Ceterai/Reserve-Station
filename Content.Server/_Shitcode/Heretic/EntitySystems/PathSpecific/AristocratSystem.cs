@@ -351,6 +351,7 @@ public sealed class AristocratSystem : EntitySystem
 
                 var dmg = conduit.StructureDamage;
 
+                var windowTag = "Window";  // Reserve edit: Fix warnings
                 if (airlockQuery.HasComp(ent))
                 {
                     _audio.PlayPvs(conduit.AirlockDamageSound, Transform(ent).Coordinates);
@@ -361,7 +362,7 @@ public sealed class AristocratSystem : EntitySystem
                             conduit.MinMaxAirlockDamageMultiplier.Y),
                         origin: ent);
                 }
-                else if (_tag.HasTag(ent, "Window"))
+                else if (_tag.HasTag(ent, windowTag))  // Reserve edit: Fix warnings
                 {
                     _audio.PlayPvs(conduit.WindowDamageSound, Transform(ent).Coordinates);
                     ignored.Add(ent);
@@ -537,7 +538,8 @@ public sealed class AristocratSystem : EntitySystem
         foreach (var (uid, tag) in tags)
         {
             // walls
-            if (!_tag.HasTag(tag, "Wall") || !_rand.Prob(.45f) ||
+            var wallTag = "Wall";  // Reserve edit: Fix warnings
+            if (!_tag.HasTag(tag, wallTag) || !_rand.Prob(.45f) ||  // Reserve edit: Fix warnings
                 (Prototype(uid)?.ID ?? string.Empty) == IceWallPrototype)
                 continue;
 
