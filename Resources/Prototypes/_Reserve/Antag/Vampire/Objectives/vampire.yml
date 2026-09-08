@@ -33,7 +33,7 @@
   id: CMOHyposprayVampireStealObjective
   components:
   - type: NotJobRequirement
-    jobs: [ MedicalDoctor, Paramedic, ChiefMedicalOfficer, MedicalIntern, Chemist, Psychologist ] # Starlight. Too easy.
+    jobs: [ MedicalDoctor, Paramedic, ChiefMedicalOfficer, MedicalIntern, Chemist, Psychologist ]
   - type: StealCondition
     owner: job-name-cmo
     stealGroup: Hypospray
@@ -43,7 +43,7 @@
   id: RDHardsuitVampireStealObjective
   components:
   - type: NotJobRequirement
-    jobs: [ ResearchDirector, ResearchAssistant, Scientist, Roboticist ] # Starlight. Too easy.
+    jobs: [ ResearchDirector, ResearchAssistant, Scientist, Roboticist ]
   - type: StealCondition
     owner: job-name-rd
     stealGroup: ClothingOuterHardsuitRd
@@ -55,11 +55,11 @@
   id: EnergyMagnumVampireStealObjective
   components:
   - type: Objective
-    difficulty: 1.5 # Starlight, lowered difficulty since it's a lot easier to deal with Det than HoS
+    difficulty: 1.1
   - type: NotJobRequirement
-    jobs: [ SecurityOfficer, HeadOfSecurity, Detective, Warden, Brigmedic, SecurityCadet ] # Starlight - magnum to detective, and rest of department excluded
+    jobs: [ SecurityOfficer, HeadOfSecurity, Detective, Warden, Brigmedic, SecurityCadet ]
   - type: StealCondition
-    stealGroup: WeaponRevolverInspector
+    stealGroup: OfficerHandgun
     owner: job-name-detective
 
 - type: entity
@@ -69,7 +69,7 @@
   - type: Objective
     difficulty: 2
   - type: NotJobRequirement
-    jobs: [ SecurityOfficer, HeadOfSecurity, Detective, Warden, Brigmedic, SecurityCadet ] # Too easy.
+    jobs: [ SecurityOfficer, HeadOfSecurity, Detective, Warden, Brigmedic, SecurityCadet ]
   - type: StealCondition
     stealGroup: WeaponEnergyShotgun
     owner: job-name-warden
@@ -79,7 +79,7 @@
   id: MagbootsVampireStealObjective
   components:
   - type: NotJobRequirement
-    jobs: [ ChiefEngineer, StationEngineer, AtmosphericTechnician, TechnicalAssistant ] # Starlight. Too easy.
+    jobs: [ ChiefEngineer, StationEngineer, AtmosphericTechnician, TechnicalAssistant ]
   - type: StealCondition
     stealGroup: ClothingShoesBootsMagAdv
     owner: job-name-ce
@@ -89,7 +89,7 @@
   id: ClipboardVampireStealObjective
   components:
   - type: NotJobRequirement
-    jobs: [ Quartermaster, CargoTechnician, SalvageSpecialist ] # Starlight. Too easy.
+    jobs: [ Quartermaster, CargoTechnician, SalvageSpecialist ]
   - type: StealCondition
     stealGroup: BoxFolderQmClipboard
     owner: job-name-qm
