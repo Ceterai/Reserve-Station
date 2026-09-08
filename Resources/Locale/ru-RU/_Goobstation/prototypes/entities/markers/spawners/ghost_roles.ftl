@@ -8,3 +8,6 @@ ent-SpawnPointGhostSlaughterDemon = { ent-BaseAntagSpawner }
 ent-SpawnPointGhostLaughterDemon = { ent-SpawnPointGhostSlaughterDemon }
     .desc = { ent-SpawnPointGhostSlaughterDemon.desc }
     .suffix = Демон смеха
+ent-SpawnPointGhostWraith = { ent-BaseAntagSpawner }
+    .desc = { ent-BaseAntagSpawner.desc }
+    .suffix = Фантом
