@@ -70,7 +70,7 @@ public sealed class BlobFactorySystem : EntitySystem
         if (TryComp<BlobbernautComponent>(blobbernaut, out var blobbernautComponent))
         {
             blobbernautComponent.Factory = uid;
-            blobbernautComponent.Color = blobCoreComponent.ChemРЎolors[blobCoreComponent.CurrentChem];
+            blobbernautComponent.Color = blobCoreComponent.ChemСolors[blobCoreComponent.CurrentChem];
             Dirty(blobbernaut, blobbernautComponent);
         }
         if (TryComp<MeleeWeaponComponent>(blobbernaut, out var meleeWeaponComponent))
@@ -163,7 +163,7 @@ public sealed class BlobFactorySystem : EntitySystem
         blobPod.Factory = uid; //Reserve edit - blob factory port
         FillSmokeGas((pod, blobPod), blobCoreComponent.CurrentChem);
 
-        //smokeOnTrigger.SmokeColor = blobCoreComponent.ChemРЎolors[blobCoreComponent.CurrentChem];
+        //smokeOnTrigger.SmokeColor = blobCoreComponent.ChemСolors[blobCoreComponent.CurrentChem];
         component.Accumulator = 0;
     }
 }
