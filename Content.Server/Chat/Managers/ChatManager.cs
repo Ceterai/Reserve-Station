@@ -439,14 +439,18 @@ internal sealed partial class ChatManager : IChatManager
                 author: player.UserId);
         }
 
-        _discordLink.SendMessage(message, player.Name, ChatChannel.AdminChat);
+        var adminTitle = _adminManager.GetAdminData(player)?.Title ?? "Admin";  // Reserve edit: Use bot instead of webhook
+        _discordLink.SendMessage(message, $"[{adminTitle}] {player.Name}", ChatChannel.AdminChat);  // Reserve edit: Use bot instead of webhook
         _adminLogger.Add(LogType.Chat, $"Admin chat from {player:Player}: {message}");
 
-        if (!string.IsNullOrEmpty(_configurationManager.GetCVar(CCVars.DiscordAdminchatWebhook)))
+        if (  // Reserve edit: Use bot instead of webhook for admin chat when bot admin chat relay is configured
+            string.IsNullOrEmpty(_configurationManager.GetCVar(CCVars.AdminChatDiscordChannelId)) &&
+            !string.IsNullOrEmpty(_configurationManager.GetCVar(CCVars.DiscordAdminchatWebhook))
+        )
         {
             var webhookUrl = _configurationManager.GetCVar(CCVars.DiscordAdminchatWebhook);
             var playerName = player.Name;
-            var adminTitle = _adminManager.GetAdminData(player)?.Title ?? "Admin";
+            // var adminTitle = _adminManager.GetAdminData(player)?.Title ?? "Admin";  // Reserve edit: Use bot instead of webhook
 
             _ = Task.Run(async () =>
             {
