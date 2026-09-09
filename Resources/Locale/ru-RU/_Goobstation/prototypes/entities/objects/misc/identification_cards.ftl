@@ -1,5 +1,6 @@
-ent-ChronoIDCard = футуристичная ID карта
+ent-ChronoIDCard = футуристическая ID карта
     .desc = Карта, которая изначально имела доступ ко всему в этой вселенной.
+    .suffix = Хронолегионер
 ent-HelldiverIDCard = ID карта утилизатора-десантника
     .desc = { ent-SalvageIDCard.desc }
 ent-HecuIDCard = ID карта HECU

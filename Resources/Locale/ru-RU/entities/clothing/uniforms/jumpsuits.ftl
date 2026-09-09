@@ -188,6 +188,7 @@ ent-ClothingUniformJumpsuitPirate = пиратская форма
     .desc = Пиратская вариация комбинезона космического моряка.
 ent-ClothingUniformJumpsuitCossack = казачий костюм
     .desc = Старые добрые штаны да бригантина.
+    .suffix = Казак
 ent-ClothingUniformJumpsuitHawaiBlack = чёрная гавайская рубашка
     .desc = Чёрная, как звёздная ночь.
 ent-ClothingUniformJumpsuitHawaiBlue = синяя гавайская рубашка
