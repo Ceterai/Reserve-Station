@@ -141,7 +141,7 @@ public partial class SharedMartialArtsSystem
                         break;
 
                     _trauma.ApplyDamageToBone(bone, boneComp.BoneIntegrity, boneComp);
-                    ComboPopup(ent, args.Target, "Neck Snap");
+                    ComboPopup(ent, args.Target, "NeckSnap"); // Reserve edit: localization #359
                     break;
                 }
 
@@ -157,7 +157,7 @@ public partial class SharedMartialArtsSystem
 
                 _standingState.Stand(ent.Owner);
                 _stun.TryKnockdown(args.Target, TimeSpan.FromSeconds(5), true);
-                ComboPopup(ent, args.Target, "Leg Sweep");
+                ComboPopup(ent, args.Target, "LegSweep"); // Reserve edit: localization #359
                 break;
         }
     }
@@ -178,7 +178,7 @@ public partial class SharedMartialArtsSystem
         if (TryComp<PullableComponent>(target, out var pullable))
             _pulling.TryStopPull(target, pullable, ent, true);
         _audio.PlayPvs(new SoundPathSpecifier("/Audio/Weapons/genhit3.ogg"), target);
-        ComboPopup(ent, target, proto.Name);
+        ComboPopup(ent, target, proto.ID); // Reserve edit: localization #359
         ent.Comp.LastAttacks.Clear();
     }
 
@@ -209,7 +209,7 @@ public partial class SharedMartialArtsSystem
             _pulling.TryStopPull(target, pullable, ent, true);
         _grabThrowing.Throw(target, ent, dir, proto.ThrownSpeed, behavior: proto.DropItems);
         _audio.PlayPvs(new SoundPathSpecifier("/Audio/Weapons/genhit2.ogg"), target);
-        ComboPopup(ent, target, proto.Name);
+        ComboPopup(ent, target, proto.ID); // Reserve edit: localization #359
         ent.Comp.LastAttacks.Clear();
     }
 
@@ -221,7 +221,7 @@ public partial class SharedMartialArtsSystem
 
         _stun.TryKnockdown(target, proto.ParalyzeTime, true, true, proto.DropItems);
         _stamina.TakeStaminaDamage(target, proto.StaminaDamage, source: ent);
-        ComboPopup(ent, target, proto.Name);
+        ComboPopup(ent, target, proto.ID); // Reserve edit: localization #359
         ent.Comp.LastAttacks.Clear();
     }
 
@@ -233,7 +233,7 @@ public partial class SharedMartialArtsSystem
 
         _stamina.TakeStaminaDamage(target, proto.StaminaDamage, source: ent);
 
-        ComboPopup(ent, target, proto.Name);
+        ComboPopup(ent, target, proto.ID); // Reserve edit: localization #359
         ent.Comp.LastAttacks.Clear();
 
         if (!_hands.TryGetActiveItem(target, out var activeItem))
@@ -256,7 +256,7 @@ public partial class SharedMartialArtsSystem
         DoDamage(ent, target, proto.DamageType, proto.ExtraDamage, out _);
         _stamina.TakeStaminaDamage(target, proto.StaminaDamage, source: ent);
         _audio.PlayPvs(new SoundPathSpecifier("/Audio/Weapons/genhit1.ogg"), target);
-        ComboPopup(ent, target, proto.Name);
+        ComboPopup(ent, target, proto.ID); // Reserve edit: localization #359
         ent.Comp.LastAttacks.Clear();
     }
 
