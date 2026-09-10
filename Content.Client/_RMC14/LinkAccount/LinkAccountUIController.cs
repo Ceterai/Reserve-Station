@@ -72,7 +72,8 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
 
         var user = FormattedMessage.EscapeText(message.User);
         var msg = FormattedMessage.EscapeText(message.Message);
-        gui.LobbyMessageLabel.SetMarkupPermissive($"[font size=20]Lobby message by: {user}\n{msg}[/font]");
+        gui.LobbyMessageLabel.SetMarkupPermissive($"[font size=20]{Loc.GetString("rmc-ui-lobby-message-by")} [bold][color=#c23c2d]{user}[/color][/bold]\n{msg}[/font]");  // Reserve edit: Maecenas System
+        gui.LobbyMessagePanel.Visible = true;  // Reserve edit: Maecenas System
     }
 
     public void ToggleWindow()
@@ -83,7 +84,10 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
             _window.OnClose += () => _window = null;
             _window.Label.SetMarkupPermissive($"{Loc.GetString("rmc-ui-link-discord-account-text")}");
             if (_linkAccount.Linked)
-                _window.Label.SetMarkupPermissive($"{Loc.GetString("rmc-ui-link-discord-account-already-linked")}\n\n{Loc.GetString("rmc-ui-link-discord-account-text")}");
+            {
+                _window.Label.SetMarkupPermissive($"{Loc.GetString("rmc-ui-link-discord-account-already-linked")}");  // Reserve edit: Maecenas System
+                _window.CopyButton.Disabled = true;  // Reserve edit: Maecenas System
+            }
 
             _window.CopyButton.OnPressed += _ =>
             {
@@ -209,6 +213,7 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
         }
 
         _net.ClientSendMessage(new RMCChangeLobbyMessageMsg { Text = text });
+        _linkAccount.LobbyMessage = new SharedRMCLobbyMessage(text);  // Reserve edit: Maecenas System
     }
 
     private void OnNTShoutoutSave(ButtonEventArgs args)
@@ -224,6 +229,7 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
         }
 
         _net.ClientSendMessage(new RMCChangeNTShoutoutMsg { Name = text });
+        _linkAccount.RoundEndShoutout = new SharedRMCRoundEndShoutouts(text);  // Reserve edit: Maecenas System
         UpdateExamples();
     }
 
@@ -242,6 +248,7 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
 
         _patronPerksWindow.GhostColorSliders.Color = Color.White;
         _net.ClientSendMessage(new RMCClearGhostColorMsg());
+        _linkAccount.GhostColor = null;  // Reserve edit: Maecenas System
     }
 
     private void OnGhostColorSave(ButtonEventArgs args)
@@ -250,6 +257,7 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
             return;
 
         _net.ClientSendMessage(new RMCChangeGhostColorMsg { Color = _patronPerksWindow.GhostColorSliders.Color });
+        _linkAccount.GhostColor = _patronPerksWindow.GhostColorSliders.Color;  // Reserve edit: Maecenas System
     }
 
     // Goob start - ghost cosmetics
@@ -310,6 +318,11 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
             Hat = ToCosmeticProto(_patronPerksWindow.GhostHatButton.SelectedMetadata as string),
             Mask = ToCosmeticProto(_patronPerksWindow.GhostMaskButton.SelectedMetadata as string),
         });
+        _linkAccount.GhostCosmetics = new SharedRMCGhostCosmetics(  // Reserve edit: Maecenas System
+            ToCosmeticProto(_patronPerksWindow.GhostParticlesButton.SelectedMetadata as string),
+            ToCosmeticProto(_patronPerksWindow.GhostHatButton.SelectedMetadata as string),
+            ToCosmeticProto(_patronPerksWindow.GhostMaskButton.SelectedMetadata as string)
+        );
     }
 
     private static ProtoId<GhostCosmeticPrototype>? ToCosmeticProto(string? id)

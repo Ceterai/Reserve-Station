@@ -14,6 +14,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
 using Content.Server.Discord;
+using Content.Server.Discord.DiscordLink;  // Reserve edit: Maecenas System
 using Content.Server.ADT.Administration;
 
 namespace Content.Server.GameTicking
@@ -22,6 +23,7 @@ namespace Content.Server.GameTicking
     public sealed partial class GameTicker
     {
         [Dependency] private readonly IPlayerManager _playerManager = default!;
+        [Dependency] private readonly DiscordLink _discordLink = default!;  // Reserve edit: Maecenas System
 
         private void InitializePlayer()
         {
@@ -101,6 +103,7 @@ namespace Content.Server.GameTicking
                         await _discord.CreateMessage(identifier, payload);
                     }
                     // ADT-Tweak-end
+                    await _discordLink.AssignPatronTierAsync(args.Session.UserId);  // Reserve edit: Maecenas System
                     if (session.Channel.IsConnected)  // Reserve edit: Flaky test fixes
                         RaiseNetworkEvent(GetConnectionStatusMsg(), session.Channel);
 
