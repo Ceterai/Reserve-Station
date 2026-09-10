@@ -13,10 +13,10 @@ public sealed class LinkAccountManager : IPostInjectInit
 
     public SharedRMCPatronTier? Tier { get; private set; }
     public bool Linked { get; private set; }
-    public Color? GhostColor { get; private set; }
-    public SharedRMCGhostCosmetics? GhostCosmetics { get; private set; } // Goob - ghost cosmetics
-    public SharedRMCLobbyMessage? LobbyMessage { get; private set; }
-    public SharedRMCRoundEndShoutouts? RoundEndShoutout { get; private set; }
+    public Color? GhostColor { get; set; }  // Reserve edit: Maecenas System
+    public SharedRMCGhostCosmetics? GhostCosmetics { get; set; } // Goob - ghost cosmetics  // Reserve edit: Maecenas System
+    public SharedRMCLobbyMessage? LobbyMessage { get; set; }  // Reserve edit: Maecenas System
+    public SharedRMCRoundEndShoutouts? RoundEndShoutout { get; set; }  // Reserve edit: Maecenas System
 
     public event Action<Guid>? CodeReceived;
     public event Action? Updated;
