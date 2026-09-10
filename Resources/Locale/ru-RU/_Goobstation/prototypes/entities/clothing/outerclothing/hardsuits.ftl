@@ -1,4 +1,4 @@
-ent-ClothingOuterHardsuitChronolegioneer = футуристический пустотный костюм
+ent-ClothingOuterHardsuitChronolegioneer = футуристичный пустотный костюм
     .desc = Пустотный костюм, покрытый неизвестным материалом, защищающий от большинства материальных и временных повреждений.
     .suffix = Хронолегионер
 ent-ClothingOuterHardsuitChronolegioneerUnremoveable = { ent-ClothingOuterHardsuitChronolegioneer }

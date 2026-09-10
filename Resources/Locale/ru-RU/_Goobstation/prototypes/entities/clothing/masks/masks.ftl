@@ -1,5 +1,5 @@
-ent-ClothingMaskGasChrono = футуристический противогаз
-    .desc = футуристический противогаз неизвестной конструкции с невообразимым количеством систем фильтрации.
+ent-ClothingMaskGasChrono = футуристичный противогаз
+    .desc = футуристичный противогаз неизвестной конструкции с невообразимым количеством систем фильтрации.
     .suffix = Хронолегионер
 ent-ClothingMaskGasChronoUnremoveable = { ent-ClothingMaskGasChrono }
     .desc = { ent-ClothingMaskGasChrono.desc }

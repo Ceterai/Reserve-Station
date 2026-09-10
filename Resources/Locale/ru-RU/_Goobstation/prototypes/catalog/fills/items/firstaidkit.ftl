@@ -1,4 +1,4 @@
-ent-MedkitCombatStasiziumFilled = футуристическая аптечка
+ent-MedkitCombatStasiziumFilled = футуристичная аптечка
     .desc = Аптечка с медициной будущего.
     .suffix = Хронолегионер, Стазизиум
 ent-MedkitBSOFilled = { ent-MedkitBSO }

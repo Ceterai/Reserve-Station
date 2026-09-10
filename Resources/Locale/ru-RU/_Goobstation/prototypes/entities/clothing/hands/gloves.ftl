@@ -1,4 +1,4 @@
-ent-ClothingHandsGlovesChronoLegioneer = футуристические перчатки
+ent-ClothingHandsGlovesChronoLegioneer = футуристичные перчатки
     .desc = Футуристические перчатки из неизвестного материала, не оставляющего следов.
     .suffix = Хронолегионер
 ent-ClothingHandsGlovesChronoLegioneerUnremoveable = { ent-ClothingHandsGlovesChronoLegioneer }

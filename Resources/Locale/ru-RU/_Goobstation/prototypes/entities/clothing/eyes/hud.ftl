@@ -1,6 +1,6 @@
 ent-ShowHealthRelatedIcons = { "" }
     .desc = { "" }
-ent-ClothingEyesHudChrono = футуристический визор
+ent-ClothingEyesHudChrono = футуристичный визор
     .desc = Визор из будущего, способный отображать практически всё.
     .suffix = Хронолегионер
 ent-ClothingEyesHudChronoUnremoveable = { ent-ClothingEyesHudChrono }
