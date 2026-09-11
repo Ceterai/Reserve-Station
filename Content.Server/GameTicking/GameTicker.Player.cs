@@ -83,27 +83,13 @@ namespace Content.Server.GameTicking
                           Loc.GetString("player-first-join-account-date", ("creationDate", creationDate)) //Reserve edit
                         : Loc.GetString("player-join-message", ("name", args.Session.Name)));
 
-                    // ADT-Tweak-start: Постит в дис админчата, о заходе новых игроков
-                    if (!string.IsNullOrEmpty(_cfg.GetCVar(CCVars.DiscordAdminchatWebhook)) && firstConnection)
-                    {
-                        var webhookUrl = _cfg.GetCVar(CCVars.DiscordAdminchatWebhook);
-
-                        if (webhookUrl == null)
-                            return;
-
-                        if (await _discord.GetWebhook(webhookUrl) is not { } webhookData)
-                            return;
-                        var payload = new WebhookPayload
-                        {
-                            Content = Loc.GetString("player-first-join-message-webhook", ("name", args.Session.Name)) + "\n" +
-                            Loc.GetString("player-first-join-account-date", ("creationDate", creationDate)) + "\n" + //Reserve edit
-                            $"userid: {args.Session.UserId.ToString()}" //Reserve edit
-                        };
-                        var identifier = webhookData.ToIdentifier();
-                        await _discord.CreateMessage(identifier, payload);
-                    }
-                    // ADT-Tweak-end
-                    await _discordLink.AssignPatronTierAsync(args.Session.UserId);  // Reserve edit: Maecenas System
+                        // Reserve edit start: Better webhook send
+                        var message = Loc.GetString("player-first-join-message-webhook", ("name", args.Session.Name)) + "\n" +
+                            Loc.GetString("player-first-join-account-date", ("creationDate", creationDate)) + "\n" +
+                            $"userid: {args.Session.UserId.ToString()}";
+                        await _discord.SendWebhookMessage(message, _cfg.GetCVar(CCVars.DiscordAdminchatWebhook));
+                        // Reserve edit end: Better webhook send
+                        await _discordLink.AssignPatronTierAsync(args.Session.UserId);  // Reserve edit: Maecenas System
                     if (session.Channel.IsConnected)  // Reserve edit: Flaky test fixes
                         RaiseNetworkEvent(GetConnectionStatusMsg(), session.Channel);
 
