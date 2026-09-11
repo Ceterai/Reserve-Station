@@ -119,9 +119,9 @@ public sealed partial class GoobAdminVerbSystem
         // Gangwars
         Verb gangLeader = new()
         {
-            Text = "073. " + Loc.GetString("admin-verb-text-make-gang-leader"),
+            Text = "075. " + Loc.GetString("admin-verb-text-make-gang-leader"), // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Goobstation/Gangs/gang_markers.rsi"), "gang_head"),
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Goobstation/Gangs/gang_markers.rsi"), "gang_head"), // Reserve edit: Fix antag verbs
             Act = () =>
             {
                 _antag.ForceMakeAntag<GangwarRuleComponent>(targetPlayer, "Gangwars");

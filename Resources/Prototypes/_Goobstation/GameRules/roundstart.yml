@@ -77,6 +77,7 @@
       lateJoinAdditional: true
       mindRoles:
       - MindRoleTraitor
+  - type: CorporateAgentRule
 
 - type: entity
   parent: BaseTraitorRule
@@ -361,6 +362,7 @@
         - Syndicate
       mindRoles:
       - MindRoleNukeops
+  - type: HonkopsRule
 
 - type: entity
   parent: BaseGameRule
