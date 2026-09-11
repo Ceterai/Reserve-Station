@@ -9,14 +9,14 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  # cancel-in-progress: true
 
 jobs:
   get_credits:
     runs-on: ubuntu-latest
     # Hey there fork dev! If you like to include your own contributors in this then you can probably just change this to your own repo
     # Do this in dump_github_contributors.ps1 too into your own repo
-    if: github.repository == 'Reserve-Station/Reserve-Station/' # Reserve edit
+    if: github.repository == 'Reserve-Station/Reserve-Station' # Reserve edit
 
     steps:
       - uses: actions/checkout@v4.2.2
