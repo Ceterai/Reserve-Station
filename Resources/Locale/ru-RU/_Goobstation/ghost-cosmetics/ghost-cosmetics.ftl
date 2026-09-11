@@ -1,6 +1,7 @@
 goob-ui-ghost-cosmetics = Украшения
 goob-ui-ghost-cosmetics-description = Оденьте вашего призрака в шляпу, маску и эффект частиц.
-    Учитывайте, что выбранные украшения будут хорошо смотреться лишь на стандартных призраках.
+    Учитывайте, что выбранные украшения будут хорошо смотреться лишь
+    на стандартных призраках.
 goob-ui-ghost-cosmetics-particles = Эффект частиц
 goob-ui-ghost-cosmetics-hat = Шляпа
 goob-ui-ghost-cosmetics-mask = Маска

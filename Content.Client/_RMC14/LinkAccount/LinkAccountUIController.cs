@@ -84,10 +84,10 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
             _window.OnClose += () => _window = null;
             _window.Label.SetMarkupPermissive($"{Loc.GetString("rmc-ui-link-discord-account-text")}");
             if (_linkAccount.Linked)
-            {
                 _window.Label.SetMarkupPermissive($"{Loc.GetString("rmc-ui-link-discord-account-already-linked")}");  // Reserve edit: Maecenas System
-                _window.CopyButton.Disabled = true;  // Reserve edit: Maecenas System
-            }
+
+            _window.CopyButton.Disabled = _linkAccount.Linked;  // Reserve edit: Maecenas System
+            _window.CopyButton.Visible = !_linkAccount.Linked;  // Reserve edit: Maecenas System
 
             _window.CopyButton.OnPressed += _ =>
             {
@@ -135,6 +135,31 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
             };
 
             var tier = _linkAccount.Tier;
+
+            // Reserve edit start: Maecenas System
+            SetTabTitle(_patronPerksWindow.MainTab, Loc.GetString("rmc-ui-lobby-main"));
+            SetTabVisible(_patronPerksWindow.MainTab, tier is not null);
+            var tierName = "";
+            if (tier != null)
+            {
+                tierName = tier.Tier;
+                var mainDescription = Loc.GetString("rmc-ui-lobby-main-description", ("tier", tierName));
+                if (tier.ShowOnCredits)
+                    mainDescription = mainDescription + "\n" + Loc.GetString("rmc-ui-lobby-main-credits");
+                if (tier.LobbyMessage)
+                    mainDescription = mainDescription + "\n" + Loc.GetString("rmc-ui-lobby-main-lobby-message");
+                if (tier.RoundEndShoutout)
+                    mainDescription = mainDescription + "\n" + Loc.GetString("rmc-ui-lobby-main-shoutout");
+                if (tier.GhostColor)
+                    mainDescription = mainDescription + "\n" + Loc.GetString("rmc-ui-lobby-main-ghost-color");
+                if (tier.GhostCosmetics)
+                    mainDescription = mainDescription + "\n" + Loc.GetString("rmc-ui-lobby-main-ghost-cosmetics");
+                if (tier.GhostParticles)
+                    mainDescription = mainDescription + "\n" + Loc.GetString("rmc-ui-lobby-main-ghost-particles");
+                _patronPerksWindow.MainTabLabel.SetMarkupPermissive(mainDescription);
+            }
+            // Reserve edit end: Maecenas System
+
             SetTabTitle(_patronPerksWindow.LobbyMessageTab, Loc.GetString("rmc-ui-lobby-message"));
             SetTabVisible(_patronPerksWindow.LobbyMessageTab, tier is { LobbyMessage: true });
             _patronPerksWindow.LobbyMessageSaveButton.OnPressed += OnLobbyMessageSave;
@@ -150,25 +175,32 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
                 _patronPerksWindow.NTShoutout.Text = ntShoutout;
 
             SetTabTitle(_patronPerksWindow.GhostColorTab, Loc.GetString("rmc-ui-ghost-color"));
-            SetTabVisible(_patronPerksWindow.GhostColorTab, tier is { GhostColor: true });
+            SetTabVisible(_patronPerksWindow.GhostColorTab, tier is { GhostColor: true } or { GhostCosmetics: true } or { GhostParticles: true });  // Reserve edit: Maecenas System
             _patronPerksWindow.GhostColorSliders.Color = _linkAccount.GhostColor ?? Color.White;
             _patronPerksWindow.GhostColorSliders.OnColorChanged += OnGhostColorChanged;
             _patronPerksWindow.GhostColorClearButton.OnPressed += OnGhostColorClear;
             _patronPerksWindow.GhostColorSaveButton.OnPressed += OnGhostColorSave;
+            _patronPerksWindow.GhostColorLabel.Visible = tier is { GhostColor: true };  // Reserve edit: Maecenas System
+            _patronPerksWindow.GhostColorSliders.Visible = tier is { GhostColor: true };  // Reserve edit: Maecenas System
+            _patronPerksWindow.GhostColorClearButton.Visible = tier is { GhostColor: true };  // Reserve edit: Maecenas System
+            _patronPerksWindow.GhostColorSaveButton.Visible = tier is { GhostColor: true };  // Reserve edit: Maecenas System
 
             // Goob start - ghost cosmetics
-            SetTabTitle(_patronPerksWindow.GhostCosmeticsTab, Loc.GetString("goob-ui-ghost-cosmetics"));
-            SetTabVisible(_patronPerksWindow.GhostCosmeticsTab, tier is { GhostCosmetics: true } or { GhostParticles: true });
+            // SetTabTitle(_patronPerksWindow.GhostCosmeticsTab, Loc.GetString("goob-ui-ghost-cosmetics"));  // Reserve edit: Maecenas System
+            // SetTabVisible(_patronPerksWindow.GhostCosmeticsTab, tier is { GhostCosmetics: true } or { GhostParticles: true });  // Reserve edit: Maecenas System
 
             var cosmetics = _linkAccount.GhostCosmetics;
+            _patronPerksWindow.GhostCosmeticsLabel.Visible = tier is { GhostCosmetics: true } or { GhostParticles: true };  // Reserve edit: Maecenas System
             _patronPerksWindow.GhostParticlesRow.Visible = tier is { GhostParticles: true };
             _patronPerksWindow.GhostHatRow.Visible = tier is { GhostCosmetics: true };
             _patronPerksWindow.GhostMaskRow.Visible = tier is { GhostCosmetics: true };
+            _patronPerksWindow.GhostCosmeticsSaveButton.Visible = tier is { GhostCosmetics: true } or { GhostParticles: true };  // Reserve edit: Maecenas System
             PopulateGhostCosmetics(_patronPerksWindow.GhostParticlesButton, GhostCosmeticCategory.Particles, cosmetics?.Particles);
             PopulateGhostCosmetics(_patronPerksWindow.GhostHatButton, GhostCosmeticCategory.Hat, cosmetics?.Hat);
             PopulateGhostCosmetics(_patronPerksWindow.GhostMaskButton, GhostCosmeticCategory.Mask, cosmetics?.Mask);
             _patronPerksWindow.GhostCosmeticsSaveButton.OnPressed += OnGhostCosmeticsSave;
 
+            /* Reserve edit: Maecenas System
             if (tier is { GhostCosmetics: true } or { GhostParticles: true })
             {
                 _cosmeticsPreviewGhost = _entityManager.SpawnEntity("GhostCosmeticsPreviewDummy", MapCoordinates.Nullspace);
@@ -178,6 +210,12 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
                 _patronPerksWindow.GhostCosmeticsPreview.SetEntity(_cosmeticsPreviewGhost);
                 UpdateGhostCosmeticsPreview();
             }
+            */
+            _patronPerksWindow.GhostMaskButton.OnPressed += OnGhostCosmeticsChanged;  // Reserve edit: Maecenas System
+            _patronPerksWindow.GhostHatButton.OnPressed += OnGhostCosmeticsChanged;  // Reserve edit: Maecenas System
+            _patronPerksWindow.GhostParticlesButton.OnPressed += OnGhostCosmeticsChanged;  // Reserve edit: Maecenas System
+
+            SetupGhostPreview();  // Reserve edit: Maecenas System
             // Goob end
 
             UpdateExamples();
@@ -249,6 +287,7 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
         _patronPerksWindow.GhostColorSliders.Color = Color.White;
         _net.ClientSendMessage(new RMCClearGhostColorMsg());
         _linkAccount.GhostColor = null;  // Reserve edit: Maecenas System
+        SetupGhostPreview();  // Reserve edit: Maecenas System
     }
 
     private void OnGhostColorSave(ButtonEventArgs args)
@@ -258,6 +297,7 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
 
         _net.ClientSendMessage(new RMCChangeGhostColorMsg { Color = _patronPerksWindow.GhostColorSliders.Color });
         _linkAccount.GhostColor = _patronPerksWindow.GhostColorSliders.Color;  // Reserve edit: Maecenas System
+        SetupGhostPreview();  // Reserve edit: Maecenas System
     }
 
     // Goob start - ghost cosmetics
@@ -306,6 +346,32 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
         _entityManager.DeleteEntity(_cosmeticsPreviewGhost);
         _cosmeticsPreviewGhost = null;
     }
+
+    // Reserve edit start: Maecenas System
+    private void SetupGhostPreview()
+    {
+        if (_cosmeticsPreviewGhost != null)
+            DeleteGhostCosmeticsPreview();
+
+        if (_patronPerksWindow != null && _linkAccount.Tier is { GhostCosmetics: true } or { GhostParticles: true } or { GhostColor: true })
+        {
+            _cosmeticsPreviewGhost = _entityManager.SpawnEntity("GhostCosmeticsPreviewDummy", MapCoordinates.Nullspace);
+            if (_entityManager.TryGetComponent(_cosmeticsPreviewGhost.Value, out GhostColorComponent? previewColor))
+                previewColor.Color = _linkAccount.GhostColor;
+
+            _patronPerksWindow.GhostCosmeticsPreview.SetEntity(_cosmeticsPreviewGhost);
+            UpdateGhostCosmeticsPreview();
+        }
+    }
+
+    private void OnGhostCosmeticsChanged(ButtonEventArgs args)
+    {
+        if (_patronPerksWindow is not { IsOpen: true })
+            return;
+
+        _patronPerksWindow.GhostCosmeticsSaveButton.Disabled = false;
+    }
+    // Reserve edit end: Maecenas System
 
     private void OnGhostCosmeticsSave(ButtonEventArgs args)
     {

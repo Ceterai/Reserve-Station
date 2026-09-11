@@ -55,7 +55,9 @@ public sealed class LinkAccountManager : IPostInjectInit
                 tier.GhostCosmetics || // Goob - ghost cosmetics
                 tier.GhostParticles || // Goob - ghost cosmetics
                 tier.LobbyMessage ||
-                tier.RoundEndShoutout);
+                tier.RoundEndShoutout ||
+                tier is not null  // Reserve edit: Maecenas System
+                );
     }
 
     void IPostInjectInit.PostInject()
