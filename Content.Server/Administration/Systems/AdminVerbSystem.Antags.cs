@@ -275,7 +275,7 @@ public sealed partial class AdminVerbSystem
         var vampireName = Loc.GetString("admin-verb-text-make-vampire");
         Verb vampire = new()
         {
-            Text = vampireName,
+            Text = "071. " + vampireName,
             Category = VerbCategory.Antag,
             Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "Vampire"),
             Act = () =>
