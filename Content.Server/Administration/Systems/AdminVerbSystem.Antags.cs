@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Goobstation.Shared.Pirates.Roles; // Reserve edit: Fix antag verbs
 using Content.Server._Goobstation.Wizard.Components;
 using Content.Server._DV.CosmicCult.Components; // DeltaV
 using Content.Server._Harmony.GameTicking.Rules.Components; // Harmony
@@ -44,6 +45,20 @@ public sealed partial class AdminVerbSystem
     private static readonly EntProtoId DefaultConspiratorRule = "Conspirators";
     private static readonly EntProtoId DefaultBloodBrotherRule = "BloodBrothers";
     // Harmony end
+    // Reserve edit start: Fix antag verbs
+    private static readonly EntProtoId DefaultCorporateAgentRule = "CorporateAgent";
+    private static readonly EntProtoId DefaultWizardApprenticeRule = "ApprenticeRule";
+    private static readonly EntProtoId DefaultPirateCaptainRule = "PiratesSpawn";
+    private static readonly EntProtoId DefaultPirateRule = "Pirate";
+    private static readonly EntProtoId DefaultNukeOpCommandRule = "Nukeops";
+    private static readonly EntProtoId DefaultNukeOpHonkRule = "Honkops";
+    private static readonly EntProtoId DefaultContractorRule = "ContractorSpawnMidround";
+    private static readonly EntProtoId DefaultMimeAssassinRule = "MimeAssassinMidround";
+    private static readonly EntProtoId DefaultTunnelClownRule = "TunnelClownMidround";
+    private static readonly EntProtoId DefaultAbductorRule = "LoneAbductorSpawn";
+    private static readonly EntProtoId DefaultAbductorVictimRule = "AbductorVictim";
+    private static readonly EntProtoId DefaultDarkPriestRule = "DarkPriestMidround";
+    // Reserve edit end: Fix antag verbs
 
     // All antag verbs have names so invokeverb works.
     private void AddAntagVerbs(GetVerbsEvent<Verb> args)
@@ -64,7 +79,7 @@ public sealed partial class AdminVerbSystem
         var traitorName = Loc.GetString("admin-verb-text-make-traitor");
         Verb traitor = new()
         {
-            Text = traitorName,
+            Text = "011. " + traitorName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
             Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Interface/Misc/job_icons.rsi"), "Syndicate"),
             Act = () =>
@@ -79,7 +94,7 @@ public sealed partial class AdminVerbSystem
         var initialInfectedName = Loc.GetString("admin-verb-text-make-initial-infected");
         Verb initialInfected = new()
         {
-            Text = initialInfectedName,
+            Text = "054. " + initialInfectedName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
             Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "InitialInfected"),
             Act = () =>
@@ -94,7 +109,7 @@ public sealed partial class AdminVerbSystem
         var zombieName = Loc.GetString("admin-verb-text-make-zombie");
         Verb zombie = new()
         {
-            Text = zombieName,
+            Text = "055. " + zombieName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
             Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "Zombie"),
             Act = () =>
@@ -109,9 +124,9 @@ public sealed partial class AdminVerbSystem
         var nukeOpName = Loc.GetString("admin-verb-text-make-nuclear-operative");
         Verb nukeOp = new()
         {
-            Text = nukeOpName,
+            Text = "013. " + nukeOpName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new("/Textures/_Funkystation/Interface/Lobby/AntagCards.rsi"), "nuclearoperative"), // Reserve edit: Fix antag verbs
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "NukeOps"), // Reserve edit: Fix antag verbs
             Act = () =>
             {
                 _antag.ForceMakeAntag<NukeopsRuleComponent>(targetPlayer, DefaultNukeOpRule);
@@ -124,13 +139,14 @@ public sealed partial class AdminVerbSystem
         var pirateName = Loc.GetString("admin-verb-text-make-pirate");
         Verb pirate = new()
         {
-            Text = pirateName,
+            Text = "052. " + pirateName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new("/Textures/Clothing/Head/Hats/pirate.rsi"), "icon"),
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "Pirate"), // Reserve edit: Fix antag verbs
             Act = () =>
             {
-                // pirates just get an outfit because they don't really have logic associated with them
-                _outfit.SetOutfit(args.Target, PirateGearId);
+                // // pirates just get an outfit because they don't really have logic associated with them
+                // _outfit.SetOutfit(args.Target, PirateGearId);
+                _antag.ForceMakeAntag<PirateRoleComponent>(targetPlayer, DefaultPirateRule);
             },
             Impact = LogImpact.High,
             Message = string.Join(": ", pirateName, Loc.GetString("admin-verb-make-pirate")),
@@ -140,7 +156,7 @@ public sealed partial class AdminVerbSystem
         var headRevName = Loc.GetString("admin-verb-text-make-head-rev");
         Verb headRev = new()
         {
-            Text = headRevName,
+            Text = "020. " + headRevName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
             Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "HeadRevolutionary"),
             Act = () =>
@@ -155,9 +171,9 @@ public sealed partial class AdminVerbSystem
         var thiefName = Loc.GetString("admin-verb-text-make-thief");
         Verb thief = new()
         {
-            Text = thiefName,
+            Text = "001. " + thiefName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Clothing/Hands/Gloves/Color/black.rsi"), "icon"),
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Interface/Misc/job_icons.rsi"), "Thief"), // Reserve edit: Fix antag verbs
             Act = () =>
             {
                 _antag.ForceMakeAntag<ThiefRuleComponent>(targetPlayer, DefaultThiefRule);
@@ -170,7 +186,7 @@ public sealed partial class AdminVerbSystem
         var paradoxCloneName = Loc.GetString("admin-verb-text-make-paradox-clone");
         Verb paradox = new()
         {
-            Text = paradoxCloneName,
+            Text = "016. " + paradoxCloneName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
             Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "ParadoxClone"),
             Act = () =>
@@ -208,9 +224,9 @@ public sealed partial class AdminVerbSystem
         var ninjaName = Loc.GetString("admin-verb-text-make-space-ninja");
         Verb ninja = new()
         {
-            Text = ninjaName,
+            Text = "002. " + ninjaName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new("/Textures/Objects/Weapons/Melee/energykatana.rsi"), "icon"),
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "Ninja"), // Reserve edit: Fix antag verbs
             Act = () =>
             {
                 _antag.ForceMakeAntag<NinjaRoleComponent>(targetPlayer, DefaultNinjaRule);
@@ -227,9 +243,9 @@ public sealed partial class AdminVerbSystem
         var hereticName = Loc.GetString("admin-verb-text-make-heretic");
         Verb heretic = new()
         {
-            Text = hereticName,
+            Text = "003. " + hereticName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Funkystation/Interface/Lobby/AntagCards.rsi"), "heretic"), // Reserve edit: Fix antag verbs
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Interface/Misc/job_icons.rsi"), "Heretic"), // Reserve edit: Fix antag verbs
             Act = () =>
             {
                 _antag.ForceMakeAntag<HereticRuleComponent>(targetPlayer, "Heretic");
@@ -243,9 +259,9 @@ public sealed partial class AdminVerbSystem
         var wizardName = Loc.GetString("admin-verb-text-make-wizard");
         Verb wizard = new()
         {
-            Text = wizardName,
+            Text = "044. " + wizardName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Funkystation/Interface/Lobby/AntagCards.rsi"), "wizard"), // Reserve edit: Fix antag verbs
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Goobstation/Wizard/StatusIcons/10x10.rsi"), "wizard"), // Reserve edit: Fix antag verbs
             Act = () =>
             {
                 _antag.ForceMakeAntag<WizardRuleComponent>(targetPlayer, "Wizard");
@@ -275,7 +291,7 @@ public sealed partial class AdminVerbSystem
         var cosmicCultName = Loc.GetString("admin-verb-text-make-cosmiccultist");
         Verb cosmiccult = new()
         {
-            Text = cosmicCultName,
+            Text = "062. " + cosmicCultName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
             Icon = new SpriteSpecifier.Rsi(new("/Textures/_DV/CosmicCult/Icons/antag_icons.rsi"), "CosmicCult"),
             Act = () =>
@@ -291,7 +307,7 @@ public sealed partial class AdminVerbSystem
         var conspiratorName = Loc.GetString("admin-verb-text-make-conspirator");
         Verb conspirator = new()
         {
-            Text = conspiratorName,
+            Text = "017. " + conspiratorName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
             Icon = new SpriteSpecifier.Rsi(new("/Textures/_Harmony/Interface/Misc/job_icons.rsi"), "Conspirator"),
             Act = () =>
@@ -306,7 +322,7 @@ public sealed partial class AdminVerbSystem
         var bloodBrotherName = Loc.GetString("admin-verb-text-make-blood-brother");
         Verb bloodBrother = new()
         {
-            Text = bloodBrotherName,
+            Text = "018. " + bloodBrotherName, // Reserve edit: Fix antag verbs
             Category = VerbCategory.Antag,
             Icon = new SpriteSpecifier.Rsi(new("/Textures/_Harmony/Interface/Misc/job_icons.rsi"), "BloodBrother"),
             Act = () =>
@@ -318,5 +334,179 @@ public sealed partial class AdminVerbSystem
         };
         args.Verbs.Add(bloodBrother);
         // Harmony end
+        // Reserve start
+        var corporateAgentName = Loc.GetString("admin-verb-text-make-corporate-agent");
+        Verb corporateAgent = new()
+        {
+            Text = "019. " + corporateAgentName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "CorporateAgent"),
+            Act = () =>
+            {
+                _antag.ForceMakeAntag<TraitorRuleComponent>(targetPlayer, DefaultCorporateAgentRule);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", corporateAgentName, Loc.GetString("admin-verb-make-corporate-agent")),
+        };
+        args.Verbs.Add(corporateAgent);
+
+        var wizardApprenticeName = Loc.GetString("admin-verb-text-make-wizard-apprentice");
+        Verb wizardApprentice = new()
+        {
+            Text = "045. " + wizardApprenticeName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Goobstation/Wizard/StatusIcons/10x10.rsi"), "apprentice"),
+            Act = () =>
+            {
+                _antag.ForceMakeAntag<WizardRuleComponent>(targetPlayer, DefaultWizardApprenticeRule);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", wizardApprenticeName, Loc.GetString("admin-verb-make-wizard-apprentice")),
+        };
+        args.Verbs.Add(wizardApprentice);
+
+        var contractorName = Loc.GetString("admin-verb-text-make-contractor");
+        Verb contractor = new()
+        {
+            Text = "012. " + contractorName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "Contractor"),
+            Act = () =>
+            {
+                _outfit.SetOutfit(args.Target, "EmptyNudeGear");
+                _antag.ForceMakeAntag<NukeopsRuleComponent>(targetPlayer, DefaultContractorRule);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", contractorName, Loc.GetString("admin-verb-make-contractor")),
+        };
+        args.Verbs.Add(contractor);
+
+        var nukeOpCommandName = Loc.GetString("admin-verb-text-make-nuclear-operative-command");
+        Verb nukeOpCommand = new()
+        {
+            Text = "014. " + nukeOpCommandName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "NukeOpsCommander"),
+            Act = () =>
+            {
+                _outfit.SetOutfit(args.Target, "EmptyNudeGear");
+                _antag.ForceMakeAntag<NukeopsRuleComponent>(targetPlayer, DefaultNukeOpCommandRule);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", nukeOpCommandName, Loc.GetString("admin-verb-make-nuclear-operative-command")),
+        };
+        args.Verbs.Add(nukeOpCommand);
+
+        var nukeOpHonkName = Loc.GetString("admin-verb-text-make-nuclear-operative-command-honk");
+        Verb nukeOpHonk = new()
+        {
+            Text = "015. " + nukeOpHonkName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "NukeOpsClown"),
+            Act = () =>
+            {
+                _outfit.SetOutfit(args.Target, "EmptyNudeGear");
+                _antag.ForceMakeAntag<NukeopsRuleComponent>(targetPlayer, DefaultNukeOpHonkRule);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", nukeOpHonkName, Loc.GetString("admin-verb-make-nuclear-operative-command-honk")),
+        };
+        args.Verbs.Add(nukeOpHonk);
+
+        var pirateCaptainName = Loc.GetString("admin-verb-text-make-pirate-captain");
+        Verb pirateCaptain = new()
+        {
+            Text = "051. " + pirateCaptainName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "PirateCaptain"),
+            Act = () =>
+            {
+                _outfit.SetOutfit(args.Target, "EmptyNudeGear");
+                _antag.ForceMakeAntag<PirateRoleComponent>(targetPlayer, DefaultPirateCaptainRule);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", pirateCaptainName, Loc.GetString("admin-verb-make-pirate-captain")),
+        };
+        args.Verbs.Add(pirateCaptain);
+
+        var mimeAssassinName = Loc.GetString("admin-verb-text-make-mime-assassin");
+        Verb mimeAssassin = new()
+        {
+            Text = "007. " + mimeAssassinName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "MimeAssassin"),
+            Act = () =>
+            {
+                _outfit.SetOutfit(args.Target, "MimeAssassinGear");
+                _antag.ForceMakeAntag<NukeopsRuleComponent>(targetPlayer, DefaultMimeAssassinRule);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", mimeAssassinName, Loc.GetString("admin-verb-make-mime-assassin")),
+        };
+        args.Verbs.Add(mimeAssassin);
+
+        var tunnelClownName = Loc.GetString("admin-verb-text-make-tunnel-clown");
+        Verb tunnelClown = new()
+        {
+            Text = "008. " + tunnelClownName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "ClownTunnel"),
+            Act = () =>
+            {
+                _outfit.SetOutfit(args.Target, "TunnelClownAntagGear");
+                _antag.ForceMakeAntag<NukeopsRuleComponent>(targetPlayer, DefaultTunnelClownRule);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", tunnelClownName, Loc.GetString("admin-verb-make-tunnel-clown")),
+        };
+        args.Verbs.Add(tunnelClown);
+
+        var darkPriestName = Loc.GetString("admin-verb-text-make-dark-priest");
+        Verb darkPriest = new()
+        {
+            Text = "050. " + darkPriestName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "ChaplainDark"),
+            Act = () =>
+            {
+                _outfit.SetOutfit(args.Target, "DarkPriestAntagGear");
+                _antag.ForceMakeAntag<NukeopsRuleComponent>(targetPlayer, DefaultDarkPriestRule);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", darkPriestName, Loc.GetString("admin-verb-make-dark-priest")),
+        };
+        args.Verbs.Add(darkPriest);
+
+        var abductorName = Loc.GetString("admin-verb-text-make-abductor");
+        Verb abductor = new()
+        {
+            Text = "009. " + abductorName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "Abductor"),
+            Act = () =>
+            {
+                _outfit.SetOutfit(args.Target, "EmptyNudeGear");
+                _antag.ForceMakeAntag<NukeopsRuleComponent>(targetPlayer, DefaultAbductorRule);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", abductorName, Loc.GetString("admin-verb-make-abductor")),
+        };
+        args.Verbs.Add(abductor);
+
+        var abductorVictimName = Loc.GetString("admin-verb-text-make-abductor-victim");
+        Verb abductorVictim = new()
+        {
+            Text = "010. " + abductorVictimName,
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "AbductorVictim"),
+            Act = () =>
+            {
+                _antag.ForceMakeAntag<NukeopsRuleComponent>(targetPlayer, DefaultAbductorVictimRule);
+            },
+            Impact = LogImpact.High,
+            Message = string.Join(": ", abductorVictimName, Loc.GetString("admin-verb-make-abductor-victim")),
+        };
+        args.Verbs.Add(abductorVictim);
+        // Reserve end
     }
 }
