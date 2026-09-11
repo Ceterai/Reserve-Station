@@ -72,7 +72,7 @@ jobs:
         SHARD: ${{ matrix.shard }}
       run: |
         set -euo pipefail
-        if [ "$SHARD" = "heavy" ]; then
+        if [ "$SHARD" = "medium" ]; then
           FILTER='FullyQualifiedName~Content.IntegrationTests.Tests.EntityTest|FullyQualifiedName~Content.IntegrationTests.Tests.PostMapInitTest|FullyQualifiedName~Content.IntegrationTests.Tests.Power.StationPowerTests|FullyQualifiedName~Content.IntegrationTests.Tests.Power.PowerTest|FullyQualifiedName~Content.IntegrationTests.Tests.Atmos.AirtightTest|FullyQualifiedName~Content.IntegrationTests.Tests.ClickableTest'
         elif [ "$SHARD" = "fast" ]; then
           FILTER='FullyQualifiedName~Content.IntegrationTests.Tests.PrototypeTests.PrototypeTests|FullyQualifiedName~Content.IntegrationTests.Tests.SaveLoadMapTest|FullyQualifiedName~Content.IntegrationTests.Tests.SaveLoadSaveTest|FullyQualifiedName~Content.IntegrationTests.Tests.Commands.ForceMapTest'
