@@ -121,7 +121,7 @@ public sealed partial class GoobAdminVerbSystem
         {
             Text = "073. " + Loc.GetString("admin-verb-text-make-gang-leader"),
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Goobstation/Gangs/spray_cans.rsi"), "icon"),
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Goobstation/Gangs/gang_markers.rsi"), "gang_head"),
             Act = () =>
             {
                 _antag.ForceMakeAntag<GangwarRuleComponent>(targetPlayer, "Gangwars");

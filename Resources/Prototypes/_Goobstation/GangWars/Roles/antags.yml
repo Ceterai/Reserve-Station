@@ -12,6 +12,11 @@
       department: Security
       time: 7200 # 2h
   guides: [ GangWars ]
+  # Reserve - antag UI
+  category: Team
+  icon:
+    sprite: _Goobstation/Gangs/gang_tags.rsi
+    state: gangtag12
 
 - type: antag
   id: GangMember
