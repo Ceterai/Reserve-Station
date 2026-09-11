@@ -365,7 +365,14 @@ public sealed class DiscordLink : IPostInjectInit
             var registeredCommands = await _client.Rest.GetGuildApplicationCommandsAsync(_client.Id, _guildId);
             foreach (var command in commandDefinitions)
             {
-                await _client.Rest.DeleteGuildApplicationCommandAsync(_client.Id, _guildId, registeredCommands.FirstOrDefault(c => c.Name == command.Name)?.Id ?? 0);
+                try
+                {
+                    await _client.Rest.DeleteGuildApplicationCommandAsync(_client.Id, _guildId, registeredCommands.FirstOrDefault(c => c.Name == command.Name)?.Id ?? 0);
+                }
+                catch (Exception e)
+                {
+                    _sawmill.Warning($"Failed to unregister command {command.Name}!", e);
+                }
                 await _client.Rest.CreateGuildApplicationCommandAsync(_client.Id, _guildId, command);
             }
 

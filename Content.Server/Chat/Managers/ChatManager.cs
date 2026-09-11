@@ -383,24 +383,10 @@ internal sealed partial class ChatManager : IChatManager
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"OOC from {player:Player}: {message}");
 
         // Reserve ooc-discord start
-        if (!string.IsNullOrEmpty(_configurationManager.GetCVar(CCVars.DiscordOOCChatWebhook)))
+        _ = Task.Run(async () =>
         {
-            var webhookUrl = _configurationManager.GetCVar(CCVars.DiscordOOCChatWebhook);
-            var playerName = player.Name;
-
-            _ = Task.Run(async () =>
-            {
-                if (await _discord.GetWebhook(webhookUrl) is not { } webhookData)
-                    return;
-
-                var payload = new WebhookPayload
-                {
-                    Content = $"`{playerName}`: {message}"
-                };
-
-                await _discord.CreateMessage(webhookData.ToIdentifier(), payload);
-            });
-        }
+            await _discord.SendWebhookMessage($"`{player.Name}`: {message}", _configurationManager.GetCVar(CCVars.DiscordOOCChatWebhook));
+        });
         // Reserve ooc-discord end
     }
 
