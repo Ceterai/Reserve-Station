@@ -25,7 +25,7 @@ namespace Content.Goobstation.Server.Xenobiology.SlimeGrinder;
 // -js
 public sealed partial class SlimeGrinderSystem : EntitySystem
 {
-    // [Dependency] private readonly XenobiologySystem _xenobio = default!; // Reserve edit: Fix warnings
+    [Dependency] private readonly XenobiologySystem _xenobio = default!;
     [Dependency] private readonly SharedJitteringSystem _jitteringSystem = default!;
     [Dependency] private readonly SharedAudioSystem _sharedAudioSystem = default!;
     [Dependency] private readonly SharedAmbientSoundSystem _ambientSoundSystem = default!;
@@ -124,7 +124,7 @@ public sealed partial class SlimeGrinderSystem : EntitySystem
         EnsureComp<ActiveSlimeGrinderComponent>(grinder);
         grinder.Comp.ProcessingTimer += physics.FixturesMass * grinder.Comp.ProcessingTimePerUnitMass;
 
-        var extractProto = slime.ProducedExtract;
+        var extractProto = _xenobio.GetProducedExtract((toProcess, slime));
         var extractQuantity = slime.ExtractsProduced;
 
         if (!grinder.Comp.YieldQueue.ContainsKey(extractProto))
