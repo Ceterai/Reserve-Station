@@ -149,6 +149,7 @@
     objectives:
     - TunnelClownProtectMaintenanceObjective
   - type: GhostPingRule # Reserve
+  - type: TunnelClownRule
 
 - type: entity
   parent: BaseGameRule
@@ -187,6 +188,7 @@
     - SingulothKnightSingularityObjective
     - SingulothKnightTeslaObjective
   - type: GhostPingRule # Reserve
+  - type: SingulothKnightRule
 
 - type: entity
   parent: BaseGameRule
@@ -227,6 +229,7 @@
     - KillRandomHeadObjective
     - DarkLordDuelObjective
   - type: GhostPingRule # Reserve
+  - type: DarkLordRule
 
 - type: entity # Only has a chance to spawn whenever dark lord spawns
   parent: BaseGameRule
@@ -254,6 +257,7 @@
     objectives:
     - ChosenOneKillDarkLordObjective
   - type: GhostPingRule # Reserve
+  - type: ChosenOneRule
 
 - type: entity
   parent: BaseGameRule
@@ -294,6 +298,7 @@
     - KillRandomHeadObjective
     - EscapeShuttleObjective
   - type: GhostPingRule # Reserve
+  - type: MimeAssassinRule
 
 - type: entity
   parent: BaseGameRule
@@ -333,6 +338,7 @@
     - KillRandomPersonObjective
     - EscapeShuttleObjective
   - type: GhostPingRule # Reserve
+  - type: DarkPriestRule
 
 - type: entity
   parent: BaseGameRule
