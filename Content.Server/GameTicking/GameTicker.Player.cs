@@ -84,10 +84,13 @@ namespace Content.Server.GameTicking
                         : Loc.GetString("player-join-message", ("name", args.Session.Name)));
 
                         // Reserve edit start: Better webhook send
-                        var message = Loc.GetString("player-first-join-message-webhook", ("name", args.Session.Name)) + "\n" +
-                            Loc.GetString("player-first-join-account-date", ("creationDate", creationDate)) + "\n" +
-                            $"userid: {args.Session.UserId.ToString()}";
-                        await _discord.SendWebhookMessage(message, _cfg.GetCVar(CCVars.DiscordAdminchatWebhook));
+                        if (!string.IsNullOrEmpty(_cfg.GetCVar(CCVars.DiscordAdminchatWebhook)) && firstConnection)
+                        {
+                            var message = Loc.GetString("player-first-join-message-webhook", ("name", args.Session.Name)) + "\n" +
+                                Loc.GetString("player-first-join-account-date", ("creationDate", creationDate)) + "\n" +
+                                $"userid: {args.Session.UserId.ToString()}";
+                            await _discord.SendWebhookMessage(message, _cfg.GetCVar(CCVars.DiscordAdminchatWebhook));
+                        }
                         // Reserve edit end: Better webhook send
                         await _discordLink.AssignPatronTierAsync(args.Session.UserId);  // Reserve edit: Maecenas System
                     if (session.Channel.IsConnected)  // Reserve edit: Flaky test fixes
