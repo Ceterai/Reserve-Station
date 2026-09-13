@@ -6,6 +6,8 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
 using Content.Shared.Popups;
 using Robust.Shared.Player;
+using Robust.Shared.Timing;
+using System.Threading.Tasks;
 
 namespace Content.Shared.OfferItem;
 
@@ -14,6 +16,13 @@ public abstract partial class SharedOfferItemSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedHandsSystem _hands = default!;
+    [Dependency] private readonly IGameTiming _gameTiming = default!;
+
+    // Keep a list of active users who are currently offering to avoid multiple simultaneous offers.
+    private readonly HashSet<EntityUid> _activeOfferers = new();
+
+    // Keep a list of active users who are currently unoffering to avoid multiple simultaneous receives.
+    private readonly HashSet<EntityUid> _activeUnofferers = new();
 
     public override void Initialize()
     {
@@ -46,7 +55,7 @@ public abstract partial class SharedOfferItemSystem : EntitySystem
         }
     }
 
-    private void SetInReceiveMode(EntityUid uid, OfferItemComponent component, InteractUsingEvent args)
+    async private void SetInReceiveMode(EntityUid uid, OfferItemComponent component, InteractUsingEvent args)
     {
         if (!TryComp<OfferItemComponent>(args.User, out var offerItem))
             return;
@@ -66,6 +75,11 @@ public abstract partial class SharedOfferItemSystem : EntitySystem
         if (offerItem.Item == null)
             return;
 
+        if (_activeOfferers.Contains(args.User))
+            return;
+
+        _activeOfferers.Add(args.User);
+
         _popup.PopupEntity(Loc.GetString("offer-item-try-give",
             ("item", Identity.Entity(offerItem.Item.Value, EntityManager)),
             ("target", Identity.Entity(uid, EntityManager))), component.Target.Value, component.Target.Value);
@@ -74,6 +88,9 @@ public abstract partial class SharedOfferItemSystem : EntitySystem
             ("item", Identity.Entity(offerItem.Item.Value, EntityManager))), component.Target.Value, uid);
 
         args.Handled = true;
+
+        await Task.Delay(TimeSpan.FromSeconds(component.Cooldown));
+        _activeOfferers.Remove(args.User);
     }
 
     private void OnAcceptOfferAlert(EntityUid uid, OfferItemComponent component, AcceptOfferAlertEvent args)
@@ -119,6 +136,18 @@ public abstract partial class SharedOfferItemSystem : EntitySystem
         if (!TryComp(component.Target, out OfferItemComponent? offerItem) || component.Target == null)
             goto ResetSelf;
 
+        offerItem.IsInOfferMode = false;
+        offerItem.IsInReceiveMode = false;
+        offerItem.Hand = null;
+        offerItem.Target = null;
+        offerItem.Item = null;
+        Dirty(component.Target.Value, offerItem);
+
+        if (_activeUnofferers.Contains(uid))
+            return;
+
+        _activeUnofferers.Add(uid);
+
         if (component.Item != null)
         {
             _popup.PopupEntity(Loc.GetString("offer-item-no-give",
@@ -138,14 +167,9 @@ public abstract partial class SharedOfferItemSystem : EntitySystem
                 ("item", Identity.Entity(offerItem.Item.Value, EntityManager))), component.Target.Value, uid);
         }
 
-        offerItem.IsInOfferMode = false;
-        offerItem.IsInReceiveMode = false;
-        offerItem.Hand = null;
-        offerItem.Target = null;
-        offerItem.Item = null;
-        Dirty(component.Target.Value, offerItem);
+        _activeUnofferers.Remove(uid);
 
-ResetSelf:
+    ResetSelf:
         component.IsInOfferMode = false;
         component.IsInReceiveMode = false;
         component.Hand = null;

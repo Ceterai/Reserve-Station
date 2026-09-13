@@ -42,6 +42,11 @@ public abstract partial class SharedOfferItemSystem
 
         offerItem.Item = _hands.GetActiveItem((uid, hands));
 
+        if (!offerItem.IsOfferCooldownExpired(_gameTiming.CurTime))
+            return;
+
+        offerItem.RefreshOfferCooldown(_gameTiming.CurTime);
+
         if (!offerItem.IsInOfferMode)
         {
             if (offerItem.Item == null)
@@ -70,4 +75,3 @@ public abstract partial class SharedOfferItemSystem
         UnOffer(uid, offerItem);
     }
 }
-
