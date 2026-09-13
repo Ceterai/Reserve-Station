@@ -1018,3 +1018,21 @@ Entries:
         называется "Авторы и меценаты".
   id: 122
   time: '2026-09-11T21:24:54.0000000+00:00'
+- author: mqole, ReconPangolin, Ceterai
+  changes:
+    - type: Add
+      message: Консоль сервисных событий.
+  id: 123
+  time: '2026-09-12T22:54:21.0000000+00:00'
+- author: AraiMaia, Ceterai
+  changes:
+    - type: Add
+      message: Диегетический интерфейс у торгоматов.
+  id: 124
+  time: '2026-09-12T23:11:14.0000000+00:00'
+- author: Ceterai
+  changes:
+    - type: Add
+      message: Система перемещения в рамках одного тайла.
+  id: 125
+  time: '2026-09-12T23:28:17.0000000+00:00'
