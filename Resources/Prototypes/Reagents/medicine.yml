@@ -910,7 +910,7 @@
         - !type:ChemRemoveMoodlet  # Reserve edit: Mood System port
           moodPrototype: RomerolEffect
           conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentThresholdCondition
             min: 10
 
 - type: reagent
@@ -935,7 +935,8 @@
         - !type:ChemRemoveMoodlet  # Reserve edit: Mood System port
           moodPrototype: RomerolEffect
           conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
+            reagent: AmbuzolPlus
             min: 5
 
 - type: reagent
@@ -1056,7 +1057,7 @@
         type: Remove
       - !type:ChemPurgeMoodlets  # Reserve edit: Mood System port
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: Synaptizine
           min: 10
 
