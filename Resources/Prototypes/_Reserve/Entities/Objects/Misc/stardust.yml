@@ -336,6 +336,27 @@
     - FoodSnack
     - Pill
 
+- type: entity
+  parent: FoodSnackLollypopDylovene
+  id: FoodSnackLollypopStardust
+  components:
+  - type: Sprite
+    layers:
+    - state: lollypop
+      map: [ "enum.AmmoVisualLayers.Base" ]
+    - state: color
+      map: [ "enum.AmmoVisualLayers.Tip" ]
+      color: *stardust-color
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 5
+        - ReagentId: Stardust
+          Quantity: 15
+
 # endregion Candy
 
 # region Containers
@@ -638,6 +659,59 @@
 
 # endregion Cocktail
 
+# region Cocktail Candy
+
+- type: microwaveMealRecipe
+  id: RecipeFoodSnackStardustGoddess
+  result: FoodSnackStardustGoddess
+  time: 5
+  group: Dessert
+  reagents:
+    StardustGoddess: 5
+
+- type: entity
+  parent: FoodSnackStardust
+  id: FoodSnackStardustGoddess
+  components:
+  - type: FlavorProfile
+    flavors:
+    - sweet
+    - holy
+    - stardust
+  - type: Sprite
+    sprite: *stardust-rsi
+    state: item_candy_cocktail
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: StardustGoddess
+          Quantity: 5
+
+- type: entity
+  parent: FoodSnackLollypopStardust
+  id: FoodSnackLollypopStardustGoddess
+  components:
+  - type: Sprite
+    layers:
+    - state: lollypop
+      map: [ "enum.AmmoVisualLayers.Base" ]
+    - state: color
+      map: [ "enum.AmmoVisualLayers.Tip" ]
+      color: *stardust-goddess-color
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 5
+        - ReagentId: StardustGoddess
+          Quantity: 15
+
+# endregion Cocktail Candy
+
 # region Cocktail Containers
 
 - type: entity
@@ -774,45 +848,6 @@
 
 # endregion Cocktail Containers
 
-# region Cocktail Candy
-
-- type: microwaveMealRecipe
-  id: RecipeFoodSnackStardustGoddess
-  result: FoodSnackStardustGoddess
-  time: 5
-  group: Dessert
-  reagents:
-    StardustGoddess: 5
-
-- type: entity
-  parent: FoodSnackBase
-  id: FoodSnackStardustGoddess
-  components:
-  - type: FlavorProfile
-    flavors:
-    - sweet
-    - holy
-    - stardust
-  - type: Sprite
-    sprite: *stardust-rsi
-    state: item_candy_cocktail
-  - type: Item
-  - type: Extractable
-    grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: StardustGoddess
-          Quantity: 5
-  - type: Tag
-    tags:
-    - FoodSnack
-    - Pill
-
-# endregion Cocktail Candy
-
 # region Pill Bottle
 
 - type: entity
@@ -826,8 +861,12 @@
     - id: PillStardust
       amount: 5
     - id: FoodSnackStardust
-      amount: 4
+      amount: 3
     - id: FoodSnackStardustGoddess
-      amount: 1
+      amount: 2
+    - id: FoodSnackOrchito
+      amount: 3
+    - id: FoodSnackStardustOrchito
+      amount: 2
 
 # endregion Pill Bottle
