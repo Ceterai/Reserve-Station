@@ -190,7 +190,7 @@
       - DrinkMoscowMule
       - DrinkTheSunAlsoRises
       # - Reserve drinks
-      - DrinkBrepsi
+      - DrinkBrepsiGlass
       - DrinkOrchitoGlass  # Reserve edit: Orchito 2.0
       # Reserve: Orchid's Barmania - Visual Fixes end
     chance: 0.8
