@@ -136,6 +136,38 @@
 
 - type: entity
   parent: DrinkGlass
+  id: DrinkColaGlass
+  suffix: cola
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Cola
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/colaglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkBrepsiGlass
+  suffix: brepsi
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Brepsi
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/colaglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
   id: DrinkChangelingStingGlass
   suffix: changeling sting
   components:

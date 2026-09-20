@@ -363,7 +363,7 @@
 
 - type: entity
   parent: DrinkGlass
-  id: DrinkStardust
+  id: DrinkStardustGlass
   components:
   - type: SolutionContainerManager
     solutions:
@@ -716,7 +716,7 @@
 
 - type: entity
   parent: DrinkGlass
-  id: DrinkStardustGoddess
+  id: DrinkStardustGoddessGlass
   components:
   - type: Icon
     sprite: *stardust-rsi

@@ -45,7 +45,7 @@ ent-FoodSnackLollypopStardust = леденец со звёздной пылью
     .desc = Леденец со вкусом звёздной пыли. И, возможно, не только вкусом...
     .suffix = Лодаут, Безделушки, { stardust-shared-suffix }
 
-ent-DrinkStardust = { ent-DrinkGlass }
+ent-DrinkStardustGlass = { ent-DrinkGlass }
     .desc = { reagent-desc-stardust }
     .suffix = { reagent-name-stardust-shared-suffix }
 ent-DrinkStardustJug = { ent-CustomDrinkJug }
@@ -76,7 +76,7 @@ ent-DrinkStardustCup = { ent-DrinkCup }
     .desc = { reagent-desc-stardust }
     .suffix = { reagent-name-stardust-shared-suffix }
 
-ent-DrinkStardustGoddess = { ent-DrinkGlass }
+ent-DrinkStardustGoddessGlass = { ent-DrinkGlass }
     .desc = { reagent-desc-stardust-goddess }
     .suffix = { reagent-name-stardust-goddess-shared-suffix }
 ent-DrinkStardustGoddessJug = { ent-CustomDrinkJug }
