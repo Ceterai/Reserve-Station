@@ -291,7 +291,7 @@
       beaker:
         maxVol: 50
   - type: StaticPrice
-    price: 5
+    price: 10
 
 # endregion Buckets
 
