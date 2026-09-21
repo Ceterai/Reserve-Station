@@ -5,7 +5,6 @@
 - type: entityTable
   id: RandomMaintenanceEmergencyLockers
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - !type:AllSelector
       weight: 1.2
@@ -24,7 +23,6 @@
 - type: entityTable
   id: RandomMaintenanceLockers
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: ClosetMaintenanceFilledRandom
     - id: ClosetMaintenanceFilledRandom
@@ -38,7 +36,6 @@
 - type: entityTable
   id: RandomCommonCanisters
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: AirCanister
       weight: 1.25
@@ -55,7 +52,6 @@
 - type: entityTable
   id: RandomRareCanisters
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: AmmoniaCanister
     - id: FrezonCanister
@@ -75,7 +71,6 @@
 - type: entityTable
   id: RandomRareCrates
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: CrateFunParty
     - id: CrateFunDartsSet
@@ -119,7 +114,6 @@
 - type: entityTable
   id: RandomPortableGenerators
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: PortableGeneratorJrPacman
       weight: 1.5
@@ -140,7 +134,6 @@
 - type: entityTable
   id: RandomCommonTanks
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: WaterTankFull
     - id: WeldingFuelTankFull
@@ -172,7 +165,6 @@
 - type: entityTable
   id: RandomRareTanks
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: WaterTankHighCapacity
     - id: WeldingFuelTankHighCapacity
@@ -204,7 +196,6 @@
 - type: entityTable
   id: RandomTanks
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: GenericTank
     - !type:NestedSelector
@@ -221,7 +212,6 @@
 - type: entityTable
   id: RandomRareMaintObjects
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: CrateArtifactContainer
       weight: 0.5
@@ -260,7 +250,6 @@
 - type: entityTable
   id: RandomAltars
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: AltarToolbox
     - id: AltarConvertMaint
@@ -268,7 +257,6 @@
 - type: entityTable
   id: RandomMusicObjects
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: Jukebox
     - !type:AllSelector
@@ -283,7 +271,6 @@
 - type: entityTable
   id: RandomChargers
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: BorgCharger
       weight: 1.5
@@ -311,7 +298,6 @@
 - type: entityTable
   id: RandomColoredWardrobeWallmounts
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: ClosetWallWardrobeGreyFilled
     - id: ClosetWallWardrobeMixedFilled
@@ -325,7 +311,6 @@
 - type: entityTable
   id: RandomFlagWallmounts
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: BlankFlag
     - id: NTFlag
@@ -340,7 +325,6 @@
 - type: entityTable
   id: RandomDispenserWallmounts
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: CleanerDispenser
     - id: FuelDispenser
@@ -353,7 +337,6 @@
 - type: entityTable
   id: RandomWallmounts
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: ClosetWallMaintenanceFilledRandom
       weight: 1.5
@@ -406,7 +389,6 @@
 - type: entityTable
   id: RandomMaintMiddleDoors
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - id: BarricadeBlock
     - id: AirlockMaint
@@ -428,7 +410,6 @@
 - type: entityTable
   id: RandomMaintenanceObjects
   table: !type:GroupSelector
-    offset: 0.0
     children:
     - !type:NestedSelector
       tableId: RandomMaintenanceLockers
