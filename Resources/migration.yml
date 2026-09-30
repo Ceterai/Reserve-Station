@@ -1065,4 +1065,10 @@ PartRodMetalLingering0: null
 CableApcStackLingering10: CableApcStack10
 
 # 2026-09-11 Reserve Station edit: Trashmaxxing
-CrateTrashCart: CrateTrashCartFilled
+# CrateTrashCart: CrateTrashCartFilled
+
+# 2026-09-20 Reserve Station edit: Random maints
+CrateTrashCart: RandomMaintenanceObjectSpawner
+CrateTrashCartFilled: RandomMaintenanceObjectSpawner
+ClosetMaintenance: RandomMaintenanceObjectSpawner
+ClosetMaintenanceFilledRandom: RandomMaintenanceObjectSpawner

@@ -27,6 +27,12 @@ ent-DrinkPotatoJuice = { ent-DrinkGlass }
     .desc = { ent-DrinkGlass.desc }
     .suffix = Картофельный сок
 
+ent-DrinkColaGlass = { ent-DrinkGlass }
+    .desc = { ent-DrinkGlass.desc }
+    .suffix = Космическая кола
+ent-DrinkBrepsiGlass = { ent-DrinkGlass }
+    .desc = { ent-DrinkGlass.desc }
+    .suffix = Брепси
 ent-DrinkChangelingStingGlass = { ent-DrinkGlass }
     .desc = { ent-DrinkGlass.desc }
     .suffix = Жало генокрада

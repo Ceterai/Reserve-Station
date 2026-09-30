@@ -45,7 +45,7 @@ ent-FoodSnackLollypopStardust = stardust lollypop
     .desc = A lollypop with the taste of stardust. And, possibly, not just the taste...
     .suffix = Loadout, Trinkets, { stardust-shared-suffix }
 
-ent-DrinkStardust = { ent-DrinkGlass }
+ent-DrinkStardustGlass = { ent-DrinkGlass }
     .desc = { reagent-desc-stardust }
     .suffix = { reagent-name-stardust-shared-suffix }
 ent-DrinkStardustJug = { ent-CustomDrinkJug }
@@ -76,7 +76,7 @@ ent-DrinkStardustCup = { ent-DrinkCup }
     .desc = { reagent-desc-stardust }
     .suffix = { reagent-name-stardust-shared-suffix }
 
-ent-DrinkStardustGoddess = { ent-DrinkGlass }
+ent-DrinkStardustGoddessGlass = { ent-DrinkGlass }
     .desc = { reagent-desc-stardust-goddess }
     .suffix = { reagent-name-stardust-goddess-shared-suffix }
 ent-DrinkStardustGoddessJug = { ent-CustomDrinkJug }
