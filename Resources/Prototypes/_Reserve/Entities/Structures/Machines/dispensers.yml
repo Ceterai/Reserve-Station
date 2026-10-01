@@ -3,8 +3,8 @@
 - type: entity
   parent: SodaDispenserEmpty
   id: SauceDispenserEmpty
-  name: раздатчик соусов
-  description: Диспенсер для соусов и приправ.
+  name: sauce dispenser
+  description: A dispenser for various sauces and condiments.
   suffix: Empty
   components:
   - type: Sprite
