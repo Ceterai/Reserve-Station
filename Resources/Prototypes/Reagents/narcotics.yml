@@ -113,7 +113,6 @@
         conditions:
         - !type:MetabolizerTypeCondition # Goobstation - Yowie
           type: [ Yowie ]
-          inverted: true
         damage:
           groups:
             Brute: -1
@@ -206,7 +205,6 @@
         conditions:
         - !type:MetabolizerTypeCondition # Goobstation - Yowie
           type: [ Yowie ]
-          inverted: true
         damage:
           groups:
             Brute: -1
@@ -402,7 +400,6 @@
         conditions:
         - !type:MetabolizerTypeCondition # Goobstation - Yowie
           type: [ Yowie ]
-          inverted: true
         damage:
           groups:
             Brute: -1
@@ -476,7 +473,6 @@
         conditions:
         - !type:MetabolizerTypeCondition # Goobstation - Yowie
           type: [ Yowie ]
-          inverted: true
         damage:
           groups:
             Brute: -1
@@ -671,7 +667,6 @@
         conditions:
         - !type:MetabolizerTypeCondition # Goobstation - Yowie
           type: [ Yowie ]
-          inverted: true
         damage:
           groups:
             Brute: -1

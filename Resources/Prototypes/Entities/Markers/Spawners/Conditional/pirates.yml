@@ -2,7 +2,7 @@
 
 - type: entity
   id: SpawnPointPirates
-  parent: MarkerBase
+  parent: BaseAntagSpawner  # Reserve edit: Admin Antag Verbs Enhanced
   name: pirates
   components:
   - type: SpawnPoint
