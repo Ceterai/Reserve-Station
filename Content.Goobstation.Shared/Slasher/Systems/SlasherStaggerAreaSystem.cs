@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Goob Station Contributors
+﻿// SPDX-FileCopyrightText: 2025 Goob Station Contributors
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -20,11 +20,10 @@ namespace Content.Goobstation.Shared.Slasher.Systems;
 /// </summary>
 public sealed class SlasherStaggerAreaSystem : EntitySystem
 {
-
     public static readonly EntProtoId EffectId = "SlasherSlowdownStatusEffect";
 
     [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly SharedStunSystem _stun = default!;
+    // [Dependency] private readonly SharedStunSystem _stun = default!; // Reserve edit: Fix warnings
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedInteractionSystem _interact = default!;
@@ -75,7 +74,12 @@ public sealed class SlasherStaggerAreaSystem : EntitySystem
 
         _audio.PlayPredicted(comp.StaggerSound, uid, uid);
 
-        // Show popup to the slasher only
+        var overlay = EnsureComp<SlasherStaggerOverlayComponent>(uid);
+        overlay.Range = comp.Range;
+        overlay.ShockwaveShader = comp.ShockwaveShader;
+        overlay.RingColor = comp.RingColor;
+        Dirty(uid, overlay);
+
         _popup.PopupClient(Loc.GetString("slasher-staggerarea-popup"), uid, uid, PopupType.MediumCaution);
 
         args.Handled = true;

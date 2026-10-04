@@ -48,6 +48,11 @@
   - BorgModuleFireAxe #Reserve Fireaxe Borg Modules
 
 - type: latheRecipePack
+  id: SecBorgParts
+  recipes:
+  - SecEndoskeleton
+
+- type: latheRecipePack
   id: PowerCages
   recipes:
   - PowerCageHigh
