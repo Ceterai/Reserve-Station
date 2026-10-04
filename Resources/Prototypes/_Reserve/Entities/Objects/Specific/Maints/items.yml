@@ -269,7 +269,7 @@
     scale: 1.15, 1.15
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         maxVol: 350
   - type: StaticPrice
     price: 30
@@ -288,7 +288,7 @@
     scale: 0.65, 0.65
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         maxVol: 50
   - type: PhysicalComposition
     materialComposition:

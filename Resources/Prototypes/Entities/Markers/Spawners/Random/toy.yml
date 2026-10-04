@@ -102,6 +102,9 @@
       - id: PlushieJvne # Goobstation
       - id: PlushieFern # Goobstation
       - id: PlushieAbductor # Goobstation
+      - id: PlushieLeoMalone
+      - id: PlushieRouge
+      - id: PlushieRedstonewolf
     # Reserve edit end: Random maints
     # Reserve edit start: Reserve Plushies
     - !type:GroupSelector
@@ -113,16 +116,23 @@
       - id: PlushieCeteraiOrchiDea
       - id: PlushieCeteraiOrchiDeaMime
       - id: PlushieDotusaruTaipan
+        weight: 0.5
       - id: PlushieDotusaruTaipanRainbow
+        weight: 0.5
       - id: PlushieDotusaruTaipanSyndicate
+        weight: 0.5
       - id: PlushieDotusaruTaipanLarge
+        weight: 0.5
       - id: PlushieFloppaGeoffroyKrisp
+        weight: 2.0
       - id: PlushieMrSamuelGoose
+        weight: 2.0
       - id: PlushieNazrinNya
       - id: PlushieNazrinNyaCap
       - id: PlushieSvarshikEva
       - id: PlushieSvarshikEvaLarge
     # Reserve edit end: Reserve Plushies
+    - id: PlushieSanabi  # Reserve edit: Reserve Plushies
 
 # Weh!
 - type: entityTable
