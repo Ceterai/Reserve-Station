@@ -95,13 +95,23 @@
       - id: PlushieSharkRainbow
       - id: PlushieGhostRainbow
     - !type:GroupSelector # Goobstation plushies  # Reserve edit: Random maints - moved from figurines
-      weight: 0.2 # 1 in >105
+      weight: 0.4 # 1 in >52.5  # Reserve edit: Random maints
       children:
       - id: PlushieBingle # Goobstation
       - id: PlushieSamantha # Goobstation
       - id: PlushieJvne # Goobstation
       - id: PlushieFern # Goobstation
       - id: PlushieAbductor # Goobstation
+      - id: PlushieBongle
+      - id: PlushieBinglePony
+      - id: PlushieAbductor
+      - id: PlushieNigel
+      - id: PlushieBrizby
+      - id: PlushieBoggle
+      - id: PlushieLehmin
+      - id: PlushieWachtel
+      - id: PlushieLeguia
+      - id: PlushiePasha
       - id: PlushieLeoMalone
       - id: PlushieRouge
       - id: PlushieRedstonewolf

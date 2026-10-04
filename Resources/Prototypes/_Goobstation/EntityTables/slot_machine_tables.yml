@@ -69,14 +69,14 @@
   table: !type:AllSelector
     children:
     - !type:NestedSelector
-      tableId: Plushies
+      tableId: AllPlushiesTable  # Reserve edit: Random maints
 
 - type: entityTable
   id: ClawMachineEvilPlushies
   table: !type:AllSelector
     children:
     - !type:NestedSelector
-      tableId: Plushies
+      tableId: PlushiesEvil  # Reserve edit: Random maints
 
 - type: entityTable
   id: Plushies
