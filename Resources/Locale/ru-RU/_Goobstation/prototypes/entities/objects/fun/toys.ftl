@@ -2,18 +2,25 @@
 
 ent-BaseBinglePlushie = { ent-BasePlushie }
     .desc = { ent-BasePlushie.desc }
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieBingle = плюшевый бингл
     .desc = Милый плюшевый инопланетянин синего цвета. Тебе хочется сказать "бингл".
+    .suffix = { ent-BaseBinglePlushie.suffix }
 ent-PlushieBingleSmall = плюшевый бингл
     .desc = Милый плюшевый инопланетянин синего цвета. Тебе хочется сказать "бингл".
+    .suffix = { ent-BaseBinglePlushie.suffix }
 ent-PlushieBingleYakub = плюшевый якуб-бингл
     .desc = Милый плюшевый инопланетянин синего цвета. Тебе хочется сказать "бингл".
+    .suffix = { ent-BaseBinglePlushie.suffix }
 ent-PlushieBongle = плюшевый бонгл
     .desc = Милый плюшевый инопланетянин красного цвета. Тебе хочется сказать "бонгл".
+    .suffix = { ent-BaseBinglePlushie.suffix }
 ent-PlushieBinglePony = плюшевая бингл-пони
     .desc = Милый плюшевый инопланетянин синего цвета. Тебе хочется сказать "бингл".
+    .suffix = { ent-BaseBinglePlushie.suffix }
 ent-PlushieAbductor = плюшевый абдуктор
     .desc = Глорп Зап Зибл Гларп "Плюш" Блибл.
+    .suffix = { ent-BaseBinglePlushie.suffix }
 
 # endregion Plushies
 
@@ -21,56 +28,80 @@ ent-PlushieAbductor = плюшевый абдуктор
 
 ent-PlushieLouie = плюшевый Луи
     .desc = Милый плюшевый игрушка в виде крысы. Ты ощущаешь странное желание поздороваться с крысой.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieDurk = плюшевый Дурк
     .desc = Милый плюшевый игрушка в виде некоего атмосферного техника. Держа её, ты чувствуешь приближение великого слома вселенной.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieBlackburn = плюшевый Блэкбёрн
     .desc = Человеко-лисий гибрид от NanoTrasen, созданный как благотворительность для пострадавших от тирании Юконского восстания.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieBlackburnKobliska = плюшевая Коблиска
     .desc = Более стройный Блэкберн, созданный для чистки лисьих нор и траншей; учёные спорят о продолжительности жизни "Коблискинов", первых самодизайнерских особей Восстания.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieBlackburnMatryoskya = плюшевая Матрёшка
     .desc = Городская легенда среди ветеранов NanoTrasen; существо, неподконтрольное ни Восстанию, ни корпорации. Теперь в виде плюшевой игрушки.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieDesislavaBlackburn = плюшевая Десислава
     .desc = Миниатюрная разновидность Блэкбёрн BKv1, созданная для танкеток и лёгких танков. Эта — в "Darwin 6A2M C7 YKN".
+    .suffix = { ent-BasePlushie.suffix }
 
 ent-PlushieSamantha = плюшевая Джейн
     .desc = Милый плюшевый офицер блюшилд-ветеран. Навевает непреодолимую тягу к леденцам.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieJvne = плюшевый Джвне
     .desc = Это был тяжёлый день...
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieFern = плюшевый мистический ящер
     .desc = Вы чувствуете, как будто кто-то еще наблюдает за вами... просто вне поля зрения, в тени.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieNigel = плюшевый Нигел
     .desc = Пахнет величием и отчетливым ароматом духов марки Adalamin?
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieBrizby = плюшевый Бризби
     .desc = Всегда будет признавать, что он злой.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieBaldzby = плюшевый Лысзби
     .desc = Теперь истина открыта для всеобщего обозрения.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieBoggle = плюшевый Боггл
     .desc = Вы можете почувствовать деньги внутри.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieLehmin = плюшевый Лехмин
     .desc = Пахнет химикатами, вы чувствуете себя неловко, держа его в руках.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieMnwaar = плюшевый Мнваар
     .desc = Плюшевая фигурка маленького, темно-серого, полугетерохромного порождения тьмы, одетого в форму главного врача.\nНа бирке написано: \"Мнваар: Немой менеджер Медотдела™ Теперь с помощью гипоспрея с магнитным креплением!\
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieTheHolyCrusader = плюшевый Святой крестоносец
     .desc = Самый святой парень, которого ты когда-либо встретишь.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieXeve = плюшевый Ксеве Птца
     .suffix = Вуду
     .desc = Та птица что я ненавижу.
+    .suffix = { ent-BasePlushie.suffix }
 
 ent-PlushiePasha = плюшевый уставший вокс
     .desc = Не очень симпатичная мягкая игрушка, напоминающая уставшего вокса. Сильно пахнет никотином.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieLeguia = плюшевый одинокий угорь
     .desc = Загадочное создание.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieTwofish = плюшевый ТуФиш
     .desc = Если присмотреться, похоже на чудака.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieWachtel = плюшевый Груг
     .desc = Самый пьяный водитель.
+    .suffix = { ent-BasePlushie.suffix }
 
 ent-PlushieLeoMalone = плюшевый Лео Мэлоун
     .desc = Отдалённо пахнет властью и порохом. Много лает. Нет, серьёзно. Очень много.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieRouge = плюшевая Руж
     .desc = Милый плюшевый офицер Синего Щита-ветеран. Навевает непреодолимую тягу к леденцам.
+    .suffix = { ent-BasePlushie.suffix }
 ent-PlushieRedstonewolf = плюшевая Айрин
     .desc = Мягкая плюшевая игрушка, напоминающая красного дракона. Несмотря на то, что это большой змей, он всё равно вехает.
+    .suffix = { ent-BasePlushie.suffix }
 
 # endregion Admin plushies
 
