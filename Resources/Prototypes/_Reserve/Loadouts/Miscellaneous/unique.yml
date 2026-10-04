@@ -11,6 +11,7 @@
   loadouts:
   - Orchito
   - Stardust
+  - ALittleStar
   - PlushieCeteraiOrchiDea
   - PlushieArtizziKasya
   - PlushieAwareFoxy
@@ -41,6 +42,16 @@
   storage:
     back:
     - PillCanisterStardust
+
+- type: loadout
+  id: ALittleStar
+  effects:
+  - !type:CkeyRequirementLoadoutEffect
+    ckey: [ Ceterai ]
+  storage:
+    back:
+    - DiskCaseALittleStar
+    - VinylSleeveALittleStar
 
 - type: loadout
   id: PlushieCeteraiOrchiDea
