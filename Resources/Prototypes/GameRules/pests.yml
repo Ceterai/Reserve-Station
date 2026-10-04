@@ -46,6 +46,8 @@
       - id: SpawnMobMouse
       - id: MobMouseCancer
         weight: 0.02
+      - id: SpawnMobScurret  # Reserve edit: Super Scurret - let scurrets spawn from infestation
+        weight: 0.01
 # Events always spawn a critter regardless of Probability https://github.com/space-wizards/space-station-14/issues/28480 I added the Rat King to their own event with a player cap.
 
 - type: entity
@@ -81,6 +83,8 @@
         weight: 0.02
       - id: MobLootbug # Goobstation
         weight: 0.08
+      - id: SpawnMobScurret  # Reserve edit: Super Scurret - let scurrets spawn from infestation
+        weight: 0.01
     specialEntries:
     - id: SpawnPointGhostRatKing
       prob: 0.001

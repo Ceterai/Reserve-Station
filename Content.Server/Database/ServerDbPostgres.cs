@@ -235,7 +235,7 @@ namespace Content.Server.Database
             ImmutableArray<BanRoleDef>? roles = null;
             if (ban.Type == BanType.Role)
             {
-                roles = [.. ban.Roles!.Select(br => new BanRoleDef(br.RoleType, br.RoleId))];
+                roles = [.. (ban.Roles ?? []).Select(br => new BanRoleDef(br.RoleType, br.RoleId))];
             }
 
             return new BanDef(

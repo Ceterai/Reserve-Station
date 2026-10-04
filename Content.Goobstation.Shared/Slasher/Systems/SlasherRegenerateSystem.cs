@@ -8,10 +8,12 @@ using Content.Shared.Actions;
 using Content.Shared.Body.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
+using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Rejuvenate;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
+using Robust.Shared.Player;
 
 namespace Content.Goobstation.Shared.Slasher.Systems;
 
@@ -23,6 +25,7 @@ public sealed class SlasherRegenerateSystem : EntitySystem
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly INetManager _net = default!;
+    [Dependency] private readonly MobStateSystem _mobState = default!;
 
     public override void Initialize()
     {
@@ -61,6 +64,8 @@ public sealed class SlasherRegenerateSystem : EntitySystem
             return;
         }
 
+        var wasDead = _mobState.IsDead(uid);
+
         if (_net.IsServer)
         {
             RaiseLocalEvent(uid, new RejuvenateEvent());
@@ -69,6 +74,9 @@ public sealed class SlasherRegenerateSystem : EntitySystem
             // Spawn the visual and light effect entity
             var effectEnt = Spawn(comp.RegenerateEffect, _transform.GetMapCoordinates(uid));
             _transform.SetParent(effectEnt, uid);
+
+            if (wasDead)
+                ReviveFromDeath((uid, comp));
         }
 
         // Play sound effect
@@ -79,6 +87,24 @@ public sealed class SlasherRegenerateSystem : EntitySystem
         Dirty(uid, comp);
 
         args.Handled = true;
+    }
+
+    /// <summary>
+    /// Shows the regenerate overlay to everyone in range and lets the server relocate the slasher.
+    /// </summary>
+    private void ReviveFromDeath(Entity<SlasherRegenerateComponent> ent)
+    {
+        var (uid, comp) = ent;
+
+        var filter = Filter.Empty().AddInRange(_transform.GetMapCoordinates(uid), comp.RegenerateEffectRange);
+        foreach (var session in filter.Recipients)
+        {
+            if (session.AttachedEntity is { } viewer)
+                EnsureComp<SlasherRegenerateOverlayComponent>(viewer);
+        }
+
+        var revived = new SlasherRevivedFromDeathEvent();
+        RaiseLocalEvent(uid, ref revived);
     }
 
     /// <summary>

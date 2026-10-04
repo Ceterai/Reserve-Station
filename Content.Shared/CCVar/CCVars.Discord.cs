@@ -136,4 +136,66 @@ public sealed partial class CCVars
     /// </summary>
     public static readonly CVarDef<string> DiscordOOCChatWebhook =
         CVarDef.Create("discord.ooc_webhook", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL | CVar.ARCHIVE);
+
+    // Reserve edit start: Full discord bot integration
+    /// <summary>
+    ///     Whether the "privately" option of the Discord profile commands defaults to true (ephemeral) when omitted.
+    /// </summary>
+    public static readonly CVarDef<bool> DiscordProfilePrivatelyDefault =
+        CVarDef.Create("discord.profile_privately_default", true, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Discord role ID for the honorary patron tier, shown next to a player's CKey in profile commands.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordPatronRoleHonorary =
+        CVarDef.Create("discord.patron_role_honorary", string.Empty, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Discord role ID for the highest patron tier.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordPatronRoleTierX =
+        CVarDef.Create("discord.patron_role_tier_x", string.Empty, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Discord role ID for the 5th patron tier.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordPatronRoleTier5 =
+        CVarDef.Create("discord.patron_role_tier_5", string.Empty, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Discord role ID for the 4th patron tier.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordPatronRoleTier4 =
+        CVarDef.Create("discord.patron_role_tier_4", string.Empty, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Discord role ID for the 3rd patron tier.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordPatronRoleTier3 =
+        CVarDef.Create("discord.patron_role_tier_3", string.Empty, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Discord role ID for the 2nd patron tier.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordPatronRoleTier2 =
+        CVarDef.Create("discord.patron_role_tier_2", string.Empty, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Discord role ID for the 1st patron tier.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordPatronRoleTier1 =
+        CVarDef.Create("discord.patron_role_tier_1", string.Empty, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Discord role ID for the server booster role.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordBoosterRole =
+        CVarDef.Create("discord.booster_role", string.Empty, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Embed line color for embedded discord bot responses.
+    /// </summary>
+    public static readonly CVarDef<int> DiscordEmbedColor =
+        CVarDef.Create("discord.embed_color", 0x992D22, CVar.SERVERONLY);
+    // Reserve edit end: Full discord bot integration
 }
