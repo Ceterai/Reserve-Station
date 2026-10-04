@@ -3,8 +3,8 @@
 - type: entity
   parent: BasePlushie
   id: PlushieSanabi
-  name: плюшевый генерал бригадир
-  description: Важно дойти до конца!
+  name: brigadier general plushie
+  description: It's important to get to the end!
   components:
   - type: Sprite
     sprite: _Reserve/Objects/Fun/Plushies/sanabi.rsi
