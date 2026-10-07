@@ -310,8 +310,8 @@ public sealed partial class VampireShadowBoxingActionEvent : EntityTargetActionE
     public SoundSpecifier? HitSound;
 }
 
-[Serializable, NetSerializable]
-public sealed class VampireShadowBoxingPunchEvent : EntityEventArgs
+[DataDefinition, Serializable, NetSerializable]
+public sealed partial class VampireShadowBoxingPunchEvent : EntityEventArgs
 {
     public NetEntity Source { get; }
     public NetEntity Target { get; }

@@ -25,6 +25,8 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Verbs;
 // using Robust.Shared.Utility; // Reserve edit: Fix warnings
 using Content.Shared.HealthExaminable;
+using Robust.Shared.Prototypes;
+using Content.Shared.Damage.Components;
 
 namespace Content.Server._Shitmed.PartStatus;
 
@@ -108,7 +110,7 @@ public sealed class PartStatusSystem : EntitySystem
             Category = VerbCategory.Examine,
             Disabled = !detailsRange,
             Message = detailsRange ? null : Loc.GetString("health-examinable-verb-disabled"),
-            Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/VerbIcons/rejuvenate.svg.192dpi.png"))
+            Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/rejuvenate.svg.192dpi.png"))
         };
 
         args.Verbs.Add(verb);

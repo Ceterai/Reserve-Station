@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
 using Content.Goobstation.Shared.Disease.Components;
 using Content.Shared.Mobs.Systems;
@@ -127,12 +128,12 @@ public abstract partial class SharedDiseaseSystem : EntitySystem
 
     private void OnUpdateDisease(Entity<DiseaseComponent> ent, ref DiseaseUpdateEvent args)
     {
-        var timeDelta = (float)_updateInterval.TotalSeconds;
+        var timeDelta = (float) _updateInterval.TotalSeconds;
         var alive = !_mobState.IsDead(args.Ent.Owner) || ent.Comp.AffectsDead;
 
         if (!args.Ent.Comp.EffectImmune)
         {
-            foreach (var effectUid in ent.Comp.Effects.ContainedEntities)
+            foreach (var effectUid in ent.Comp.Effects.ContainedEntities.ToArray())
             {
                 if (!EffectQuery.TryComp(effectUid, out var effect))
                     continue;

@@ -10,7 +10,7 @@ using Content.Server.Popups;
 using Content.Shared._DV.Roles;
 using Content.Shared.Alert;
 using Content.Shared.Chat;
-using Content.Shared.Damage;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
@@ -31,19 +31,19 @@ using Content.Shared.Slippery;
 
 namespace Content.Server._Reserve.Mood;
 
-public sealed class MoodSystem : EntitySystem
+public sealed partial class MoodSystem : EntitySystem
 {
-    [Dependency] private readonly IChatManager _chatManager = default!;
-    [Dependency] private readonly IConfigurationManager _config = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IChatManager _chatManager = default!;
+    [Dependency] private IConfigurationManager _config = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
 
-    [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly MobThresholdSystem _mobThreshold = default!;
-    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly SharedJetpackSystem _jetpack = default!;
-    [Dependency] private readonly SharedRoleSystem _roleSystem = default!;
+    [Dependency] private AlertsSystem _alerts = default!;
+    [Dependency] private MobThresholdSystem _mobThreshold = default!;
+    [Dependency] private MovementSpeedModifierSystem _movementSpeedModifier = default!;
+    [Dependency] private PopupSystem _popup = default!;
+    [Dependency] private SharedJetpackSystem _jetpack = default!;
+    [Dependency] private SharedRoleSystem _roleSystem = default!;
 
     public override void Initialize()
     {

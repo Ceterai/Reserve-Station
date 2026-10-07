@@ -66,16 +66,20 @@ namespace Content.Server.GameTicking
                     var firstSeenTime = record?.FirstSeenTime.ToString("dd.MM.yyyy") ?? "unknown"; // Reserve edit- first connection date
 
                     //ADT tweak begin
-                    var creationDate = "Unable to get account creation date";
-                    try
+                    var creationDate = "Не удалось получить дату создания аккаунта";
+                    if (firstConnection) // The date is only used in first-join messages
+                    {
+                        try
                         {
                             // Получаем дату создания аккаунта через API визардов
                             creationDate = await AuthApiHelper.GetCreationDate(args.Session.UserId.ToString());
                         }
                         catch (Exception ex)
                         {
-                            Log.Error($"Ошибка при получении даты создания аккаунта: {ex.Message}");
+                            // Warning: this can fail on shutdown (e.g. disposed logger in tests) and must not fail them.
+                            Log.Warning($"Ошибка при получении даты создания аккаунта: {ex.Message}");
                         }
+                    }
                     //ADT tweak end
                         _chatManager.SendAdminAnnouncement(firstConnection
                         ? Loc.GetString("player-first-join-message", ("name", args.Session.Name)) + " " +

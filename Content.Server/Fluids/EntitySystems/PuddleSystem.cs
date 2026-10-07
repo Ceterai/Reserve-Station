@@ -48,8 +48,10 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
 
     private static readonly ProtoId<ReagentPrototype> CopperBlood = "CopperBlood";
 
+    // goobstation
     private static readonly ProtoId<ReagentPrototype> BloodChangeling = "BloodChangeling"; // goobstation
 
+    // goobstation
     private static readonly ProtoId<ReagentPrototype> BlackBlood = "BlackBlood"; // goobstation
 
     private static string[] _standoutReagents = [Blood, Slime, CopperBlood, BloodChangeling, BlackBlood]; // goobstation - added BloodChangeling, BlackBlood

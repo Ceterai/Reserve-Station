@@ -20,7 +20,7 @@ public sealed class PocketDimensionSystem : EntitySystem
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly LinkedEntitySystem _link = default!;
     [Dependency] private readonly MapLoaderSystem _mapLoader = default!;
-    // [Dependency] private readonly IMapManager _mapMan = default!; // Reserve edit: Fix warnings
+    // [Dependency] private readonly SharedMapSystem _mapSystem = default!; // Reserve edit: Fix warnings
     // [Dependency] private readonly SharedTransformSystem _transform = default!; // Reserve edit: Fix warnings
 
     private ISawmill _sawmill = default!;

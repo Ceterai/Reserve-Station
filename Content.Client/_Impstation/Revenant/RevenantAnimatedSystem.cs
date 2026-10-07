@@ -3,9 +3,9 @@ using Robust.Shared.Map;
 
 namespace Content.Client.Revenant;
 
-public sealed class RevenantAnimatedSystem : EntitySystem
+public sealed partial class RevenantAnimatedSystem : EntitySystem
 {
-    [Dependency] private readonly SharedPointLightSystem _lights = default!;
+    [Dependency] private SharedPointLightSystem _lights = default!;
 
     public override void Initialize()
     {
@@ -26,7 +26,7 @@ public sealed class RevenantAnimatedSystem : EntitySystem
             if (comp.LightOverlay == null)
                 continue;
             comp.Accumulator += frameTime;
-            _lights.SetEnergy(comp.LightOverlay.Value.Owner, 2f * Math.Abs((float)Math.Sin(0.25 * Math.PI * comp.Accumulator)), comp.LightOverlay.Value.Comp);
+            _lights.SetEnergy(comp.LightOverlay.Value.Owner, 2f * Math.Abs((float) Math.Sin(0.25 * Math.PI * comp.Accumulator)), comp.LightOverlay.Value.Comp);
         }
     }
 

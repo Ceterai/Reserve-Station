@@ -107,9 +107,7 @@ public sealed class BlobFactorySystem : EntitySystem
     private static readonly ProtoId<ReagentPrototype> Fresium = "Fresium";
 
     private static readonly ProtoId<ReagentPrototype> Aluminium = "Aluminium";
-
     private static readonly ProtoId<ReagentPrototype> Iron = "Iron";
-
     private static readonly ProtoId<ReagentPrototype> Uranium = "Uranium";
 
     private void FillSmokeGas(Entity<BlobPodComponent> ent, BlobChemType currentChem)

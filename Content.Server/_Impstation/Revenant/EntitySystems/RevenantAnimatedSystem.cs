@@ -1,5 +1,6 @@
 using Content.Shared.Popups;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Server.Revenant.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Revenant.Components;
@@ -19,7 +20,6 @@ using Content.Shared.Weapons.Ranged.Systems;
 using Content.Shared.Cuffs.Components;
 using Content.Shared.Movement.Systems;
 using Robust.Shared.Player;
-using Content.Shared.Explosion.Components;
 using Content.Shared.Mind.Components;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
@@ -32,14 +32,14 @@ namespace Content.Server.Revenant.EntitySystems;
 
 public sealed partial class RevenantAnimatedSystem : EntitySystem
 {
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly NpcFactionSystem _factionSystem = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly ItemToggleSystem _itemToggleSystem = default!;
-    [Dependency] private readonly SharedGunSystem _gunSystem = default!;
-    [Dependency] private readonly MovementSpeedModifierSystem _moveSpeed = default!;
-    [Dependency] private readonly MobThresholdSystem _thresholds = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private NpcFactionSystem _factionSystem = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private ItemToggleSystem _itemToggleSystem = default!;
+    [Dependency] private SharedGunSystem _gunSystem = default!;
+    [Dependency] private MovementSpeedModifierSystem _moveSpeed = default!;
+    [Dependency] private MobThresholdSystem _thresholds = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
 
     public override void Initialize()
     {

@@ -69,14 +69,14 @@
   table: !type:AllSelector
     children:
     - !type:NestedSelector
-      tableId: Plushies
+      tableId: AllPlushiesTable  # Reserve edit: Random maints
 
 - type: entityTable
   id: ClawMachineEvilPlushies
   table: !type:AllSelector
     children:
     - !type:NestedSelector
-      tableId: Plushies
+      tableId: PlushiesEvil  # Reserve edit: Random maints
 
 - type: entityTable
   id: Plushies
@@ -105,6 +105,9 @@
     - id: PlushiePasha
     - id: PlushieLeoMalone
     - id: PlushieRedstonewolf
+    - id: PlushieDoremyZerg
+    - id: PlushieSanyati
+    - id: PlushieHarel
 
 - type: entityTable
   id: PlushiesEvil
@@ -125,3 +128,6 @@
     - id: EvilPlushieTwofish
     - id: EvilPlushieLeoMalone
     - id: EvilPlushieRedstonewolf
+    - id: EvilPlushieDoremyZerg
+    - id: EvilPlushieSanyati
+    - id: EvilPlushieHarel
