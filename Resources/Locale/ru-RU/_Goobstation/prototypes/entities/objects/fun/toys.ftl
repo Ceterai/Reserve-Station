@@ -102,6 +102,15 @@ ent-PlushieRouge = плюшевая Руж
 ent-PlushieRedstonewolf = плюшевая Айрин
     .desc = Мягкая плюшевая игрушка, напоминающая красного дракона. Несмотря на то, что это большой змей, он всё равно вехает.
     .suffix = { ent-BasePlushie.suffix }
+ent-PlushieDoremyZerg = плюшевая Айя
+    .desc = Блестящая игрушка, запятнанная чернилами и чаем.
+    .suffix = { ent-BasePlushie.suffix }
+ent-PlushieSanyati = плюшевая Никсома
+    .desc = Пахнет как ag'hsj'saje'sh.
+    .suffix = { ent-BasePlushie.suffix }
+ent-PlushieHarel = плюшевая Харель
+    .desc = Пахнет как свежая плазма.
+    .suffix = { ent-BasePlushie.suffix }
 
 # endregion Admin plushies
 
@@ -155,6 +164,15 @@ ent-EvilPlushieRedstonewolf = злобная плюшевая Айрин
 ent-EvilPlushieRouge = злобная плюшевая Руж
     .suffix = Злобный
     .desc = { ent-PlushieRouge.desc }
+ent-EvilPlushieDoremyZerg = злобная плюшевая Айя
+    .suffix = Злобный
+    .desc = { ent-PlushieDoremyZerg.desc }
+ent-EvilPlushieSanyati = злобная плюшевая Никсома
+    .suffix = Злобный
+    .desc = { ent-PlushieSanyati.desc }
+ent-EvilPlushieHarel = злобная плюшевая Харель
+    .suffix = Злобный
+    .desc = { ent-PlushieHarel.desc }
 
 # endregion Evil plushies
 
