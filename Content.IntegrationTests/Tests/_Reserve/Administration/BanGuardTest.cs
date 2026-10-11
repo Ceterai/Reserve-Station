@@ -54,6 +54,7 @@ public sealed class BanGuardTest
                 // Ожидаемые ошибки отправки в Discord не должны валить тест
                 logManager.GetSawmill("DISCORD").Level = LogLevel.Fatal;
                 logManager.GetSawmill("discord.ban_guard").Level = LogLevel.Fatal;
+                logManager.GetSawmill("discord.logger").Level = LogLevel.Fatal;
                 cfg.SetCVar(CCVars.DiscordBansWebhook, BrokenWebhook);
                 cfg.SetCVar(CCVars.DiscordAdminLogsWebhook, BrokenWebhook);
                 cfg.SetCVar(CCVars.AdminChatDiscordChannelId, "not-a-channel-id");
@@ -62,6 +63,7 @@ public sealed class BanGuardTest
             else
             {
                 logManager.GetSawmill("discord.ban_guard").Level = LogLevel.Debug;
+                logManager.GetSawmill("discord.logger").Level = LogLevel.Debug;
             }
         });
 
