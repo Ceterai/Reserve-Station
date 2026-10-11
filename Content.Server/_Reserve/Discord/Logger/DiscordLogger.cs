@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Database;
 using Content.Server.Discord;
@@ -29,8 +30,16 @@ public sealed partial class DiscordLogger : IDiscordLogger, IPostInjectInit
         _sawmill = _logManager.GetSawmill("discord.logger");
     }
 
+    // Сообщения собираются по очереди: БД в тестах синхронная и не терпит параллельных запросов
+    private readonly SemaphoreSlim _gate = new(1, 1);
+
     public async Task Guarded(Func<Task> action)
     {
+        // Ничего не настроено - не тратим запросы к БД на сборку сообщения, которое некуда отправить
+        if (!HasAnyTarget())
+            return;
+
+        await _gate.WaitAsync();
         try
         {
             await action();
@@ -39,8 +48,21 @@ public sealed partial class DiscordLogger : IDiscordLogger, IPostInjectInit
         {
             _sawmill.Error($"Discord logging failed: {e}");
         }
+        finally
+        {
+            _gate.Release();
+        }
     }
 
+    private bool HasAnyTarget()
+    {
+        if (_link.IsConnected)
+            return true;
+
+        return !string.IsNullOrWhiteSpace(_cfg.GetCVar(CCVars.DiscordBansWebhook))
+               || !string.IsNullOrWhiteSpace(_cfg.GetCVar(CCVars.DiscordAdminLogsWebhook))
+               || !string.IsNullOrWhiteSpace(_cfg.GetCVar(CCVars.DiscordAdminchatWebhook));
+    }
     public DiscordLogMessage NewMessage(string titleKey, int color, int? id = null, params (string, object)[] titleArgs)
     {
         var args = new (string, object)[titleArgs.Length + 1];

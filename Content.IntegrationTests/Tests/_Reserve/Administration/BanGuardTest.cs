@@ -35,7 +35,7 @@ public sealed class BanGuardTest
     [TestCase(true)]
     public async Task BansAndNotesWorkWithDiscordConfig(bool brokenConfig)
     {
-        await using var pair = await PoolManager.GetServerClient(new PoolSettings { Connected = true, Dirty = true });
+        await using var pair = await PoolManager.GetServerClient(new PoolSettings { Connected = true, Destructive = true });
         var server = pair.Server;
 
         var cfg = server.ResolveDependency<IConfigurationManager>();

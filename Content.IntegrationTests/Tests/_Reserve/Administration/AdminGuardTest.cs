@@ -27,7 +27,7 @@ public sealed class AdminGuardTest
     [TestCase(true)]
     public async Task AdminEventsWorkWithDiscordConfig(bool brokenConfig)
     {
-        await using var pair = await PoolManager.GetServerClient(new PoolSettings { Connected = true, Dirty = true });
+        await using var pair = await PoolManager.GetServerClient(new PoolSettings { Connected = true, Destructive = true });
         var server = pair.Server;
 
         var cfg = server.ResolveDependency<IConfigurationManager>();
