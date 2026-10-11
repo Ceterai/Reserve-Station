@@ -91,7 +91,7 @@ public sealed partial class DiscordLogger : IDiscordLogger, IPostInjectInit
         catch (Exception e)
         {
             // Упоминание - дополнительная информация, без него сообщение всё равно отправляется
-            _sawmill.Warning($"Failed to get linked Discord of {id}: {e}");
+            _sawmill.Info($"Failed to get linked Discord of {id}: {e}");
         }
 
         return label;

@@ -228,7 +228,7 @@ public sealed partial class BanGuardManager : IBanGuardManager, IPostInjectInit
         catch (Exception e)
         {
             // Список активных ролей - дополнительная информация, без неё сообщение всё равно отправляется
-            _sawmill.Warning($"Failed to get active role bans of {userId}: {e}");
+            _sawmill.Info($"Failed to get active role bans of {userId}: {e}");
             return;
         }
 

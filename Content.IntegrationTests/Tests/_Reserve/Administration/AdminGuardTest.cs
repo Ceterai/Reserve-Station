@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: AGPL-3.0-or-later
+﻿// SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Collections.Generic;
 using Content.Server._Reserve.Discord.AdminGuard;
@@ -110,6 +110,5 @@ public sealed class AdminGuardTest
         await pair.RunTicksSync(30);
         await Task.Delay(1500);
 
-        await pair.CleanReturnAsync();
     }
 }
