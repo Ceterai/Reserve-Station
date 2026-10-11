@@ -110,5 +110,6 @@ public sealed class AdminGuardTest
         await pair.RunTicksSync(30);
         await Task.Delay(1500);
 
+        await pair.CleanReturnAsync();
     }
 }
