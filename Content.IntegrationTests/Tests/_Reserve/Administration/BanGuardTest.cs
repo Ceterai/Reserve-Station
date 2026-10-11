@@ -21,6 +21,10 @@ namespace Content.IntegrationTests.Tests.Administration;
 ///     Reserve Red - BanGuard: баны, разбаны и заметки должны работать независимо от настроек Discord.
 ///     Любая ошибка внутри BanGuard логируется как Error и валит тест (FailureLogLevel = Warning).
 /// </summary>
+/// <remarks>
+///     Тест пишет в БД (баны, заметки, привязку Discord) и меняет CVar-ы, поэтому пара помечается Dirty,
+///     иначе другие тесты (например, PardonTest, ожидающий пустую таблицу банов) увидят чужие данные.
+/// </remarks>
 [TestFixture]
 public sealed class BanGuardTest
 {
@@ -31,7 +35,7 @@ public sealed class BanGuardTest
     [TestCase(true)]
     public async Task BansAndNotesWorkWithDiscordConfig(bool brokenConfig)
     {
-        await using var pair = await PoolManager.GetServerClient(new PoolSettings { Connected = true });
+        await using var pair = await PoolManager.GetServerClient(new PoolSettings { Connected = true, Dirty = true });
         var server = pair.Server;
 
         var cfg = server.ResolveDependency<IConfigurationManager>();
