@@ -231,6 +231,19 @@ ent-FloorTileItemDesertAstroSand = пустынный астро-песок
 
 ent-FloorTileItemXeno = ксенопол
     .desc = { ent-FloorTileItemBase.desc }
+    .suffix = Ксеноморф
+ent-FloorTileItemXenoSteel = стальной ксенопол
+    .desc = { ent-FloorTileItemBase.desc }
+    .suffix = Ксеноморф
+ent-FloorTileItemXenoSteelCorner = угловой стальной ксенопол
+    .desc = { ent-FloorTileItemBase.desc }
+    .suffix = Ксеноморф
+ent-FloorTileItemXenoMaint = ксенопол техобслуживания
+    .desc = { ent-FloorTileItemBase.desc }
+    .suffix = Ксеноморф
+
+ent-FloorTileItemXenoborg = ксеноборг-пол
+    .desc = { ent-FloorTileItemBase.desc }
 
 ent-FloorTileItemDarkSquiggly = тёмная волнистая стальная плитка
     .desc = { ent-FloorTileItemDark.desc }

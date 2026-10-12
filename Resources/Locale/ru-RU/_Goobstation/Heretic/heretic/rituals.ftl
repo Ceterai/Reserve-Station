@@ -29,7 +29,7 @@ heretic-ritual-fail-sacrifice-blade = У некоторых из них еще �
 
 ## side quests
 
-heretic-ritual-fail-sacrifice-rust = Недостаточно гниющих или кремниевых трупов.
+heretic-ritual-fail-sacrifice-rust = Недостаточно гниющих или синтетных трупов.
 heretic-ritual-fail-limit = Вы достигли предела количества предметов, которые предоставляет этот ритуал.
 heretic-ritual-fail-no-lost-blades = Потерянные лезвия не могут быть найдены.
 heretic-ritual-fail-already-ascended = Вы уже вознесены.

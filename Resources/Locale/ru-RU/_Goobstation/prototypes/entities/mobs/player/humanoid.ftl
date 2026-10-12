@@ -116,3 +116,4 @@ ent-RandomHumanoidSpawnerCBURNUnitNoReq = { ent-RandomHumanoidSpawnerCBURNUnit }
 
 ent-RandomHumanoidGreyTider = роль призрака - грейтайдер
     .desc = { "" }
+    .suffix = Грейтайд
