@@ -102,14 +102,17 @@ ent-CratePirate = пиратский сундук
 ent-CrateToyBox = коробка игрушек
     .desc = Коробка, переполненная весельем.
     .suffix = Пустой
+
 ent-CrateCoffin = гроб
     .desc = Удобный гроб, прекрасное место для вампиров и покойников.
+    .suffix = Вампир, Священник
 ent-CrateWoodenGrave = могила
     .desc = Здесь кто-то умер...
-    .suffix = Дерево
+    .suffix = Дерево, Священник
 ent-CrateStoneGrave = могила
     .desc = Здесь кто-то умер...
-    .suffix = Камень
+    .suffix = Камень, Священник
+
 ent-CrateTrashCart = мусорная тележка
     .desc = { ent-CrateBaseWeldable.desc }
 ent-CrateTrashCartJani = мусорная тележка уборщика

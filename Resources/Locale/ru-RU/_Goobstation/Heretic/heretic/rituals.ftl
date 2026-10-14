@@ -25,7 +25,7 @@ heretic-ritual-fail-reagentpuddle = Здесь нет { $reagentname }.
 heretic-ritual-fail-temperature-hot = Здесь слишком жарко.
 heretic-ritual-fail-temperature-cold = Здесь недостаточно холодно.
 heretic-ritual-fail-sacrifice-ash = Здесь либо недостаточно мертвых, либо горящих.
-heretic-ritual-fail-sacrifice-blade = У некоторых из них еще есть голова на плечах.
+heretic-ritual-fail-sacrifice-blade = У некоторых из них ещё есть голова на плечах.
 
 ## side quests
 

@@ -3,7 +3,7 @@ reagent-effect-guidebook-add-moodlet =
     и длится {$timeout} секунд.
 
 reagent-effect-guidebook-remove-moodlet =
-    Удаляет мудлет {$name}.
+    Снимает эффект настроения {$name}.
 
 reagent-effect-guidebook-purge-moodlets =
-    Удаляет все активные непостоянные мудлеты.
+    Удаляет все активные непостоянные эффекты настроения.

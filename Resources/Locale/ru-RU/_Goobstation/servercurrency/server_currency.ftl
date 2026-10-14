@@ -81,5 +81,5 @@ gs-balanceui-remark-token-midtier-antag = Купил мидтир антаг т�
 gs-balanceui-remark-token-ghost = Купил гостроль токен. (удалите заметку после выдачи)
 gs-balanceui-remark-token-lowtier-antag = Купил ловтир антаг токен. (удалите заметку после выдачи)
 gs-balanceui-remark-token-admin-abuse = Купил админ абуз токен. (удалите заметку после выдачи)
-gs-balanceui-shop-click-confirm = Нажмите еще раз, чтобы подтвердить.
+gs-balanceui-shop-click-confirm = Нажмите ещё раз, чтобы подтвердить.
 gs-balanceui-shop-purchased = Куплено: { $item }
