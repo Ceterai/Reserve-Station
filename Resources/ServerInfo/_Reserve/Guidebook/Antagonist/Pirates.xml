@@ -91,7 +91,7 @@
   </Box>
 
   <Box>
-    <GuideEntityEmbed Entity="EnergyCutlass" Caption="энергосабля"/>
+    <GuideEntityEmbed Entity="EnergyCutlass"/>
     <GuideEntityEmbed Entity="WeaponShotgunBlunderbussHighCapacity"/>
     <GuideEntityEmbed Entity="WeaponLauncherPirateCannon"/>
   </Box>

@@ -23,7 +23,7 @@ ent-EnergyDaggerBox = футляр энергокинжала
     .suffix = Оружие, Нож
 
 ent-EnergyCutlass = энергосабля
-    .suffix = Оружие, Меч, Пират, Капитан, Абордаж
+    .suffix = Оружие, Меч, Пират, Абордаж, Капитан
     .desc = Тот, кто сделал это, должно быть совсем не любит игрушки.
 
 ent-CyborgEnergySword = { ent-EnergySword }
