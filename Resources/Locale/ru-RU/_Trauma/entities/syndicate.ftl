@@ -130,18 +130,18 @@ ent-BulletStickyGrenade = липкий гранатный заряд
 
 ent-LauncherStickyGrenadeRegenerating = липкий гранатомёт
     .desc = Самозаряжающийся гранатомет, стреляющий липкими гранатами. Они встраиваются в любую поверхность, в которую попадают, и взрываются через 3 секунды.
-    .suffix = Регенерирующий, Синдикат, Аплинк
+    .suffix = Оружие, Регенерирующий, Синдикат, Аплинк
 
 ent-WeaponPistolViperAppraisal = { ent-AppraisalTool }
     .desc = { ent-AppraisalTool.desc }
-    .suffix = Пистолет, Синдикат, Аплинк
+    .suffix = Оружие, Пистолет, Синдикат, Аплинк
 
 ent-RealBananiumSword = { ent-BananiumSword }
     .desc = { ent-BananiumSword.desc }
-    .suffix = Настоящий, Синдикат, Аплинк
+    .suffix = Оружие, Настоящий, Синдикат, Аплинк
 ent-RealFoamCutlass = { ent-FoamCutlass }
     .desc = { ent-FoamCutlass.desc }
-    .suffix = Настоящий, Синдикат, Аплинк
+    .suffix = Оружие, Меч, Настоящий, Синдикат, Аплинк
 
 ent-UtilityKnifeReagent = { ent-UtilityKnife }
     .desc = { ent-UtilityKnife.desc }
