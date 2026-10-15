@@ -6,6 +6,9 @@ ent-SpacemenFigureSpawner = спавнер минифигурки космона
     .desc = { ent-MarkerBase.desc }
     .suffix = Только для библиотекарей, маппить с осторожностью!
 
+ent-TargetDartsFlatpack = упакованная { ent-TargetDarts }
+    .desc = Упаковка, при помощи которой можно создать мишень для игры в дартс.
+
 ent-RandomPersonalAI = спавнер случайного персонального ИИ
     .desc = { ent-MarkerBase.desc }
     .suffix = Нормальный
