@@ -221,6 +221,8 @@ ent-FloorTileItemIronsandConcrete = железопесчаная бетонна�
     .desc = { ent-FloorTileItemBase.desc }
 ent-FloorTileItemAstroIronsand = астро-железный песок
     .desc = Фальшивый красный песок. Импортирован с фальшивого Марса.
+ent-FloorTileItemAstroIronsandBorderless = { ent-FloorTileItemAstroIronsand } без границы
+    .desc = { ent-FloorTileItemAstroIronsand.desc }
 
 ent-FloorTileItemDarkAstroGrass = тёмная астро-трава
     .desc = Искусственная трава, отлично прячущая провода, поставляется с реалистичными НаноТравинками!
