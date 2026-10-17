@@ -20,9 +20,9 @@ ent-ClothingUniformJumpsuitBlueshieldOfficer = комбинезон офицер
     .desc = Серо-синий комбинезон с короткими рукавами, изготовленный из прочного материала.
 ent-ClothingUniformJumpsuitBlueshieldShirt = голубая рубашка офицера Синего Щита
     .desc = Официальная форма охранника. Довольно безопасно и довольно занято.
-ent-ClothingUniformMailCarrier = униформа почтальона
+ent-ClothingUniformMailCarrier = комбинезон почтальона
     .desc = Враг собак - везде.
-ent-ClothingUniformHecu = униформа HECU
+ent-ClothingUniformHecu = комбинезон HECU
     .desc = Убить Фримена.
     .suffix = Адмем, Халф-Лайф
 
