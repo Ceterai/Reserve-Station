@@ -86,7 +86,7 @@ ent-SyndicateKudzu = { ent-Kudzu }
 
 ent-DefibrillatorSyndicateUnpowered = { ent-DefibrillatorSyndicate }
     .desc = { ent-DefibrillatorSyndicate.desc }
-    .suffix = Всегда включен, Синдикат, Аплинк
+    .suffix = Всегда включён, Синдикат, Аплинк
 
 ent-SyndiCrewMonitor = { ent-HandheldCrewMonitor }
     .desc = { ent-HandheldCrewMonitor.desc }

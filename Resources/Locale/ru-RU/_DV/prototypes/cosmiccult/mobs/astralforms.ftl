@@ -1,10 +1,10 @@
-ent-MobCosmicAstralAscended = астральный вознесенный
+ent-MobCosmicAstralAscended = астральный вознесённый
     .desc = Трансцендент, асцендент.
     .suffix = Космический культ, AI
 ent-MobCosmicAstralProjection = астральная проекция
     .desc = Ни здесь, ни там.
     .suffix = Космический культ, AI
-ent-MobRogueAscended = изгнанный вознесенный
+ent-MobRogueAscended = изгнанный вознесённый
     .desc = Существо из границ блюспейса. Его контуры постоянно размываются и сливаются воедино, что нервирует глаз.
     .suffix = Космический культ, МидраундАнтагонист
 

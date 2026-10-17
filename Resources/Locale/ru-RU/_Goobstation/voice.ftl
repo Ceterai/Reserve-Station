@@ -7,7 +7,7 @@ ui-escape-voice-chat = Голосовой чат
 
 cmd-voicechat-desc = Показывает руководство по голосовому чату с вашей ссылкой и кодом
 cmd-voicechat-help = Использование: voicechat
-cmd-voicechat-unavailable = Голосовой чат не включен на этом сервере.
+cmd-voicechat-unavailable = Голосовой чат не включён на этом сервере.
 
 voice-link-connected = Ваш микрофон подключен.
 voice-link-disconnected = Ваш микрофон ещё не подключен.
@@ -57,11 +57,11 @@ voice-guide-rules =
     Веселитесь!
 voice-guide-connect-title = Подключите ваш микрофон
 
-cmd-voicemute-desc = Переключает, отключен ли голосовой чат игрока.
+cmd-voicemute-desc = Переключает, отключён ли голосовой чат игрока.
 cmd-voicemute-help = Использование: voicemute <имя_пользователя>
 cmd-voicemute-hint = <имя_пользователя>
-cmd-voicemute-muted = Голосовой чат для {$player} отключен.
-cmd-voicemute-unmuted = Голосовой чат для {$player} включен.
+cmd-voicemute-muted = Голосовой чат для {$player} отключён.
+cmd-voicemute-unmuted = Голосовой чат для {$player} включён.
 
 comms-console-menu-voice-broadcast-button = Голосовая трансляция
 comms-console-menu-voice-broadcast-button-tooltip = Говорите на всю станцию через голосовой чат в течение короткого времени.
@@ -151,10 +151,10 @@ voice-god-target-station = вся станция
 voice-god-cue = Голос эхом разносится в вашей голове...
 
 voice-mic-offline = Голосовой чат не открыт. Нажмите, чтобы открыть его.
-voice-mic-ready = Микрофон включен. Нажмите, чтобы отключить.
+voice-mic-ready = Микрофон включён. Нажмите, чтобы отключить.
 voice-mic-live = Вы в эфире. Нажмите, чтобы отключить.
 voice-mic-blocked = Ваш персонаж не может говорить прямо сейчас.
-voice-mic-muted = Микрофон отключен. Нажмите, чтобы включить.
+voice-mic-muted = Микрофон отключён. Нажмите, чтобы включить.
 voice-mic-deafened = Вы оглушены. Нажмите, чтобы снять оглушение и включить микрофон.
 voice-deafen-off = Оглушение: отключает весь голосовой чат и ваш микрофон.
 voice-deafen-on = Вы оглушены. Нажмите, чтобы снять оглушение.
