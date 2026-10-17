@@ -4,3 +4,6 @@ ent-CosmicConstructPylon = вакуумная часовня
 ent-CosmicConstructPylonSpawnIn = { ent-CosmicConstructPylon }
     .suffix = Спавн, НЕ МАППИТЬ, Космический культ
     .desc = { ent-CosmicConstructPylon.desc }
+ent-CosmicBorgChantry = вакуумная часовня
+    .desc = Его поверхность бурлит буйным зловещим светом.
+    .suffix = Космический культ
