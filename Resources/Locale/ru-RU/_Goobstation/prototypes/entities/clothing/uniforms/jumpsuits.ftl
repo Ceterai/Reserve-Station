@@ -76,9 +76,10 @@ ent-ClothingUniformOverallsSalvageSpecialist = { ent-ClothingUniformJumpsuitSalv
 ent-ClothingUniformJumpsuitResearchDirectorAlt = водолазка научного руководителя
     .desc = Это водолазка, которую носят те, кто обладает необходимыми знаниями для того, чтобы занять должность научного руководителя. Ее ткань обеспечивает незначительную защиту от биологических загрязнений.
     .suffix = Альтернативный
-
 ent-ClothingUniformJumpsuitVeteranSecurity = воздушный комбинезон службы безопасности
     .desc = Воздушная версия стандартного комбинезона службы безопасности, обычно выдаваемая в смены, когда отсутствуют атмосферные техники.
-
 ent-ClothingUniformJumpsuitGoldenLiaison = золотой комбинезон ЦентКом
     .desc = Бело-золотой мундир безупречного кроя, который носят высокопоставленные чины Центрального командования.
+ent-ClothingUniformJumpsuitMonk = брюки монаха
+    .desc = Простые брюки, не намного лучше старого мешка.
+    .suffix = Священник

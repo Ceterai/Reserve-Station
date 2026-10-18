@@ -219,10 +219,19 @@ ent-FloorTileItemUraniumMarble = урановая мраморная плитк�
 
 ent-FloorTileItemIronsandConcrete = железопесчаная бетонная плитка
     .desc = { ent-FloorTileItemBase.desc }
+    .suffix = Железный песок
+ent-FloorTileItemIronsandConcreteMono = большая { ent-FloorTileItemIronsandConcrete }
+    .desc = { ent-FloorTileItemIronsandConcrete.desc }
+    .suffix = Железный песок
+ent-FloorTileItemIronsandConcreteSmooth = гладкая { ent-FloorTileItemIronsandConcrete }
+    .desc = { ent-FloorTileItemIronsandConcrete.desc }
+    .suffix = Железный песок
 ent-FloorTileItemAstroIronsand = астро-железный песок
     .desc = Фальшивый красный песок. Импортирован с фальшивого Марса.
+    .suffix = Железный песок
 ent-FloorTileItemAstroIronsandBorderless = { ent-FloorTileItemAstroIronsand } без границы
     .desc = { ent-FloorTileItemAstroIronsand.desc }
+    .suffix = Железный песок
 
 ent-FloorTileItemDarkAstroGrass = тёмная астро-трава
     .desc = Искусственная трава, отлично прячущая провода, поставляется с реалистичными НаноТравинками!

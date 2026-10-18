@@ -1,9 +1,19 @@
-ent-MaterialFlowersAsh1 = пепельные цветы
-    .desc = Сырьё.
-    .suffix = Один
-ent-MaterialFlowersAsh10 = пепельные цветы
-    .desc = { ent-MaterialFlowersAsh1.desc }
-    .suffix = 10
 ent-MaterialFlowersAsh = пепельные цветы
-    .desc = { ent-MaterialFlowersAsh1.desc }
-    .suffix = Полный
+    .desc = Собранные в купу пепельные цветы.
+    .suffix = Полный, Лаваленд
+ent-MaterialFlowersAsh1 = { ent-MaterialFlowersAsh }
+    .desc = { ent-MaterialFlowersAsh.desc }
+    .suffix = Один, Лаваленд
+ent-MaterialFlowersAsh10 = { ent-MaterialFlowersAsh }
+    .desc = { ent-MaterialFlowersAsh.desc }
+    .suffix = 10, Лаваленд
+
+ent-MaterialFlowersPale = бледные цветы
+    .desc = Собранные в купу бледные цветы.
+    .suffix = Полный, Лаваленд
+ent-MaterialFlowersPale1 = { ent-MaterialFlowersPale }
+    .desc = { ent-MaterialFlowersPale.desc }
+    .suffix = Один, Лаваленд
+ent-MaterialFlowersPale10 = { ent-MaterialFlowersPale }
+    .desc = { ent-MaterialFlowersPale.desc }
+    .suffix = 10, Лаваленд

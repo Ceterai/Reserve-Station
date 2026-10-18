@@ -3,18 +3,26 @@ ent-SlasherMachete = мачете
     .suffix = Оружие, Нож, Мясник
 ent-ClothingHeadHatSlasherMask = маска мясника
     .desc = Защитная маска для лица, устанавливаемая на голове и предназначенная для полной защиты пользователя от посторонних глаз.
+    .suffix = Мясник
 ent-ClothingOuterSlasherApron = фартук мясника
     .desc = Необычный фартук для стильной особы.
+    .suffix = Мясник
 ent-ClothingHandsSlasherGloves = перчатки мясника
     .desc = Тяжёлые чёрные перчатки, покрытые пятнами времени.
+    .suffix = Мясник
 ent-ClothingShoesSlasher = обувь мясника
     .desc = Старые кожаные ботинки, знававшие лучшие времена.
+    .suffix = Мясник
+ent-ClothingUniformSlasher = { ent-ClothingUniformJumpsuitColorGrey }
+    .desc = Серый комбинезон с лёгким запахом крови.
+    .suffix = Мясник
 ent-SlasherMeatSpike = жуткий мясной крюк
     .desc = Возможно, вам захочется сбежать.
     .suffix = Мясник
 
 ent-ClothingMaskSlasher = маска мясника
     .desc = Защитная маска для лица. Через неё вы не почувствуете страх, но можете его вызвать.
+    .suffix = Мясник
 
 # Spring-locked kit
 

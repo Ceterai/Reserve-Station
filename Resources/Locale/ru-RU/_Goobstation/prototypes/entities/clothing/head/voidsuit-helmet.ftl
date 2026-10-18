@@ -1,6 +1,6 @@
 ent-ClothingHeadHelmetHardsuitChronolegioneer = футуристичный шлем
     .desc = Шлем бойцов будущего, предназначенный для специальных операций с временными потоками.
-    .suffix = Хронолегионер
+    .suffix = Хронолегионер, Адмем
 ent-ClothingHeadHelmetHardsuitBlueshield = шлем офицера Синего Щита
     .desc = Шлем скафандра офицера Синего Щита.
 ent-ClothingHeadHelmetHardsuitCybersunStealth = шлем стелс-костюма Cybersun

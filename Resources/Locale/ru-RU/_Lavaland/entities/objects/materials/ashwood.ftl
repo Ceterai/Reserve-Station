@@ -1,9 +1,19 @@
-ent-MaterialAshwoodStick1 = палка из пепельного дерева
-    .desc = Сырьё.
-    .suffix = Один
-ent-MaterialAshwoodStick10 = палка из пепельного дерева
-    .desc = { ent-MaterialAshwoodStick1.desc }
-    .suffix = 10
 ent-MaterialAshwoodStick = палка из пепельного дерева
-    .desc = { ent-MaterialAshwoodStick1.desc }
+    .desc = Небольшие палки из пепельного дерева.
+    .suffix = Полный, Лаваленд
+ent-MaterialAshwoodStick1 = { ent-MaterialAshwoodStick }
+    .desc = { ent-MaterialAshwoodStick.desc }
+    .suffix = Один, Лаваленд
+ent-MaterialAshwoodStick10 = { ent-MaterialAshwoodStick }
+    .desc = { ent-MaterialAshwoodStick.desc }
+    .suffix = 10, Лаваленд
+
+ent-MaterialWoodStick = деревянная палка
+    .desc = Небольшие деревянные палки.
     .suffix = Полный
+ent-MaterialWoodStick1 = { ent-MaterialWoodStick }
+    .desc = { ent-MaterialWoodStick.desc }
+    .suffix = Один
+ent-MaterialWoodStick10 = { ent-MaterialWoodStick }
+    .desc = { ent-MaterialWoodStick.desc }
+    .suffix = 10
