@@ -25,11 +25,11 @@ ent-ClothingNeckGangTophat6 = { ent-ClothingNeckGangTophatBase }
 # Yakuza outfit
 
 ent-ClothingShoesGangDameDane = обувь якудзы
-    .description = Наконец-то... цвета вашей банды наконец-то проявляются.
+    .desc = Наконец-то... цвета вашей банды наконец-то проявляются.
     .suffix = Война банд
 ent-ClothingOuterGangDameDane = пальто якудзы
-    .description = Пятница... выполнено в стиле вашей банды.
+    .desc = Пятница... выполнено в стиле вашей банды.
     .suffix = Война банд
 ent-ClothingUniformGangDameDane = костюм якудзы
-    .description = Бака митай... одет в цвета вашей банды.
+    .desc = Бака митай... одет в цвета вашей банды.
     .suffix = Война банд
