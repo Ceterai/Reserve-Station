@@ -80,8 +80,7 @@ public sealed partial class DiscordLinkCog
     }
 
     /// <summary>
-    ///     Dynamically assigns a Patron Tier to a player based on their Discord account.
-    ///     First, checks if the player has a linked Discord account and then assigns the appropriate Patron Tier based on their Discord roles.
+    ///     Assigns all patron tiers matching the linked Discord account's roles.
     /// </summary>
     public async Task AssignPatronTierAsync(NetUserId playerId, RestClient client, ulong guildId)
     {
@@ -102,18 +101,10 @@ public sealed partial class DiscordLinkCog
         }
 
         // Get all patron tiers
-        var patronTiers = _prototypes.EnumeratePrototypes<PatronTierPrototype>()
-            .OrderBy(patronTier => patronTier.Priority);
-
-        foreach (var patronTier in patronTiers)
-        {
-            if (member.RoleIds.Contains(patronTier.DiscordRole))
-            {
-                await _database.SetPatron(playerId, patronTier.DatabaseId);
-                return;
-            }
-        }
-        // No matching patron tier found or member does not have any patron roles.
-        await _database.SetPatron(playerId, null);
+        var tierIds = _prototypes.EnumeratePrototypes<PatronTierPrototype>()
+            .Where(tier => member.RoleIds.Contains(tier.DiscordRole))
+            .Select(tier => tier.DatabaseId)
+            .ToList();
+        await _database.SetPatronTiers(playerId, tierIds);
     }
 }

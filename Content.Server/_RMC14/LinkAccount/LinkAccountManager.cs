@@ -43,7 +43,9 @@ public sealed class LinkAccountManager : IPostInjectInit
         var linked = await _db.HasLinkedAccount(player.UserId, cancel);
         cancel.ThrowIfCancellationRequested();
 
-        var sharedTier = patron == null ? null : GetSharedTier(patron.TierId); // Goob - patron tier prototypes
+        var tiers = GetPatronTierPrototypes(patron);  // Reserve edit: Maecenas System
+        var sharedTiers = tiers.Select(GetSharedTier).ToList();  // Reserve edit: Maecenas System
+        var sharedTier = tiers.Count == 0 ? null : GetCombinedTier(tiers); // Goob - patron tier prototypes  // Reserve edit: Maecenas System
 
         SharedRMCLobbyMessage? lobbyMessage = null;
         if (patron?.LobbyMessage is { Message.Length: > 0 } patronMsg)
@@ -67,7 +69,7 @@ public sealed class LinkAccountManager : IPostInjectInit
             ghostCosmetics = new SharedRMCGhostCosmetics(p.GhostParticles, p.GhostHat, p.GhostMask);
         // Goob end
 
-        _connected[player.UserId] = new SharedRMCPatronFull(sharedTier, linked, ghostColor, ghostCosmetics, patron?.OocIcon, lobbyMessage, shoutouts); // Goob - ghost cosmetics, ooc icon
+        _connected[player.UserId] = new SharedRMCPatronFull(sharedTier, linked, ghostColor, ghostCosmetics, patron?.OocIcon, lobbyMessage, shoutouts, sharedTiers); // Goob - ghost cosmetics, ooc icon  // Reserve edit: Maecenas System
     }
 
     private void FinishLoad(ICommonSession player)
@@ -200,11 +202,13 @@ public sealed class LinkAccountManager : IPostInjectInit
 
     public void SetOocIcon(NetUserId user, string? icon)
     {
-        if (GetPatronTier(user) is not { } tier)
+        var tiers = GetPatronTiers(user);  // Reserve edit: Maecenas System
+        if (tiers.Count == 0)  // Reserve edit: Maecenas System
             return;
 
         if (icon != null &&
-            (!_prototypes.TryIndex<OocIconPrototype>(icon, out var iconProto) || !tier.CanUse(iconProto)))
+            (!_prototypes.TryIndex<OocIconPrototype>(icon, out var iconProto) ||  // Reserve edit: Maecenas System
+             !tiers.Any(tier => tier.CanUse(iconProto))))  // Reserve edit: Maecenas System
         {
             return;
         }
@@ -221,27 +225,33 @@ public sealed class LinkAccountManager : IPostInjectInit
 
     public string? GetOocIcon(NetUserId user)
     {
-        if (GetPatronTier(user) is not { } tier)
+        var tiers = GetPatronTiers(user);  // Reserve edit: Maecenas System
+        if (tiers.Count == 0)  // Reserve edit: Maecenas System
             return null;
 
         if (GetPatron(user)?.OocIcon is { } selected &&
             _prototypes.TryIndex<OocIconPrototype>(selected, out var icon) &&
-            tier.CanUse(icon))
+            tiers.Any(tier => tier.CanUse(icon)))  // Reserve edit: Maecenas System
         {
             return icon.ID;
         }
 
-        return tier.Icon;
+        return tiers[0].Icon;  // Reserve edit: Maecenas System
     }
 
-    public PatronTierPrototype? GetPatronTier(NetUserId user)
+    public IReadOnlyList<PatronTierPrototype> GetPatronTiers(NetUserId user)  // Reserve edit: Maecenas System
     {
-        if (GetPatron(user)?.Tier is not { } tier)
-            return null;
+        if (GetPatron(user) is not { } patron)  // Reserve edit: Maecenas System
+            return [];  // Reserve edit: Maecenas System
 
-        return _prototypes.TryIndex(tier.Id, out var proto) ? proto : null;
+        return patron.Tiers  // Reserve edit: Maecenas System
+            .Select(tier => _prototypes.TryIndex(tier.Id, out var proto) ? proto : null)
+            .Where(proto => proto != null)
+            .Cast<PatronTierPrototype>()
+            .ToList();
     }
 
+    /* Reserve edit: Maecenas System
     private SharedRMCPatronTier? GetSharedTier(int databaseId)
     {
         if (_prototypes.GetPatronTierByDatabaseId(databaseId) is not { } proto)
@@ -249,6 +259,7 @@ public sealed class LinkAccountManager : IPostInjectInit
 
         return GetSharedTier(proto);
     }
+    */
 
     private static SharedRMCPatronTier GetSharedTier(PatronTierPrototype proto)
     {
@@ -265,6 +276,43 @@ public sealed class LinkAccountManager : IPostInjectInit
             proto.Icon
         );
     }
+
+    // Reserve edit start: Maecenas System
+    private static SharedRMCPatronTier GetCombinedTier(IReadOnlyCollection<PatronTierPrototype> tiers)
+    {
+        var primary = tiers.OrderBy(tier => tier.Priority).ThenBy(tier => tier.ID).First();
+        var shared = GetSharedTier(primary);
+
+        return shared with
+        {
+            ShowOnCredits = tiers.Any(tier => tier.ShowOnCredits),
+            GhostColor = tiers.Any(tier => tier.GhostColor),
+            GhostCosmetics = tiers.Any(tier => tier.GhostCosmetics),
+            GhostParticles = tiers.Any(tier => tier.GhostParticles),
+            LobbyMessage = tiers.Any(tier => tier.LobbyMessage),
+            RoundEndShoutout = tiers.Any(tier => tier.RoundEndShoutout),
+            OocIcons = tiers.Any(tier => tier.OocIconTiers.Count > 0),
+        };
+    }
+
+    private List<PatronTierPrototype> GetPatronTierPrototypes(RMCPatron? patron)
+    {
+        if (patron == null)
+            return [];
+
+        IEnumerable<int> tierIds = patron.TierAssignments.Count > 0
+            ? patron.TierAssignments.Select(assignment => assignment.TierId)
+            : new[] { patron.TierId };
+
+        return tierIds
+            .Select(_prototypes.GetPatronTierByDatabaseId)
+            .Where(tier => tier != null)
+            .Cast<PatronTierPrototype>()
+            .OrderBy(tier => tier.Priority)
+            .ThenBy(tier => tier.ID)
+            .ToList();
+    }
+    // Reserve edit end: Maecenas System
 
     private async Task SyncTiers()
     {
@@ -330,21 +378,21 @@ public sealed class LinkAccountManager : IPostInjectInit
         // Goob start - patron tier prototypes
         foreach (var patron in patrons)
         {
-            if (_prototypes.GetPatronTierByDatabaseId(patron.TierId) is not { ShowOnCredits: true } tier)
-                continue;
-
-            _allPatrons.Add(new SharedRMCPatron(patron.Player.LastSeenUserName, tier.ID));
+            foreach (var tier in GetPatronTierPrototypes(patron).Where(tier => tier.ShowOnCredits))  // Reserve edit: Maecenas System
+            {
+                _allPatrons.Add(new SharedRMCPatron(patron.Player.LastSeenUserName, tier.ID));  // Reserve edit: Maecenas System
+            }
         }
 
-        foreach (var (message, user, tierId) in messages)
+        foreach (var (message, user, tierIds) in messages)  // Reserve edit: Maecenas System
         {
-            if (_prototypes.GetPatronTierByDatabaseId(tierId) is { LobbyMessage: true })
+            if (tierIds.Any(tierId => _prototypes.GetPatronTierByDatabaseId(tierId) is { LobbyMessage: true }))  // Reserve edit: Maecenas System
                 _lobbyMessages.Add((message, user));
         }
 
-        foreach (var (name, tierId) in shoutouts)
+        foreach (var (name, tierIds) in shoutouts)  // Reserve edit: Maecenas System
         {
-            if (_prototypes.GetPatronTierByDatabaseId(tierId) is { RoundEndShoutout: true })
+            if (tierIds.Any(tierId => _prototypes.GetPatronTierByDatabaseId(tierId) is { RoundEndShoutout: true }))  // Reserve edit: Maecenas System
                 _shoutouts.Add(name);
         }
         // Goob end
@@ -399,7 +447,8 @@ public sealed class LinkAccountManager : IPostInjectInit
                 GhostCosmetics: connected?.GhostCosmetics,
                 OocIcon: connected?.OocIcon,
                 LobbyMessage: connected?.LobbyMessage,
-                RoundEndShoutout: connected?.RoundEndShoutout
+                RoundEndShoutout: connected?.RoundEndShoutout,
+                Tiers: [GetSharedTier(tier)]  // Reserve edit: Maecenas System
             );
             // Goob end
         }

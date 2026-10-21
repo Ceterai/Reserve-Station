@@ -37,9 +37,9 @@ rmc-ui-discord = Дискорд
 rmc-ui-patreon = Бусти
 rmc-ui-save = Сохранить
 
-rmc-ui-lobby-main = Уровень
+rmc-ui-lobby-main = Уровни
 rmc-ui-lobby-main-description = Спасибо что поддерживаешь Резерв!
-    {"\u000A"}[bold]Текущий уровень[/bold]: [color=#c23c2d]{ $tier }[/color]
+    {"\u000A"}[bold]Текущие уровни[/bold]: [color=#c23c2d]{ $tier }[/color]
     {"\u000A"}[bold]Бонусы в Бусти[/bold]
     - Доступ к тизерам и эксклюзивным постам
     {"\u000A"}[bold]Бонусы в Дискорде[/bold]

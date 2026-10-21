@@ -63,7 +63,22 @@ public sealed class RMCPatronTier
     public int Priority { get; set; }
 
     public List<RMCPatron> Patrons { get; set; } = default!;
+    public List<RMCPatronTierAssignment> Assignments { get; set; } = [];  // Reserve edit: Maecenas System
 }
+
+// Reserve edit start: Maecenas System
+[Table("rmc_patron_tier_assignments")]
+public sealed class RMCPatronTierAssignment
+{
+    public Guid PlayerId { get; set; }
+
+    public RMCPatron Patron { get; set; } = default!;
+
+    public int TierId { get; set; }
+
+    public RMCPatronTier Tier { get; set; } = default!;
+}
+// Reserve edit end: Maecenas System
 
 [Table("rmc_patrons")]
 [Index(nameof(TierId))]
@@ -77,6 +92,7 @@ public sealed class RMCPatron
     public int TierId { get; set; }
 
     public RMCPatronTier Tier { get; set; } = default!;
+    public List<RMCPatronTierAssignment> TierAssignments { get; set; } = [];  // Reserve edit: Maecenas System
     public int? GhostColor { get; set; } = default!;
     // Goob start - ghost cosmetics: selected cosmetic prototype ids
     public string? GhostParticles { get; set; }

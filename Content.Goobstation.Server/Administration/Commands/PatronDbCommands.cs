@@ -61,9 +61,10 @@ internal sealed partial class PatronSetCommand : BasePatronDbCommand
 {
     public override string Command => "patron:set";
 
-    public override string Description => "Set or remove a player's patron tier in the database";
+    public override string Description => "Add or remove a player's patron tier in the database";  // Reserve edit: Maecenas System
 
     public override string Help => "Usage: patron:set <username> <tier|none>\n" +
+                                    "Adds the specified tier; 'none' removes all tiers.\n" +  // Reserve edit: Maecenas System
                                     "Example: patron:set \"John Doe\" PatronTierCaptain\n" +
                                     "Example: patron:set \"John Doe\" none";
 
@@ -93,7 +94,7 @@ internal sealed partial class PatronSetCommand : BasePatronDbCommand
                 }
 
                 await RefreshPatrons([player.UserId.UserId]);
-                shell.WriteLine($"Removed patron status from '{player.LastSeenUserName}'.");
+                shell.WriteLine($"Removed all patron tiers from '{player.LastSeenUserName}'.");  // Reserve edit: Maecenas System
                 return;
             }
 
@@ -102,7 +103,7 @@ internal sealed partial class PatronSetCommand : BasePatronDbCommand
 
             await Db.SetPatron(player.UserId, tier.DatabaseId);
             await RefreshPatrons([player.UserId.UserId]);
-            shell.WriteLine($"Set '{player.LastSeenUserName}' to patron tier '{tier.ID}'.");
+            shell.WriteLine($"Added patron tier '{tier.ID}' to '{player.LastSeenUserName}'.");  // Reserve edit: Maecenas System
         }
         catch (Exception e)
         {

@@ -145,18 +145,21 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
             // Reserve edit start: Maecenas System
             SetTabTitle(_patronPerksWindow.MainTab, Loc.GetString("rmc-ui-lobby-main"));
             SetTabVisible(_patronPerksWindow.MainTab, tier is not null);
-            var tierName = "";
+            var tierName = string.Join(", ", _linkAccount.Tiers.Select(currentTier => currentTier.Tier));
             var tiersWithIconSelection = new[] {  // No easy way to check how many icons are in a tier, so we list them manually
                 "Maecenas2",
                 "Maecenas3",
                 "Maecenas4",
                 "Maecenas5",
                 "MaecenasX",
+                "Staff",
             };
             var maxTier = "MaecenasX";
             if (tier != null)
             {
-                tierName = tier.Tier;
+                if (string.IsNullOrEmpty(tierName))
+                    tierName = tier.Tier;
+
                 var mainDescription = Loc.GetString("rmc-ui-lobby-main-description", ("tier", tierName));
                 var lockedPerksDescription = "";
 
@@ -266,7 +269,7 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
             SetTabTitle(_patronPerksWindow.OocIconTab, Loc.GetString("goob-ui-ooc-icon"));
             SetTabVisible(_patronPerksWindow.OocIconTab, tier is { OocIcons: true });
             if (tier is { OocIcons: true })
-                PopulateOocIcons(tier);
+                PopulateOocIcons();  // Reserve edit: Maecenas System
             // Goob end
 
             UpdateExamples();
@@ -444,9 +447,11 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
         );
     }
 
-    private void PopulateOocIcons(SharedRMCPatronTier tier)
+    private void PopulateOocIcons()  // Reserve edit: Maecenas System
     {
-        if (_patronPerksWindow == null || !_prototype.TryIndex(tier.Id, out var tierProto))
+        if (_patronPerksWindow == null ||
+            _linkAccount.Tier is not { } tier ||  // Reserve edit: Maecenas System
+            !_prototype.TryIndex(tier.Id, out var tierProto))
             return;
 
         var window = _patronPerksWindow;
@@ -455,9 +460,26 @@ public sealed class LinkAccountUIController : UIController, IOnSystemChanged<Lin
         _selectedOocIcon = _linkAccount.OocIcon;
 
         var group = new ButtonGroup();
-        var icons = _prototype.GetAvailableOocIcons(tierProto).ToList();
+        // Reserve edit start: Maecenas System
+        var allowedIconTiers = new List<ProtoId<PatronTierPrototype>>();
+        foreach (var currentTier in _linkAccount.Tiers)
+        {
+            if (!_prototype.TryIndex(currentTier.Id, out var currentTierProto))
+                continue;
 
-        foreach (var iconTier in tierProto.OocIconTiers)
+            foreach (var iconTier in currentTierProto.OocIconTiers)
+            {
+                if (!allowedIconTiers.Contains(iconTier))
+                    allowedIconTiers.Add(iconTier);
+            }
+        }
+
+        var icons = _prototype.EnumeratePrototypes<OocIconPrototype>()
+            .Where(icon => allowedIconTiers.Contains(icon.Tier))
+            .ToList();
+        // Reserve edit end: Maecenas System
+
+        foreach (var iconTier in allowedIconTiers)  // Reserve edit: Maecenas System
         {
             var tierIcons = icons
                 .Where(icon => icon.Tier == iconTier)

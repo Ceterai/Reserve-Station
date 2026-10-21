@@ -58,6 +58,7 @@ namespace Content.Server.Database
         public DbSet<RMCLinkedAccount> RMCLinkedAccounts { get; set; } = default!;
         public DbSet<RMCPatronTier> RMCPatronTiers { get; set; } = default!;
         public DbSet<RMCPatron> RMCPatrons { get; set; } = default!;
+        public DbSet<RMCPatronTierAssignment> RMCPatronTierAssignments { get; set; } = default!;  // Reserve edit: Maecenas System
         public DbSet<RMCLinkingCodes> RMCLinkingCodes { get; set; } = default!;
         public DbSet<RMCLinkedAccountLogs> RMCLinkedAccountLogs { get; set; } = default!;
         public DbSet<RMCPatronLobbyMessage> RMCPatronLobbyMessages { get; set; } = default!;
@@ -71,6 +72,23 @@ namespace Content.Server.Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Reserve edit start: Maecenas System
+            modelBuilder.Entity<RMCPatronTierAssignment>()
+                .HasKey(e => new { e.PlayerId, e.TierId });
+
+            modelBuilder.Entity<RMCPatronTierAssignment>()
+                .HasOne(e => e.Patron)
+                .WithMany(e => e.TierAssignments)
+                .HasForeignKey(e => e.PlayerId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<RMCPatronTierAssignment>()
+                .HasOne(e => e.Tier)
+                .WithMany(e => e.Assignments)
+                .HasForeignKey(e => e.TierId)
+                .OnDelete(DeleteBehavior.Cascade);
+            // Reserve edit end: Maecenas System
+
             modelBuilder.Entity<Preference>()
                 .HasIndex(p => p.UserId)
                 .IsUnique();

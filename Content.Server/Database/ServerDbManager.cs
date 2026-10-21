@@ -351,15 +351,17 @@ namespace Content.Server.Database
         Task SyncPatronTiers(List<RMCPatronTier> tiers);
 
         Task<bool> SetPatron(Guid player, int? tierId);
+
+        Task SetPatronTiers(Guid player, List<int> tierIds);  // Reserve edit: Maecenas System
         // Goob end
 
         Task SetLobbyMessage(Guid player, string message);
 
         Task SetNTShoutout(Guid player, string name);
 
-        Task<List<(string Message, string User, int TierId)>> GetLobbyMessages(); // Goob - tier perks from prototypes
+        Task<List<(string Message, string User, List<int> TierIds)>> GetLobbyMessages(); // Goob - tier perks from prototypes
 
-        Task<List<(string Name, int TierId)>> GetShoutouts(); // Goob - tier perks from prototypes
+        Task<List<(string Name, List<int> TierIds)>> GetShoutouts(); // Goob - tier perks from prototypes
 
         #endregion
 
@@ -1164,6 +1166,12 @@ namespace Content.Server.Database
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.SetPatron(player, tierId));
         }
+
+        public Task SetPatronTiers(Guid player, List<int> tierIds)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.SetPatronTiers(player, tierIds));
+        }
         // Goob end
 
         public Task SetLobbyMessage(Guid player, string message)
@@ -1178,13 +1186,13 @@ namespace Content.Server.Database
             return RunDbCommand(() => _db.SetNTShoutout(player, name));
         }
 
-        public Task<List<(string Message, string User, int TierId)>> GetLobbyMessages() // Goob - tier perks from prototypes
+        public Task<List<(string Message, string User, List<int> TierIds)>> GetLobbyMessages() // Goob - tier perks from prototypes
         {
             DbReadOpsMetric.Inc();
             return RunDbCommand(() => _db.GetLobbyMessages());
         }
 
-        public Task<List<(string Name, int TierId)>> GetShoutouts() // Goob - tier perks from prototypes
+        public Task<List<(string Name, List<int> TierIds)>> GetShoutouts() // Goob - tier perks from prototypes
         {
             DbReadOpsMetric.Inc();
             return RunDbCommand(() => _db.GetShoutouts());
