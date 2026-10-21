@@ -1,19 +1,19 @@
 # GameStaff
-- type: oocIcon
-  id: OocIconAndheisking
-  name: ooc-icon-andheisking
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: andheisking
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconAndheisking
+#   name: ooc-icon-andheisking
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: andheisking
+#   tier: PatronTierGameStaff
 
-- type: oocIcon
-  id: OocIconAndroidonator
-  name: ooc-icon-androidonator
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: androidonator
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconAndroidonator
+#   name: ooc-icon-androidonator
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: androidonator
+#   tier: PatronTierGameStaff
 
 - type: oocIcon
   id: OocIconAnxiousmist
@@ -21,79 +21,79 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: anxiousmist
-  tier: PatronTierGameStaff
+  tier: Maecenas2
 
-- type: oocIcon
-  id: OocIconBaptr0b0t
-  name: ooc-icon-baptr0b0t
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: baptr0b0t
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconBaptr0b0t
+#   name: ooc-icon-baptr0b0t
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: baptr0b0t
+#   tier: PatronTierGameStaff
 
-- type: oocIcon
-  id: OocIconBirb
-  name: ooc-icon-birb
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: birb
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconBirb
+#   name: ooc-icon-birb
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: birb
+#   tier: PatronTierGameStaff
 
-- type: oocIcon
-  id: OocIconBlepington
-  name: ooc-icon-blepington
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: blepington
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconBlepington
+#   name: ooc-icon-blepington
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: blepington
+#   tier: PatronTierGameStaff
 
-- type: oocIcon
-  id: OocIconBomzis
-  name: ooc-icon-bomzis
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: bomzis
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconBomzis
+#   name: ooc-icon-bomzis
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: bomzis
+#   tier: PatronTierGameStaff
 
-- type: oocIcon
-  id: OocIconCarlander
-  name: ooc-icon-carlander
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: carlander
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconCarlander
+#   name: ooc-icon-carlander
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: carlander
+#   tier: PatronTierGameStaff
 
 - type: oocIcon
   id: OocIconCCCommander
-  name: ooc-icon-cccommander
+  name: ooc-icon-cent-comm-commander
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: CCCommander
-  tier: PatronTierGameStaff
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconCco
-  name: ooc-icon-cco
+  name: ooc-icon-cent-comm-official
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: cco
-  tier: PatronTierGameStaff
+  tier: MaecenasX
 
-- type: oocIcon
-  id: OocIconDaffyd5
-  name: ooc-icon-daffyd5
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: daffyd5
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconDaffyd5
+#   name: ooc-icon-daffyd5
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: daffyd5
+#   tier: PatronTierGameStaff
 
-- type: oocIcon
-  id: OocIconDurk
-  name: ooc-icon-durk
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: durk
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconDurk
+#   name: ooc-icon-durk
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: durk
+#   tier: PatronTierGameStaff
 
 - type: oocIcon
   id: OocIconFuture
@@ -101,39 +101,39 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/job_icons.rsi
     state: Future
-  tier: PatronTierGameStaff
+  tier: Maecenas2
 
-- type: oocIcon
-  id: OocIconHarel
-  name: ooc-icon-harel
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: harel
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconHarel
+#   name: ooc-icon-harel
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: harel
+#   tier: PatronTierGameStaff
 
-- type: oocIcon
-  id: OocIconLeguia
-  name: ooc-icon-leguia
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: Leguia
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconLeguia
+#   name: ooc-icon-leguia
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: Leguia
+#   tier: PatronTierGameStaff
 
-- type: oocIcon
-  id: OocIconLehmok
-  name: ooc-icon-lehmok
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: lehmok
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconLehmok
+#   name: ooc-icon-lehmok
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: lehmok
+#   tier: PatronTierGameStaff
 
-- type: oocIcon
-  id: OocIconNightharlaw
-  name: ooc-icon-nightharlaw
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: nightharlaw
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconNightharlaw
+#   name: ooc-icon-nightharlaw
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: nightharlaw
+#   tier: PatronTierGameStaff
 
 - type: oocIcon
   id: OocIconNTIntern
@@ -141,7 +141,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: NTIntern
-  tier: PatronTierGameStaff
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconRedstonewolf
@@ -149,15 +149,15 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: redstonewolf
-  tier: PatronTierGameStaff
+  tier: Maecenas2
 
-- type: oocIcon
-  id: OocIconSmallmonke
-  name: ooc-icon-smallmonke
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: smallmonke
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconSmallmonke
+#   name: ooc-icon-smallmonke
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: smallmonke
+#   tier: PatronTierGameStaff
 
 - type: oocIcon
   id: OocIconSpecopsofficer
@@ -165,7 +165,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: specopsofficer
-  tier: PatronTierGameStaff
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconTrainer
@@ -173,7 +173,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/job_icons.rsi
     state: trainer
-  tier: PatronTierGameStaff
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconUnrobust
@@ -181,39 +181,39 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: unrobust
-  tier: PatronTierGameStaff
+  tier: Maecenas2
 
-- type: oocIcon
-  id: OocIconWetaht
-  name: ooc-icon-wetaht
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: wetaht
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconWetaht
+#   name: ooc-icon-wetaht
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: wetaht
+#   tier: PatronTierGameStaff
 
-- type: oocIcon
-  id: OocIconWine
-  name: ooc-icon-wine
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: wine
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconWine
+#   name: ooc-icon-wine
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: wine
+#   tier: PatronTierGameStaff
 
-- type: oocIcon
-  id: OocIconXeve
-  name: ooc-icon-xeve
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: xeve
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconXeve
+#   name: ooc-icon-xeve
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: xeve
+#   tier: PatronTierGameStaff
 
-- type: oocIcon
-  id: OocIconYummi
-  name: ooc-icon-yummi
-  icon:
-    sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
-    state: yummi
-  tier: PatronTierGameStaff
+# - type: oocIcon
+#   id: OocIconYummi
+#   name: ooc-icon-yummi
+#   icon:
+#     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
+#     state: yummi
+#   tier: PatronTierGameStaff
 
 # CentralCommand
 - type: oocIcon
@@ -222,7 +222,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/job_icons.rsi
     state: blueshield
-  tier: PatronTierCentralCommand
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconCBURN
@@ -230,7 +230,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: CBURN
-  tier: PatronTierCentralCommand
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconERTChaplain
@@ -238,7 +238,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: ERTChaplain
-  tier: PatronTierCentralCommand
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconERTEngineer
@@ -246,7 +246,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: ERTEngineer
-  tier: PatronTierCentralCommand
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconERTJanitor
@@ -254,7 +254,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: ERTJanitor
-  tier: PatronTierCentralCommand
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconERTLeader
@@ -262,7 +262,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: ERTLeader
-  tier: PatronTierCentralCommand
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconERTMedical
@@ -270,7 +270,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: ERTMedical
-  tier: PatronTierCentralCommand
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconERTSecurity
@@ -278,7 +278,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: ERTSecurity
-  tier: PatronTierCentralCommand
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconNanotrasen
@@ -286,7 +286,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Nanotrasen
-  tier: PatronTierCentralCommand
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconNanotrasenrepresentative
@@ -294,7 +294,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/job_icons.rsi
     state: nanotrasenrepresentative
-  tier: PatronTierCentralCommand
+  tier: MaecenasX
 
 # Captain
 - type: oocIcon
@@ -303,7 +303,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Captain
-  tier: PatronTierCaptain
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconChiefEngineer
@@ -311,7 +311,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: ChiefEngineer
-  tier: PatronTierCaptain
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconChiefMedicalOfficer
@@ -319,7 +319,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: ChiefMedicalOfficer
-  tier: PatronTierCaptain
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconHeadOfPersonnel
@@ -327,7 +327,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: HeadOfPersonnel
-  tier: PatronTierCaptain
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconHeadOfSecurity
@@ -335,7 +335,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: HeadOfSecurity
-  tier: PatronTierCaptain
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconHeadRevolutionary
@@ -343,7 +343,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: HeadRevolutionary
-  tier: PatronTierCaptain
+  tier: Maecenas5
 
 - type: oocIcon
   id: OocIconInitialInfected
@@ -351,7 +351,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: InitialInfected
-  tier: PatronTierCaptain
+  tier: Maecenas5
 
 - type: oocIcon
   id: OocIconQuarterMaster
@@ -359,7 +359,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: QuarterMaster
-  tier: PatronTierCaptain
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconResearchDirector
@@ -367,7 +367,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: ResearchDirector
-  tier: PatronTierCaptain
+  tier: MaecenasX
 
 # StationAi
 - type: oocIcon
@@ -376,7 +376,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Changeling
-  tier: PatronTierStationAi
+  tier: Maecenas5
 
 - type: oocIcon
   id: OocIconCluwne
@@ -384,7 +384,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Cluwne
-  tier: PatronTierStationAi
+  tier: Maecenas2
 
 - type: oocIcon
   id: OocIconParadoxClone
@@ -392,7 +392,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: ParadoxClone
-  tier: PatronTierStationAi
+  tier: Maecenas5
 
 - type: oocIcon
   id: OocIconParamedic
@@ -400,7 +400,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Paramedic
-  tier: PatronTierStationAi
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconRevolutionary
@@ -408,7 +408,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Revolutionary
-  tier: PatronTierStationAi
+  tier: Maecenas5
 
 - type: oocIcon
   id: OocIconStationAi
@@ -416,7 +416,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: StationAi
-  tier: PatronTierStationAi
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconWarden
@@ -424,7 +424,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Warden
-  tier: PatronTierStationAi
+  tier: Maecenas4
 
 # Janitor
 - type: oocIcon
@@ -433,7 +433,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: AtmosphericTechnician
-  tier: PatronTierJanitor
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconBrigmedic
@@ -441,7 +441,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Brigmedic
-  tier: PatronTierJanitor
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconCargoTechnician
@@ -449,7 +449,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: CargoTechnician
-  tier: PatronTierJanitor
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconChemist
@@ -457,7 +457,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Chemist
-  tier: PatronTierJanitor
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconCommandMaid
@@ -465,7 +465,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: CommandMaid
-  tier: PatronTierJanitor
+  tier: MaecenasX
 
 - type: oocIcon
   id: OocIconDetective
@@ -473,7 +473,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Detective
-  tier: PatronTierJanitor
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconGeneticist
@@ -481,7 +481,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Geneticist
-  tier: PatronTierJanitor
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconJanitor
@@ -489,7 +489,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Janitor
-  tier: PatronTierJanitor
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconMedicalDoctor
@@ -497,7 +497,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: MedicalDoctor
-  tier: PatronTierJanitor
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconRoboticist
@@ -505,7 +505,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Roboticist
-  tier: PatronTierJanitor
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconScientist
@@ -513,7 +513,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Scientist
-  tier: PatronTierJanitor
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconSecurityClown
@@ -521,7 +521,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: SecurityClown
-  tier: PatronTierJanitor
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconSecurityOfficer
@@ -529,7 +529,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: SecurityOfficer
-  tier: PatronTierJanitor
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconShaftMiner
@@ -537,7 +537,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: ShaftMiner
-  tier: PatronTierJanitor
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconStationEngineer
@@ -545,7 +545,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: StationEngineer
-  tier: PatronTierJanitor
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconSyndicate
@@ -553,7 +553,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Syndicate
-  tier: PatronTierJanitor
+  tier: Maecenas5
 
 - type: oocIcon
   id: OocIconVirologist
@@ -561,7 +561,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Virologist
-  tier: PatronTierJanitor
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconZombie
@@ -569,7 +569,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Zombie
-  tier: PatronTierJanitor
+  tier: Maecenas5
 
 # Assistant
 - type: oocIcon
@@ -578,7 +578,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Bartender
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconBorg
@@ -586,7 +586,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Borg
-  tier: PatronTierAssistant
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconBotanist
@@ -594,7 +594,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Botanist
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconBoxer
@@ -602,7 +602,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Boxer
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconChaplain
@@ -610,7 +610,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Chaplain
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconChef
@@ -618,7 +618,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Chef
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconClown
@@ -626,7 +626,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Clown
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconCoglove
@@ -634,7 +634,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: coglove
-  tier: PatronTierAssistant
+  tier: Maecenas2
 
 - type: oocIcon
   id: OocIconFloorpills
@@ -642,7 +642,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: floorpills
-  tier: PatronTierAssistant
+  tier: Maecenas2
 
 - type: oocIcon
   id: OocIconIan
@@ -650,7 +650,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: ian
-  tier: PatronTierAssistant
+  tier: Maecenas2
 
 - type: oocIcon
   id: OocIconLawyer
@@ -658,7 +658,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Lawyer
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconLibrarian
@@ -666,7 +666,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Librarian
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconMedicalIntern
@@ -674,7 +674,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: MedicalIntern
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconMime
@@ -682,7 +682,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Mime
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconMusician
@@ -690,7 +690,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Musician
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconNoId
@@ -698,7 +698,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: NoId
-  tier: PatronTierAssistant
+  tier: Maecenas2
 
 - type: oocIcon
   id: OocIconPassenger
@@ -706,7 +706,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Passenger
-  tier: PatronTierAssistant
+  tier: Maecenas2
 
 - type: oocIcon
   id: OocIconPrisoner
@@ -714,7 +714,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Prisoner
-  tier: PatronTierAssistant
+  tier: Maecenas2
 
 - type: oocIcon
   id: OocIconPsychologist
@@ -722,7 +722,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Psychologist
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconRadiohost
@@ -730,7 +730,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/job_icons.rsi
     state: radiohost
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconReporter
@@ -738,7 +738,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Reporter
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconResearchAssistant
@@ -746,7 +746,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: ResearchAssistant
-  tier: PatronTierAssistant
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconSecurityCadet
@@ -754,7 +754,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: SecurityCadet
-  tier: PatronTierAssistant
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconServiceWorker
@@ -762,7 +762,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: ServiceWorker
-  tier: PatronTierAssistant
+  tier: Maecenas3
 
 - type: oocIcon
   id: OocIconTechnicalAssistant
@@ -770,7 +770,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: TechnicalAssistant
-  tier: PatronTierAssistant
+  tier: Maecenas4
 
 - type: oocIcon
   id: OocIconTeddy
@@ -778,7 +778,7 @@
   icon:
     sprite: /Textures/_Goobstation/Interface/Misc/ooc_icons.rsi
     state: teddy
-  tier: PatronTierAssistant
+  tier: Maecenas2
 
 - type: oocIcon
   id: OocIconVisitor
@@ -786,7 +786,7 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Visitor
-  tier: PatronTierAssistant
+  tier: Maecenas2
 
 - type: oocIcon
   id: OocIconZookeeper
@@ -794,4 +794,4 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Zookeeper
-  tier: PatronTierAssistant
+  tier: Maecenas3

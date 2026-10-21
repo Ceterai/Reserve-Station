@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Client.Gameplay;
+using Content.Client.Credits;  // Reserve edit: Maecenas System
 using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Client.UserInterface.Systems.Info;
@@ -28,6 +29,7 @@ using Content.Client.Guidebook;
 using Content.Client.Lobby.UI;
 using Content.Client.Players.PlayTimeTracking;
 using Content.Goobstation.Common.CCVar; // Goobstation - Voice chat
+using Content.Shared._Reserve.LenaApi;  // Reserve edit: Maecenas System
 
 namespace Content.Client.UserInterface.Systems.EscapeMenu;
 
@@ -114,6 +116,25 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
             CloseEscapeWindow();
             UIManager.GetUIController<LinkAccountUIController>().TogglePatronPerksWindow();
         };
+
+        // Reserve edit start: Maecenas System
+        _escapeWindow.CreditsButton.OnPressed += _ =>
+        {
+            CloseEscapeWindow();
+            new CreditsWindow().Open();
+        };
+
+        _escapeWindow.CustomGhostsButton.OnPressed += _ => CloseEscapeWindow();
+
+        _escapeWindow.TokenShopButton.OnPressed += _ =>
+        {
+            CloseEscapeWindow();
+            if (_cfg.GetCVar(LenaApiCVars.ApiIntegration))
+                _uri.OpenUri(_cfg.GetCVar(LenaApiCVars.ShopUri));
+            else
+                _console.ExecuteCommand("balanceui");
+        };
+        // Reserve edit end: Maecenas System
 
         _escapeWindow.RulesButton.OnPressed += _ =>
         {

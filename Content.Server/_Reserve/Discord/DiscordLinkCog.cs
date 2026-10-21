@@ -102,7 +102,8 @@ public sealed partial class DiscordLinkCog
         }
 
         // Get all patron tiers
-        var patronTiers = _prototypes.EnumeratePrototypes<PatronTierPrototype>();
+        var patronTiers = _prototypes.EnumeratePrototypes<PatronTierPrototype>()
+            .OrderBy(patronTier => patronTier.Priority);
 
         foreach (var patronTier in patronTiers)
         {
