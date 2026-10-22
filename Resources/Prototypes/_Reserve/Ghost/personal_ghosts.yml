@@ -284,3 +284,26 @@
 #     sprite: _Reserve/Ghosts/cyou-ghost.rsi
 
 # endregion Dexp
+
+# region Valentinos
+
+- type: customGhost
+  id: valentinos-ghost
+  category: personal
+  proto: MobObserverCkeyValentinos
+  restrictions:
+  - !type:CkeyRestriction
+    ckey: [Valentinos]
+  name: Шишка кедровая
+  description: Да-да я потратил 1 тысячу рубликов, чтобы загрузить гифку с головой своей фурри куклой на которой играю, не удивляйтесь.
+
+- type: entity
+  parent: MobObserverCkey
+  id: MobObserverCkeyValentinos
+  components:
+  - type: Sprite
+    sprite: _Reserve/Ghosts/valentinos-ghost.rsi
+    color: "#ffffff88"
+    scale: 0.4, 0.4
+
+# endregion Valentinos

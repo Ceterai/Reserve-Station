@@ -38,3 +38,6 @@ ent-MobObserverCkeyCyou = { ent-MobObserverCkey }
     .desc = Я, наверное, открою небольшой оккультный магазин где-нибудь. Где-нибудь далеко от Прехевиля... Может, в Рондоне.
     Хочу жить в оживлённом месте, среди множества людей. Людей, которые не будут осуждать меня или кого-то ещё вокруг...
     .suffix = Марина, Dexp, Дексп, { ent-MobObserverCkey.suffix }
+ent-MobObserverCkeyValentinos = { ent-MobObserverCkey }
+    .desc = Да-да я потратил 1 тысячу рубликов, чтобы загрузить гифку с головой своей фурри куклой на которой играю, не удивляйтесь. А если хотите прослушать полное описание госта то вот - https://suno.com/song/d1b493f6-c388-4f71-96ca-7c82291dfd64?sh=DcqyJctzt2flzriL
+    .suffix = Шишка кедровая, Валентинос, { ent-MobObserverCkey.suffix }
