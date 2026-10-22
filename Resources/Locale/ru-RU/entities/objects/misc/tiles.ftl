@@ -192,6 +192,8 @@ ent-FloorTileItemGratingMaint = решётчатый технический по
     .desc = { ent-FloorTileItemBase.desc }
 ent-FloorTileItemWeb = паутинный пол
     .desc = { ent-FloorTileItemBase.desc }
+    .suffix = Хэллоуин
+
 ent-FloorTileItemAstroGrass = астро-трава
     .desc = Искусственная трава, отлично прячущая провода, поставляется с реалистичными НаноТравинками!
 ent-FloorTileItemMowedAstroGrass = астро-газон
@@ -206,8 +208,10 @@ ent-FloorTileItemAstroAsteroidSandBorderless = { ent-FloorTileItemAstroAsteroidS
     .desc = { ent-FloorTileItemAstroAsteroidSand.desc }
 ent-FloorTileItemAstroSnow = астро-снег
     .desc = Искусственный снег, такой же пушистый, как настоящий, и при этом легко снимается!
+
 ent-FloorTileItemWoodLarge = большой деревянный пол
     .desc = { ent-FloorTileItemBase.desc }
+
 ent-FloorTileItemWhiteMarble = белая мраморная плитка
     .desc = Вырезанный и отполированный квадрат из лучшего космического мрамора. Лучше не терять.
 ent-FloorTileItemDarkMarble = тёмная мраморная плитка

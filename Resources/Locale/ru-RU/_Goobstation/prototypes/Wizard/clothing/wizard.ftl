@@ -1,12 +1,12 @@
 ent-ClothingEyesEyepatchMedical = медицинская повязка на глаз
     .desc = Используется космическими пигалицами, чтобы притвориться, что глаза нет, и членами экипажа, которые на самом деле потеряли глаз, чтобы притвориться, что глаз есть.
     .suffix = НЕ МАППИТЬ
-ent-ClothingHeadHatWizardBaseArmor = { "" }
+ent-ClothingHeadHatWizardBaseArmor = базовая шляпа мага
     .suffix = Одежда волшебника
-    .desc = { "" }
-ent-ClothingOuterWizardBaseArmor = { "" }
+    .desc = Базовая шляпа, которую носят маги.
+ent-ClothingOuterWizardBaseArmor = базовая мантия мага
     .suffix = Одежда волшебника
-    .desc = { "" }
+    .desc = Базовая мантия, которую носят маги.
 ent-ClothingHeadHatBlackwizardReal = чёрная шляпа мага
     .desc = Странного вида чёрная шляпа, которая наверняка принадлежит настоящему личу. Жутковато.
 ent-ClothingOuterWizardBlackReal = чёрная мантия мага

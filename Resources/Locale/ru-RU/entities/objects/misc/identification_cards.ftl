@@ -131,10 +131,11 @@ ent-AgentIDCard = { ent-PassengerIDCard }
     .desc = { ent-PassengerIDCard.desc }
     .suffix = Агентская
 ent-NukieAgentIDCard = ID карта пассажира
-    .suffix = Оперативники
-
     .desc = { ent-AgentIDCard.desc }
+    .suffix = Ядерные оперативники
+
 ent-PirateIDCard = ID карта пирата
     .desc = { ent-IDCardStandard.desc }
+
 ent-XenoborgIDCard = ID карта ксеноборга
     .desc = { ent-IDCardStandard.desc }

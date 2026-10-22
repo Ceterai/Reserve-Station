@@ -11,6 +11,7 @@ ent-CrateSecure = { ent-CrateBaseSecure }
 
 ent-CrateFreezer = холодильник
     .desc = { ent-CratePlastic.desc }
+    .suffix = Кухня, Ящик, Морозильник
 
 ent-CrateHydroponics = гидропонный ящик
     .desc = { ent-CratePlastic.desc }
@@ -29,6 +30,7 @@ ent-CrateSyndicate = ящик Синдиката
 
 ent-CrateWeb = паутинный ящик
     .desc = { ent-CrateGeneric.desc }
+    .suffix = Хэллоуин
 
 ent-CrateRadiation = ящик противорадиационного снаряжения
     .desc = На самом деле не имеет свинцовой обшивки. Не храните в нём свой плутоний.
@@ -105,13 +107,13 @@ ent-CrateToyBox = коробка игрушек
 
 ent-CrateCoffin = гроб
     .desc = Удобный гроб, прекрасное место для вампиров и покойников.
-    .suffix = Вампир, Священник
+    .suffix = Вампир, Священник, Хэллоуин
 ent-CrateWoodenGrave = могила
     .desc = Здесь кто-то умер...
-    .suffix = Дерево, Священник
+    .suffix = Дерево, Священник, Хэллоуин
 ent-CrateStoneGrave = могила
     .desc = Здесь кто-то умер...
-    .suffix = Камень, Священник
+    .suffix = Камень, Священник, Хэллоуин
 
 ent-CrateTrashCart = мусорная тележка
     .desc = { ent-CrateBaseWeldable.desc }

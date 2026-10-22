@@ -1,5 +1,5 @@
-ent-MobElementalBase = { "" }
-    .desc = { "" }
+ent-MobElementalBase = элементаль
+    .desc = Существо, состоящее из чистой стихии.
 ent-MobOreCrab = рудокраб
     .desc = { ent-MobElementalBase.desc }
 ent-MobQuartzCrab = { ent-MobOreCrab }

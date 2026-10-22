@@ -1,5 +1,5 @@
-ent-Incorporeal = { "" }
-    .desc = Мобы без физических тел
+ent-Incorporeal = бессущностный
+    .desc = Сущность без физического тела.
 ent-MobObserverBase = наблюдатель
     .desc = Буу!
 ent-MobObserver = { ent-MobObserverBase }

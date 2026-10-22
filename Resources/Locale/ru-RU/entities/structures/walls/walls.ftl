@@ -71,6 +71,7 @@ ent-WallWood = деревянная стена
     .desc = { ent-BaseWall.desc }
 ent-WallWeb = паутинная стена
     .desc = Удерживает паучат внутри, а ассистентов снаружи.
+    .suffix = Хэллоуин
 ent-WallNecropolis = каменная стена
     .desc = { ent-BaseWall.desc }
 ent-WallMining = шахтёрская стена

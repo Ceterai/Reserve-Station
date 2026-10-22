@@ -1,13 +1,17 @@
+ent-EffectBase = базовый эффект
+    .desc = Что-то происходит...
+    .suffix = Эффект
+
 ent-EffectLightning1 = молния
-    .desc = { "" }
+    .desc = { ent-EffectBase.desc }
     .suffix = Эффект
 ent-EffectLightning2 = { ent-EffectLightning1 }
-    .desc = { "" }
+    .desc = { ent-EffectBase.desc }
     .suffix = { ent-EffectLightning1.suffix }
 
 ent-ScentTrackEffect = след запаха
-    .desc = { "" }
+    .desc = { ent-EffectBase.desc }
     .suffix = Эффект
 
 ent-XenomorphBloodstream = кровообращение ксеноморфа
-    .desc = { "" }
+    .desc = { ent-EffectBase.desc }

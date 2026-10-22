@@ -290,3 +290,6 @@ ent-VampireShadowSnare = теневая ловушка
     .desc = Почти невидимая ловушка из уплотненной тьмы.
 ent-VampireShadowSnareEnsnare = теневые щупальца
     .desc = Тёмные щупальца, сковывающие ноги.
+
+ent-Vampire = Вампир
+    .desc = { ent-BaseGameRule.desc }
