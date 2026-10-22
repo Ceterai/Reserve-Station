@@ -1,6 +1,7 @@
 using System.Numerics;
 using Content.Client.Chat.UI;
 using Content.Client.Examine;
+using Content.Goobstation.Common.CCVar;  // Reserve edit: Make RuneChat optional for Alt-overlay
 using Content.Shared.Humanoid;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Mobs;
@@ -10,6 +11,7 @@ using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface;
+using Robust.Shared.Configuration;  // Reserve edit: Make RuneChat optional for Alt-overlay
 using Robust.Shared.Enums;
 using Robust.Shared.Light;
 using Robust.Shared.Prototypes;
@@ -27,6 +29,7 @@ public sealed class ESNamePeekOverlay : Overlay
     [Dependency] private ILocalizationManager _loc = default!;
     [Dependency] private IPrototypeManager _prototypeManager = default!;
     [Dependency] private IResourceCache _cache = default!;
+    [Dependency] private IConfigurationManager _configManager = default!;  // Reserve edit: Make RuneChat optional for Alt-overlay
 
     private readonly ESNamePeekSystem _namePeek;
     private readonly ExamineSystem _examine;
@@ -37,6 +40,8 @@ public sealed class ESNamePeekOverlay : Overlay
     private readonly ShaderInstance _shader;
     private readonly Font _font;
     private readonly Font _smallFont;
+    private readonly Font _runechatFont;  // Reserve edit: Make RuneChat optional for Alt-overlay
+    private readonly Font _runechatSmallFont;  // Reserve edit: Make RuneChat optional for Alt-overlay
 
     private readonly HashSet<Entity<MobStateComponent>> _nearbyEntities = new();
 
@@ -54,8 +59,12 @@ public sealed class ESNamePeekOverlay : Overlay
         _sprite = _entityManager.System<SpriteSystem>();
 
         _shader = _prototypeManager.Index(UnshadedShader).Instance();
-        _font = new VectorFont(_cache.GetResource<FontResource>(RunechatSheetlet.FontPath), FontSize);
-        _smallFont = new VectorFont(_cache.GetResource<FontResource>(RunechatSheetlet.WhisperFontPath), FontSize);
+        // Reserve edit start: Make RuneChat optional for Alt-overlay
+        _font = new VectorFont(_cache.GetResource<FontResource>("/Fonts/NotoSans/NotoSans-Regular.ttf"), FontSize);
+        _smallFont = new VectorFont(_cache.GetResource<FontResource>("/Fonts/NotoSans/NotoSans-Regular.ttf"), FontSize);
+        _runechatFont = new VectorFont(_cache.GetResource<FontResource>(RunechatSheetlet.FontPath), FontSize);
+        _runechatSmallFont = new VectorFont(_cache.GetResource<FontResource>(RunechatSheetlet.WhisperFontPath), FontSize);
+        // Reserve edit end: Make RuneChat optional for Alt-overlay
     }
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)
@@ -77,6 +86,10 @@ public sealed class ESNamePeekOverlay : Overlay
         var scale = (args.ViewportControl as Control)?.UIScale ?? 0f;
         if (scale <= 0f)
             return;
+
+        var useRunechat = _configManager.GetCVar(GoobCVars.ChatRunechat);  // Reserve edit: Make RuneChat optional for Alt-overlay
+        var font = useRunechat ? _runechatFont : _font;  // Reserve edit: Make RuneChat optional for Alt-overlay
+        var smallFont = useRunechat ? _runechatSmallFont : _smallFont;  // Reserve edit: Make RuneChat optional for Alt-overlay
 
         args.DrawingHandle.SetTransform(Matrix3x2.Identity);
         args.DrawingHandle.UseShader(_shader);
@@ -110,7 +123,7 @@ public sealed class ESNamePeekOverlay : Overlay
                 continue;
 
             var text = Identity.Name(ent, _entityManager, playerEnt);
-            var dimensions = handle.GetDimensions(_font, text, scale);
+            var dimensions = handle.GetDimensions(font, text, scale);  // Reserve edit: Make RuneChat optional for Alt-overlay
 
             var (worldPos, worldRot) = _transform.GetWorldPositionRotation(xform);
             var bounds = _sprite.CalculateBounds((ent, sprite), worldPos, worldRot, eye.Rotation);
@@ -119,7 +132,7 @@ public sealed class ESNamePeekOverlay : Overlay
             var pos = Vector2.Transform(worldPos - offset, matrix);
             var color = RunechatSpeechBubble.GetNameColor(text);
 
-            handle.DrawString(_font, (pos - dimensions / 2f).Rounded(), text, scale, color, outline);
+            handle.DrawString(font, (pos - dimensions / 2f).Rounded(), text, scale, color, useRunechat ? outline : null);  // Reserve edit: Make RuneChat optional for Alt-overlay
 
             if (!_entityManager.TryGetComponent<HumanoidAppearanceComponent>(ent, out var humanoid))
                 continue;
@@ -131,10 +144,10 @@ public sealed class ESNamePeekOverlay : Overlay
                 Gender.Neuter => "humanoid-profile-editor-pronouns-neuter-text",
                 _ => "humanoid-profile-editor-pronouns-epicene-text",
             });
-            var pronounDimensions = handle.GetDimensions(_smallFont, pronouns, scale);
+            var pronounDimensions = handle.GetDimensions(smallFont, pronouns, scale);  // Reserve edit: Make RuneChat optional for Alt-overlay
             var pronounPos = pos - pronounDimensions / 2f + new Vector2(0f, dimensions.Y);
 
-            handle.DrawString(_smallFont, pronounPos.Rounded(), pronouns, scale, color, outline);
+            handle.DrawString(smallFont, pronounPos.Rounded(), pronouns, scale, color, useRunechat ? outline : null);  // Reserve edit: Make RuneChat optional for Alt-overlay
         }
 
         args.DrawingHandle.UseShader(null);
