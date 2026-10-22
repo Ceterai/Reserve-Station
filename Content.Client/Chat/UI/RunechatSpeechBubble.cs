@@ -16,8 +16,9 @@ public sealed class RunechatSpeechBubble : SpeechBubble
     public const string StyleClassNormal = "runechat";
     public const string StyleClassLoud = "runechatLoud";
     public const string StyleClassWhisper = "runechatWhisper";
-    public const int NormalSize = 12;
-    public const int LoudSize = 18;
+    public const int SmallSize = 12;  // Reserve edit: Cyrillic Runechat support
+    public const int NormalSize = 16;  // Reserve edit: Cyrillic Runechat support
+    public const int LoudSize = 20;  // Reserve edit: Cyrillic Runechat support
     private const float DesignPixelsPerEm = 8f;
     private const float RunechatMaxWidth = 200;
     private static readonly TimeSpan FadeInTime = TimeSpan.FromSeconds(0.15);

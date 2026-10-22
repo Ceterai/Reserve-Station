@@ -11,8 +11,8 @@ namespace Content.Client.Chat.UI;
 [CommonSheetlet]
 public sealed class RunechatSheetlet : Sheetlet<NanotrasenStylesheet>
 {
-    public const string FontPath = "/Fonts/_ES/Grand9KPixelRegular.ttf";
-    public const string WhisperFontPath = "/Fonts/_ES/Wormtown9k-Small.ttf";
+    public const string FontPath = "/Fonts/_Reserve/Grand9KPixelUnicode.otf";  // Reserve edit: Cyrillic Runechat support
+    public const string WhisperFontPath = "/Fonts/_Reserve/Grand9KPixelUnicode.otf";  // Reserve edit: Cyrillic Runechat support
 
     public override StyleRule[] GetRules(NanotrasenStylesheet sheet, object config)
     {
@@ -23,13 +23,13 @@ public sealed class RunechatSheetlet : Sheetlet<NanotrasenStylesheet>
         [
             E<RichTextLabel>()
                 .Class(RunechatSpeechBubble.StyleClassNormal)
-                .Prop(Label.StylePropertyFont, new VectorFont(font, RunechatSpeechBubble.NormalSize)),
+                .Prop(Label.StylePropertyFont, new VectorFont(font, RunechatSpeechBubble.NormalSize)),  // Reserve edit: Cyrillic Runechat support
             E<RichTextLabel>()
                 .Class(RunechatSpeechBubble.StyleClassLoud)
-                .Prop(Label.StylePropertyFont, new VectorFont(font, RunechatSpeechBubble.LoudSize)),
+                .Prop(Label.StylePropertyFont, new VectorFont(font, RunechatSpeechBubble.LoudSize)),  // Reserve edit: Cyrillic Runechat support
             E<RichTextLabel>()
                 .Class(RunechatSpeechBubble.StyleClassWhisper)
-                .Prop(Label.StylePropertyFont, new VectorFont(whisperFont, RunechatSpeechBubble.NormalSize)),
+                .Prop(Label.StylePropertyFont, new VectorFont(whisperFont, RunechatSpeechBubble.SmallSize)),  // Reserve edit: Cyrillic Runechat support
         ];
     }
 }

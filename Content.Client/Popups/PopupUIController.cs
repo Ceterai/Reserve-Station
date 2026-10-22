@@ -34,19 +34,19 @@ public sealed class PopupUIController : UIController, IOnStateEntered<GameplaySt
         base.Initialize();
         var cache = IoCManager.Resolve<IResourceCache>();
         // Reserve edit start: Upstream 20261020 - Popup font should check the Runechat setting
-        // _smallFont = new VectorFont(cache.GetResource<FontResource>("/Fonts/_ES/Grand9KPixelRegular.ttf"), 10); // Goob
-        // _mediumFont = new VectorFont(cache.GetResource<FontResource>("/Fonts/_ES/Grand9KPixelRegular.ttf"), 12); // Goob
-        // _largeFont = new VectorFont(cache.GetResource<FontResource>("/Fonts/_ES/Grand9KPixelRegular.ttf"), 14); // Goob
+        // _smallFont = new VectorFont(cache.GetResource<FontResource>("/Fonts/_Reserve/Grand9KPixelUnicode.otf"), 10); // Goob  // Reserve edit: Cyrillic Runechat support
+        // _mediumFont = new VectorFont(cache.GetResource<FontResource>("/Fonts/_Reserve/Grand9KPixelUnicode.otf"), 12); // Goob  // Reserve edit: Cyrillic Runechat support
+        // _largeFont = new VectorFont(cache.GetResource<FontResource>("/Fonts/_Reserve/Grand9KPixelUnicode.otf"), 14); // Goob  // Reserve edit: Cyrillic Runechat support
         _configManager = IoCManager.Resolve<IConfigurationManager>();
 
         var defaultFont = cache.GetResource<FontResource>("/Fonts/NotoSans/NotoSans-Regular.ttf");
-        var runechatFont = cache.GetResource<FontResource>("/Fonts/_ES/Grand9KPixelRegular.ttf");
+        var runechatFont = cache.GetResource<FontResource>("/Fonts/_Reserve/Grand9KPixelUnicode.otf");  // Reserve edit: Cyrillic Runechat support
         _smallFont = new VectorFont(defaultFont, 10);
         _mediumFont = new VectorFont(defaultFont, 12);
         _largeFont = new VectorFont(defaultFont, 14);
-        _runechatSmallFont = new VectorFont(runechatFont, 10);
-        _runechatMediumFont = new VectorFont(runechatFont, 12);
-        _runechatLargeFont = new VectorFont(runechatFont, 14);
+        _runechatSmallFont = new VectorFont(runechatFont, 12);  // Reserve edit: Cyrillic Runechat support
+        _runechatMediumFont = new VectorFont(runechatFont, 14);  // Reserve edit: Cyrillic Runechat support
+        _runechatLargeFont = new VectorFont(runechatFont, 16);  // Reserve edit: Cyrillic Runechat support
         // Reserve edit end: Upstream 20261020 - Popup font should check the Runechat setting
     }
 
