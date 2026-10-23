@@ -93,6 +93,8 @@
     color: "#808080"
     activateSound: null
     deactivateSound: null
+  - type: Body  # Reserve edit: Proper small animal organs
+    prototype: Critter
 
 - type: entity
   name: bee
@@ -179,6 +181,8 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: Body  # Reserve edit: Proper small animal organs
+    prototype: Insect
 
 - type: entity
   name: bee
@@ -300,6 +304,8 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  - type: Body  # Reserve edit: Proper small animal organs
+    prototype: Critter
 
 - type: entity
   parent: MobChicken
@@ -478,6 +484,8 @@
     damage:
       types:
         Piercing: 0
+  - type: Body  # Reserve edit: Proper small animal organs
+    prototype: Insect
 
 - type: entity
   name: glockroach
@@ -775,6 +783,8 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  - type: Body  # Reserve edit: Proper small animal organs
+    prototype: Critter
 
 - type: entity
   name: white duck #Quack
@@ -906,6 +916,8 @@
       - !type:GibBehavior
         recursive: false
   - type: ZombieImmune
+  - type: Body  # Reserve edit: Proper small animal organs
+    prototype: Insect
 
 - type: entity
   name: cow
@@ -991,9 +1003,6 @@
     guides:
     - Chef
     - FoodRecipes
-  - type: EatToGrow  # Reserve edit: Chonkers! - Goobstation Eat To Grow System
-    growth: 0.05
-    maxGrowth: 1.25
 
 - type: entity
   name: crab
@@ -2862,8 +2871,6 @@
     color: "#808080"
     activateSound: null
     deactivateSound: null
-  - type: EatToGrow  # Reserve edit: Chonkers! - Goobstation Eat To Grow System
-    maxGrowth: 2
 
 - type: entity
   parent: MobSpiderBase
@@ -2925,6 +2932,8 @@
     damage:
       types:
         Piercing: 6
+  - type: EatToGrow  # Reserve edit: Chonkers! - Goobstation Eat To Grow System
+    maxGrowth: 2
 
 - type: entity
   parent:
@@ -2993,6 +3002,8 @@
     - Universal # Should allow them to understand everything and speak it too. Might need to change this.
     understands:
     - Universal
+  - type: EatToGrow  # Reserve edit: Chonkers! - Goobstation Eat To Grow System
+    maxGrowth: 2
 
 - type: entity
   name: possum
