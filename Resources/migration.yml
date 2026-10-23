@@ -1072,3 +1072,11 @@ CrateTrashCart: RandomMaintenanceObjectSpawner
 CrateTrashCartFilled: RandomMaintenanceObjectSpawner
 ClosetMaintenance: RandomMaintenanceObjectSpawner
 ClosetMaintenanceFilledRandom: RandomMaintenanceObjectSpawner
+
+# 2026-10-23 Reserve Station edit: Better spawners
+SolarPanel: SolarPanelChance
+DrinkCafeLatte: RandomDrinkCup
+DrinkHotCoffee: RandomDrinkCup
+DrinkHotCoco: RandomDrinkCup
+ShelfWallFreezerWhite: ShelfWallFreezerWhiteFilledRandom
+ShelfWallFreezerDark: ShelfWallFreezerDarkFilledRandom
