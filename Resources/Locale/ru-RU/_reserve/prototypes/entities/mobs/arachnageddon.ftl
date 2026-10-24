@@ -6,42 +6,42 @@
 
 ent-MobSmallSpider = паук
     .desc = Крошечный, но страшный.
-    .suffix = Хэллоуин, Арахнагеддон
+    .suffix = Хэллоуин, Арахнагеддон, AI
 ent-MobSmallSpiderAngry = { ent-MobSmallSpider }
     .desc = Крошечный агрессивный паук.
-    .suffix = Хэллоуин, Арахнагеддон, Злой
+    .suffix = Хэллоуин, Арахнагеддон, Злой, AI
 
 ent-MobBloodmotherSpider = кровоматка
     .desc = Багровый тарантул, плетущий кровавую паутину.
-    .suffix = Хэллоуин, Арахнагеддон, Паук
+    .suffix = Хэллоуин, Арахнагеддон, Паук, AI
 ent-MobBloodmotherSpiderAngry = { ent-MobBloodmotherSpider }
     .desc = { ent-MobBloodmotherSpider.desc }
-    .suffix = Хэллоуин, Арахнагеддон, Паук, Злой
+    .suffix = Хэллоуин, Арахнагеддон, Паук, Злой, AI
 
 ent-MobBrutemotherSpider = брутоматка
     .desc = Оно идёт.
-    .suffix = Хэллоуин, Арахнагеддон, Паук
+    .suffix = Хэллоуин, Арахнагеддон, Паук, AI
 ent-MobBrutemotherSpiderAngry = { ent-MobBrutemotherSpider }
     .desc = { ent-MobBrutemotherSpider.desc }
-    .suffix = Хэллоуин, Арахнагеддон, Паук, Злой
+    .suffix = Хэллоуин, Арахнагеддон, Паук, Злой, AI
 
 ent-MobXenorantulaSpider = ксенарантул
     .desc = Что это вообще такое?..
-    .suffix = Хэллоуин, Арахнагеддон, Паук
+    .suffix = Хэллоуин, Арахнагеддон, Паук, AI
 ent-MobXenorantulaSpiderAngry = { ent-MobXenorantulaSpider }
     .desc = { ent-MobXenorantulaSpider.desc }
-    .suffix = Хэллоуин, Арахнагеддон, Паук, Злой
+    .suffix = Хэллоуин, Арахнагеддон, Паук, Злой, AI
 
 ent-SpiderWebBlood = кровавая паутина
     .desc = Кроваво-красная паутина, наполненная сами знаете чем.
-    .suffix = Хэллоуин, Арахнагеддон, Кровоматка
+    .suffix = Хэллоуин, Арахнагеддон, Кровоматка, AI
 ent-SpiderWebXeno = ксенопаутина
     .desc = Паутина ксенарантулы, оставляющая лужу кислоты при разрушении.
-    .suffix = Хэллоуин, Арахнагеддон, Ксенарантул
+    .suffix = Хэллоуин, Арахнагеддон, Ксенарантул, AI
 
 ent-MobBlackDeathSpider = Чёрная Смерть
     .desc = Колоссальный монстр. К сожалению, невероятно агрессивный. И плодовитый.
-    .suffix = Хэллоуин, Арахнагеддон, Паук, Злой, Босс, Адмем
+    .suffix = Хэллоуин, Арахнагеддон, Паук, Злой, Босс, Адмем, AI
 
 ent-ActionSpawnTinyAngrySpider = Родить маленького паука
     .desc = Породить маленького злого паука, который будет сражаться на вашей стороне.

@@ -6,42 +6,42 @@
 
 ent-MobSmallSpider = tiny spider
     .desc = Tiny, but scary.
-    .suffix = Halloween, Arachnageddon
+    .suffix = Halloween, Arachnageddon, AI
 ent-MobSmallSpiderAngry = { ent-MobSmallSpider }
     .desc = A tiny, hostile spider.
-    .suffix = Halloween, Arachnageddon, Angry
+    .suffix = Halloween, Arachnageddon, Angry, AI
 
 ent-MobBloodmotherSpider = bloodmother
     .desc = A crimson tarantula that spins bloody webs.
-    .suffix = Halloween, Arachnageddon
+    .suffix = Halloween, Arachnageddon, AI
 ent-MobBloodmotherSpiderAngry = { ent-MobBloodmotherSpider }
     .desc = { ent-MobBloodmotherSpider.desc }
-    .suffix = Halloween, Arachnageddon, Angry
+    .suffix = Halloween, Arachnageddon, Angry, AI
 
 ent-MobBrutemotherSpider = brutemother
     .desc = It is coming.
-    .suffix = Halloween, Arachnageddon
+    .suffix = Halloween, Arachnageddon, AI
 ent-MobBrutemotherSpiderAngry = { ent-MobBrutemotherSpider }
     .desc = { ent-MobBrutemotherSpider.desc }
-    .suffix = Halloween, Arachnageddon, Angry
+    .suffix = Halloween, Arachnageddon, Angry, AI
 
 ent-MobXenorantulaSpider = xenorantula
     .desc = What even is this?..
-    .suffix = Halloween, Arachnageddon
+    .suffix = Halloween, Arachnageddon, AI
 ent-MobXenorantulaSpiderAngry = { ent-MobXenorantulaSpider }
     .desc = { ent-MobXenorantulaSpider.desc }
-    .suffix = Halloween, Arachnageddon, Angry
+    .suffix = Halloween, Arachnageddon, Angry, AI
 
 ent-SpiderWebBlood = bloody spider web
     .desc = A blood-red web filled with you-know-what.
-    .suffix = Halloween, Arachnageddon, Bloodmother
+    .suffix = Halloween, Arachnageddon, Bloodmother, AI
 ent-SpiderWebXeno = xeno web
     .desc = A xenorantula web that leaves a puddle of acid when destroyed.
-    .suffix = Halloween, Arachnageddon, Xenorantula
+    .suffix = Halloween, Arachnageddon, Xenorantula, AI
 
 ent-MobBlackDeathSpider = the Black Death
     .desc = A colossal monster. Unfortunately, incredibly aggressive. And prolific.
-    .suffix = Halloween, Arachnageddon, Angry, Boss
+    .suffix = Halloween, Arachnageddon, Angry, Boss, AI
 
 ent-ActionSpawnTinyAngrySpider = Summon tiny spider
     .desc = Summon a tiny angry spider to fight alongside you.
