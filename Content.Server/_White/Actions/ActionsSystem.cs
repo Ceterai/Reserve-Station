@@ -140,7 +140,7 @@ public sealed class ActionsSystem : EntitySystem
         if (entProtoId == null || CheckTileBlocked(coordinates, collisionLayer, collisionMask))
             return false;
 
-        Spawn(entProtoId, coordinates);
+        SpawnAtPosition(entProtoId, coordinates);  // Reserve edit: Arachnageddon
 
         return true;
     }
