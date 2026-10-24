@@ -307,3 +307,26 @@
     scale: 0.4, 0.4
 
 # endregion Valentinos
+
+# region Lordich_
+
+- type: customGhost
+  id: lordich-ghost
+  category: personal
+  proto: MobObserverCkeyLordich
+  restrictions:
+  - !type:CkeyRestriction
+    ckey: [Lordich_]
+  name: Император Человечества
+  description: Икона основателя Империума.
+
+- type: entity
+  parent: MobObserverCkey
+  id: MobObserverCkeyLordich
+  components:
+  - type: Sprite
+    sprite: _Reserve/Ghosts/lordich-ghost.rsi
+    color: "#ffffffaa"
+    scale: 0.6, 0.6
+
+# endregion Lordich_

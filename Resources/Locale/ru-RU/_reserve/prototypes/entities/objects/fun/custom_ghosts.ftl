@@ -41,3 +41,6 @@ ent-MobObserverCkeyCyou = { ent-MobObserverCkey }
 ent-MobObserverCkeyValentinos = { ent-MobObserverCkey }
     .desc = Да-да я потратил 1 тысячу рубликов, чтобы загрузить гифку с головой своей фурри куклой на которой играю, не удивляйтесь. А если хотите прослушать полное описание госта то вот - https://suno.com/song/d1b493f6-c388-4f71-96ca-7c82291dfd64?sh=DcqyJctzt2flzriL
     .suffix = Шишка кедровая, Валентинос, { ent-MobObserverCkey.suffix }
+ent-MobObserverCkeyLordich = { ent-MobObserverCkey }
+    .desc = Икона основателя Империума.
+    .suffix = Император Человечества, Лордич, { ent-MobObserverCkey.suffix }
