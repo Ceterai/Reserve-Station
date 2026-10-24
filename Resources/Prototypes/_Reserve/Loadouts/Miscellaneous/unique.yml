@@ -20,6 +20,7 @@
   - PlushieMrSamuelGoose
   - PlushieNazrinNyaCap
   - PlushieSvarshikEva
+  # - HalloweenCandyBucket  # Uncomment on Halloween
 
 # endregion
 
@@ -154,3 +155,12 @@
     - PlushieSvarshikEva
 
 # endregion Svarshik
+
+# region Events
+
+- type: loadout
+  id: HalloweenCandyBucket
+  inhand:
+  - CandyBucketFilled
+
+# endregion Events

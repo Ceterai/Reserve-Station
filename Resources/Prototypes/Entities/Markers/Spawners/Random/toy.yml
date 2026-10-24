@@ -147,6 +147,12 @@
     # Reserve edit end: Reserve Plushies
     - id: PlushieSanabi  # Reserve edit: Reserve Plushies
     - id: PlushieSynth  # Reserve edit: Upstream 20261020
+    # Reserve edit start: Halloween on Reserve
+    - !type:GroupSelector
+      children:
+      - id: PlushiePumpkin
+      - id: PlushieGhostBurger
+    # Reserve edit end: Halloween on Reserve
 
 # Weh!
 - type: entityTable
