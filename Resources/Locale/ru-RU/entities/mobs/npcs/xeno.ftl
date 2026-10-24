@@ -17,10 +17,11 @@ ent-MobXenoSpitter = ксено-плевальщик
 
 ent-MobPurpleSnake = космическая гадюка
     .desc = Грозная пурпурная змея с Kepler-283c.
+    .suffix = AI, Злой
 ent-MobSmallPurpleSnake = космическая гадюка
     .desc = Уменьшенная версия грозной пурпурной змеи из Kepler-283c.
-    .suffix = Маленькая
+    .suffix = Маленькая, AI, Злой
 
 ent-MobXenoLonePraetorianNoGhost = ксено-преторианец "Дейл"
     .desc = Преторианец, оставшийся после первоначальной зачистки станции. У него в пасти застряла пара окровавленных жетонов с выгравированным именем "Рядовой Дейл".
-    .suffix = { ent-SimpleSpaceMobBase.suffix }
+    .suffix = { ent-SimpleSpaceMobBase.suffix }, Злой

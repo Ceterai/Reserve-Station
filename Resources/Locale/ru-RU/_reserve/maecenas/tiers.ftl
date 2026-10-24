@@ -135,7 +135,7 @@ ooc-icon-unrobust = Пчела
 ooc-icon-lambda = Лямбда
 
 # Antagonists
-ooc-icon-changeling = Ченджлинг
+ooc-icon-changeling = Генокрад
 ooc-icon-head-revolutionary = Глава революционеров
 ooc-icon-initial-infected = Нулевой заражённый
 ooc-icon-paradox-clone = Парадоксальный клон

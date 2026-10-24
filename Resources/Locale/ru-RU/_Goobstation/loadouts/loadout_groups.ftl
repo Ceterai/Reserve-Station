@@ -162,7 +162,7 @@ loadout-group-ntr-gloves = Представитель NanoTrasen, перчатк
 loadout-group-ntr-head = Представитель NanoTrasen, головной убор
 loadout-group-ntr-backpack = Представитель NanoTrasen, рюкзак
 loadout-group-ntr-neck = Представитель NanoTrasen, плащ
-loadout-group-ntr-jumpsuit = Представитель NanoTrasen,
+loadout-group-ntr-jumpsuit = Представитель NanoTrasen, комбинезон
 loadout-group-ntr-belt = Представитель NanoTrasen, пояс
 loadout-group-ntr-shoes = Представитель NanoTrasen, обувь
 # NanoTrasen Career Trainer

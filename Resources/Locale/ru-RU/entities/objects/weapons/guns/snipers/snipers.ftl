@@ -10,7 +10,7 @@ ent-WeaponSniperHristov = Христов
     .suffix = Оружие, Винтовка
 
 ent-WeaponPistolFlintlock = кремниевый пистолет
-    .desc = Спутник пирата. Яррр! Использует патроны калибра .60 крупнокалиберный.
+    .desc = Спутник пирата. Яррр! Использует патроны калибра .45.
     .suffix = Оружие, Пистолет, Винтовка, Пират
 ent-WeaponPistolFlintlockEmpty = { ent-WeaponPistolFlintlock }
     .desc = { ent-WeaponPistolFlintlock.desc }
